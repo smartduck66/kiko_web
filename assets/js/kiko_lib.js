@@ -12,8 +12,7 @@ let M_PI = Math.acos(-1.0);
 // TO DO - coeur du système (#1)
 // const prix_m2 = require('../data/prix_maisons_m2.json');    //(#2)
 // const lat_long_CNPE = require('../data/centrales.json');    //(#3)
-let lat_long_CNPE;
-fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => { lat_long_CNPE = data;});
+let lat_long_CNPE = fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => { return data;});
 /*
 async function fetchText() {
     let response = await fetch("assets/data/centrales.json");
