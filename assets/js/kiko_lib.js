@@ -21,7 +21,7 @@ async function fetchText() {
 }
 let lat_long_CNPE = fetchText();
 */
-console.log(lat_long_CNPE);
+
 
 // This function converts decimal degrees to radians
 function deg2rad(deg) { return (deg * M_PI / 180); }
@@ -79,6 +79,7 @@ function centrale_la_plus_proche(latitude_station, longitude_station){
 
     // On calcule la distance de la station météo avec chacune des centrales nucléaires...
     let distance_centrales = new Array();
+    console.log(lat_long_CNPE);
     for (let i=0;i< lat_long_CNPE.length; i++) {
         distance_centrales.push(distanceEarth(convert_DMS_DD(latitude_station), convert_DMS_DD(longitude_station), 
         Number(lat_long_CNPE[i].latitude), Number(lat_long_CNPE[i].longitude)));
