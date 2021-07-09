@@ -7,7 +7,7 @@
 
         <br> 
         <label>Distance de la CNPE (kms) : 
-            <input type="text" id="centrale" value="" size="190"> 
+            <input type="text" id="Référence" value="" size="190"> 
         </label>         
         <br> 
 
@@ -17,10 +17,8 @@
     <script>
         let lat_to_test=`43°54'30"N`;
         let long_to_test=`00°30'00"W`;
-        //document.getElementById('centrale').value = centrale_la_plus_proche(lat_to_test, long_to_test);
-        fetch("assets/data/centrales.json") 
-        .then(response => {return response.json();}) 
-        .then(data => console.log(data));
+        document.getElementById('Référence').value = "Vélizy";
+
     </script>
 
 
