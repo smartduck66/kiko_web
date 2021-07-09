@@ -7,11 +7,10 @@
 let earthRadiusKm = 6371;
 let M_PI = Math.acos(-1.0);
 
-// Création des objets en mémoire : fiches climatiques (#1), prix au m2 (#2) et coordonnées des CNPE (#3)
+// Chargement des prix au m2 et des coordonnées des CNPE
 // Ex de Web API : fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => console.log(data));
-// TO DO - coeur du système (#1)
-const prix_m2 = require('../data/prix_maisons_m2.json');    //(#2)
-const lat_long_CNPE = require('../data/centrales.json');    //(#3)
+const prix_m2 = require('../data/prix_maisons_m2.json');    
+const lat_long_CNPE = require('../data/centrales.json');    
 
 // This function converts decimal degrees to radians
 function deg2rad(deg) { return (deg * M_PI / 180); }
@@ -80,3 +79,29 @@ function centrale_la_plus_proche(latitude_station, longitude_station){
     return Math.min(...distance_centrales);
 
 }
+
+/* Tests
+let lat_to_test=`43°54'30"N`;
+let long_to_test=`00°30'00"W`;
+console.log(centrale_la_plus_proche(lat_to_test, long_to_test));
+*/
+
+// Création du fichier json central regroupant les fiches climatiques
+const ref = require('../data/ListeFichesClimatiques.json');
+console.log(ref.refcli[300].ref);
+console.log(ref.refcli[300].town);   
+
+/*
+		ss << setw(8) << left << x.ref << " - " << setw(25) << left << x.town <<
+			" (" << setw(4) << right << to_string(x.altitude) << " m)" <<
+			" - T moy : " << setw(4) << right << d2s(x.mean_temps[12], 1) <<
+			" deg - T min : " << setw(4) << right << d2s(x.min_temps[12], 1) <<
+			" deg - T max : " << setw(4) << right << d2s(x.max_temps[12], 1) <<
+			" deg - soleil : " << setw(4) << right << d2s(x.solar_radiation_duration[12], 0) << " h/an" <<
+			" - pluie : " << setw(4) << right << d2s(x.mean_rain[12], 0) << " mm/mois" <<
+			" - rafales de vent : " << setw(3) << right << d2s(x.wind_mean_days(0, 12), 0) << " j/an" <<
+			" - dist. Centrale : " << setw(5) << right << d2s(centrale_la_plus_proche(x.latitude, x.longitude, lat_long_CNPE), 0) << " kms" <<
+			" - [prix maisons : " << setw(5) << right << prix << endl;
+
+
+*/
