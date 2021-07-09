@@ -5,8 +5,6 @@ exports.handler = async (event, context) => {
   console.log('context', context)
   return {
     statusCode: 200,
-    body: JSON.stringify({
-      data: true
-    })
+    body: JSON.stringify({message: "Fonction opérationnelle"})
   }
 }
