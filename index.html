@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <script>
+            let lat_to_test=`43°54'30"N`;
+            let long_to_test=`00°30'00"W`;
+            document.getElementById('centrale').value = centrale_la_plus_proche(lat_to_test, long_to_test);
+        </script>
 
     </head>
     <body>
 
-        hello world!
+        <br> 
+        <label>Référence climatique : 
+            <input type="text" id="centrale" value="Distance de la CNPE (kms) : " size="190"> 
+        </label>         
+        <br> 
 
 
     </body>
