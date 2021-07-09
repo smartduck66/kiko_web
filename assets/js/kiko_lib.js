@@ -8,20 +8,11 @@ let earthRadiusKm = 6371;
 let M_PI = Math.acos(-1.0);
 
 // Création des objets en mémoire : fiches climatiques (#1), prix au m2 (#2) et coordonnées des CNPE (#3)
-// Ex de Web API : fetch("../data/centrales.json") .then(response => {return response.json();}) .then(data => console.log(data));
+// Ex de Web API : fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => console.log(data));
 // TO DO - coeur du système (#1)
-// const prix_m2 = require('../data/prix_maisons_m2.json');    //(#2)
-// const lat_long_CNPE = require('../data/centrales.json');    //(#3)
-let lat_long_CNPE = fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => { return data;});
-/*
-async function fetchText() {
-    let response = await fetch("assets/data/centrales.json");
-    return await response.json();
-
-}
-let lat_long_CNPE = fetchText();
-*/
-
+const prix_m2 = require('../data/prix_maisons_m2.json');    //(#2)
+const lat_long_CNPE = require('../data/centrales.json');    //(#3)
+// let lat_long_CNPE = fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => { return data;});
 
 // This function converts decimal degrees to radians
 function deg2rad(deg) { return (deg * M_PI / 180); }
@@ -79,7 +70,7 @@ function centrale_la_plus_proche(latitude_station, longitude_station){
 
     // On calcule la distance de la station météo avec chacune des centrales nucléaires...
     let distance_centrales = new Array();
-    console.log(lat_long_CNPE);
+
     for (let i=0;i< lat_long_CNPE.length; i++) {
         distance_centrales.push(distanceEarth(convert_DMS_DD(latitude_station), convert_DMS_DD(longitude_station), 
         Number(lat_long_CNPE[i].latitude), Number(lat_long_CNPE[i].longitude)));
