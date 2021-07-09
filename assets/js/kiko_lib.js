@@ -15,9 +15,10 @@ let M_PI = Math.acos(-1.0);
 // fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => {const lat_long_CNPE = data;});
 async function fetchText() {
     let response = await fetch("assets/data/centrales.json");
-    return await response.text();
+    return await response.json();
 
 }
+
 const lat_long_CNPE = fetchText();
 console.log(lat_long_CNPE);
 
