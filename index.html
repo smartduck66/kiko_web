@@ -20,7 +20,7 @@
         //document.getElementById('centrale').value = centrale_la_plus_proche(lat_to_test, long_to_test);
         fetch("assets/data/centrales.json") 
         .then(response => {return response.json();}) 
-        .then(data => { document.getElementById('centrale').value=data.latitude[0];});
+        .then(data => console.log(data));
     </script>
 
 
