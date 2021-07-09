@@ -19,7 +19,7 @@ async function fetchText() {
 
 }
 
-const lat_long_CNPE = fetchText();
+let lat_long_CNPE = fetchText();
 console.log(lat_long_CNPE);
 
 // This function converts decimal degrees to radians
