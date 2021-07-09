@@ -10,9 +10,11 @@ let M_PI = Math.acos(-1.0);
 // Création des objets en mémoire : fiches climatiques (#1), prix au m2 (#2) et coordonnées des CNPE (#3)
 // Ex de Web API : fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => console.log(data));
 // TO DO - coeur du système (#1)
-const prix_m2 = require('../data/prix_maisons_m2.json');    //(#2)
-const lat_long_CNPE = require('../data/centrales.json');    //(#3)
-// let lat_long_CNPE = fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => { return data;});
+//const prix_m2 = require('../data/prix_maisons_m2.json');    //(#2)
+//const lat_long_CNPE = require('../data/centrales.json');    //(#3)
+let lat_long_CNPE = fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => { return data;});
+
+console.log(lat_long_CNPE);
 
 // This function converts decimal degrees to radians
 function deg2rad(deg) { return (deg * M_PI / 180); }

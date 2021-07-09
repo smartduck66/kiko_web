@@ -17,10 +17,10 @@
     <script>
         let lat_to_test=`43°54'30"N`;
         let long_to_test=`00°30'00"W`;
-        // document.getElementById('centrale').value = centrale_la_plus_proche(lat_to_test, long_to_test);
-        let lat_long_CNPE = fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => { return data;});
-        console.log(lat_long_CNPE);
-        document.getElementById('centrale').value=lat_long_CNPE[0].latitude;
+        //document.getElementById('centrale').value = centrale_la_plus_proche(lat_to_test, long_to_test);
+        fetch("assets/data/centrales.json") 
+        .then(response => {return response.json();}) 
+        .then(data => { document.getElementById('centrale').value=data.latitude[0];});
     </script>
 
 
