@@ -12,7 +12,7 @@ let M_PI = Math.acos(-1.0);
 // TO DO - coeur du système (#1)
 // const prix_m2 = require('../data/prix_maisons_m2.json');    //(#2)
 // const lat_long_CNPE = require('../data/centrales.json');    //(#3)
-fetch("../data/centrales.json") .then(response => {return response.json();}) .then(data => lat_long_CNPE = data);
+fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => lat_long_CNPE = data);
 
 // This function converts decimal degrees to radians
 function deg2rad(deg) { return (deg * M_PI / 180); }
