@@ -88,8 +88,48 @@ console.log(centrale_la_plus_proche(lat_to_test, long_to_test));
 
 // Création du fichier json central regroupant les fiches climatiques
 const ref = require('../data/ListeFichesClimatiques.json');
-console.log(ref.refcli[300].ref);
-console.log(ref.refcli[300].town);   
+//console.log(ref.refcli[300].ref);
+//console.log(ref.refcli[300].town);   
+
+class data_MF {
+    indicatif;
+    indicatif;
+    altitude;
+    temp_moy;
+    temp_min;
+    temp_max;
+    ensoleillement;
+    pluie;
+    vent;
+    distance_cnpe;
+    prix_maisons;
+
+}
+
+var fiches = [];
+var item = new data_MF(); // note the "new" keyword here
+const fs = require("fs");
+let text = fs.readFileSync("../ficheclim/01089001.data","utf8");
+//console.log(text);
+item.indicatif = ref.refcli[0].ref;
+item.ville = ref.refcli[0].town;
+item.departement="01";
+item.altitude="250";
+item.latitude=`45°58'30"N`;
+item.longitude=`05°19'42"E`;
+item.temp_moy="10.2";
+item.temp_min="8.9";
+item.temp_max="13.3";
+item.ensoleillement="2000";
+item.pluie="876";
+item.vent="10";
+item.distance_cnpe=Math.trunc(centrale_la_plus_proche(item.latitude, item.longitude)).toString();
+item.prix_maisons=prix_m2[prix_m2.findIndex(x => x.dpt==item.departement)]["prix"];
+
+fiches.push(item);
+console.log(fiches[0]);
+
+// TODO : boucle sur l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
 
 /*
 		ss << setw(8) << left << x.ref << " - " << setw(25) << left << x.town <<
