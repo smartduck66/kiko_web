@@ -88,8 +88,7 @@ console.log(centrale_la_plus_proche(lat_to_test, long_to_test));
 
 // Création du fichier json central regroupant les fiches climatiques
 const ref = require('../data/ListeFichesClimatiques.json');
-//console.log(ref.refcli[300].ref);
-//console.log(ref.refcli[300].town);   
+const nb_fiches = Object.keys(ref.refcli).length
 
 class data_MF {
     indicatif;
@@ -107,29 +106,54 @@ class data_MF {
 }
 
 var fiches = [];
-var item = new data_MF(); // note the "new" keyword here
 const fs = require("fs");
-let text = fs.readFileSync("../ficheclim/01089001.data","utf8");
-//console.log(text);
-item.indicatif = ref.refcli[0].ref;
-item.ville = ref.refcli[0].town;
-item.departement="01";
-item.altitude="250";
-item.latitude=`45°58'30"N`;
-item.longitude=`05°19'42"E`;
-item.temp_moy="10.2";
-item.temp_min="8.9";
-item.temp_max="13.3";
-item.ensoleillement="2000";
-item.pluie="876";
-item.vent="10";
-item.distance_cnpe=Math.trunc(centrale_la_plus_proche(item.latitude, item.longitude)).toString();
-item.prix_maisons=prix_m2[prix_m2.findIndex(x => x.dpt==item.departement)]["prix"];
+console.log(fs.readFileSync("../ficheclim/"+ref.refcli[0].ref+".data","utf8"));
+// Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
+for (let i=0;i< nb_fiches; i++) {
+    let text = fs.readFileSync("../ficheclim/"+ref.refcli[i].ref+".data","utf8");
+    var item = new data_MF(); // note the "new" keyword here
+    
+    item.indicatif = ref.refcli[i].ref;
+    item.ville = ref.refcli[i].town;
 
-fiches.push(item);
-console.log(fiches[0]);
+    // regex sur : AMBERIEU (01)      Indicatif : 01089001, alt : 250m, lat : 45°58'30"N, lon : 05°19'42"E;
+    let pattern1 = / /;
+    let match1 = text.match(pattern1);
+    if (match1 !== null) { 
+        item.departement = match1[0];
+        item.altitude = match1[1];
+        item.latitude = match1[2];
+        item.longitude = match1[3];
+    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données dpt, altitude, latitude ou longitude !");
 
-// TODO : boucle sur l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
+    // regex sur Température moyenne (Moyenne en °C);
+    //        ;       2.5;       3.8;       7.5;      10.5;      14.9;      18.2;      20.8;      20.3;      16.4;      12.5;       6.6;       3.5;      11.5;
+    item.temp_moy="10.2";
+    item.temp_min="8.9";
+    item.temp_max="13.3";
+    
+    // regex sur Durée d'insolation (Moyenne en heures);
+    //        ;      71.7;      96.9;     166.5;     187.7;     215.6;     250.1;     284.9;     252.2;     183.6;       120;      68.9;      50.2;    1948.3;
+    item.ensoleillement="2000";
+    
+    // regex sur Précipitations : Hauteur moyenne mensuelle (mm);
+    //        ;      83.7;      73.3;      80.1;      95.2;     116.6;      91.7;      77.7;      82.1;       111;     120.1;     107.6;      95.3;    1134.4;
+    item.pluie="876";
+    
+    // regex sur Nombre moyen de jours avec rafales;
+//     >= 16 m/s   ;         -;       3.4;       4.3;       3.4;       2.6;       1.7;       2.1;       1.3;       1.5;       2.4;       3.0;       3.9;         -;
+    item.vent="10";
+    
+    
+    item.distance_cnpe=Math.trunc(centrale_la_plus_proche(item.latitude, item.longitude)).toString();
+    item.prix_maisons=prix_m2[prix_m2.findIndex(x => x.dpt==item.departement)]["prix"];
+    
+    fiches.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches climatiques
+}
+
+fs.writeFileSync('../data/fc.json', JSON.stringify(fiches));    // Création du json final sur disque
+
+
 
 /*
 		ss << setw(8) << left << x.ref << " - " << setw(25) << left << x.town <<
