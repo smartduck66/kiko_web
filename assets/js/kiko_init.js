@@ -187,6 +187,8 @@ for (let i=0;i< nb_fiches; i++) {
     }
 
     fiches.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches climatiques
+    
 }
 
 fs.writeFileSync('../data/fc.json', JSON.stringify(fiches));    // Création du json final sur disque
+
