@@ -11,7 +11,6 @@ const EARTH_RADIUS_KM = 6371;
 const M_PI = Math.acos(-1.0);
 
 // Chargement des prix au m2 et des coordonnées des CNPE
-// Ex de Web API : fetch("assets/data/centrales.json") .then(response => {return response.json();}) .then(data => console.log(data));
 let prix_m2 = require('../data/prix_maisons_m2.json');    
 let lat_long_CNPE = require('../data/centrales.json');    
 
@@ -181,7 +180,7 @@ for (let i=0;i< nb_fiches; i++) {
     item.distance_cnpe = Math.trunc(centrale_la_plus_proche(item.latitude, item.longitude)).toString();
     
     try {
-        item.prix_maisons=prix_m2[prix_m2.findIndex(x => x.dpt==item.departement)]["prix"];
+        item.prix_maisons = prix_m2[prix_m2.findIndex(x => x.dpt==item.departement)]["prix"];
     }
     catch (ex) {
         item.prix_maisons = "indisponible";

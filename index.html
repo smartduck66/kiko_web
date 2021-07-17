@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>KIKO web</title>
     </head>
     <body>
 
         <br> 
         <label>Distance de la CNPE (kms) : 
-            <input type="text" id="Référence" value="" size="190"> 
+            <input type="text" id="Référence" value="" size="50"> 
         </label>         
         <br> 
 
@@ -16,8 +19,28 @@
 
     <script>
 
-        document.getElementById('Référence').value = "Vélizy";
+        fetch("assets/data/fc.json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
 
+        function appendData(data) {
+            var mainContainer = document.getElementById('Référence');
+            var div = document.createElement("div");
+            div.innerHTML = data[data.findIndex(x => x.ref=="78640001")]["distance_cnpe"];
+            mainContainer.appendChild(div);
+            
+        }
+  
+        // fetch("assets/data/fc.json") .then(response => {return response.json();}) .then(data => console.log(data));
+        // document.getElementById('Référence').value = "Vélizy";
+    
     </script>
 
 
