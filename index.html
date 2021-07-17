@@ -4,12 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link
-        rel="preload"
-        href="assets/data/fc.json"
-        as="fetch"
-        crossorigin
-        />
         <title>KIKO web</title>
     </head>
     <body>
@@ -25,9 +19,23 @@
 
     <script>
 
-        let data = require('fc.json');
-
-        document.getElementById('Référence').value = data[data.findIndex(x => x.indicatif=="78640001")]["distance_cnpe"];
+        fetch("https://confident-edison-4570c2.netlify.app/assets/data/fc.json")
+             
+             .then(function (response) {
+                 return response.json();
+             })
+             .then(function (data) {
+                 appendData(data);
+             })
+             .catch(function (err) {
+                 console.log('error: ' + err);
+             });
+ 
+         function appendData(data) {
+ 
+             document.getElementById('Référence').value = data[data.findIndex(x => x.indicatif=="78640001")]["distance_cnpe"];
+             
+         }
             
         
   
