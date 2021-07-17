@@ -3,7 +3,7 @@
   functions = "functions"
 
 [[headers]]
-  # Define which paths this specific [[headers]] block will cover.
+  # CORS to harden -> lecture fichier json
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
