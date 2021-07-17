@@ -183,7 +183,7 @@ for (let i=0;i< nb_fiches; i++) {
         item.prix_maisons = prix_m2[prix_m2.findIndex(x => x.dpt==item.departement)]["prix"];
     }
     catch (ex) {
-        item.prix_maisons = "indisponible";
+        item.prix_maisons = "-";
     }
 
     fiches.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches climatiques
