@@ -25,7 +25,6 @@
                 return response.json();
             })
             .then(function (data) {
-                console.log(data);
                 appendData(data);
             })
             .catch(function (err) {
@@ -35,7 +34,7 @@
         function appendData(data) {
             var mainContainer = document.getElementById('Référence');
             var div = document.createElement("div");
-            div.innerHTML = data[data.findIndex(x => x.ref=="78640001")]["distance_cnpe"];
+            div.innerHTML = data[data.findIndex(x => x.indicatif=="78640001")]["distance_cnpe"];
             mainContainer.appendChild(div);
             
         }
