@@ -80,11 +80,23 @@ function centrale_la_plus_proche(latitude_station, longitude_station){
 
 }
 
-/* Tests
-let lat_to_test=`43°54'30"N`;
-let long_to_test=`00°30'00"W`;
-console.log(centrale_la_plus_proche(lat_to_test, long_to_test));
-*/
+function extraction_valeurs_climatiques(fiche, match, pattern_size){
+    
+    // Guard : on teste la présence d'une mention au lieu de valeurs
+    let mention_stats = fiche.substr(match.index + pattern_size, 1);  
+    
+    if (mention_stats=="D") {
+        // Données non disponibles
+        return "indisponible";
+
+    } else {
+        let test = fiche.split(";");
+        let offset = (mention_stats=="S" ? pattern_size + 47 : pattern_size); // La présence de 'Statistiques établies...' modifie le démarrage des valeurs
+        let s1 = fiche.substr(match.index + offset, offset + 117);
+        let s2 = s1.split(";");
+        return s2[13].trimStart();
+    }
+}
 
 // Création du fichier json central regroupant les fiches climatiques
 const ref = require('../data/ListeFichesClimatiques.json');
@@ -107,47 +119,88 @@ class data_MF {
 
 var fiches = [];
 const fs = require("fs");
-console.log(fs.readFileSync("../ficheclim/"+ref.refcli[0].ref+".data","utf8"));
+
 // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
 for (let i=0;i< nb_fiches; i++) {
     let text = fs.readFileSync("../ficheclim/"+ref.refcli[i].ref+".data","utf8");
     var item = new data_MF(); // note the "new" keyword here
-    
+     
     item.indicatif = ref.refcli[i].ref;
     item.ville = ref.refcli[i].town;
-
-    // regex sur : AMBERIEU (01)      Indicatif : 01089001, alt : 250m, lat : 45°58'30"N, lon : 05°19'42"E;
-    let pattern1 = / /;
+     
+    let pattern0 = /\(\d{1,3}\)/;
+    let match0 = text.match(pattern0);
+    if (match0 !== null) {
+        let s = match0[0];
+        item.departement = s.substring(s.indexOf("(")+1,s.indexOf(")"));
+    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données concernant le département...");
+  
+    let pattern1 = /alt : \d+m/;
     let match1 = text.match(pattern1);
-    if (match1 !== null) { 
-        item.departement = match1[0];
-        item.altitude = match1[1];
-        item.latitude = match1[2];
-        item.longitude = match1[3];
-    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données dpt, altitude, latitude ou longitude !");
+    if (match1 !== null) {
+        let s = match1[0];
+        item.altitude = s.substring(s.indexOf(":")+2,s.indexOf("m"));
+    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données concernant l'altitude...");
 
-    // regex sur Température moyenne (Moyenne en °C);
-    //        ;       2.5;       3.8;       7.5;      10.5;      14.9;      18.2;      20.8;      20.3;      16.4;      12.5;       6.6;       3.5;      11.5;
-    item.temp_moy="10.2";
-    item.temp_min="8.9";
-    item.temp_max="13.3";
+    let pattern2 = /lat : .+,/;
+    let match2 = text.match(pattern2);
+    if (match2 !== null) {
+        let s = match2[0];
+        item.latitude = s.substring(s.indexOf(":")+1,s.indexOf(","));
+    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données concernant la latitude...");
     
-    // regex sur Durée d'insolation (Moyenne en heures);
-    //        ;      71.7;      96.9;     166.5;     187.7;     215.6;     250.1;     284.9;     252.2;     183.6;       120;      68.9;      50.2;    1948.3;
-    item.ensoleillement="2000";
+    let pattern3 = /lon : .+;/;
+    let match3 = text.match(pattern3);
+    if (match3 !== null) {
+        let s = match3[0];
+        item.longitude = s.substring(s.indexOf(":")+1,s.indexOf(";"));
+    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données concernant la longitude...");
     
-    // regex sur Précipitations : Hauteur moyenne mensuelle (mm);
-    //        ;      83.7;      73.3;      80.1;      95.2;     116.6;      91.7;      77.7;      82.1;       111;     120.1;     107.6;      95.3;    1134.4;
-    item.pluie="876";
+    let pattern4 = /Température moyenne \(Moyenne en °C\);\r\r\n/;
+    let match4 = text.match(pattern4);
+    if (match4 !== null) {
+        item.temp_moy = extraction_valeurs_climatiques(text, match4, pattern4.toString().length-7);
+    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données concernant la température moyenne...");
     
-    // regex sur Nombre moyen de jours avec rafales;
-//     >= 16 m/s   ;         -;       3.4;       4.3;       3.4;       2.6;       1.7;       2.1;       1.3;       1.5;       2.4;       3.0;       3.9;         -;
-    item.vent="10";
+    let pattern5 = /Température minimale \(Moyenne en °C\);\r\r\n/;
+    let match5 = text.match(pattern5);
+    if (match5 !== null) {
+        item.temp_min = extraction_valeurs_climatiques(text, match5, pattern5.toString().length-7);
+    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données concernant la température minimale...");
     
+    let pattern6 = /Température maximale \(Moyenne en °C\);\r\r\n/;
+    let match6 = text.match(pattern6);
+    if (match6 !== null) {
+        item.temp_max = extraction_valeurs_climatiques(text, match6, pattern6.toString().length-7);
+    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données concernant la température maximale...");
     
-    item.distance_cnpe=Math.trunc(centrale_la_plus_proche(item.latitude, item.longitude)).toString();
-    item.prix_maisons=prix_m2[prix_m2.findIndex(x => x.dpt==item.departement)]["prix"];
+    let pattern7 = /Durée d'insolation \(Moyenne en heures\);\r\r\n/;
+    let match7 = text.match(pattern7);
+    if (match7 !== null) {
+        item.ensoleillement = extraction_valeurs_climatiques(text, match7, pattern7.toString().length-7);
+    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données concernant la durée d'insolation...");
     
+    let pattern8 = /Précipitations : Hauteur moyenne mensuelle \(mm\);\r\r\n/;
+    let match8 = text.match(pattern8);
+    if (match8 !== null) {
+        item.pluie = extraction_valeurs_climatiques(text, match8, pattern8.toString().length-7);
+    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données concernant les précipitations...");
+    
+    let pattern9 = /Nombre moyen de jours avec rafales;\r\r\n/;
+    let match9 = text.match(pattern9);
+    if (match9 !== null) {
+        item.vent = extraction_valeurs_climatiques(text, match9, pattern9.toString().length-5);
+    } else throw new Error("La fiche " + ref.refcli[i].ref + " semble ne pas avoir de données concernant les rafales de vent...");
+    
+    item.distance_cnpe = Math.trunc(centrale_la_plus_proche(item.latitude, item.longitude)).toString();
+    
+    try {
+        item.prix_maisons=prix_m2[prix_m2.findIndex(x => x.dpt==item.departement)]["prix"];
+    }
+    catch (ex) {
+        item.prix_maisons = "indisponible";
+    }
+
     fiches.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches climatiques
 }
 
