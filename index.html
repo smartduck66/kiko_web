@@ -25,13 +25,37 @@
         <div> 
             <b>Référence climatique</b>
             <p><span id="Référence"></span></p>
-            
+            <button style="font-size: 1em; background-color: rgba(220, 0, 0, 1); color: rgba(255, 255, 255, 255)" id="Reset_Filtres" onClick="ResetFiltres();">Réinitialiser les filtres</button>
+            <br>
             <label>Température moyenne annuelle (saisir MIN et MAX en degrés celsius)....... : 
                 <input type="text" id="min_temp" value="" size="1"> 
                 <input type="text" id="max_temp" value="" size="1"> 
+            </label>
+            <br>
+            <label>Durée d'insolation moyenne (saisir MIN et MAX en heures/an).....................: 
+                <input type="text" id="min_soleil" value="" size="1"> 
+                <input type="text" id="max_soleil" value="" size="1"> 
+            </label>
+            <br>
+            <label>Hauteur moyenne mensuelle des précipitations (saisir MIN et MAX en mm) : 
+                <input type="text" id="min_pluie" value="" size="1"> 
+                <input type="text" id="max_pluie" value="" size="1"> 
             </label>         
-            <button id="temp_btn" onClick="filtre()">GO</button>
-            
+            <br>
+            <label>Nombre moyen de jours/an avec rafales (saisir MIN et MAX)....................... : 
+                <input type="text" id="min_vent" value="" size="1"> 
+                <input type="text" id="max_vent" value="" size="1"> 
+            </label>           
+            <button id="filtres" onClick="filtres()">GO</button>
+            <br>
+            <label>Fiches d'un département : 
+                <input type="text" id="fiches_dep" value="78" size="1"> 
+            </label>         
+            <button id="fiches_dep_btn" onClick="departement()">GO</button>         
+            <br> 
+            <label>  Nombre d'occurences trouvées : </label><span id="occurences"></span>
+            <br>
+
             <textarea id="results" rows="35" cols="230"></textarea> 
 
         </div> 
@@ -86,8 +110,20 @@
             return "".concat(...s);
         }
         
-         function filtre() {
-            // Filtre
+        function affichage_fiches(results){
+            // Affichage des fiches
+            let s = [];
+            for (let i=0;i< results.length; i++) {
+                s.push(fiche_climatique(results[i].indicatif));
+                s.push("\n");
+
+            }
+            document.getElementById('results').innerHTML = "".concat(...s);
+            document.getElementById('occurences').innerHTML = results.length;
+        } 
+
+        function filtres() {
+            // Filtres
 
             let data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
 
@@ -103,17 +139,77 @@
                 document.getElementById('max_temp').value = p2;
             }
 
-            // Sélection des fiches climatiques
-            let results = data.filter(x => x.temp_moy >= p1 && x.temp_moy <= p2 );
-            let s = [];
-            for (let i=0;i< results.length; i++) {
-                s.push(fiche_climatique(results[i].indicatif));
-                s.push("\n");
-
+            let p3 = document.getElementById('min_soleil').value;
+            let p4 = document.getElementById('max_soleil').value;
+            if (p3 > p4) {
+                p3 = p4;
+                document.getElementById('min_soleil').value = p3;
             }
-            document.getElementById('results').innerHTML = "".concat(...s);
-         }
+            if (p4 < p3) {
+                p4 = p3;
+                document.getElementById('max_soleil').value = p4;
+            }
+            let p5 = document.getElementById('min_pluie').value;
+            let p6 = document.getElementById('max_pluie').value;
+            if (p5 > p6) {
+                p5 = p6;
+                document.getElementById('min_pluie').value = p5;
+            }
+            if (p6 < p5) {
+                p6 = p5;
+                document.getElementById('max_pluie').value = p6;
+            }
+            let p7 = document.getElementById('min_vent').value;
+            let p8 = document.getElementById('max_vent').value;
+            if (p7 > p8) {
+                p7 = p8;
+                document.getElementById('min_vent').value = p7;
+            }
+            if (p8 < p7) {
+                p8 = p7;
+                document.getElementById('max_vent').value = p8;
+            }
+
+            // Sélection des fiches climatiques
+            let results = data;
+            if (p1 != "" && p2 != "") {results = results.filter(x => x.temp_moy >= p1 && x.temp_moy <= p2);}
+            if (p3 != "" && p4 != "") {results = results.filter(x => x.ensoleillement >= p3 && x.ensoleillement <= p4);}
+            if (p5 != "" && p6 != "") {results = results.filter(x => x.pluie >= p5 && x.pluie <= p6);}
+            if (p7 != "" && p8 != "") {results = results.filter(x => x.vent >= p7 && x.vent <= p8);}
+            
+            affichage_fiches(results);
+        }
   
+        function departement() {
+            // Fiches d'un département donné
+
+            let data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
+
+            // Récupération et sécurisation du paramétre saisi
+            let p1 = document.getElementById('fiches_dep').value;
+
+            // Sélection des fiches climatiques
+            let results = data;
+            if (p1 != "") {results = results.filter(x => x.departement == p1);}
+
+            affichage_fiches(results);
+        }
+
+        function ResetFiltres() {
+            document.getElementById('min_temp').value = "";
+            document.getElementById('max_temp').value = "";
+            document.getElementById('min_soleil').value = "";
+            document.getElementById('max_soleil').value = "";
+            document.getElementById('min_pluie').value = "";
+            document.getElementById('max_pluie').value = "";
+            document.getElementById('min_vent').value = "";
+            document.getElementById('max_vent').value = "";
+            document.getElementById('occurences').innerHTML = "";
+            document.getElementById('fiches_dep').value = "78";
+            document.getElementById('results').innerHTML = "Les filtres ont été réinitialisés.";
+			
+		}    
+
     </script>
     
 </html>
