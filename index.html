@@ -19,7 +19,10 @@
 
     <script>
 
-        fetch("https://confident-edison-4570c2.netlify.app/assets/data/fc.json")
+        fetch("https://confident-edison-4570c2.netlify.app/assets/data/fc.json", {
+            credentials: 'same-origin'
+             })
+             
             .then(function (response) {
                 return response.json();
             })
