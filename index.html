@@ -20,11 +20,9 @@
     </head>
     <body>
 
-        <br> 
-        <label>Distance de la CNPE (kms) : 
-            <input type="text" id="Distance" value="" size="50"> 
-        </label>         
-        <br> 
+        <div> 
+        <label>Distance de la CNPE : <input type="text" id="Distance" value="" size="20"> kms</label>         
+        </div> 
 
 
     </body>
@@ -46,7 +44,6 @@
          function appendData(data) {
             // Affichage des valeurs de référence (Villacoublay)
             let station_ref = data[data.findIndex(x => x.indicatif=="78640001")]
-            //document.getElementById('Référence').value = data[data.findIndex(x => x.indicatif=="78640001")]["distance_cnpe"];
             document.getElementById('Distance').value = station_ref.distance_cnpe; 
          }
             
