@@ -35,6 +35,7 @@
             var mainContainer = document.getElementById('Référence');
             var div = document.createElement("div");
             div.innerHTML = data[data.findIndex(x => x.indicatif=="78640001")]["distance_cnpe"];
+            console.log(data[data.findIndex(x => x.indicatif=="78640001")]["distance_cnpe"]);
             mainContainer.appendChild(div);
             
         }
