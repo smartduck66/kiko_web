@@ -99,9 +99,9 @@
                 <label>Température moyenne :</label> 
             </div>
             <div class="column">
-                entre <input type="text" id="min_temp" value="" size="2">
+                entre <input type="text" id="min_temp" value="" size="3">
                 et 
-                <input type="text" id="max_temp" value="" size="2"> 
+                <input type="text" id="max_temp" value="" size="3"> 
             </div>    
         </div>
         <div class="columns is-mobile"> 
@@ -109,9 +109,9 @@
                 <label>Durée d'insolation :</label> 
             </div>
             <div class="column">
-                entre <input type="text" id="min_soleil" value="" size="2">
+                entre <input type="text" id="min_soleil" value="" size="3">
                 et 
-                <input type="text" id="max_soleil" value="" size="2"> 
+                <input type="text" id="max_soleil" value="" size="3"> 
             </div>    
         </div>
         <div class="columns is-mobile"> 
@@ -119,9 +119,9 @@
                 <label>Précipitations :</label> 
             </div>
             <div class="column">
-                entre <input type="text" id="min_pluie" value="" size="2">
+                entre <input type="text" id="min_pluie" value="" size="3">
                 et 
-                <input type="text" id="max_pluie" value="" size="2"> 
+                <input type="text" id="max_pluie" value="" size="3"> 
             </div>    
         </div>
         <div class="columns is-mobile"> 
@@ -129,9 +129,9 @@
                 <label>Nb jours avec rafales :</label> 
             </div>
             <div class="column">
-                entre <input type="text" id="min_vent" value="" size="2">
+                entre <input type="text" id="min_vent" value="" size="3">
                 et 
-                <input type="text" id="max_vent" value="" size="2"> 
+                <input type="text" id="max_vent" value="" size="3"> 
             </div>    
         </div>
         <div class="columns is-mobile is-centered"> 
@@ -142,8 +142,20 @@
                 <button class="button is-light is-small" id="filtres" onClick="filtres()">Lancer la recherche</button> 
             </div>    
         </div>
+        <label>Fiches d'un département : 
+            <input type="text" id="fiches_dep" value="78" size="1"> 
+        </label>         
+        <button id="fiches_dep_btn" onClick="departement()">GO</button> 
+        <div class="box">
+            <span class="icon-text">
+                <span class="icon">
+                  <i class="fas fa-grin"></i>
+                </span>
+                <label>  Nombre d'occurences trouvées : </label><span id="occurences"></span>
+              </span>
+        </div>
         
-        <label>  Nombre d'occurences trouvées : </label><span id="occurences"></span>
+        
         <div class="content is-small">
             <div class="columns is-gapless is-mobile">
                 <div class="column is-one-fifth"><b>Station</b></div>
@@ -173,26 +185,7 @@
                 </div>
             </div>
             <div class="columns is-gapless is-multiline is-mobile">
-                <div class="column is-one-fifth">78640001 Villacoublay (174 m)</div>
-                <div class="column">11.2</div>
-                <div class="column">5.6</div>
-                <div class="column">16.9</div>
-                <div class="column">1800</div>
-                <div class="column">1000</div>
-                <div class="column">44</div>
-                <div class="column">100</div>
-                <div class="column">4456</div>
-            </div>
-            <div class="columns is-gapless is-multiline is-mobile">
-                <div class="column is-one-fifth">78640001 Villacoublay (174 m)</div>
-                <div class="column">11.2</div>
-                <div class="column">5.6</div>
-                <div class="column">16.9</div>
-                <div class="column">1800</div>
-                <div class="column">1000</div>
-                <div class="column">44</div>
-                <div class="column">100</div>
-                <div class="column">4456</div>
+                <span id="results"></span>
             </div>
         </div>
     </body>
@@ -230,28 +223,39 @@
 
             let station = data[data.findIndex(x => x.indicatif == ref)]
             let s = [];
+            s.push(`<div class="columns is-gapless is-multiline is-mobile">`);
+            s.push(`<div class="column is-one-fifth">`);
             s.push(station.indicatif);
-            s.push(" - ");
-            s.push(station.ville.padEnd(20).slice(0,20));   // 20 caractères max pour la ville
+            s.push(" ");
+            s.push(station.ville);
             s.push(" (");
             s.push(station.altitude);
-            s.push(" m) - T moy : ");
+            s.push(" m)</div>");
+            s.push(`<div class="column">`);
             s.push(station.temp_moy);
-            s.push("° - T min : ");
+            s.push("</div>");
+            s.push(`<div class="column">`);
             s.push(station.temp_min);
-            s.push("° - T max : ");
+            s.push("</div>");
+            s.push(`<div class="column">`);
             s.push(station.temp_max);
-            s.push("° - Soleil : ");
-            if (isNaN(station.ensoleillement)) {s.push(0);} else {s.push(Math.trunc(Number(station.ensoleillement)));}  // Ternary operator does not run...
-            s.push(" h/an - Pluie : ");
+            s.push("</div>");
+            s.push(`<div class="column">`);
+            if (isNaN(station.ensoleillement)) {s.push(0);} else {s.push(Math.trunc(Number(station.ensoleillement)));}
+            s.push("</div>");
+            s.push(`<div class="column">`);
             if (isNaN(station.pluie)) {s.push(0);} else {s.push(Math.trunc(Number(station.pluie)));}
-            s.push(" mm/mois - Rafales de vent : ");
+            s.push("</div>");
+            s.push(`<div class="column">`);
             if (isNaN(station.vent)) {s.push(0);} else {s.push(Math.trunc(Number(station.vent)));}
-            s.push(" j/an - Dist. Centrale : ");
+            s.push("</div>");
+            s.push(`<div class="column">`);
             s.push(station.distance_cnpe);
-            s.push(" kms - Prix maisons : ");
+            s.push("</div>");
+            s.push(`<div class="column">`);
             s.push(station.prix_maisons);
-            s.push(" €/m2");
+            s.push("</div>");
+            s.push("</div>");
 
             return "".concat(...s);
         }
@@ -264,6 +268,7 @@
                 s.push("\n");
 
             }
+
             document.getElementById('results').innerHTML = "".concat(...s);
             document.getElementById('occurences').innerHTML = results.length;
         } 
