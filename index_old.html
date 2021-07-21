@@ -13,110 +13,28 @@
         <script src="https://kit.fontawesome.com/1046b8e22f.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <section class="section">      
-      
-            <div class="columns">
-                <div class="column">
-                  <p class="bd-notification is-info" id="en-tete"></p>
-                  <div class="columns is-mobile">
-                    <div class="column is-two-fifths">
-                        <p>
-                        <span class="icon-text">
-                            <span class="icon">
-                              <i class="fas fa-thermometer-half"></i>
-                            </span>
-                            <span id="tmoy"></span>
-                        </span>
-                        </p>
-                        <p>
-                        <span class="icon-text">
-                            <span class="icon">
-                              <i class="fas fa-temperature-low"></i>
-                            </span>
-                            <span id="tmin"></span>
-                        </span>
-                        </p>
-                        <p>
-                        <span class="icon-text">
-                            <span class="icon">
-                              <i class="fas fa-temperature-high"></i>
-                            </span>
-                            <span id="tmax"></span>
-                        </span>
-                        </p>
-                        <p>
-                            <span class="icon-text">
-                                <span class="icon ">
-                                  <i class="fas fa-atom"></i>
-                                </span>
-                                <span id="cnpe"></span>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <p>
-                        <span class="icon-text">
-                            <span class="icon">
-                              <i class="fas fa-sun"></i>
-                            </span>
-                            <span id="soleil"></span>
-                        </span>
-                        </p>
-                        <p>
-                        <span class="icon-text">
-                            <span class="icon">
-                              <i class="fas fa-cloud-rain"></i>
-                            </span>
-                            <span id="pluie"></span>
-                        </span>
-                        </p>
-                        <p>
-                            <span class="icon-text">
-                                <span class="icon ">
-                                  <i class="fas fa-wind"></i>
-                                </span>
-                                <span id="vent"></span>
-                            </span>
-                        </p>
-                        <p>
-                            <span class="icon-text">
-                                <span class="icon ">
-                                  <i class="fas fa-home"></i>
-                                </span>
-                                <span id="prix"></span>
-                            </span>
-                        </p>
-                    </div>
-                  </div>
-                </div>
-                
-            </div>
-            <button style="font-size: 1em; background-color: rgba(220, 0, 0, 1); color: rgba(255, 255, 255, 255)" id="Reset_Filtres" onClick="ResetFiltres();">Réinitialiser les filtres</button>
-          </section>
-        
-
-
-
 
         <div> 
-
-            
-            <label>Température moyenne : 
+            <b>Référence climatique</b>
+            <p><span id="Référence"></span></p>
+            <button style="font-size: 1em; background-color: rgba(220, 0, 0, 1); color: rgba(255, 255, 255, 255)" id="Reset_Filtres" onClick="ResetFiltres();">Réinitialiser les filtres</button>
+            <br>
+            <label>Température moyenne annuelle (saisir MIN et MAX en degrés celsius)....... : 
                 <input type="text" id="min_temp" value="" size="1"> 
                 <input type="text" id="max_temp" value="" size="1"> 
             </label>
             <br>
-            <label>Durée d'insolation : 
+            <label>Durée d'insolation moyenne (saisir MIN et MAX en heures/an).....................: 
                 <input type="text" id="min_soleil" value="" size="1"> 
                 <input type="text" id="max_soleil" value="" size="1"> 
             </label>
             <br>
-            <label>Hauteur des précipitations : 
+            <label>Hauteur moyenne mensuelle des précipitations (saisir MIN et MAX en mm) : 
                 <input type="text" id="min_pluie" value="" size="1"> 
                 <input type="text" id="max_pluie" value="" size="1"> 
             </label>         
             <br>
-            <label>Nombre de jours avec rafales : 
+            <label>Nombre moyen de jours/an avec rafales (saisir MIN et MAX)....................... : 
                 <input type="text" id="min_vent" value="" size="1"> 
                 <input type="text" id="max_vent" value="" size="1"> 
             </label>           
@@ -128,59 +46,11 @@
             <button id="fiches_dep_btn" onClick="departement()">GO</button>         
             <br> 
             <label>  Nombre d'occurences trouvées : </label><span id="occurences"></span>
+            <br>
 
-        </div>
-        <div class="content is-small">
-            <div class="columns is-gapless is-mobile">
-                <div class="column is-one-fifth"><b>Station</b></div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-thermometer-half"></i></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-temperature-low"></i></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-temperature-high"></i></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-sun"></i></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-cloud-rain"></i></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-wind"></i></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-atom"></i></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-home"></i></span>
-                </div>
-            </div>
-            <div class="columns is-gapless is-multiline is-mobile">
-                <div class="column is-one-fifth">78640001 Villacoublay (174 m)</div>
-                <div class="column">11.2</div>
-                <div class="column">5.6</div>
-                <div class="column">16.9</div>
-                <div class="column">1800</div>
-                <div class="column">1000</div>
-                <div class="column">44</div>
-                <div class="column">100</div>
-                <div class="column">4456</div>
-            </div>
-            <div class="columns is-gapless is-multiline is-mobile">
-                <div class="column is-one-fifth">78640001 Villacoublay (174 m)</div>
-                <div class="column">11.2</div>
-                <div class="column">5.6</div>
-                <div class="column">16.9</div>
-                <div class="column">1800</div>
-                <div class="column">1000</div>
-                <div class="column">44</div>
-                <div class="column">100</div>
-                <div class="column">4456</div>
-            </div>
-        </div>
+            <textarea id="results" rows="35" cols="230"></textarea> 
+
+        </div> 
     </body>
 
     <script>
@@ -193,17 +63,7 @@
              .then(function (data) {
                 localStorage.clear();
                 localStorage.fc = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
-                // Affichage valeur de référence
-                let station = data[data.findIndex(x => x.indicatif == "78640001")];
-                document.getElementById('en-tete').innerHTML = station.indicatif + ' - ' + station.ville + ' (' + station.altitude + ' m)'; 
-                document.getElementById('tmoy').innerHTML = station.temp_moy + '°';
-                document.getElementById('tmin').innerHTML = station.temp_min + '°';
-                document.getElementById('tmax').innerHTML = station.temp_max + '°';
-                document.getElementById('cnpe').innerHTML = station.distance_cnpe + ' kms';
-                document.getElementById('soleil').innerHTML = station.ensoleillement + ' h/an';
-                document.getElementById('pluie').innerHTML = station.pluie + ' mm/mois';
-                document.getElementById('vent').innerHTML = station.vent + ' j/an';
-                document.getElementById('prix').innerHTML = station.prix_maisons + ' €/m2';
+                document.getElementById('Référence').innerHTML = fiche_climatique("78640001"); // Affichage valeur de référence
              })
              .catch(function (err) {
                  console.log('error: ' + err);
