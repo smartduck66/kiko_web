@@ -13,7 +13,7 @@
         <script src="https://kit.fontawesome.com/1046b8e22f.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <section class="section">      
+        <div class="box">      
       
             <div class="columns">
                 <div class="column">
@@ -91,45 +91,59 @@
                 </div>
                 
             </div>
-            <button style="font-size: 1em; background-color: rgba(220, 0, 0, 1); color: rgba(255, 255, 255, 255)" id="Reset_Filtres" onClick="ResetFiltres();">Réinitialiser les filtres</button>
-          </section>
-        
-
-
-
-
-        <div> 
-
             
-            <label>Température moyenne : 
-                <input type="text" id="min_temp" value="" size="1"> 
-                <input type="text" id="max_temp" value="" size="1"> 
-            </label>
-            <br>
-            <label>Durée d'insolation : 
-                <input type="text" id="min_soleil" value="" size="1"> 
-                <input type="text" id="max_soleil" value="" size="1"> 
-            </label>
-            <br>
-            <label>Hauteur des précipitations : 
-                <input type="text" id="min_pluie" value="" size="1"> 
-                <input type="text" id="max_pluie" value="" size="1"> 
-            </label>         
-            <br>
-            <label>Nombre de jours avec rafales : 
-                <input type="text" id="min_vent" value="" size="1"> 
-                <input type="text" id="max_vent" value="" size="1"> 
-            </label>           
-            <button id="filtres" onClick="filtres()">GO</button>
-            <br>
-            <label>Fiches d'un département : 
-                <input type="text" id="fiches_dep" value="78" size="1"> 
-            </label>         
-            <button id="fiches_dep_btn" onClick="departement()">GO</button>         
-            <br> 
-            <label>  Nombre d'occurences trouvées : </label><span id="occurences"></span>
-
         </div>
+
+        <div class="columns is-mobile"> 
+            <div class="column is-half">
+                <label>Température moyenne :</label> 
+            </div>
+            <div class="column">
+                entre <input type="text" id="min_temp" value="" size="2">
+                et 
+                <input type="text" id="max_temp" value="" size="2"> 
+            </div>    
+        </div>
+        <div class="columns is-mobile"> 
+            <div class="column is-half">
+                <label>Durée d'insolation :</label> 
+            </div>
+            <div class="column">
+                entre <input type="text" id="min_soleil" value="" size="2">
+                et 
+                <input type="text" id="max_soleil" value="" size="2"> 
+            </div>    
+        </div>
+        <div class="columns is-mobile"> 
+            <div class="column is-half">
+                <label>Précipitations :</label> 
+            </div>
+            <div class="column">
+                entre <input type="text" id="min_pluie" value="" size="2">
+                et 
+                <input type="text" id="max_pluie" value="" size="2"> 
+            </div>    
+        </div>
+        <div class="columns is-mobile"> 
+            <div class="column is-half">
+                <label>Nb jours avec rafales :</label> 
+            </div>
+            <div class="column">
+                entre <input type="text" id="min_vent" value="" size="2">
+                et 
+                <input type="text" id="max_vent" value="" size="2"> 
+            </div>    
+        </div>
+        <div class="columns is-mobile is-centered"> 
+            <div class="column is-half">
+                <button class="button is-danger is-small" id="Reset_Filtres" onClick="ResetFiltres();">Réinitialiser les filtres</button>
+            </div>
+            <div class="column">
+                <button class="button is-light is-small" id="filtres" onClick="filtres()">Lancer la recherche</button> 
+            </div>    
+        </div>
+        
+        <label>  Nombre d'occurences trouvées : </label><span id="occurences"></span>
         <div class="content is-small">
             <div class="columns is-gapless is-mobile">
                 <div class="column is-one-fifth"><b>Station</b></div>
@@ -195,7 +209,7 @@
                 localStorage.fc = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
                 // Affichage valeur de référence
                 let station = data[data.findIndex(x => x.indicatif == "78640001")];
-                document.getElementById('en-tete').innerHTML = station.indicatif + ' - ' + station.ville + ' (' + station.altitude + ' m)'; 
+                document.getElementById('en-tete').innerHTML = '<b>'+station.indicatif + ' - ' + station.ville + ' (alt. : ' + station.altitude + ' m)</b>'; 
                 document.getElementById('tmoy').innerHTML = station.temp_moy + '°';
                 document.getElementById('tmin').innerHTML = station.temp_min + '°';
                 document.getElementById('tmax').innerHTML = station.temp_max + '°';
