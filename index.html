@@ -14,7 +14,6 @@
     </head>
     <body>
         <div class="box">      
-      
             <div class="columns">
                 <div class="column">
                   <p class="bd-notification is-info" id="en-tete"></p>
@@ -91,61 +90,53 @@
                 </div>
                 
             </div>
-            
         </div>
 
         <div class="columns is-mobile"> 
-            <div class="column is-half">
-                <label>Température moyenne :</label> 
+            <div class="column">
+                <div>Température moyenne :</div>
+                <div>Durée d'insolation :</div>
+                <div>Précipitations :</div>
+                <div>Nb jours avec rafales :</div> 
             </div>
             <div class="column">
-                entre <input type="text" id="min_temp" value="" size="3">
-                et 
-                <input type="text" id="max_temp" value="" size="3"> 
-            </div>    
+                <div>
+                    entre <input type="text" id="min_temp" value="" size="3">
+                    et 
+                    <input type="text" id="max_temp" value="" size="3"> 
+                </div>    
+                <div>
+                    entre <input type="text" id="min_soleil" value="" size="3">
+                    et 
+                    <input type="text" id="max_soleil" value="" size="3"> 
+                </div>
+                <div>
+                    entre <input type="text" id="min_pluie" value="" size="3">
+                    et 
+                    <input type="text" id="max_pluie" value="" size="3"> 
+                </div>
+                <div>
+                    entre <input type="text" id="min_vent" value="" size="3">
+                    et 
+                    <input type="text" id="max_vent" value="" size="3"> 
+                </div>
+            </div>
         </div>
+
         <div class="columns is-mobile"> 
-            <div class="column is-half">
-                <label>Durée d'insolation :</label> 
-            </div>
             <div class="column">
-                entre <input type="text" id="min_soleil" value="" size="3">
-                et 
-                <input type="text" id="max_soleil" value="" size="3"> 
-            </div>    
-        </div>
-        <div class="columns is-mobile"> 
-            <div class="column is-half">
-                <label>Précipitations :</label> 
-            </div>
-            <div class="column">
-                entre <input type="text" id="min_pluie" value="" size="3">
-                et 
-                <input type="text" id="max_pluie" value="" size="3"> 
-            </div>    
-        </div>
-        <div class="columns is-mobile"> 
-            <div class="column is-half">
-                <label>Nb jours avec rafales :</label> 
-            </div>
-            <div class="column">
-                entre <input type="text" id="min_vent" value="" size="3">
-                et 
-                <input type="text" id="max_vent" value="" size="3"> 
-            </div>    
-        </div>
-        <div class="columns is-mobile is-centered"> 
-            <div class="column is-half">
                 <button class="button is-danger is-small" id="Reset_Filtres" onClick="ResetFiltres();">Réinitialiser les filtres</button>
             </div>
             <div class="column">
                 <button class="button is-light is-small" id="filtres" onClick="filtres()">Lancer la recherche</button> 
             </div>    
         </div>
+
         <label>Fiches d'un département : 
-            <input type="text" id="fiches_dep" value="78" size="1"> 
+            <input type="text" id="fiches_dep" value="78" size="3"> 
         </label>         
         <button id="fiches_dep_btn" onClick="departement()">GO</button> 
+
         <div class="box">
             <span class="icon-text">
                 <span class="icon">
@@ -155,33 +146,43 @@
               </span>
         </div>
         
-        
         <div class="content is-small">
             <div class="columns is-gapless is-mobile">
-                <div class="column is-one-fifth"><b>Station</b></div>
+                <div class="column is-one-fifth">
+                    <b>Station</b>
+                    <span id="results1"></span>
+                </div>
                 <div class="column">
                     <span class="icon"><i class="fas fa-thermometer-half"></i></span>
+                    <span id="results2"></span>
                 </div>
                 <div class="column">
                     <span class="icon"><i class="fas fa-temperature-low"></i></span>
+                    <span id="results3"></span>
                 </div>
                 <div class="column">
                     <span class="icon"><i class="fas fa-temperature-high"></i></span>
+                    <span id="results4"></span>
                 </div>
                 <div class="column">
                     <span class="icon"><i class="fas fa-sun"></i></span>
+                    <span id="results5"></span>
                 </div>
                 <div class="column">
                     <span class="icon"><i class="fas fa-cloud-rain"></i></span>
+                    <span id="results6"></span>
                 </div>
                 <div class="column">
                     <span class="icon"><i class="fas fa-wind"></i></span>
+                    <span id="results7"></span>
                 </div>
                 <div class="column">
                     <span class="icon"><i class="fas fa-atom"></i></span>
+                    <span id="results8"></span>
                 </div>
                 <div class="column">
                     <span class="icon"><i class="fas fa-home"></i></span>
+                    <span id="results9"></span>
                 </div>
             </div>
             <div class="columns is-gapless is-multiline is-mobile">
@@ -216,7 +217,7 @@
                  console.log('error: ' + err);
              });
  
-        function fiche_climatique(ref) {
+        function fiche_climatique_old(ref) {
             // Construction d'une "ligne HTML" avec les données climatiques d'un indicatif passé en paramètre (ref)
 
             let data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
@@ -256,11 +257,11 @@
             s.push(station.prix_maisons);
             s.push("</div>");
             s.push("</div>");
-
+            
             return "".concat(...s);
         }
         
-        function affichage_fiches(results){
+        function affichage_fiches_old(results){
             // Affichage des fiches
             let s = [];
             for (let i=0;i< results.length; i++) {
@@ -272,6 +273,59 @@
             document.getElementById('results').innerHTML = "".concat(...s);
             document.getElementById('occurences').innerHTML = results.length;
         } 
+
+
+
+        function affichage_fiches(results){
+            // Affichage des fiches par colonne
+            // TODO : optimisation avec une array multi-dimensionnelle ? **************
+            let c1 = [];
+            let c2 = [];
+            let c3 = [];
+            let c4 = [];
+            let c5 = [];
+            let c6 = [];
+            let c7 = [];
+            let c8 = [];
+            let c9 = [];
+            
+            for (let i=0;i< results.length; i++) {
+                c1.push("<p>");
+                c1.push(results[i].indicatif);
+                c1.push(" ");
+                c1.push(results[i].ville);
+                c1.push(" (");
+                c1.push(results[i].altitude);
+                c1.push(" m)</p>");  
+                c2.push("<p>" + results[i].temp_moy + "</p>");
+                c3.push("<p>" + results[i].temp_min + "</p>");
+                c4.push("<p>" + results[i].temp_max + "</p>");
+                c5.push("<p>");
+                if (isNaN(results[i].ensoleillement)) {c5.push(0);} else {c5.push(Math.trunc(Number(results[i].ensoleillement)));}
+                c5.push("</p>");
+                c6.push("<p>");
+                if (isNaN(results[i].pluie)) {c6.push(0);} else {c6.push(Math.trunc(Number(results[i].pluie)));}
+                c6.push("</p>");
+                c7.push("<p>");
+                if (isNaN(results[i].vent)) {c7.push(0);} else {c7.push(Math.trunc(Number(results[i].vent)));}
+                c7.push("</p>");
+                c8.push("<p>" + results[i].distance_cnpe + "</p>");
+                c9.push("<p>" + results[i].prix_maisons + "</p>");
+            }
+            document.getElementById('results1').innerHTML = "".concat(...c1);
+            document.getElementById('results2').innerHTML = "".concat(...c2);
+            document.getElementById('results3').innerHTML = "".concat(...c3);
+            document.getElementById('results4').innerHTML = "".concat(...c4);
+            document.getElementById('results5').innerHTML = "".concat(...c5);
+            document.getElementById('results6').innerHTML = "".concat(...c6);
+            document.getElementById('results7').innerHTML = "".concat(...c7);
+            document.getElementById('results8').innerHTML = "".concat(...c8);
+            document.getElementById('results9').innerHTML = "".concat(...c9);
+           
+            // *************************************************************************
+            
+            document.getElementById('occurences').innerHTML = results.length;
+        }
 
         function filtres() {
             // Filtres
@@ -357,7 +411,9 @@
             document.getElementById('max_vent').value = "";
             document.getElementById('occurences').innerHTML = "";
             document.getElementById('fiches_dep').value = "78";
-            document.getElementById('results').innerHTML = "Les filtres ont été réinitialisés.";
+            for (let i=1;i< 10; i++) {
+                document.getElementById('results' + i.toString()).innerHTML = "";
+            } 
 			
 		}    
 
