@@ -296,8 +296,8 @@
                 c1.push(results[i].ville);
                 c1.push(" (");
                 c1.push(results[i].altitude);
-                c1.push(" m)</p>");  
-                c2.push("<p>" + results[i].temp_moy + "</p>");
+                c1.push(" m)</p>");
+                c2.push(`<p><abbr title="Température moyenne">` + results[i].temp_moy + `</abbr></p>`);
                 c3.push("<p>" + results[i].temp_min + "</p>");
                 c4.push("<p>" + results[i].temp_max + "</p>");
                 c5.push("<p>");
