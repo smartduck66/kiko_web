@@ -147,7 +147,7 @@
         </div>
         
         <div class="content is-small">
-            <div class="columns is-gapless is-mobile">
+            <div class="columns is-gapless is-mobile is-vcentered">
                 <div class="column is-one-fifth">
                     <b>Station</b>
                     <span id="results1"></span>
@@ -189,6 +189,14 @@
                 <span id="results"></span>
             </div>
         </div>
+
+        <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <!-- Any other Bulma elements you want -->
+            </div>
+            <button class="hideModal is-large" aria-label="close"></button>
+        </div>
     </body>
 
     <script>
@@ -216,65 +224,6 @@
              .catch(function (err) {
                  console.log('error: ' + err);
              });
- 
-        function fiche_climatique_old(ref) {
-            // Construction d'une "ligne HTML" avec les données climatiques d'un indicatif passé en paramètre (ref)
-
-            let data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
-
-            let station = data[data.findIndex(x => x.indicatif == ref)]
-            let s = [];
-            s.push(`<div class="columns is-gapless is-multiline is-mobile">`);
-            s.push(`<div class="column is-one-fifth">`);
-            s.push(station.indicatif);
-            s.push(" ");
-            s.push(station.ville);
-            s.push(" (");
-            s.push(station.altitude);
-            s.push(" m)</div>");
-            s.push(`<div class="column">`);
-            s.push(station.temp_moy);
-            s.push("</div>");
-            s.push(`<div class="column">`);
-            s.push(station.temp_min);
-            s.push("</div>");
-            s.push(`<div class="column">`);
-            s.push(station.temp_max);
-            s.push("</div>");
-            s.push(`<div class="column">`);
-            if (isNaN(station.ensoleillement)) {s.push(0);} else {s.push(Math.trunc(Number(station.ensoleillement)));}
-            s.push("</div>");
-            s.push(`<div class="column">`);
-            if (isNaN(station.pluie)) {s.push(0);} else {s.push(Math.trunc(Number(station.pluie)));}
-            s.push("</div>");
-            s.push(`<div class="column">`);
-            if (isNaN(station.vent)) {s.push(0);} else {s.push(Math.trunc(Number(station.vent)));}
-            s.push("</div>");
-            s.push(`<div class="column">`);
-            s.push(station.distance_cnpe);
-            s.push("</div>");
-            s.push(`<div class="column">`);
-            s.push(station.prix_maisons);
-            s.push("</div>");
-            s.push("</div>");
-            
-            return "".concat(...s);
-        }
-        
-        function affichage_fiches_old(results){
-            // Affichage des fiches
-            let s = [];
-            for (let i=0;i< results.length; i++) {
-                s.push(fiche_climatique(results[i].indicatif));
-                s.push("\n");
-
-            }
-
-            document.getElementById('results').innerHTML = "".concat(...s);
-            document.getElementById('occurences').innerHTML = results.length;
-        } 
-
-
 
         function affichage_fiches(results){
             // Affichage des fiches par colonne
@@ -290,14 +239,16 @@
             let c9 = [];
             
             for (let i=0;i< results.length; i++) {
-                c1.push("<p>");
-                c1.push(results[i].indicatif);
-                c1.push(" ");
-                c1.push(results[i].ville);
-                c1.push(" (");
-                c1.push(results[i].altitude);
-                c1.push(" m)</p>");
-                c2.push(`<p><abbr title="Température moyenne">` + results[i].temp_moy + `</abbr></p>`);
+                if (window.screen.width>768) {
+                    c1.push("<p>");
+                    c1.push(results[i].indicatif);
+                    c1.push(" ");
+                    c1.push(results[i].ville);
+                    c1.push(" (");
+                    c1.push(results[i].altitude);
+                    c1.push(" m)</p>");
+                } else c1.push(`<p><a data-target="showModal">` + results[i].indicatif + `</a></p>`);
+                c2.push("<p>" + results[i].temp_moy + "</p>");
                 c3.push("<p>" + results[i].temp_min + "</p>");
                 c4.push("<p>" + results[i].temp_max + "</p>");
                 c5.push("<p>");
@@ -415,7 +366,19 @@
                 document.getElementById('results' + i.toString()).innerHTML = "";
             } 
 			
+		}   
+        
+        function showModal() {
+            var element = document.getElementById("modal");
+            element.classList.add("is-active");
+			
 		}    
+
+        function hideModal() {
+            var element = document.getElementById("modal");
+            element.classList.remove("is-active");
+			
+		}  
 
     </script>
     
