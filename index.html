@@ -142,14 +142,20 @@
                 <span class="icon">
                   <i class="fas fa-grin"></i>
                 </span>
-                <label>  Nombre d'occurences trouvées : </label><span id="occurences"></span>
-              </span>
+                <label>  Nombre d'occurences trouvées : </label>
+            </span>
+            <span id="occurences"></span>
         </div>
         
         <div class="content is-small">
             <div class="columns is-gapless is-mobile is-vcentered">
                 <div class="column is-one-fifth">
-                    <b>Station</b>
+                    <span class="icon-text">
+                        <span class="icon">
+                          <i class="fas fa-city"></i>
+                        </span>
+                        <label>Site</label>
+                    </span>
                     <span id="results1"></span>
                 </div>
                 <div class="column">
@@ -227,7 +233,6 @@
 
         function affichage_fiches(results){
             // Affichage des fiches par colonne
-            // TODO : optimisation avec une array multi-dimensionnelle ? **************
             let c1 = [];
             let c2 = [];
             let c3 = [];
@@ -273,8 +278,6 @@
             document.getElementById('results7').innerHTML = "".concat(...c7);
             document.getElementById('results8').innerHTML = "".concat(...c8);
             document.getElementById('results9').innerHTML = "".concat(...c9);
-           
-            // *************************************************************************
             
             document.getElementById('occurences').innerHTML = results.length;
         }
@@ -375,7 +378,7 @@
             let data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
             let station = data[data.findIndex(x => x.indicatif == ref)]
             document.getElementById('results_modal').innerHTML = "<p>" + station.indicatif + "</p><p>" + 
-                    station.ville + "</p><p>" + "altitude : "+ station.altitude + "m</p>";
+                    station.ville + "</p><p>" + "altitude : "+ station.altitude + " m</p>";
 			
 		}    
 
