@@ -253,7 +253,7 @@
                     c1.push(" (");
                     c1.push(results[i].altitude);
                     c1.push(" m)</p>");
-                } else {c1.push(`<p><a onclick="showModal(`+ ref +`)">` + ref + "</a></p>");}
+                } else {c1.push(`<p><a onclick="showModal('`+ ref +`')">` + ref + "</a></p>");}
                 c2.push("<p>" + results[i].temp_moy + "</p>");
                 c3.push("<p>" + results[i].temp_min + "</p>");
                 c4.push("<p>" + results[i].temp_max + "</p>");
@@ -384,6 +384,7 @@
 
         function hideModal() {
             var element = document.getElementById("modal");
+            document.getElementById('results_modal').innerHTML = "";
             element.classList.remove("is-active");
 			
 		}  
