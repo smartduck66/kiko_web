@@ -288,51 +288,40 @@
             let data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
 
             // Récupération et sécurisation des paramétres saisis
-            let p1 = document.getElementById('min_temp').value;
-            let p2 = document.getElementById('max_temp').value;
+            let p1 = Number(document.getElementById('min_temp').value);
+            let p2 = Number(document.getElementById('max_temp').value);
             if (p1 > p2) {
-                p1 = p2;
-                document.getElementById('min_temp').value = p1;
-            }
-            if (p2 < p1) {
                 p2 = p1;
                 document.getElementById('max_temp').value = p2;
             }
 
-            let p3 = document.getElementById('min_soleil').value;
-            let p4 = document.getElementById('max_soleil').value;
+            let p3 = Number(document.getElementById('min_soleil').value);
+            let p4 = Number(document.getElementById('max_soleil').value);
             if (p3 > p4) {
-                p3 = p4;
-                document.getElementById('min_soleil').value = p3;
-            }
-            if (p4 < p3) {
                 p4 = p3;
                 document.getElementById('max_soleil').value = p4;
             }
-            let p5 = document.getElementById('min_pluie').value;
-            let p6 = document.getElementById('max_pluie').value;
+            
+            let p5 = Number(document.getElementById('min_pluie').value);
+            let p6 = Number(document.getElementById('max_pluie').value);
             if (p5 > p6) {
-                p5 = p6;
-                document.getElementById('min_pluie').value = p5;
-            }
-            if (p6 < p5) {
                 p6 = p5;
                 document.getElementById('max_pluie').value = p6;
             }
-            let p7 = document.getElementById('min_vent').value;
-            let p8 = document.getElementById('max_vent').value;
+            
+            let p7 = Number(document.getElementById('min_vent').value);
+            let p8 = Number(document.getElementById('max_vent').value);
             if (p7 > p8) {
-                p7 = p8;
-                document.getElementById('min_vent').value = p7;
-            }
-            if (p8 < p7) {
                 p8 = p7;
                 document.getElementById('max_vent').value = p8;
             }
 
             // Sélection des fiches climatiques
             let results = data;
-            if (p1 != "" && p2 != "") {results = results.filter(x => x.temp_moy >= p1 && x.temp_moy <= p2);}
+            if (p1 != "" && p2 != "") {
+                results = results.filter(x => x.temp_moy >= p1 && x.temp_moy <= p2);
+                results.sort(function(a,b){return a.temp_moy < b.temp_moy});
+            }
             if (p3 != "" && p4 != "") {results = results.filter(x => x.ensoleillement >= p3 && x.ensoleillement <= p4);}
             if (p5 != "" && p6 != "") {results = results.filter(x => x.pluie >= p5 && x.pluie <= p6);}
             if (p7 != "" && p8 != "") {results = results.filter(x => x.vent >= p7 && x.vent <= p8);}
