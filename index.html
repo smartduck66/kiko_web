@@ -316,15 +316,24 @@
                 document.getElementById('max_vent').value = p8;
             }
 
-            // Sélection des fiches climatiques
+            // Sélection des fiches climatiques et tri ascendant
             let results = data;
             if (p1 != "" && p2 != "") {
                 results = results.filter(x => x.temp_moy >= p1 && x.temp_moy <= p2);
-                results.sort(function(a,b){return a.temp_moy < b.temp_moy});
+                results.sort(function(a,b){return a.temp_moy - b.temp_moy});
             }
-            if (p3 != "" && p4 != "") {results = results.filter(x => x.ensoleillement >= p3 && x.ensoleillement <= p4);}
-            if (p5 != "" && p6 != "") {results = results.filter(x => x.pluie >= p5 && x.pluie <= p6);}
-            if (p7 != "" && p8 != "") {results = results.filter(x => x.vent >= p7 && x.vent <= p8);}
+            if (p3 != "" && p4 != "") {
+                results = results.filter(x => x.ensoleillement >= p3 && x.ensoleillement <= p4);
+                results.sort(function(a,b){return a.ensoleillement - b.ensoleillement});
+            }
+            if (p5 != "" && p6 != "") {
+                results = results.filter(x => x.pluie >= p5 && x.pluie <= p6);
+                results.sort(function(a,b){return a.pluie - b.pluie});
+            }
+            if (p7 != "" && p8 != "") {
+                results = results.filter(x => x.vent >= p7 && x.vent <= p8);
+                results.sort(function(a,b){return a.vent - b.vent});
+            }
             
             affichage_fiches(results);
         }
