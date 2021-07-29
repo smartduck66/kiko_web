@@ -15,196 +15,196 @@
     </head>
     <body>
         <section class="whole_app">
-        <div class="box">      
-            <div class="columns">
-                <div class="column">
-                  <p class="bd-notification is-info" id="en-tete"></p>
-                  <div class="columns is-mobile">
-                    <div class="column is-two-fifths">
-                        <p>
-                        <span class="icon-text">
-                            <span class="icon">
-                              <i class="fas fa-thermometer-half"></i>
-                            </span>
-                            <span id="tmoy"></span>
-                        </span>
-                        </p>
-                        <p>
-                        <span class="icon-text">
-                            <span class="icon">
-                              <i class="fas fa-temperature-low"></i>
-                            </span>
-                            <span id="tmin"></span>
-                        </span>
-                        </p>
-                        <p>
-                        <span class="icon-text">
-                            <span class="icon">
-                              <i class="fas fa-temperature-high"></i>
-                            </span>
-                            <span id="tmax"></span>
-                        </span>
-                        </p>
-                        <p>
+            <div class="box">      
+                <div class="columns">
+                    <div class="column">
+                    <p class="bd-notification is-info" id="en-tete"></p>
+                    <div class="columns is-mobile">
+                        <div class="column is-two-fifths">
+                            <p>
                             <span class="icon-text">
-                                <span class="icon ">
-                                  <i class="fas fa-atom"></i>
+                                <span class="icon">
+                                <i class="fas fa-thermometer-half"></i>
                                 </span>
-                                <span id="cnpe"></span>
+                                <span id="tmoy"></span>
                             </span>
-                        </p>
+                            </p>
+                            <p>
+                            <span class="icon-text">
+                                <span class="icon">
+                                <i class="fas fa-temperature-low"></i>
+                                </span>
+                                <span id="tmin"></span>
+                            </span>
+                            </p>
+                            <p>
+                            <span class="icon-text">
+                                <span class="icon">
+                                <i class="fas fa-temperature-high"></i>
+                                </span>
+                                <span id="tmax"></span>
+                            </span>
+                            </p>
+                            <p>
+                                <span class="icon-text">
+                                    <span class="icon ">
+                                    <i class="fas fa-atom"></i>
+                                    </span>
+                                    <span id="cnpe"></span>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="column">
+                            <p>
+                            <span class="icon-text">
+                                <span class="icon">
+                                <i class="fas fa-sun"></i>
+                                </span>
+                                <span id="soleil"></span>
+                            </span>
+                            </p>
+                            <p>
+                            <span class="icon-text">
+                                <span class="icon">
+                                <i class="fas fa-cloud-rain"></i>
+                                </span>
+                                <span id="pluie"></span>
+                            </span>
+                            </p>
+                            <p>
+                                <span class="icon-text">
+                                    <span class="icon ">
+                                    <i class="fas fa-wind"></i>
+                                    </span>
+                                    <span id="vent"></span>
+                                </span>
+                            </p>
+                            <p>
+                                <span class="icon-text">
+                                    <span class="icon ">
+                                    <i class="fas fa-home"></i>
+                                    </span>
+                                    <span id="prix"></span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="columns is-mobile"> 
+                <div class="column">
+                    <div>Température moyenne :</div>
+                    <div>Durée d'insolation :</div>
+                    <div>Précipitations :</div>
+                    <div>Nb jours avec rafales :</div> 
+                </div>
+                <div class="column">
+                    <div>
+                        entre <input type="text" id="min_temp" value="" size="3">
+                        et 
+                        <input type="text" id="max_temp" value="" size="3"> 
+                    </div>    
+                    <div>
+                        entre <input type="text" id="min_soleil" value="" size="3">
+                        et 
+                        <input type="text" id="max_soleil" value="" size="3"> 
+                    </div>
+                    <div>
+                        entre <input type="text" id="min_pluie" value="" size="3">
+                        et 
+                        <input type="text" id="max_pluie" value="" size="3"> 
+                    </div>
+                    <div>
+                        entre <input type="text" id="min_vent" value="" size="3">
+                        et 
+                        <input type="text" id="max_vent" value="" size="3"> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-mobile"> 
+                <div class="column">
+                    <button class="button is-danger is-small" id="Reset_Filtres" onClick="ResetFiltres();">Réinitialiser les filtres</button>
+                </div>
+                <div class="column">
+                    <button class="button is-light is-small" id="filtres" onClick="filtres()">Lancer la recherche</button> 
+                </div>    
+            </div>
+
+            <label>Fiches d'un département : 
+                <input type="text" id="fiches_dep" value="78" size="3"> 
+            </label>         
+            <button id="fiches_dep_btn" onClick="departement()">GO</button> 
+
+            <div class="box">
+                <span class="icon-text">
+                    <span class="icon">
+                    <i class="fas fa-grin"></i>
+                    </span>
+                    <label>  Nombre d'occurences trouvées : </label>
+                </span>
+                <span id="occurences"></span>
+            </div>
+            
+            <div class="content is-small">
+                <div class="columns is-gapless is-mobile is-vcentered">
+                    <div class="column is-one-fifth">
+                        <span class="icon-text">
+                            <span class="icon">
+                            <i class="fas fa-city"></i>
+                            </span>
+                            <label>Site</label>
+                        </span>
+                        <span id="results1"></span>
                     </div>
                     <div class="column">
-                        <p>
-                        <span class="icon-text">
-                            <span class="icon">
-                              <i class="fas fa-sun"></i>
-                            </span>
-                            <span id="soleil"></span>
-                        </span>
-                        </p>
-                        <p>
-                        <span class="icon-text">
-                            <span class="icon">
-                              <i class="fas fa-cloud-rain"></i>
-                            </span>
-                            <span id="pluie"></span>
-                        </span>
-                        </p>
-                        <p>
-                            <span class="icon-text">
-                                <span class="icon ">
-                                  <i class="fas fa-wind"></i>
-                                </span>
-                                <span id="vent"></span>
-                            </span>
-                        </p>
-                        <p>
-                            <span class="icon-text">
-                                <span class="icon ">
-                                  <i class="fas fa-home"></i>
-                                </span>
-                                <span id="prix"></span>
-                            </span>
-                        </p>
+                        <span class="icon"><i class="fas fa-thermometer-half"></i></span>
+                        <span id="results2"></span>
                     </div>
-                  </div>
+                    <div class="column">
+                        <span class="icon"><i class="fas fa-temperature-low"></i></span>
+                        <span id="results3"></span>
+                    </div>
+                    <div class="column">
+                        <span class="icon"><i class="fas fa-temperature-high"></i></span>
+                        <span id="results4"></span>
+                    </div>
+                    <div class="column">
+                        <span class="icon"><i class="fas fa-sun"></i></span>
+                        <span id="results5"></span>
+                    </div>
+                    <div class="column">
+                        <span class="icon"><i class="fas fa-cloud-rain"></i></span>
+                        <span id="results6"></span>
+                    </div>
+                    <div class="column">
+                        <span class="icon"><i class="fas fa-wind"></i></span>
+                        <span id="results7"></span>
+                    </div>
+                    <div class="column">
+                        <span class="icon"><i class="fas fa-atom"></i></span>
+                        <span id="results8"></span>
+                    </div>
+                    <div class="column">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span id="results9"></span>
+                    </div>
                 </div>
-                
+                <div class="columns is-gapless is-multiline is-mobile">
+                    <span id="results"></span>
+                </div>
             </div>
-        </div>
 
-        <div class="columns is-mobile"> 
-            <div class="column">
-                <div>Température moyenne :</div>
-                <div>Durée d'insolation :</div>
-                <div>Précipitations :</div>
-                <div>Nb jours avec rafales :</div> 
+            <div class="modal" id="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                <div class="box"><span id="results_modal"></span></div>
+                </div>
+                <button class="modal-close is-large" aria-label="close" onclick="hideModal()"></button>
             </div>
-            <div class="column">
-                <div>
-                    entre <input type="text" id="min_temp" value="" size="3">
-                    et 
-                    <input type="text" id="max_temp" value="" size="3"> 
-                </div>    
-                <div>
-                    entre <input type="text" id="min_soleil" value="" size="3">
-                    et 
-                    <input type="text" id="max_soleil" value="" size="3"> 
-                </div>
-                <div>
-                    entre <input type="text" id="min_pluie" value="" size="3">
-                    et 
-                    <input type="text" id="max_pluie" value="" size="3"> 
-                </div>
-                <div>
-                    entre <input type="text" id="min_vent" value="" size="3">
-                    et 
-                    <input type="text" id="max_vent" value="" size="3"> 
-                </div>
-            </div>
-        </div>
-
-        <div class="columns is-mobile"> 
-            <div class="column">
-                <button class="button is-danger is-small" id="Reset_Filtres" onClick="ResetFiltres();">Réinitialiser les filtres</button>
-            </div>
-            <div class="column">
-                <button class="button is-light is-small" id="filtres" onClick="filtres()">Lancer la recherche</button> 
-            </div>    
-        </div>
-
-        <label>Fiches d'un département : 
-            <input type="text" id="fiches_dep" value="78" size="3"> 
-        </label>         
-        <button id="fiches_dep_btn" onClick="departement()">GO</button> 
-
-        <div class="box">
-            <span class="icon-text">
-                <span class="icon">
-                  <i class="fas fa-grin"></i>
-                </span>
-                <label>  Nombre d'occurences trouvées : </label>
-            </span>
-            <span id="occurences"></span>
-        </div>
-        
-        <div class="content is-small">
-            <div class="columns is-gapless is-mobile is-vcentered">
-                <div class="column is-one-fifth">
-                    <span class="icon-text">
-                        <span class="icon">
-                          <i class="fas fa-city"></i>
-                        </span>
-                        <label>Site</label>
-                    </span>
-                    <span id="results1"></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-thermometer-half"></i></span>
-                    <span id="results2"></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-temperature-low"></i></span>
-                    <span id="results3"></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-temperature-high"></i></span>
-                    <span id="results4"></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-sun"></i></span>
-                    <span id="results5"></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-cloud-rain"></i></span>
-                    <span id="results6"></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-wind"></i></span>
-                    <span id="results7"></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-atom"></i></span>
-                    <span id="results8"></span>
-                </div>
-                <div class="column">
-                    <span class="icon"><i class="fas fa-home"></i></span>
-                    <span id="results9"></span>
-                </div>
-            </div>
-            <div class="columns is-gapless is-multiline is-mobile">
-                <span id="results"></span>
-            </div>
-        </div>
-
-        <div class="modal" id="modal">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-              <div class="box"><span id="results_modal"></span></div>
-            </div>
-            <button class="modal-close is-large" aria-label="close" onclick="hideModal()"></button>
-        </div>
         </section>
     </body>
 
