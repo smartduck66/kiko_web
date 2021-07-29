@@ -1,7 +1,3 @@
-[build]
-  publish = "/"
-  functions = "functions"
-
 [[headers]]
   # CORS to harden -> lecture fichier json
   for = "/*"
