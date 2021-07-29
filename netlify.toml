@@ -1,5 +1,0 @@
-[[headers]]
-  # CORS to harden -> lecture fichier json
-  for = "/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
