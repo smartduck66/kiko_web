@@ -2,6 +2,21 @@
 // *********************************************************************
 //
 
+// Load du fichier json contenant les départements/régions (pour la fenêtre modale)
+fetch("assets/data/departements-region.json")
+             
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+   localStorage.clear();
+   localStorage.dpt = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
+   
+})
+.catch(function (err) {
+    console.log('error: ' + err);
+});
+
 // Load du fichier json contenant l'ensemble des fiches climatiques
 fetch("assets/data/fc.json")
              
@@ -9,7 +24,6 @@ fetch("assets/data/fc.json")
     return response.json();
 })
 .then(function (data) {
-   localStorage.clear();
    localStorage.fc = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
    // Affichage valeur de référence
    let station = data[data.findIndex(x => x.indicatif == "78640001")];
@@ -19,7 +33,7 @@ fetch("assets/data/fc.json")
    document.getElementById('tmax').innerHTML = station.temp_max + '°';
    document.getElementById('cnpe').innerHTML = station.distance_cnpe + ' kms';
    document.getElementById('soleil').innerHTML = station.ensoleillement + ' h/an';
-   document.getElementById('pluie').innerHTML = station.pluie + ' mm/mois';
+   document.getElementById('pluie').innerHTML = station.pluie + ' mm/an';
    document.getElementById('vent').innerHTML = station.vent + ' j/an';
    document.getElementById('prix').innerHTML = station.prix_maisons + ' €/m2';
 })
@@ -30,15 +44,7 @@ fetch("assets/data/fc.json")
 function affichage_fiches(results){
     // Affichage des fiches par colonne
 
-    let c1 = [];
-    let c2 = [];
-    let c3 = [];
-    let c4 = [];
-    let c5 = [];
-    let c6 = [];
-    let c7 = [];
-    let c8 = [];
-    let c9 = [];
+    let [c1, c2, c3, c4, c5, c6, c7, c8, c9] = [[], [], [], [], [], [], [], [], []] // Initialisation multiple d'arrays en une seule ligne
 
     for (let i=0;i< results.length; i++) {
     let ref = results[i].indicatif;
@@ -171,10 +177,18 @@ function ResetFiltres() {
 function showModal(ref) {
     var element = document.getElementById("modal");
     element.classList.add("is-active");
+    
     let data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
     let station = data[data.findIndex(x => x.indicatif == ref)]
+    let data1 = JSON.parse(localStorage.dpt); // Récupération locale des départements
+    let dpt_searched = station.indicatif.substring(0,2);
+    let dpt_toDisplay ="";  // Guard pour les DOM (inutile dans notre cas)
+    if (Number(dpt_searched)<97) {
+        let departement = data1[data1.findIndex(x => x.num_dep == dpt_searched)];
+        dpt_toDisplay = departement.dep_name;
+    } 
     document.getElementById('results_modal').innerHTML = "<p>" + station.indicatif + "</p><p>" + 
-        station.ville + "</p><p>" + "altitude : "+ station.altitude + " m</p>";
+        station.ville + "</p><p>" + dpt_toDisplay + "</p><p>" + "Altitude : "+ station.altitude + " m</p>";
 
 }    
 
