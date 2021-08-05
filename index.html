@@ -134,10 +134,22 @@
                 </div>    
             </div>
 
-            <label>Fiches d'un département : 
-                <input type="text" id="fiches_dep" value="78" size="3"> 
-            </label>         
-            <button id="fiches_dep_btn" onClick="departement()">GO</button> 
+            <div class="columns is-mobile"> 
+                <div class="column is-two-thirds">
+                    <p><label>Fiches d'un département :</label></p>
+                    <p><label>Risques d'une commune (CP) :</label></p>
+                </div>
+                <div class="column">
+                    <p>
+                        <input type="text" id="fiches_dep" value="78" size="5">
+                        <button id="fiches_dep_btn" onClick="departement()">GO</button>
+                    </p>
+                    <p>
+                        <input type="text" id="risques_cp" value="78640" size="5">
+                        <button id="risques_cp_btn" onClick="risques_commune()">GO</button>
+                    </p> 
+                </div>    
+            </div>
 
             <div class="box">
                 <span class="icon-text">
@@ -208,6 +220,7 @@
         </section>
     </body>
 
+    <script src="assets/js/distances.js"></script>
     <script src="assets/js/kiko.js"></script>
     
 </html>

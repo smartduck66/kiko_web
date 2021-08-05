@@ -2,6 +2,22 @@
 // *********************************************************************
 //
 
+localStorage.clear();   // Initialisation du stockage local avant chargemet des différents fichiers json
+
+// Load du fichier json contenant les coordonnées des CNPE (pour la fenêtre modale des risques)
+fetch("assets/data/centrales.json")
+             
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+   localStorage.cnpe = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
+   
+})
+.catch(function (err) {
+    console.log('error: ' + err);
+});
+
 // Load du fichier json contenant les départements/régions (pour la fenêtre modale)
 fetch("assets/data/departements-region.json")
              
@@ -9,8 +25,21 @@ fetch("assets/data/departements-region.json")
     return response.json();
 })
 .then(function (data) {
-   localStorage.clear();
    localStorage.dpt = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
+   
+})
+.catch(function (err) {
+    console.log('error: ' + err);
+});
+
+// Load du fichier json contenant les coordonnées géographiques de chaque commune (pour la fenêtre modale)
+fetch("assets/data/communes.json")
+             
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+   localStorage.communes = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
    
 })
 .catch(function (err) {
@@ -56,7 +85,7 @@ function affichage_fiches(results){
         c1.push(" (");
         c1.push(results[i].altitude);
         c1.push(" m)</p>");
-    } else {c1.push(`<p><a onclick="showModal('`+ ref +`')">` + ref + "</a></p>");}  // En mobile, affichage seulement de l'indicatif (modale pour le détail)
+    } else {c1.push(`<p><a onclick="showModal_ref('`+ ref +`')">` + ref + "</a></p>");}  // En mobile, affichage seulement de l'indicatif (modale pour le détail)
     c2.push("<p>" + results[i].temp_moy + "</p>");
     c3.push("<p>" + results[i].temp_min + "</p>");
     c4.push("<p>" + results[i].temp_max + "</p>");
@@ -147,7 +176,7 @@ function departement() {
 
     let data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
 
-    // Récupération et sécurisation du paramétre saisi
+    // Récupération du paramétre saisi
     let p1 = document.getElementById('fiches_dep').value;
 
     // Sélection des fiches climatiques
@@ -155,6 +184,17 @@ function departement() {
     if (p1 != "") {results = results.filter(x => x.departement == p1);}
 
     affichage_fiches(results);
+}
+
+function risques_commune() {
+    // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
+
+    // Récupération du paramétre saisi
+    let p1 = document.getElementById('risques_cp').value;
+
+    // Affichage de la modale
+    showModal_risques(p1);
+
 }
 
 function ResetFiltres() {
@@ -168,27 +208,51 @@ function ResetFiltres() {
     document.getElementById('max_vent').value = "";
     document.getElementById('occurences').innerHTML = "";
     document.getElementById('fiches_dep').value = "78";
+    document.getElementById('risques_cp').value = "78640";
     for (let i=1;i< 10; i++) {
         document.getElementById('results' + i.toString()).innerHTML = "";
     } 
 
 }   
 
-function showModal(ref) {
+function showModal_ref(ref) {
     var element = document.getElementById("modal");
     element.classList.add("is-active");
     
-    let data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
+    let data = JSON.parse(localStorage.fc);     // Récupération locale des fiches climatiques
     let station = data[data.findIndex(x => x.indicatif == ref)]
-    let data1 = JSON.parse(localStorage.dpt); // Récupération locale des départements
+    let data1 = JSON.parse(localStorage.dpt);   // Récupération locale des départements
     let dpt_searched = station.indicatif.substring(0,2);
-    let dpt_toDisplay ="";  // Guard pour les DOM (inutile dans notre cas)
-    if (Number(dpt_searched)<97) {
+    let dpt_toDisplay = "";  
+    if (Number(dpt_searched) < 97) {            // Guard pour les DOM (inutile dans notre cas)
         let departement = data1[data1.findIndex(x => x.num_dep == dpt_searched)];
         dpt_toDisplay = departement.dep_name;
     } 
     document.getElementById('results_modal').innerHTML = "<p>" + station.indicatif + "</p><p>" + 
         station.ville + "</p><p>" + dpt_toDisplay + "</p><p>" + "Altitude : "+ station.altitude + " m</p>";
+
+}    
+
+function showModal_risques(cp) {
+    let data = JSON.parse(localStorage.communes); // Récupération locale des coordonnées géographiques des communes
+    
+    var element = document.getElementById("modal");
+    element.classList.add("is-active");
+    let risques ="";
+        
+    try {
+        let index = data.findIndex(x => x.cp==cp); // Si pas de correspondance, le 'catch' prend le relai
+        let ville = data[index]["ville"];
+        let lat = data[index]["latitude"];
+        let lon = data[index]["longitude"];
+        let distance_cnpe = Math.trunc(centrale_la_plus_proche(lat, lon)).toString();
+        risques = "<p>" + cp + "</p><p>" + ville + "</p><p>" + "CNPE la plus proche : "+ distance_cnpe + " kms</p>";
+    }
+    catch (ex) {
+        risques = "Pas de données";
+    }
+    
+    document.getElementById('results_modal').innerHTML = risques;
 
 }    
 

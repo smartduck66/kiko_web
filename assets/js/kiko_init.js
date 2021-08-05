@@ -1,3 +1,4 @@
+// Bibliothéque JavaScript utilisée en mode "batch"
 // Création du fichier json à partir des données climatiques de Météo France
 // Mode d'emploi : 
 // 1. node kiko_init.js en partant de la ligne de commande, une fois/an
