@@ -51,23 +51,32 @@ function convert_DMS_DD(coord) {
 
 }
 
-function centrale_la_plus_proche(latitude_station, longitude_station){
+function site_dangereux_le_plus_proche(coords_sites_dangereux, latitude_to_test, longitude_to_test){
     // Fonction qui retourne la distance à vol d'oiseau (en kms) de la plus proche centrale nucléaire répertoriée sur le territoire français (IRSN.fr)
     // 19 centrales en exploitation en 2020 et 1 en construction (EPR Flamanville)
     // Outil de vérification : https://www.lexilogos.com/calcul_distances.htm
 
-    let lat_long_CNPE = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des CNPE
+    class distance_sites_dangereux {
+        distance;
+        site;
+    }
+    
+    let fiches = [];
 
-    // On calcule la distance du site passé en paramètre avec chacune des centrales nucléaires...
-    let distance_centrales = new Array();
+    for (let i=0;i< coords_sites_dangereux.length; i++) {
+        let item = new distance_sites_dangereux(); // note the "new" keyword here
 
-    for (let i=0;i< lat_long_CNPE.length; i++) {
-        distance_centrales.push(distanceEarth(Number(latitude_station), Number(longitude_station), 
-            Number(lat_long_CNPE[i].latitude), Number(lat_long_CNPE[i].longitude)));
+        item.distance = distanceEarth(Number(latitude_to_test), Number(longitude_to_test), 
+            Number(coords_sites_dangereux[i].latitude), Number(coords_sites_dangereux[i].longitude));
+        
+        item.site = coords_sites_dangereux[i].site;
+        
+        fiches.push(item);
 
     }
+    fiches.sort(function(a,b){return a.distance - b.distance});
 
     // ... et on renvoit la distance minimale
-    return Math.min(...distance_centrales);
+    return fiches[0];
 
 }

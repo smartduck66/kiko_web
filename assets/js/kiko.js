@@ -18,6 +18,20 @@ fetch("assets/data/centrales.json")
     console.log('error: ' + err);
 });
 
+// Load du fichier json contenant les coordonnées des sites seveso (pour la fenêtre modale des risques)
+fetch("assets/data/seveso.json")
+             
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+   localStorage.seveso = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
+   
+})
+.catch(function (err) {
+    console.log('error: ' + err);
+});
+
 // Load du fichier json contenant les départements/régions (pour la fenêtre modale)
 fetch("assets/data/departements-region.json")
              
@@ -208,7 +222,7 @@ function ResetFiltres() {
     document.getElementById('max_vent').value = "";
     document.getElementById('occurences').innerHTML = "";
     document.getElementById('fiches_dep').value = "78";
-    document.getElementById('risques_cp').value = "78640";
+    document.getElementById('risques_cp').value = "78140";
     for (let i=1;i< 10; i++) {
         document.getElementById('results' + i.toString()).innerHTML = "";
     } 
@@ -235,7 +249,9 @@ function showModal_ref(ref) {
 
 function showModal_risques(cp) {
     let data = JSON.parse(localStorage.communes); // Récupération locale des coordonnées géographiques des communes
-    
+    let data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
+    let data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
+
     var element = document.getElementById("modal");
     element.classList.add("is-active");
     let risques ="";
@@ -245,8 +261,11 @@ function showModal_risques(cp) {
         let ville = data[index]["ville"];
         let lat = data[index]["latitude"];
         let lon = data[index]["longitude"];
-        let distance_cnpe = Math.trunc(centrale_la_plus_proche(lat, lon)).toString();
-        risques = "<p>" + cp + "</p><p>" + ville + "</p><p>" + "CNPE la plus proche : "+ distance_cnpe + " kms</p>";
+        let cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon);
+        let seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon);
+        risques = "<p>" + cp + "</p><p>" + ville + "</p><p>" + "CNPE la plus proche : "+ Math.trunc(cnpe.distance) + " kms ("+ cnpe.site + ")</p>" 
+            + "Site Seveso le plus proche : "+ Math.trunc(seveso.distance) + " kms - "+ seveso.site + "</p>";
+    
     }
     catch (ex) {
         risques = "Pas de données";
