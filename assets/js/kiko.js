@@ -248,16 +248,16 @@ function showModal_ref(ref) {
 }    
 
 function showModal_risques(cp) {
-    let data = JSON.parse(localStorage.communes); // Récupération locale des coordonnées géographiques des communes
-    let data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
-    let data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
+    let data = JSON.parse(localStorage.communes);       // Récupération locale des coordonnées géographiques des communes
+    let data_cnpe = JSON.parse(localStorage.cnpe);      // Récupération locale des coordonnées des Centrales Nucléaires
+    let data_seveso = JSON.parse(localStorage.seveso);  // Récupération locale des coordonnées des sites seveso
 
     var element = document.getElementById("modal");
     element.classList.add("is-active");
     let risques ="";
         
     try {
-        let index = data.findIndex(x => x.cp==cp); // Si pas de correspondance, le 'catch' prend le relai
+        let index = data.findIndex(x => x.cp==cp);      // Si pas de correspondance, le 'catch' prend le relai
         let ville = data[index]["ville"];
         let lat = data[index]["latitude"];
         let lon = data[index]["longitude"];
