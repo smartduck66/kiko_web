@@ -36,7 +36,7 @@ for (let i=0;i< allTextLines.length; i++) {
     
 }
 
-fs.writeFileSync('../data/communes.json', JSON.stringify(fiches));    // Création du json final sur disque
+fs.writeFileSync('../data/communes.json', JSON.stringify(fiches,null,2));    // Création du json final sur disque
 
 // ***********************************************************************************************************************************
 
@@ -75,4 +75,4 @@ for (let i=0;i< allTextLines1.length; i++) {
     
 }
 
-fs.writeFileSync('../data/seveso.json', JSON.stringify(fiches1));    // Création du json final sur disque
+fs.writeFileSync('../data/seveso.json', JSON.stringify(fiches1,null,2));    // Création du json final sur disque

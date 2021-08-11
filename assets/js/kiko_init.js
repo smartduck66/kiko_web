@@ -191,5 +191,5 @@ for (let i=0;i< nb_fiches; i++) {
     
 }
 
-fs.writeFileSync('../data/fc.json', JSON.stringify(fiches));    // Création du json final sur disque
+fs.writeFileSync('../data/fc.json', JSON.stringify(fiches,null,2));    // Création du json final sur disque
 

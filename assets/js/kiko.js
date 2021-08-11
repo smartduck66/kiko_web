@@ -2,6 +2,10 @@
 // *********************************************************************
 //
 
+// Formatage
+const euros = Intl.NumberFormat("fr", {style: "currency", currency: "EUR", maximumFractionDigits: 0});
+const milliers = Intl.NumberFormat("fr", {style: "decimal", maximumFractionDigits: 0});
+
 localStorage.clear();   // Initialisation du stockage local avant chargemet des différents fichiers json
 
 // Load du fichier json contenant les coordonnées des CNPE (pour la fenêtre modale des risques)
@@ -75,10 +79,10 @@ fetch("assets/data/fc.json")
    document.getElementById('tmin').innerHTML = station.temp_min + '°';
    document.getElementById('tmax').innerHTML = station.temp_max + '°';
    document.getElementById('cnpe').innerHTML = station.distance_cnpe + ' kms';
-   document.getElementById('soleil').innerHTML = station.ensoleillement + ' h/an';
-   document.getElementById('pluie').innerHTML = station.pluie + ' mm/an';
-   document.getElementById('vent').innerHTML = station.vent + ' j/an';
-   document.getElementById('prix').innerHTML = station.prix_maisons + ' €/m2';
+   document.getElementById('soleil').innerHTML = milliers.format(station.ensoleillement) + ' h/an';
+   document.getElementById('pluie').innerHTML = milliers.format(station.pluie) + ' mm/an';
+   document.getElementById('vent').innerHTML = milliers.format(station.vent) + ' j/an';
+   document.getElementById('prix').innerHTML = euros.format(station.prix_maisons) + '/m2';
 })
 .catch(function (err) {
     console.log('error: ' + err);
@@ -104,16 +108,16 @@ function affichage_fiches(results){
     c3.push("<p>" + results[i].temp_min + "</p>");
     c4.push("<p>" + results[i].temp_max + "</p>");
     c5.push("<p>");
-    if (isNaN(results[i].ensoleillement)) {c5.push(0);} else {c5.push(Math.trunc(Number(results[i].ensoleillement)));}
+    if (isNaN(results[i].ensoleillement)) {c5.push(0);} else {c5.push(milliers.format(Number(results[i].ensoleillement)));}
     c5.push("</p>");
     c6.push("<p>");
-    if (isNaN(results[i].pluie)) {c6.push(0);} else {c6.push(Math.trunc(Number(results[i].pluie)));}
+    if (isNaN(results[i].pluie)) {c6.push(0);} else {c6.push(milliers.format(Number(results[i].pluie)));}
     c6.push("</p>");
     c7.push("<p>");
-    if (isNaN(results[i].vent)) {c7.push(0);} else {c7.push(Math.trunc(Number(results[i].vent)));}
+    if (isNaN(results[i].vent)) {c7.push(0);} else {c7.push(milliers.format(Number(results[i].vent)));}
     c7.push("</p>");
     c8.push("<p>" + results[i].distance_cnpe + "</p>");
-    c9.push("<p>" + results[i].prix_maisons + "</p>");
+    if (isNaN(results[i].prix_maisons)) {c9.push("<p>-</p>");} else {c9.push("<p>" + euros.format(results[i].prix_maisons) + "</p>");}
     }
     // On concatène chaque élément de l'array pour chaque colonne, afin d'obtenir une seule string HTML à afficher
     document.getElementById('results1').innerHTML = "".concat(...c1);
