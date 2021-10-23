@@ -6,7 +6,7 @@
 const euros = Intl.NumberFormat("fr", {style: "currency", currency: "EUR", maximumFractionDigits: 0});
 const milliers = Intl.NumberFormat("fr", {style: "decimal", maximumFractionDigits: 0});
 
-localStorage.clear();   // Initialisation du stockage local avant chargemet des différents fichiers json
+localStorage.clear();   // Initialisation du stockage local avant chargement des différents fichiers json
 
 // Load du fichier json contenant les coordonnées des CNPE (pour la fenêtre modale des risques)
 fetch("assets/data/centrales.json")
@@ -265,8 +265,8 @@ function showModal_risques(cp) {
         let ville = data[index]["ville"];
         let lat = data[index]["latitude"];
         let lon = data[index]["longitude"];
-        let cnpe = site_dangereux_le_plus_proche(data_cnpe, lat, lon);
-        let seveso = site_dangereux_le_plus_proche(data_seveso, lat, lon);
+        let cnpe = distances.site_dangereux_le_plus_proche(data_cnpe, lat, lon);        // Fonction 'importée' de distances.js  
+        let seveso = distances.site_dangereux_le_plus_proche(data_seveso, lat, lon);    // Fonction 'importée' de distances.js
         risques = "<p>" + cp + "</p><p>" + ville + "</p><p>" + "CNPE la plus proche : "+ Math.trunc(cnpe.distance) + " kms ("+ cnpe.site + ")</p>" 
             + "Site Seveso le plus proche : "+ Math.trunc(seveso.distance) + " kms - "+ seveso.site + "</p>";
     
