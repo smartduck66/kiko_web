@@ -1,0 +1,112 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1981-2010  et  records;
+L OUDON LIEURY_SAPC (14)      Indicatif : 14624001, alt : 52m, lat : 48°59'18"N, lon : 00°00'30"W;
+Edité le : 06/12/2020 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-01-1971 au 02-12-2020);
+            ;      16.2;      20.9;      22.8;      28.7;      30.6;      36.1;      40.1;      38.8;      33.3;      29.2;      22.4;      17.2;      40.1;
+Date        ;   13-1993;   27-2019;   30-2017;   21-2018;   27-2005;   25-2020;   25-2019;   10-2003;   13-2016;   01-2011;   01-2015;   16-1989;      2019;
+
+
+Température maximale (Moyenne en °C);
+            ;       7.9;       8.9;        12;      14.6;      18.3;      21.3;      23.8;      23.9;      20.9;      16.5;      11.5;       8.2;      15.7;
+
+
+Température moyenne (Moyenne en °C);
+            ;       4.7;         5;       7.4;       9.2;      12.8;      15.5;      17.8;      17.8;      15.1;        12;       7.8;       5.1;      10.9;
+
+
+Température minimale (Moyenne en °C);
+            ;       1.5;       1.2;       2.8;       3.7;       7.2;       9.8;      11.8;      11.7;       9.4;       7.6;         4;       1.9;       6.1;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-01-1971 au 02-12-2020);
+            ;     -26.5;     -14.8;     -14.5;      -7.1;      -3.1;      -0.5;         3;       1.5;      -1.5;        -8;      -9.8;     -13.4;     -26.5;
+Date        ;   08-1985;   11-2012;   13-2013;   04-1996;   14-2010;   05-1991;   04-1984;   28-1974;   27-1972;   30-1997;   28-2010;   19-2009;      1985;
+
+
+Nombre moyen de jours avec;
+Tx >=  30°C ;         .;         .;         .;         .;       0.0;       1.0;       2.8;       2.5;       0.4;         .;         .;         .;       6.6;
+Tx >=  25°C ;         .;         .;         .;       0.4;       2.5;       5.3;      11.1;      10.2;       4.1;       0.4;         .;         .;      34.0;
+Tx <=   0°C ;       1.5;       0.5;         .;         .;         .;         .;         .;         .;         .;         .;       0.1;       0.6;       2.7;
+Tn <=   0°C ;      11.0;      11.7;       9.2;       5.8;       0.9;       0.0;         .;         .;       0.1;       2.1;       6.3;      11.5;      58.7;
+Tn <=  -5°C ;       3.6;       2.9;       1.1;       0.3;         .;         .;         .;         .;         .;       0.1;       1.4;       3.0;      12.3;
+Tn <= -10°C ;       0.7;       0.2;         .;         .;         .;         .;         .;         .;         .;         .;         .;       0.3;       1.2;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-07-1963 au 02-12-2020);
+            ;        31;      35.2;      23.8;      47.6;      87.8;      52.4;      50.6;      58.6;      40.3;      38.2;      47.6;      34.1;      87.8;
+Date        ;   10-1993;   28-1964;   03-1969;   19-1988;   28-2018;   10-1993;   03-1975;   02-1999;   20-1981;   11-1993;   04-1994;   05-1988;      2018;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+            ;      53.8;        42;      49.3;        49;      62.4;      54.8;      51.1;      46.6;      59.4;      65.9;      59.2;        65;     658.5;
+
+
+Nombre moyen de jours avec;
+Rr >=  1 mm ;      11.4;       9.8;      10.4;       9.8;       9.8;       8.1;       8.6;       7.3;       8.7;      10.6;      11.5;      12.3;     118.4;
+Rr >=  5 mm ;       3.6;       2.8;       3.0;       3.4;       3.9;       3.4;       3.1;       3.0;       4.0;       4.4;       4.1;       4.6;      43.3;
+Rr >= 10 mm ;       1.0;       0.6;       1.0;       1.1;       2.0;       1.5;       1.4;       1.3;       1.8;       1.8;       1.1;       1.6;      16.1;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+            ;       411;     366.2;     328.6;     264.9;     164.2;      84.9;      36.8;      37.1;      92.5;     186.1;     307.3;     400.9;    2680.5;
+
+
+Rayonnement global (Moyenne en J/cm²);
+Statistiques établies sur la période 1994-2010;
+            ;     10751;     16383;     30673;     44292;     54778;     60310;     56956;     50580;         -;     23019;     12124;      8536;         -;
+
+
+Durée d'insolation (Moyenne en heures);
+Données non disponibles;
+
+
+
+Nombre moyen de jours avec fraction d'insolation;
+Données non disponibles;
+
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+Données non disponibles;
+
+
+
+Rafale maximale de vent (m/s);
+(Records établis sur la période du 01-04-1993 au 27-03-2013);
+            ;        27;        28;        24;        24;        29;        19;        22;        27;        22;        26;        24;        28;29.0      ;
+Date        ;   27-1994;   12-1996;   04-1998;   04-1994;   02-2003;   23-2004;   19-2006;   25-1999;   05-2008;   30-2000;   24-2012;   17-2004;      2003;
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+Statistiques établies sur la période 1993-2010;
+            ;       3.4;       3.4;       3.1;       2.9;       2.5;       2.3;       2.4;       2.3;       2.3;       2.6;       2.8;         3;       2.7;
+
+
+Nombre moyen de jours avec rafales;
+Statistiques établies sur la période 1993-2010;
+>= 16 m/s   ;       5.3;       4.8;       4.2;       3.1;       1.4;       0.6;       1.3;       1.1;       1.2;       2.1;       2.7;       4.1;      31.9;
+>= 28 m/s   ;         .;       0.1;         .;         .;       0.1;         .;         .;         .;         .;         .;         .;       0.1;       0.2;
+(16 m/s = 58 km/h,  28 m/s = 100 km/h);
+
+
+Nombre moyen de jours avec brouillard / orage / grêle / neige;
+Données non disponibles;
+
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1981-2010 sauf pour les paramètres suivants :  rayonnement global (1994-2010), vent (1993-2010).;
+

@@ -1,0 +1,114 @@
+FICHE CLIMATOLOGIQUE;
+;
+Statistiques  1981-2010  et  records;
+COLMAR-MEYENHEIM (68)      Indicatif : 68205001, alt : 207m, lat : 47°55'42"N, lon : 07°24'24"E;
+Edité le : 06/12/2020 dans l'état de la base;
+
+
+            ;     Janv.;     Févr.;      Mars;     Avril;       Mai;      Juin;     Juil.;      Août;     Sept.;      Oct.;      Nov.;      Déc.;     Année;
+
+
+La température la plus élevée (°C);
+(Records établis sur la période du 01-04-1957 au 02-12-2020);
+            ;      18.5;      21.8;      25.5;      29.7;      34.7;      38.6;      38.7;      40.9;      33.7;      30.7;        24;      20.3;      40.9;
+Date        ;   10-1991;   25-1990;   30-1989;   21-2018;   25-2009;   30-2019;   04-2015;   13-2003;   15-2020;   07-2009;   07-2015;   16-1989;      2003;
+
+
+Température maximale (Moyenne en °C);
+            ;       4.8;       6.8;      11.9;        16;      20.4;      23.7;      26.1;      25.8;      21.4;      15.8;       9.2;       5.5;      15.7;
+
+
+Température moyenne (Moyenne en °C);
+            ;       1.7;       2.8;       6.9;      10.4;      14.9;        18;      20.2;      19.7;      15.8;      11.3;       5.7;       2.7;      10.9;
+
+
+Température minimale (Moyenne en °C);
+            ;      -1.4;      -1.2;         2;       4.8;       9.3;      12.3;      14.2;      13.7;      10.2;       6.8;       2.2;      -0.2;       6.1;
+
+
+La température la plus basse (°C);
+(Records établis sur la période du 01-04-1957 au 02-12-2020);
+            ;       -22;     -24.8;       -16;      -7.3;      -3.1;       2.1;         4;       3.2;        -1;      -7.6;     -13.1;       -19;     -24.8;
+Date        ;   19-1966;   27-1986;   01-1963;   13-1986;   01-1962;   03-2006;   07-1962;   29-1963;   18-1971;   31-1997;   23-1998;   28-1962;      1986;
+
+
+Nombre moyen de jours avec;
+Tx >=  30°C ;         .;         .;         .;         .;       0.8;       3.4;       6.3;       5.7;       0.6;       0.1;         .;         .;      16.9;
+Tx >=  25°C ;         .;         .;       0.1;       1.2;       6.2;      12.2;      18.3;      17.3;       6.7;       1.0;         .;         .;      63.2;
+Tx <=   0°C ;       6.6;       3.3;       0.3;         .;         .;         .;         .;         .;         .;         .;       1.1;       3.6;      14.9;
+Tn <=   0°C ;      18.0;      16.3;      10.7;       3.1;       0.2;         .;         .;         .;         .;       2.4;       9.1;      15.6;      75.3;
+Tn <=  -5°C ;       7.1;       6.0;       1.9;       0.1;         .;         .;         .;         .;         .;       0.1;       2.1;       4.2;      21.5;
+Tn <= -10°C ;       2.2;       1.4;       0.2;         .;         .;         .;         .;         .;         .;         .;       0.2;       1.0;       5.0;
+(Tn=Température minimale. Tx=Température maximale);
+
+
+Précipitations : Hauteur quotidienne maximale (mm);
+(Records établis sur la période du 01-04-1957 au 02-12-2020);
+            ;      38.1;      23.9;      34.4;      30.2;      67.5;      55.2;      80.6;      59.8;      40.6;      32.6;      35.8;      28.1;      80.6;
+Date        ;   27-1979;   07-1958;   19-1995;   03-1992;   21-1959;   17-1970;   10-1989;   15-1979;   26-1987;   08-2009;   03-1989;   24-2009;      1989;
+
+
+Précipitations : Hauteur moyenne mensuelle (mm);
+            ;      31.7;      28.8;      37.4;      44.7;      74.2;      64.2;      66.8;        57;      57.8;      56.9;      40.1;      47.7;     607.3;
+
+
+Nombre moyen de jours avec;
+Rr >=  1 mm ;       7.1;       7.0;       8.5;       8.9;      11.2;       9.6;       9.4;       9.1;       7.9;       9.3;       7.3;       8.5;     103.9;
+Rr >=  5 mm ;       2.0;       1.9;       2.3;       2.8;       4.8;       4.0;       4.4;       3.7;       3.8;       3.9;       2.7;       3.0;      39.3;
+Rr >= 10 mm ;       0.6;       0.3;       0.7;       1.0;       2.3;       1.9;       2.0;       1.8;       2.0;       1.6;       0.9;       1.2;      16.2;
+Rr : Hauteur quotidienne de précipitations;
+
+
+Degrés Jours Unifiés (Moyenne en °C);
+            ;       505;     428.6;     343.6;     228.4;     107.3;      42.6;      13.2;      17.9;      80.3;     209.2;     369.2;     474.5;    2819.8;
+
+
+Rayonnement global (Moyenne en J/cm²);
+Statistiques établies sur la période 1991-2010;
+            ;     11523;     18158;     33413;     46898;     57683;     63959;     63582;     54818;     38471;     23468;     12432;      8757;  433162.0;
+
+
+Durée d'insolation (Moyenne en heures);
+            ;      71.8;        97;     144.7;     180.2;     201.5;     225.5;     239.2;     223.6;     170.7;     116.9;      70.5;      57.5;    1799.0;
+
+
+Nombre moyen de jours avec fraction d'insolation;
+ =  0 %     ;      10.3;       6.3;       4.5;       2.5;       3.3;       1.4;       1.1;       1.6;       3.0;       6.0;       8.6;      12.4;      60.8;
+<= 20 %     ;      18.2;      13.5;      12.1;       9.6;      10.2;       7.4;       7.5;       7.2;       9.4;      13.3;      17.1;      19.7;     144.8;
+>= 80 %     ;       3.3;       4.5;       6.2;       6.2;       6.2;       5.6;       6.8;       7.5;       6.5;       4.4;       2.5;       2.6;      62.2;
+
+
+Evapotranspiration Potentielle (ETP Penman moyenne en mm);
+            ;      12.7;      22.7;      54.4;      87.2;     119.9;     139.9;     143.4;     117.3;      71.2;      35.9;      13.9;      10.1;     828.6;
+
+
+Rafale maximale de vent (m/s);
+(Records établis sur la période du 01-01-1981 au 02-12-2020);
+            ;        31;        38;        33;        27;        26;        32;        33;        28;        25;        28;        30;        43;43.0      ;
+Date        ;   12-1993;   01-1983;   24-1986;   15-1992;   24-1996;   25-2006;   20-2003;   17-2003;   22-1991;   29-1998;   23-1984;   26-1999;      1999;
+
+
+Vitesse du vent moyenné sur 10 mn (Moyenne en m/s);
+            ;       3.6;       3.6;       3.8;       3.3;       3.2;         3;       2.8;       2.6;       2.7;         3;       3.1;       3.5;       3.2;
+
+
+Nombre moyen de jours avec rafales;
+>= 16 m/s   ;       6.1;       4.7;       5.1;       3.0;       2.4;       2.4;       2.1;         -;       1.7;       3.1;       3.3;       5.0;         -;
+>= 28 m/s   ;       0.3;       0.3;       0.1;         .;         .;       0.1;       0.1;         -;         .;       0.1;       0.1;       0.2;         -;
+(16 m/s = 58 km/h,  28 m/s = 100 km/h);
+
+
+Nombre moyen de jours avec ;
+Données non disponibles;
+
+Données non disponibles;
+
+Données non disponibles;
+
+Neige       ;         -;         -;         -;       0.6;         .;         .;         .;         .;         .;         -;         -;         -;         -;
+
+- : donnée manquante;  . : donnée égale à 0;
+
+
+Ces statistiques sont établies sur la période 1981-2010 sauf pour les paramètres suivants :  rayonnement global (1991-2010), insolation (1991-2010), ETP (2001-2010).;
+

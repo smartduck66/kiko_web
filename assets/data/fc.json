@@ -13,7 +13,7 @@
     "pluie": "1134.4",
     "vent": "-",
     "distance_cnpe": "20",
-    "prix_maisons": "2537"
+    "prix_maisons": 2469
   },
   {
     "indicatif": "02320001",
@@ -29,7 +29,7 @@
     "pluie": "702.6",
     "vent": "-",
     "distance_cnpe": "117",
-    "prix_maisons": "1263"
+    "prix_maisons": 1262
   },
   {
     "indicatif": "02321002",
@@ -45,7 +45,7 @@
     "pluie": "853.5",
     "vent": "48.8",
     "distance_cnpe": "71",
-    "prix_maisons": "1263"
+    "prix_maisons": 1262
   },
   {
     "indicatif": "02594001",
@@ -61,7 +61,7 @@
     "pluie": "727.6",
     "vent": "-",
     "distance_cnpe": "75",
-    "prix_maisons": "1263"
+    "prix_maisons": 1262
   },
   {
     "indicatif": "03060001",
@@ -77,7 +77,7 @@
     "pluie": "779.5",
     "vent": "26.7",
     "distance_cnpe": "135",
-    "prix_maisons": "1209"
+    "prix_maisons": 1211
   },
   {
     "indicatif": "03155003",
@@ -93,7 +93,7 @@
     "pluie": "750.7",
     "vent": "30.8",
     "distance_cnpe": "88",
-    "prix_maisons": "1209"
+    "prix_maisons": 1211
   },
   {
     "indicatif": "03180001",
@@ -109,7 +109,7 @@
     "pluie": "770.9",
     "vent": "33.1",
     "distance_cnpe": "116",
-    "prix_maisons": "1209"
+    "prix_maisons": 1211
   },
   {
     "indicatif": "03200001",
@@ -125,7 +125,7 @@
     "pluie": "751.2",
     "vent": "21.6",
     "distance_cnpe": "111",
-    "prix_maisons": "1209"
+    "prix_maisons": 1211
   },
   {
     "indicatif": "03248001",
@@ -141,7 +141,7 @@
     "pluie": "1409.4",
     "vent": "-",
     "distance_cnpe": "102",
-    "prix_maisons": "1209"
+    "prix_maisons": 1211
   },
   {
     "indicatif": "04049001",
@@ -157,7 +157,7 @@
     "pluie": "694.9",
     "vent": "-",
     "distance_cnpe": "104",
-    "prix_maisons": "2292"
+    "prix_maisons": 2319
   },
   {
     "indicatif": "05023001",
@@ -173,15 +173,15 @@
     "pluie": "759.1",
     "vent": "-",
     "distance_cnpe": "145",
-    "prix_maisons": "2394"
+    "prix_maisons": 2367
   },
   {
     "indicatif": "05046001",
     "ville": "Embrun",
     "departement": "05",
-    "altitude": "871",
-    "latitude": "44°33'54\"N",
-    "longitude": "06°30'06\"E",
+    "altitude": "873",
+    "latitude": "44°34'12\"N",
+    "longitude": "06°30'30\"E",
     "temp_moy": "10.7",
     "temp_min": "4.9",
     "temp_max": "16.5",
@@ -189,7 +189,7 @@
     "pluie": "726.5",
     "vent": "-",
     "distance_cnpe": "138",
-    "prix_maisons": "2394"
+    "prix_maisons": 2367
   },
   {
     "indicatif": "05070003",
@@ -205,7 +205,7 @@
     "pluie": "815.2",
     "vent": "-",
     "distance_cnpe": "84",
-    "prix_maisons": "2394"
+    "prix_maisons": 2367
   },
   {
     "indicatif": "06029001",
@@ -221,7 +221,7 @@
     "pluie": "794.8",
     "vent": "indisponible",
     "distance_cnpe": "197",
-    "prix_maisons": "5851"
+    "prix_maisons": 5950
   },
   {
     "indicatif": "06088001",
@@ -237,7 +237,7 @@
     "pluie": "733",
     "vent": "41.4",
     "distance_cnpe": "212",
-    "prix_maisons": "5851"
+    "prix_maisons": 5950
   },
   {
     "indicatif": "07068001",
@@ -253,14 +253,14 @@
     "pluie": "961.6",
     "vent": "indisponible",
     "distance_cnpe": "43",
-    "prix_maisons": "1947"
+    "prix_maisons": 1944
   },
   {
     "indicatif": "07131001",
     "ville": "Lanas Syn",
     "departement": "07",
-    "altitude": "280",
-    "latitude": "44°32'18\"N",
+    "altitude": "265",
+    "latitude": "44°32'12\"N",
     "longitude": "04°22'00\"E",
     "temp_moy": "13.5",
     "temp_min": "8.3",
@@ -269,7 +269,7 @@
     "pluie": "1074.3",
     "vent": "indisponible",
     "distance_cnpe": "32",
-    "prix_maisons": "1947"
+    "prix_maisons": 1944
   },
   {
     "indicatif": "08105005",
@@ -285,7 +285,7 @@
     "pluie": "942.6",
     "vent": "-",
     "distance_cnpe": "35",
-    "prix_maisons": "1157"
+    "prix_maisons": 1155
   },
   {
     "indicatif": "09289001",
@@ -301,7 +301,7 @@
     "pluie": "952.2",
     "vent": "28.3",
     "distance_cnpe": "124",
-    "prix_maisons": "1382"
+    "prix_maisons": 1377
   },
   {
     "indicatif": "10030001",
@@ -317,7 +317,7 @@
     "pluie": "644.8",
     "vent": "-",
     "distance_cnpe": "42",
-    "prix_maisons": "1399"
+    "prix_maisons": 1404
   },
   {
     "indicatif": "10130001",
@@ -333,7 +333,7 @@
     "pluie": "726.5",
     "vent": "20.2",
     "distance_cnpe": "52",
-    "prix_maisons": "1399"
+    "prix_maisons": 1404
   },
   {
     "indicatif": "10228002",
@@ -349,7 +349,7 @@
     "pluie": "742.9",
     "vent": "-",
     "distance_cnpe": "72",
-    "prix_maisons": "1399"
+    "prix_maisons": 1404
   },
   {
     "indicatif": "11069001",
@@ -365,7 +365,7 @@
     "pluie": "648.5",
     "vent": "108.1",
     "distance_cnpe": "153",
-    "prix_maisons": "1749"
+    "prix_maisons": 1767
   },
   {
     "indicatif": "11170001",
@@ -381,7 +381,7 @@
     "pluie": "582.8",
     "vent": "indisponible",
     "distance_cnpe": "184",
-    "prix_maisons": "1749"
+    "prix_maisons": 1767
   },
   {
     "indicatif": "12145001",
@@ -397,7 +397,7 @@
     "pluie": "731.6",
     "vent": "131.2",
     "distance_cnpe": "138",
-    "prix_maisons": "1455"
+    "prix_maisons": 1550
   },
   {
     "indicatif": "12254001",
@@ -413,7 +413,7 @@
     "pluie": "894.2",
     "vent": "-",
     "distance_cnpe": "134",
-    "prix_maisons": "1455"
+    "prix_maisons": 1550
   },
   {
     "indicatif": "13001006",
@@ -429,7 +429,7 @@
     "pluie": "576.4",
     "vent": "58.8",
     "distance_cnpe": "105",
-    "prix_maisons": "4311"
+    "prix_maisons": 4437
   },
   {
     "indicatif": "13001009",
@@ -445,7 +445,7 @@
     "pluie": "585.8",
     "vent": "indisponible",
     "distance_cnpe": "105",
-    "prix_maisons": "4311"
+    "prix_maisons": 4437
   },
   {
     "indicatif": "13004003",
@@ -461,7 +461,7 @@
     "pluie": "580.2",
     "vent": "-",
     "distance_cnpe": "91",
-    "prix_maisons": "4311"
+    "prix_maisons": 4437
   },
   {
     "indicatif": "13047001",
@@ -477,7 +477,7 @@
     "pluie": "554.3",
     "vent": "114.0",
     "distance_cnpe": "91",
-    "prix_maisons": "4311"
+    "prix_maisons": 4437
   },
   {
     "indicatif": "13054001",
@@ -493,7 +493,7 @@
     "pluie": "515.4",
     "vent": "104.7",
     "distance_cnpe": "106",
-    "prix_maisons": "4311"
+    "prix_maisons": 4437
   },
   {
     "indicatif": "13103001",
@@ -509,7 +509,7 @@
     "pluie": "579.3",
     "vent": "98.0",
     "distance_cnpe": "86",
-    "prix_maisons": "4311"
+    "prix_maisons": 4437
   },
   {
     "indicatif": "14137001",
@@ -525,7 +525,7 @@
     "pluie": "739.9",
     "vent": "70.9",
     "distance_cnpe": "108",
-    "prix_maisons": "2932"
+    "prix_maisons": 2488
   },
   {
     "indicatif": "14624001",
@@ -541,7 +541,7 @@
     "pluie": "658.5",
     "vent": "31.9",
     "distance_cnpe": "107",
-    "prix_maisons": "2932"
+    "prix_maisons": 2488
   },
   {
     "indicatif": "15014004",
@@ -557,7 +557,7 @@
     "pluie": "1174",
     "vent": "35.7",
     "distance_cnpe": "152",
-    "prix_maisons": "1241"
+    "prix_maisons": 1267
   },
   {
     "indicatif": "15053001",
@@ -573,7 +573,7 @@
     "pluie": "764.4",
     "vent": "54.5",
     "distance_cnpe": "143",
-    "prix_maisons": "1241"
+    "prix_maisons": 1267
   },
   {
     "indicatif": "15114002",
@@ -589,7 +589,7 @@
     "pluie": "1189.8",
     "vent": "58.9",
     "distance_cnpe": "150",
-    "prix_maisons": "1241"
+    "prix_maisons": 1267
   },
   {
     "indicatif": "15120005",
@@ -605,7 +605,7 @@
     "pluie": "1200.5",
     "vent": "25.4",
     "distance_cnpe": "168",
-    "prix_maisons": "1241"
+    "prix_maisons": 1267
   },
   {
     "indicatif": "15122002",
@@ -621,7 +621,7 @@
     "pluie": "1176.3",
     "vent": "26.5",
     "distance_cnpe": "125",
-    "prix_maisons": "1241"
+    "prix_maisons": 1267
   },
   {
     "indicatif": "16089001",
@@ -637,7 +637,7 @@
     "pluie": "777.1",
     "vent": "35.5",
     "distance_cnpe": "54",
-    "prix_maisons": "1331"
+    "prix_maisons": 1336
   },
   {
     "indicatif": "16113001",
@@ -653,7 +653,7 @@
     "pluie": "843.2",
     "vent": "-",
     "distance_cnpe": "74",
-    "prix_maisons": "1331"
+    "prix_maisons": 1336
   },
   {
     "indicatif": "16225001",
@@ -669,7 +669,7 @@
     "pluie": "1007.9",
     "vent": "-",
     "distance_cnpe": "74",
-    "prix_maisons": "1331"
+    "prix_maisons": 1336
   },
   {
     "indicatif": "16360001",
@@ -685,7 +685,7 @@
     "pluie": "817.8",
     "vent": "-",
     "distance_cnpe": "50",
-    "prix_maisons": "1331"
+    "prix_maisons": 1336
   },
   {
     "indicatif": "16390001",
@@ -701,7 +701,7 @@
     "pluie": "836.4",
     "vent": "-",
     "distance_cnpe": "72",
-    "prix_maisons": "1331"
+    "prix_maisons": 1336
   },
   {
     "indicatif": "16397001",
@@ -717,7 +717,7 @@
     "pluie": "802.5",
     "vent": "-",
     "distance_cnpe": "83",
-    "prix_maisons": "1331"
+    "prix_maisons": 1336
   },
   {
     "indicatif": "17300001",
@@ -733,7 +733,7 @@
     "pluie": "767",
     "vent": "indisponible",
     "distance_cnpe": "105",
-    "prix_maisons": "2399"
+    "prix_maisons": 2425
   },
   {
     "indicatif": "17415003",
@@ -749,7 +749,7 @@
     "pluie": "910.6",
     "vent": "-",
     "distance_cnpe": "56",
-    "prix_maisons": "2399"
+    "prix_maisons": 2425
   },
   {
     "indicatif": "18033001",
@@ -765,7 +765,7 @@
     "pluie": "747.9",
     "vent": "41.3",
     "distance_cnpe": "63",
-    "prix_maisons": "1353"
+    "prix_maisons": 1349
   },
   {
     "indicatif": "18092001",
@@ -781,7 +781,7 @@
     "pluie": "772.9",
     "vent": "41.6",
     "distance_cnpe": "53",
-    "prix_maisons": "1353"
+    "prix_maisons": 1349
   },
   {
     "indicatif": "18241002",
@@ -797,7 +797,7 @@
     "pluie": "905.4",
     "vent": "indisponible",
     "distance_cnpe": "20",
-    "prix_maisons": "1353"
+    "prix_maisons": 1349
   },
   {
     "indicatif": "19010001",
@@ -813,7 +813,7 @@
     "pluie": "1165.4",
     "vent": "10.4",
     "distance_cnpe": "140",
-    "prix_maisons": "1312"
+    "prix_maisons": 1364
   },
   {
     "indicatif": "19031008",
@@ -829,7 +829,7 @@
     "pluie": "914.4",
     "vent": "17.2",
     "distance_cnpe": "125",
-    "prix_maisons": "1312"
+    "prix_maisons": 1364
   },
   {
     "indicatif": "19146001",
@@ -845,7 +845,7 @@
     "pluie": "1236.4",
     "vent": "-",
     "distance_cnpe": "153",
-    "prix_maisons": "1312"
+    "prix_maisons": 1364
   },
   {
     "indicatif": "19276006",
@@ -861,7 +861,7 @@
     "pluie": "1126.2",
     "vent": "20.4",
     "distance_cnpe": "137",
-    "prix_maisons": "1312"
+    "prix_maisons": 1364
   },
   {
     "indicatif": "20004002",
@@ -981,14 +981,14 @@
     "departement": "20",
     "altitude": "510",
     "latitude": "42°32'24\"N",
-    "longitude": "09°11'12\"E",
+    "longitude": "09°10'18\"E",
     "temp_moy": "13.9",
     "temp_min": "9.2",
     "temp_max": "18.6",
     "ensoleillement": "indisponible",
     "pluie": "651.7",
     "vent": "30.7",
-    "distance_cnpe": "411",
+    "distance_cnpe": "410",
     "prix_maisons": "-"
   },
   {
@@ -1085,7 +1085,7 @@
     "pluie": "864.1",
     "vent": "39.4",
     "distance_cnpe": "108",
-    "prix_maisons": "1872"
+    "prix_maisons": 1912
   },
   {
     "indicatif": "21473001",
@@ -1101,7 +1101,7 @@
     "pluie": "760.5",
     "vent": "31.5",
     "distance_cnpe": "163",
-    "prix_maisons": "1872"
+    "prix_maisons": 1912
   },
   {
     "indicatif": "21567001",
@@ -1117,7 +1117,7 @@
     "pluie": "807",
     "vent": "24.6",
     "distance_cnpe": "129",
-    "prix_maisons": "1872"
+    "prix_maisons": 1912
   },
   {
     "indicatif": "22092001",
@@ -1133,7 +1133,7 @@
     "pluie": "1130.6",
     "vent": "indisponible",
     "distance_cnpe": "156",
-    "prix_maisons": "1717"
+    "prix_maisons": 1706
   },
   {
     "indicatif": "22113006",
@@ -1149,7 +1149,7 @@
     "pluie": "945",
     "vent": "83.4",
     "distance_cnpe": "144",
-    "prix_maisons": "1717"
+    "prix_maisons": 1706
   },
   {
     "indicatif": "22135001",
@@ -1165,7 +1165,7 @@
     "pluie": "1013.3",
     "vent": "-",
     "distance_cnpe": "154",
-    "prix_maisons": "1717"
+    "prix_maisons": 1706
   },
   {
     "indicatif": "22219003",
@@ -1181,7 +1181,7 @@
     "pluie": "966.8",
     "vent": "indisponible",
     "distance_cnpe": "154",
-    "prix_maisons": "1717"
+    "prix_maisons": 1706
   },
   {
     "indicatif": "22247002",
@@ -1197,7 +1197,7 @@
     "pluie": "891",
     "vent": "-",
     "distance_cnpe": "133",
-    "prix_maisons": "1717"
+    "prix_maisons": 1706
   },
   {
     "indicatif": "22261002",
@@ -1213,7 +1213,7 @@
     "pluie": "743.4",
     "vent": "-",
     "distance_cnpe": "119",
-    "prix_maisons": "1717"
+    "prix_maisons": 1706
   },
   {
     "indicatif": "22266001",
@@ -1229,7 +1229,7 @@
     "pluie": "1145.7",
     "vent": "indisponible",
     "distance_cnpe": "178",
-    "prix_maisons": "1717"
+    "prix_maisons": 1706
   },
   {
     "indicatif": "22372001",
@@ -1245,7 +1245,7 @@
     "pluie": "750.7",
     "vent": "79.9",
     "distance_cnpe": "132",
-    "prix_maisons": "1717"
+    "prix_maisons": 1706
   },
   {
     "indicatif": "23030004",
@@ -1261,7 +1261,7 @@
     "pluie": "1262.1",
     "vent": "37.1",
     "distance_cnpe": "100",
-    "prix_maisons": "935"
+    "prix_maisons": 921
   },
   {
     "indicatif": "23176001",
@@ -1277,7 +1277,7 @@
     "pluie": "1029.1",
     "vent": "20.9",
     "distance_cnpe": "65",
-    "prix_maisons": "935"
+    "prix_maisons": 921
   },
   {
     "indicatif": "24037005",
@@ -1293,7 +1293,7 @@
     "pluie": "788.3",
     "vent": "23.4",
     "distance_cnpe": "83",
-    "prix_maisons": "1665"
+    "prix_maisons": 1674
   },
   {
     "indicatif": "25056001",
@@ -1309,7 +1309,7 @@
     "pluie": "1187",
     "vent": "indisponible",
     "distance_cnpe": "138",
-    "prix_maisons": "1948"
+    "prix_maisons": 1894
   },
   {
     "indicatif": "25462001",
@@ -1325,7 +1325,7 @@
     "pluie": "1503.3",
     "vent": "-",
     "distance_cnpe": "144",
-    "prix_maisons": "1948"
+    "prix_maisons": 1894
   },
   {
     "indicatif": "26050001",
@@ -1341,7 +1341,7 @@
     "pluie": "790.3",
     "vent": "indisponible",
     "distance_cnpe": "46",
-    "prix_maisons": "2306"
+    "prix_maisons": 2260
   },
   {
     "indicatif": "26113003",
@@ -1357,7 +1357,7 @@
     "pluie": "953.4",
     "vent": "indisponible",
     "distance_cnpe": "48",
-    "prix_maisons": "2306"
+    "prix_maisons": 2260
   },
   {
     "indicatif": "26115001",
@@ -1373,7 +1373,7 @@
     "pluie": "901.6",
     "vent": "indisponible",
     "distance_cnpe": "21",
-    "prix_maisons": "2306"
+    "prix_maisons": 2260
   },
   {
     "indicatif": "26116002",
@@ -1389,7 +1389,7 @@
     "pluie": "841.8",
     "vent": "indisponible",
     "distance_cnpe": "10",
-    "prix_maisons": "2306"
+    "prix_maisons": 2260
   },
   {
     "indicatif": "26124001",
@@ -1405,7 +1405,7 @@
     "pluie": "922.9",
     "vent": "indisponible",
     "distance_cnpe": "23",
-    "prix_maisons": "2306"
+    "prix_maisons": 2260
   },
   {
     "indicatif": "26179001",
@@ -1421,7 +1421,7 @@
     "pluie": "872.7",
     "vent": "indisponible",
     "distance_cnpe": "39",
-    "prix_maisons": "2306"
+    "prix_maisons": 2260
   },
   {
     "indicatif": "26198001",
@@ -1437,7 +1437,7 @@
     "pluie": "905.3",
     "vent": "99.8",
     "distance_cnpe": "6",
-    "prix_maisons": "2306"
+    "prix_maisons": 2260
   },
   {
     "indicatif": "26313001",
@@ -1453,7 +1453,7 @@
     "pluie": "867.8",
     "vent": "indisponible",
     "distance_cnpe": "40",
-    "prix_maisons": "2306"
+    "prix_maisons": 2260
   },
   {
     "indicatif": "27347001",
@@ -1469,7 +1469,7 @@
     "pluie": "604.6",
     "vent": "50.8",
     "distance_cnpe": "101",
-    "prix_maisons": "1821"
+    "prix_maisons": 1828
   },
   {
     "indicatif": "28070001",
@@ -1485,7 +1485,7 @@
     "pluie": "598.9",
     "vent": "41.5",
     "distance_cnpe": "82",
-    "prix_maisons": "1754"
+    "prix_maisons": 1753
   },
   {
     "indicatif": "28198001",
@@ -1501,7 +1501,7 @@
     "pluie": "612.3",
     "vent": "48.3",
     "distance_cnpe": "40",
-    "prix_maisons": "1754"
+    "prix_maisons": 1753
   },
   {
     "indicatif": "28215001",
@@ -1517,7 +1517,7 @@
     "pluie": "618.8",
     "vent": "indisponible",
     "distance_cnpe": "69",
-    "prix_maisons": "1754"
+    "prix_maisons": 1753
   },
   {
     "indicatif": "28239002",
@@ -1533,7 +1533,7 @@
     "pluie": "551.1",
     "vent": "indisponible",
     "distance_cnpe": "104",
-    "prix_maisons": "1754"
+    "prix_maisons": 1753
   },
   {
     "indicatif": "28252002",
@@ -1549,7 +1549,7 @@
     "pluie": "756.1",
     "vent": "indisponible",
     "distance_cnpe": "73",
-    "prix_maisons": "1754"
+    "prix_maisons": 1753
   },
   {
     "indicatif": "28305001",
@@ -1565,7 +1565,7 @@
     "pluie": "597.4",
     "vent": "indisponible",
     "distance_cnpe": "51",
-    "prix_maisons": "1754"
+    "prix_maisons": 1753
   },
   {
     "indicatif": "28322003",
@@ -1581,7 +1581,7 @@
     "pluie": "594.9",
     "vent": "indisponible",
     "distance_cnpe": "118",
-    "prix_maisons": "1754"
+    "prix_maisons": 1753
   },
   {
     "indicatif": "28406001",
@@ -1597,7 +1597,7 @@
     "pluie": "583.8",
     "vent": "indisponible",
     "distance_cnpe": "52",
-    "prix_maisons": "1754"
+    "prix_maisons": 1753
   },
   {
     "indicatif": "29021001",
@@ -1613,7 +1613,7 @@
     "pluie": "908",
     "vent": "138.3",
     "distance_cnpe": "202",
-    "prix_maisons": "1822"
+    "prix_maisons": 1802
   },
   {
     "indicatif": "29075001",
@@ -1629,7 +1629,7 @@
     "pluie": "1210",
     "vent": "81.6",
     "distance_cnpe": "218",
-    "prix_maisons": "1822"
+    "prix_maisons": 1802
   },
   {
     "indicatif": "29120001",
@@ -1645,7 +1645,7 @@
     "pluie": "1006.4",
     "vent": "90.0",
     "distance_cnpe": "233",
-    "prix_maisons": "1822"
+    "prix_maisons": 1802
   },
   {
     "indicatif": "29155005",
@@ -1661,7 +1661,7 @@
     "pluie": "819",
     "vent": "-",
     "distance_cnpe": "259",
-    "prix_maisons": "1822"
+    "prix_maisons": 1802
   },
   {
     "indicatif": "29163003",
@@ -1677,7 +1677,7 @@
     "pluie": "1126.8",
     "vent": "81.7",
     "distance_cnpe": "184",
-    "prix_maisons": "1822"
+    "prix_maisons": 1802
   },
   {
     "indicatif": "29216001",
@@ -1693,7 +1693,7 @@
     "pluie": "1250.2",
     "vent": "77.8",
     "distance_cnpe": "241",
-    "prix_maisons": "1822"
+    "prix_maisons": 1802
   },
   {
     "indicatif": "29264001",
@@ -1709,7 +1709,7 @@
     "pluie": "1165.1",
     "vent": "-",
     "distance_cnpe": "199",
-    "prix_maisons": "1822"
+    "prix_maisons": 1802
   },
   {
     "indicatif": "29276001",
@@ -1725,7 +1725,7 @@
     "pluie": "923.6",
     "vent": "indisponible",
     "distance_cnpe": "187",
-    "prix_maisons": "1822"
+    "prix_maisons": 1802
   },
   {
     "indicatif": "30081002",
@@ -1741,7 +1741,7 @@
     "pluie": "757",
     "vent": "155.8",
     "distance_cnpe": "22",
-    "prix_maisons": "2522"
+    "prix_maisons": 2521
   },
   {
     "indicatif": "30189001",
@@ -1757,7 +1757,7 @@
     "pluie": "762.9",
     "vent": "72.4",
     "distance_cnpe": "58",
-    "prix_maisons": "2522"
+    "prix_maisons": 2521
   },
   {
     "indicatif": "30258001",
@@ -1773,7 +1773,7 @@
     "pluie": "696.5",
     "vent": "81.6",
     "distance_cnpe": "67",
-    "prix_maisons": "2522"
+    "prix_maisons": 2521
   },
   {
     "indicatif": "30339001",
@@ -1789,7 +1789,7 @@
     "pluie": "1931.7",
     "vent": "273.2",
     "distance_cnpe": "94",
-    "prix_maisons": "2522"
+    "prix_maisons": 2521
   },
   {
     "indicatif": "31069001",
@@ -1805,7 +1805,7 @@
     "pluie": "638.3",
     "vent": "52.1",
     "distance_cnpe": "68",
-    "prix_maisons": "2652"
+    "prix_maisons": 2493
   },
   {
     "indicatif": "31157001",
@@ -1821,7 +1821,7 @@
     "pluie": "625.6",
     "vent": "52.0",
     "distance_cnpe": "75",
-    "prix_maisons": "2652"
+    "prix_maisons": 2493
   },
   {
     "indicatif": "32013005",
@@ -1837,7 +1837,7 @@
     "pluie": "685.4",
     "vent": "18.6",
     "distance_cnpe": "50",
-    "prix_maisons": "1564"
+    "prix_maisons": 1538
   },
   {
     "indicatif": "33281001",
@@ -1853,7 +1853,7 @@
     "pluie": "944.1",
     "vent": "38.6",
     "distance_cnpe": "47",
-    "prix_maisons": "3214"
+    "prix_maisons": 3215
   },
   {
     "indicatif": "33529001",
@@ -1869,7 +1869,7 @@
     "pluie": "946.3",
     "vent": "40.7",
     "distance_cnpe": "87",
-    "prix_maisons": "3214"
+    "prix_maisons": 3215
   },
   {
     "indicatif": "34154001",
@@ -1885,7 +1885,7 @@
     "pluie": "629.1",
     "vent": "71.8",
     "distance_cnpe": "104",
-    "prix_maisons": "2900"
+    "prix_maisons": 2934
   },
   {
     "indicatif": "34301002",
@@ -1901,7 +1901,7 @@
     "pluie": "560.7",
     "vent": "-",
     "distance_cnpe": "133",
-    "prix_maisons": "2900"
+    "prix_maisons": 2934
   },
   {
     "indicatif": "35228001",
@@ -1917,7 +1917,7 @@
     "pluie": "758.7",
     "vent": "68.3",
     "distance_cnpe": "106",
-    "prix_maisons": "2230"
+    "prix_maisons": 2229
   },
   {
     "indicatif": "35281001",
@@ -1933,7 +1933,7 @@
     "pluie": "694",
     "vent": "43.2",
     "distance_cnpe": "163",
-    "prix_maisons": "2230"
+    "prix_maisons": 2229
   },
   {
     "indicatif": "36063001",
@@ -1949,7 +1949,7 @@
     "pluie": "737.1",
     "vent": "49.0",
     "distance_cnpe": "94",
-    "prix_maisons": "1114"
+    "prix_maisons": 1119
   },
   {
     "indicatif": "37179001",
@@ -1965,7 +1965,7 @@
     "pluie": "695.6",
     "vent": "indisponible",
     "distance_cnpe": "48",
-    "prix_maisons": "2023"
+    "prix_maisons": 2096
   },
   {
     "indicatif": "38384001",
@@ -1981,7 +1981,7 @@
     "pluie": "934.3",
     "vent": "-",
     "distance_cnpe": "43",
-    "prix_maisons": "2784"
+    "prix_maisons": 2531
   },
   {
     "indicatif": "39013004",
@@ -1997,7 +1997,7 @@
     "pluie": "1226",
     "vent": "53.9",
     "distance_cnpe": "127",
-    "prix_maisons": "1600"
+    "prix_maisons": 1593
   },
   {
     "indicatif": "39097003",
@@ -2013,7 +2013,7 @@
     "pluie": "1574.9",
     "vent": "16.8",
     "distance_cnpe": "116",
-    "prix_maisons": "1600"
+    "prix_maisons": 1593
   },
   {
     "indicatif": "39362001",
@@ -2029,7 +2029,7 @@
     "pluie": "1189.5",
     "vent": "indisponible",
     "distance_cnpe": "101",
-    "prix_maisons": "1600"
+    "prix_maisons": 1593
   },
   {
     "indicatif": "39413001",
@@ -2045,7 +2045,7 @@
     "pluie": "1673.5",
     "vent": "49.1",
     "distance_cnpe": "71",
-    "prix_maisons": "1600"
+    "prix_maisons": 1593
   },
   {
     "indicatif": "39526003",
@@ -2061,7 +2061,7 @@
     "pluie": "888.1",
     "vent": "43.0",
     "distance_cnpe": "138",
-    "prix_maisons": "1600"
+    "prix_maisons": 1593
   },
   {
     "indicatif": "40088001",
@@ -2077,7 +2077,7 @@
     "pluie": "1151.3",
     "vent": "23.2",
     "distance_cnpe": "160",
-    "prix_maisons": "2442"
+    "prix_maisons": 2441
   },
   {
     "indicatif": "40192001",
@@ -2093,7 +2093,7 @@
     "pluie": "916.9",
     "vent": "24.8",
     "distance_cnpe": "109",
-    "prix_maisons": "2442"
+    "prix_maisons": 2441
   },
   {
     "indicatif": "41097001",
@@ -2109,7 +2109,7 @@
     "pluie": "702.3",
     "vent": "28.6",
     "distance_cnpe": "45",
-    "prix_maisons": "1585"
+    "prix_maisons": 1582
   },
   {
     "indicatif": "41281001",
@@ -2125,7 +2125,7 @@
     "pluie": "639.2",
     "vent": "45.8",
     "distance_cnpe": "28",
-    "prix_maisons": "1585"
+    "prix_maisons": 1582
   },
   {
     "indicatif": "42005001",
@@ -2141,7 +2141,7 @@
     "pluie": "718.2",
     "vent": "34.3",
     "distance_cnpe": "39",
-    "prix_maisons": "1826"
+    "prix_maisons": 1847
   },
   {
     "indicatif": "42095001",
@@ -2157,7 +2157,7 @@
     "pluie": "781.7",
     "vent": "12.2",
     "distance_cnpe": "36",
-    "prix_maisons": "1826"
+    "prix_maisons": 1847
   },
   {
     "indicatif": "42170001",
@@ -2173,7 +2173,7 @@
     "pluie": "682.4",
     "vent": "indisponible",
     "distance_cnpe": "85",
-    "prix_maisons": "1826"
+    "prix_maisons": 1847
   },
   {
     "indicatif": "42184002",
@@ -2189,7 +2189,7 @@
     "pluie": "703.3",
     "vent": "21.8",
     "distance_cnpe": "91",
-    "prix_maisons": "1826"
+    "prix_maisons": 1847
   },
   {
     "indicatif": "43062001",
@@ -2205,7 +2205,7 @@
     "pluie": "678.3",
     "vent": "50.6",
     "distance_cnpe": "85",
-    "prix_maisons": "1377"
+    "prix_maisons": 1385
   },
   {
     "indicatif": "43096001",
@@ -2221,7 +2221,7 @@
     "pluie": "613",
     "vent": "22.4",
     "distance_cnpe": "105",
-    "prix_maisons": "1377"
+    "prix_maisons": 1385
   },
   {
     "indicatif": "43111002",
@@ -2237,7 +2237,7 @@
     "pluie": "816.8",
     "vent": "-",
     "distance_cnpe": "76",
-    "prix_maisons": "1377"
+    "prix_maisons": 1385
   },
   {
     "indicatif": "43234005",
@@ -2253,7 +2253,7 @@
     "pluie": "790.2",
     "vent": "60.2",
     "distance_cnpe": "102",
-    "prix_maisons": "1377"
+    "prix_maisons": 1385
   },
   {
     "indicatif": "44020001",
@@ -2269,7 +2269,7 @@
     "pluie": "819.5",
     "vent": "47.2",
     "distance_cnpe": "134",
-    "prix_maisons": "2738"
+    "prix_maisons": 2738
   },
   {
     "indicatif": "44103001",
@@ -2285,7 +2285,7 @@
     "pluie": "774.4",
     "vent": "62.8",
     "distance_cnpe": "175",
-    "prix_maisons": "2738"
+    "prix_maisons": 2738
   },
   {
     "indicatif": "45055001",
@@ -2301,7 +2301,7 @@
     "pluie": "642.5",
     "vent": "49.7",
     "distance_cnpe": "32",
-    "prix_maisons": "1749"
+    "prix_maisons": 1775
   },
   {
     "indicatif": "46127001",
@@ -2317,7 +2317,7 @@
     "pluie": "856.7",
     "vent": "27.9",
     "distance_cnpe": "83",
-    "prix_maisons": "1585"
+    "prix_maisons": 1525
   },
   {
     "indicatif": "47091001",
@@ -2333,7 +2333,7 @@
     "pluie": "712.2",
     "vent": "-",
     "distance_cnpe": "21",
-    "prix_maisons": "1552"
+    "prix_maisons": 1552
   },
   {
     "indicatif": "47252002",
@@ -2349,7 +2349,7 @@
     "pluie": "757.6",
     "vent": "-",
     "distance_cnpe": "40",
-    "prix_maisons": "1552"
+    "prix_maisons": 1552
   },
   {
     "indicatif": "48004001",
@@ -2365,7 +2365,7 @@
     "pluie": "1188.9",
     "vent": "132.3",
     "distance_cnpe": "72",
-    "prix_maisons": "1394"
+    "prix_maisons": 1374
   },
   {
     "indicatif": "49020001",
@@ -2381,7 +2381,7 @@
     "pluie": "693.3",
     "vent": "34.9",
     "distance_cnpe": "65",
-    "prix_maisons": "1814"
+    "prix_maisons": 1825
   },
   {
     "indicatif": "49188001",
@@ -2397,7 +2397,7 @@
     "pluie": "703.2",
     "vent": "32.0",
     "distance_cnpe": "51",
-    "prix_maisons": "1814"
+    "prix_maisons": 1825
   },
   {
     "indicatif": "51029003",
@@ -2413,7 +2413,7 @@
     "pluie": "694.1",
     "vent": "34.5",
     "distance_cnpe": "64",
-    "prix_maisons": "1837"
+    "prix_maisons": 1875
   },
   {
     "indicatif": "51183001",
@@ -2429,7 +2429,7 @@
     "pluie": "628.2",
     "vent": "43.6",
     "distance_cnpe": "96",
-    "prix_maisons": "1837"
+    "prix_maisons": 1875
   },
   {
     "indicatif": "52269001",
@@ -2445,7 +2445,7 @@
     "pluie": "895.5",
     "vent": "indisponible",
     "distance_cnpe": "154",
-    "prix_maisons": "911"
+    "prix_maisons": 944
   },
   {
     "indicatif": "52448001",
@@ -2461,7 +2461,7 @@
     "pluie": "843.7",
     "vent": "-",
     "distance_cnpe": "102",
-    "prix_maisons": "911"
+    "prix_maisons": 944
   },
   {
     "indicatif": "53094001",
@@ -2477,7 +2477,7 @@
     "pluie": "740",
     "vent": "43.3",
     "distance_cnpe": "112",
-    "prix_maisons": "1333"
+    "prix_maisons": 1336
   },
   {
     "indicatif": "53096004",
@@ -2493,7 +2493,7 @@
     "pluie": "847.7",
     "vent": "37.8",
     "distance_cnpe": "145",
-    "prix_maisons": "1333"
+    "prix_maisons": 1336
   },
   {
     "indicatif": "54405001",
@@ -2509,7 +2509,7 @@
     "pluie": "846.4",
     "vent": "-",
     "distance_cnpe": "94",
-    "prix_maisons": "1699"
+    "prix_maisons": 1697
   },
   {
     "indicatif": "54463001",
@@ -2525,7 +2525,7 @@
     "pluie": "761.1",
     "vent": "38.6",
     "distance_cnpe": "72",
-    "prix_maisons": "1699"
+    "prix_maisons": 1697
   },
   {
     "indicatif": "54526001",
@@ -2541,7 +2541,7 @@
     "pluie": "775.1",
     "vent": "35.9",
     "distance_cnpe": "81",
-    "prix_maisons": "1699"
+    "prix_maisons": 1697
   },
   {
     "indicatif": "56004001",
@@ -2557,7 +2557,7 @@
     "pluie": "837.4",
     "vent": "-",
     "distance_cnpe": "194",
-    "prix_maisons": "2168"
+    "prix_maisons": 2185
   },
   {
     "indicatif": "56009001",
@@ -2573,7 +2573,7 @@
     "pluie": "701.4",
     "vent": "135.6",
     "distance_cnpe": "255",
-    "prix_maisons": "2168"
+    "prix_maisons": 2185
   },
   {
     "indicatif": "56017003",
@@ -2589,7 +2589,7 @@
     "pluie": "1010.8",
     "vent": "42.3",
     "distance_cnpe": "194",
-    "prix_maisons": "2168"
+    "prix_maisons": 2185
   },
   {
     "indicatif": "56165003",
@@ -2605,7 +2605,7 @@
     "pluie": "749.7",
     "vent": "indisponible",
     "distance_cnpe": "180",
-    "prix_maisons": "2168"
+    "prix_maisons": 2185
   },
   {
     "indicatif": "56185001",
@@ -2621,7 +2621,7 @@
     "pluie": "950.9",
     "vent": "66.2",
     "distance_cnpe": "227",
-    "prix_maisons": "2168"
+    "prix_maisons": 2185
   },
   {
     "indicatif": "56240003",
@@ -2637,7 +2637,7 @@
     "pluie": "708.7",
     "vent": "indisponible",
     "distance_cnpe": "225",
-    "prix_maisons": "2168"
+    "prix_maisons": 2185
   },
   {
     "indicatif": "56243001",
@@ -2653,7 +2653,7 @@
     "pluie": "907.9",
     "vent": "-",
     "distance_cnpe": "220",
-    "prix_maisons": "2168"
+    "prix_maisons": 2185
   },
   {
     "indicatif": "57039001",
@@ -2685,7 +2685,7 @@
     "pluie": "804.1",
     "vent": "29.0",
     "distance_cnpe": "59",
-    "prix_maisons": "1119"
+    "prix_maisons": 1098
   },
   {
     "indicatif": "59343001",
@@ -2701,7 +2701,7 @@
     "pluie": "742.5",
     "vent": "62.4",
     "distance_cnpe": "82",
-    "prix_maisons": "2080"
+    "prix_maisons": 2076
   },
   {
     "indicatif": "60639001",
@@ -2717,7 +2717,7 @@
     "pluie": "669.4",
     "vent": "52.8",
     "distance_cnpe": "88",
-    "prix_maisons": "2148"
+    "prix_maisons": 2151
   },
   {
     "indicatif": "61001001",
@@ -2733,7 +2733,7 @@
     "pluie": "746.7",
     "vent": "43.3",
     "distance_cnpe": "135",
-    "prix_maisons": "1454"
+    "prix_maisons": 1406
   },
   {
     "indicatif": "62160001",
@@ -2749,7 +2749,7 @@
     "pluie": "777.9",
     "vent": "-",
     "distance_cnpe": "45",
-    "prix_maisons": "1817"
+    "prix_maisons": 1786
   },
   {
     "indicatif": "62298001",
@@ -2765,7 +2765,7 @@
     "pluie": "711.1",
     "vent": "65.7",
     "distance_cnpe": "112",
-    "prix_maisons": "1817"
+    "prix_maisons": 1786
   },
   {
     "indicatif": "62548002",
@@ -2781,7 +2781,7 @@
     "pluie": "722.6",
     "vent": "96.6",
     "distance_cnpe": "11",
-    "prix_maisons": "1817"
+    "prix_maisons": 1786
   },
   {
     "indicatif": "62826001",
@@ -2797,7 +2797,7 @@
     "pluie": "871.9",
     "vent": "-",
     "distance_cnpe": "62",
-    "prix_maisons": "1817"
+    "prix_maisons": 1786
   },
   {
     "indicatif": "63003004",
@@ -2813,7 +2813,7 @@
     "pluie": "873.3",
     "vent": "-",
     "distance_cnpe": "80",
-    "prix_maisons": "1652"
+    "prix_maisons": 1715
   },
   {
     "indicatif": "63098001",
@@ -2829,7 +2829,7 @@
     "pluie": "1600",
     "vent": "-",
     "distance_cnpe": "155",
-    "prix_maisons": "1652"
+    "prix_maisons": 1715
   },
   {
     "indicatif": "63113001",
@@ -2845,7 +2845,7 @@
     "pluie": "578.9",
     "vent": "49.4",
     "distance_cnpe": "132",
-    "prix_maisons": "1652"
+    "prix_maisons": 1715
   },
   {
     "indicatif": "63178001",
@@ -2861,7 +2861,7 @@
     "pluie": "624.2",
     "vent": "-",
     "distance_cnpe": "117",
-    "prix_maisons": "1652"
+    "prix_maisons": 1715
   },
   {
     "indicatif": "63345002",
@@ -2877,7 +2877,7 @@
     "pluie": "796.1",
     "vent": "indisponible",
     "distance_cnpe": "139",
-    "prix_maisons": "1652"
+    "prix_maisons": 1715
   },
   {
     "indicatif": "63353003",
@@ -2893,7 +2893,7 @@
     "pluie": "1082.2",
     "vent": "-",
     "distance_cnpe": "95",
-    "prix_maisons": "1652"
+    "prix_maisons": 1715
   },
   {
     "indicatif": "64010002",
@@ -2909,7 +2909,7 @@
     "pluie": "1216.7",
     "vent": "-",
     "distance_cnpe": "172",
-    "prix_maisons": "2409"
+    "prix_maisons": 2743
   },
   {
     "indicatif": "64024001",
@@ -2925,7 +2925,7 @@
     "pluie": "1450.9",
     "vent": "56.3",
     "distance_cnpe": "203",
-    "prix_maisons": "2409"
+    "prix_maisons": 2743
   },
   {
     "indicatif": "64189001",
@@ -2941,7 +2941,7 @@
     "pluie": "1483",
     "vent": "94.2",
     "distance_cnpe": "218",
-    "prix_maisons": "2409"
+    "prix_maisons": 2743
   },
   {
     "indicatif": "64549001",
@@ -2957,7 +2957,7 @@
     "pluie": "1069.9",
     "vent": "29.8",
     "distance_cnpe": "129",
-    "prix_maisons": "2409"
+    "prix_maisons": 2743
   },
   {
     "indicatif": "65125001",
@@ -2973,7 +2973,7 @@
     "pluie": "1103.2",
     "vent": "-",
     "distance_cnpe": "115",
-    "prix_maisons": "1481"
+    "prix_maisons": 1465
   },
   {
     "indicatif": "65344001",
@@ -2989,7 +2989,7 @@
     "pluie": "1047.4",
     "vent": "34.1",
     "distance_cnpe": "122",
-    "prix_maisons": "1481"
+    "prix_maisons": 1465
   },
   {
     "indicatif": "66002001",
@@ -3005,7 +3005,7 @@
     "pluie": "653.7",
     "vent": "indisponible",
     "distance_cnpe": "235",
-    "prix_maisons": "2169"
+    "prix_maisons": 2101
   },
   {
     "indicatif": "66136001",
@@ -3021,7 +3021,7 @@
     "pluie": "557.6",
     "vent": "135.4",
     "distance_cnpe": "223",
-    "prix_maisons": "2169"
+    "prix_maisons": 2101
   },
   {
     "indicatif": "66181001",
@@ -3037,7 +3037,7 @@
     "pluie": "567.3",
     "vent": "78.4",
     "distance_cnpe": "207",
-    "prix_maisons": "2169"
+    "prix_maisons": 2101
   },
   {
     "indicatif": "66212001",
@@ -3053,7 +3053,7 @@
     "pluie": "556.3",
     "vent": "-",
     "distance_cnpe": "225",
-    "prix_maisons": "2169"
+    "prix_maisons": 2101
   },
   {
     "indicatif": "66233001",
@@ -3069,7 +3069,7 @@
     "pluie": "656",
     "vent": "131.4",
     "distance_cnpe": "233",
-    "prix_maisons": "2169"
+    "prix_maisons": 2101
   },
   {
     "indicatif": "67122001",
@@ -3229,7 +3229,7 @@
     "pluie": "831.9",
     "vent": "56.5",
     "distance_cnpe": "27",
-    "prix_maisons": "3866"
+    "prix_maisons": 3868
   },
   {
     "indicatif": "69174002",
@@ -3245,7 +3245,7 @@
     "pluie": "993.8",
     "vent": "indisponible",
     "distance_cnpe": "65",
-    "prix_maisons": "3866"
+    "prix_maisons": 3868
   },
   {
     "indicatif": "69299001",
@@ -3261,7 +3261,7 @@
     "pluie": "880.9",
     "vent": "53.2",
     "distance_cnpe": "17",
-    "prix_maisons": "3866"
+    "prix_maisons": 3868
   },
   {
     "indicatif": "70132001",
@@ -3277,7 +3277,7 @@
     "pluie": "862.4",
     "vent": "-",
     "distance_cnpe": "153",
-    "prix_maisons": "1217"
+    "prix_maisons": 1215
   },
   {
     "indicatif": "70261001",
@@ -3293,7 +3293,7 @@
     "pluie": "951.3",
     "vent": "60.6",
     "distance_cnpe": "106",
-    "prix_maisons": "1217"
+    "prix_maisons": 1215
   },
   {
     "indicatif": "70473001",
@@ -3309,7 +3309,7 @@
     "pluie": "1051.2",
     "vent": "-",
     "distance_cnpe": "90",
-    "prix_maisons": "1217"
+    "prix_maisons": 1215
   },
   {
     "indicatif": "70561002",
@@ -3325,7 +3325,7 @@
     "pluie": "1065.3",
     "vent": "27.6",
     "distance_cnpe": "93",
-    "prix_maisons": "1217"
+    "prix_maisons": 1215
   },
   {
     "indicatif": "71014004",
@@ -3341,7 +3341,7 @@
     "pluie": "885.6",
     "vent": "27.2",
     "distance_cnpe": "120",
-    "prix_maisons": "1328"
+    "prix_maisons": 1409
   },
   {
     "indicatif": "71081001",
@@ -3357,7 +3357,7 @@
     "pluie": "735.2",
     "vent": "28.4",
     "distance_cnpe": "119",
-    "prix_maisons": "1328"
+    "prix_maisons": 1409
   },
   {
     "indicatif": "71105001",
@@ -3373,7 +3373,7 @@
     "pluie": "859.3",
     "vent": "29.8",
     "distance_cnpe": "66",
-    "prix_maisons": "1328"
+    "prix_maisons": 1409
   },
   {
     "indicatif": "71289001",
@@ -3389,7 +3389,7 @@
     "pluie": "1043.7",
     "vent": "16.6",
     "distance_cnpe": "82",
-    "prix_maisons": "1328"
+    "prix_maisons": 1409
   },
   {
     "indicatif": "71320001",
@@ -3405,7 +3405,7 @@
     "pluie": "929.1",
     "vent": "indisponible",
     "distance_cnpe": "110",
-    "prix_maisons": "1328"
+    "prix_maisons": 1409
   },
   {
     "indicatif": "71491001",
@@ -3421,7 +3421,7 @@
     "pluie": "799.4",
     "vent": "31.9",
     "distance_cnpe": "118",
-    "prix_maisons": "1328"
+    "prix_maisons": 1409
   },
   {
     "indicatif": "72181001",
@@ -3437,7 +3437,7 @@
     "pluie": "687.5",
     "vent": "30.7",
     "distance_cnpe": "79",
-    "prix_maisons": "1578"
+    "prix_maisons": 1572
   },
   {
     "indicatif": "73054001",
@@ -3453,7 +3453,7 @@
     "pluie": "985.9",
     "vent": "indisponible",
     "distance_cnpe": "117",
-    "prix_maisons": "2811"
+    "prix_maisons": 2924
   },
   {
     "indicatif": "73329001",
@@ -3469,7 +3469,7 @@
     "pluie": "1221",
     "vent": "30.3",
     "distance_cnpe": "50",
-    "prix_maisons": "2811"
+    "prix_maisons": 2924
   },
   {
     "indicatif": "74182001",
@@ -3485,7 +3485,7 @@
     "pluie": "1249.4",
     "vent": "-",
     "distance_cnpe": "65",
-    "prix_maisons": "4242"
+    "prix_maisons": 4360
   },
   {
     "indicatif": "75114001",
@@ -3501,7 +3501,7 @@
     "pluie": "637.4",
     "vent": "indisponible",
     "distance_cnpe": "93",
-    "prix_maisons": "14848"
+    "prix_maisons": 14836
   },
   {
     "indicatif": "76116001",
@@ -3517,7 +3517,7 @@
     "pluie": "851.7",
     "vent": "52.7",
     "distance_cnpe": "65",
-    "prix_maisons": "1951"
+    "prix_maisons": 1977
   },
   {
     "indicatif": "77054001",
@@ -3533,7 +3533,7 @@
     "pluie": "653.4",
     "vent": "41.3",
     "distance_cnpe": "40",
-    "prix_maisons": "2862"
+    "prix_maisons": 2864
   },
   {
     "indicatif": "77113002",
@@ -3549,7 +3549,7 @@
     "pluie": "691.4",
     "vent": "44.5",
     "distance_cnpe": "32",
-    "prix_maisons": "2862"
+    "prix_maisons": 2864
   },
   {
     "indicatif": "77211001",
@@ -3565,7 +3565,7 @@
     "pluie": "711.1",
     "vent": "50.2",
     "distance_cnpe": "38",
-    "prix_maisons": "2862"
+    "prix_maisons": 2864
   },
   {
     "indicatif": "77306001",
@@ -3581,7 +3581,7 @@
     "pluie": "676.9",
     "vent": "47.7",
     "distance_cnpe": "62",
-    "prix_maisons": "2862"
+    "prix_maisons": 2864
   },
   {
     "indicatif": "77333003",
@@ -3597,7 +3597,7 @@
     "pluie": "687.1",
     "vent": "21.6",
     "distance_cnpe": "61",
-    "prix_maisons": "2862"
+    "prix_maisons": 2864
   },
   {
     "indicatif": "77468001",
@@ -3613,7 +3613,7 @@
     "pluie": "721.2",
     "vent": "29.4",
     "distance_cnpe": "74",
-    "prix_maisons": "2862"
+    "prix_maisons": 2864
   },
   {
     "indicatif": "78354001",
@@ -3629,7 +3629,7 @@
     "pluie": "628.4",
     "vent": "-",
     "distance_cnpe": "117",
-    "prix_maisons": "4164"
+    "prix_maisons": 4210
   },
   {
     "indicatif": "78465001",
@@ -3645,7 +3645,7 @@
     "pluie": "565.1",
     "vent": "indisponible",
     "distance_cnpe": "126",
-    "prix_maisons": "4164"
+    "prix_maisons": 4210
   },
   {
     "indicatif": "78620001",
@@ -3661,7 +3661,7 @@
     "pluie": "689.8",
     "vent": "48.0",
     "distance_cnpe": "106",
-    "prix_maisons": "4164"
+    "prix_maisons": 4210
   },
   {
     "indicatif": "78621001",
@@ -3677,7 +3677,7 @@
     "pluie": "694.2",
     "vent": "indisponible",
     "distance_cnpe": "114",
-    "prix_maisons": "4164"
+    "prix_maisons": 4210
   },
   {
     "indicatif": "78640001",
@@ -3693,7 +3693,7 @@
     "pluie": "675.7",
     "vent": "44.9",
     "distance_cnpe": "100",
-    "prix_maisons": "4164"
+    "prix_maisons": 4210
   },
   {
     "indicatif": "79191005",
@@ -3709,7 +3709,7 @@
     "pluie": "867.2",
     "vent": "43.3",
     "distance_cnpe": "82",
-    "prix_maisons": "1273"
+    "prix_maisons": 1260
   },
   {
     "indicatif": "80001001",
@@ -3725,7 +3725,7 @@
     "pluie": "782.6",
     "vent": "74.2",
     "distance_cnpe": "47",
-    "prix_maisons": "1732"
+    "prix_maisons": 1740
   },
   {
     "indicatif": "80379002",
@@ -3741,7 +3741,7 @@
     "pluie": "631.2",
     "vent": "43.7",
     "distance_cnpe": "84",
-    "prix_maisons": "1732"
+    "prix_maisons": 1740
   },
   {
     "indicatif": "80682001",
@@ -3757,7 +3757,7 @@
     "pluie": "636.3",
     "vent": "52.0",
     "distance_cnpe": "109",
-    "prix_maisons": "1732"
+    "prix_maisons": 1740
   },
   {
     "indicatif": "80815002",
@@ -3773,7 +3773,7 @@
     "pluie": "893.4",
     "vent": "67.9",
     "distance_cnpe": "53",
-    "prix_maisons": "1732"
+    "prix_maisons": 1740
   },
   {
     "indicatif": "81081002",
@@ -3789,7 +3789,7 @@
     "pluie": "832.3",
     "vent": "-",
     "distance_cnpe": "124",
-    "prix_maisons": "1648"
+    "prix_maisons": 1700
   },
   {
     "indicatif": "81140002",
@@ -3805,7 +3805,7 @@
     "pluie": "724.9",
     "vent": "indisponible",
     "distance_cnpe": "93",
-    "prix_maisons": "1648"
+    "prix_maisons": 1700
   },
   {
     "indicatif": "81284001",
@@ -3821,7 +3821,7 @@
     "pluie": "730.9",
     "vent": "24.7",
     "distance_cnpe": "103",
-    "prix_maisons": "1648"
+    "prix_maisons": 1700
   },
   {
     "indicatif": "82121002",
@@ -3837,7 +3837,7 @@
     "pluie": "711.9",
     "vent": "23.4",
     "distance_cnpe": "43",
-    "prix_maisons": "1685"
+    "prix_maisons": 1769
   },
   {
     "indicatif": "83019002",
@@ -3853,7 +3853,7 @@
     "pluie": "917.9",
     "vent": "39.8",
     "distance_cnpe": "182",
-    "prix_maisons": "4806"
+    "prix_maisons": 4716
   },
   {
     "indicatif": "83031001",
@@ -3869,7 +3869,7 @@
     "pluie": "776.7",
     "vent": "-",
     "distance_cnpe": "169",
-    "prix_maisons": "4806"
+    "prix_maisons": 4716
   },
   {
     "indicatif": "83061001",
@@ -3885,7 +3885,7 @@
     "pluie": "747.3",
     "vent": "indisponible",
     "distance_cnpe": "189",
-    "prix_maisons": "4806"
+    "prix_maisons": 4716
   },
   {
     "indicatif": "83069001",
@@ -3901,7 +3901,7 @@
     "pluie": "652",
     "vent": "80.1",
     "distance_cnpe": "178",
-    "prix_maisons": "4806"
+    "prix_maisons": 4716
   },
   {
     "indicatif": "83069016",
@@ -3917,7 +3917,7 @@
     "pluie": "649.1",
     "vent": "indisponible",
     "distance_cnpe": "177",
-    "prix_maisons": "4806"
+    "prix_maisons": 4716
   },
   {
     "indicatif": "83137001",
@@ -3933,7 +3933,7 @@
     "pluie": "616.1",
     "vent": "116.5",
     "distance_cnpe": "164",
-    "prix_maisons": "4806"
+    "prix_maisons": 4716
   },
   {
     "indicatif": "84025001",
@@ -3949,7 +3949,7 @@
     "pluie": "686.2",
     "vent": "-",
     "distance_cnpe": "60",
-    "prix_maisons": "3091"
+    "prix_maisons": 3021
   },
   {
     "indicatif": "84031001",
@@ -3965,7 +3965,7 @@
     "pluie": "648.2",
     "vent": "66.5",
     "distance_cnpe": "37",
-    "prix_maisons": "3091"
+    "prix_maisons": 3021
   },
   {
     "indicatif": "84087001",
@@ -3981,7 +3981,7 @@
     "pluie": "709.1",
     "vent": "121.2",
     "distance_cnpe": "23",
-    "prix_maisons": "3091"
+    "prix_maisons": 3021
   },
   {
     "indicatif": "85113001",
@@ -3997,7 +3997,7 @@
     "pluie": "769.8",
     "vent": "98.0",
     "distance_cnpe": "198",
-    "prix_maisons": "2121"
+    "prix_maisons": 2127
   },
   {
     "indicatif": "85191003",
@@ -4013,7 +4013,7 @@
     "pluie": "880.7",
     "vent": "47.7",
     "distance_cnpe": "131",
-    "prix_maisons": "2121"
+    "prix_maisons": 2127
   },
   {
     "indicatif": "86027001",
@@ -4029,7 +4029,7 @@
     "pluie": "685.6",
     "vent": "41.6",
     "distance_cnpe": "30",
-    "prix_maisons": "1442"
+    "prix_maisons": 1434
   },
   {
     "indicatif": "87064005",
@@ -4045,7 +4045,7 @@
     "pluie": "1182.1",
     "vent": "25.3",
     "distance_cnpe": "113",
-    "prix_maisons": "1390"
+    "prix_maisons": 1398
   },
   {
     "indicatif": "87085006",
@@ -4061,7 +4061,7 @@
     "pluie": "1023.5",
     "vent": "31.1",
     "distance_cnpe": "77",
-    "prix_maisons": "1390"
+    "prix_maisons": 1398
   },
   {
     "indicatif": "87089003",
@@ -4077,7 +4077,7 @@
     "pluie": "892.3",
     "vent": "31.5",
     "distance_cnpe": "49",
-    "prix_maisons": "1390"
+    "prix_maisons": 1398
   },
   {
     "indicatif": "87154003",
@@ -4093,7 +4093,7 @@
     "pluie": "977.6",
     "vent": "21.6",
     "distance_cnpe": "65",
-    "prix_maisons": "1390"
+    "prix_maisons": 1398
   },
   {
     "indicatif": "87187003",
@@ -4109,7 +4109,7 @@
     "pluie": "1164.2",
     "vent": "16.9",
     "distance_cnpe": "114",
-    "prix_maisons": "1390"
+    "prix_maisons": 1398
   },
   {
     "indicatif": "88136001",
@@ -4125,7 +4125,7 @@
     "pluie": "942.4",
     "vent": "-",
     "distance_cnpe": "89",
-    "prix_maisons": "1278"
+    "prix_maisons": 1278
   },
   {
     "indicatif": "89131001",
@@ -4141,7 +4141,7 @@
     "pluie": "880.3",
     "vent": "39.0",
     "distance_cnpe": "90",
-    "prix_maisons": "1310"
+    "prix_maisons": 1303
   },
   {
     "indicatif": "89206001",
@@ -4157,7 +4157,7 @@
     "pluie": "679.3",
     "vent": "22.5",
     "distance_cnpe": "60",
-    "prix_maisons": "1310"
+    "prix_maisons": 1303
   },
   {
     "indicatif": "89346001",
@@ -4173,7 +4173,7 @@
     "pluie": "707.9",
     "vent": "indisponible",
     "distance_cnpe": "59",
-    "prix_maisons": "1310"
+    "prix_maisons": 1303
   },
   {
     "indicatif": "90010001",
@@ -4189,7 +4189,7 @@
     "pluie": "1122.3",
     "vent": "-",
     "distance_cnpe": "59",
-    "prix_maisons": "1628"
+    "prix_maisons": 1626
   },
   {
     "indicatif": "91027002",
@@ -4205,14 +4205,14 @@
     "pluie": "616.6",
     "vent": "51.5",
     "distance_cnpe": "85",
-    "prix_maisons": "3354"
+    "prix_maisons": 3357
   },
   {
     "indicatif": "91103001",
     "ville": "Bretigny_sapc",
     "departement": "91",
     "altitude": "78",
-    "latitude": "48°35'54\"N",
+    "latitude": "48°36'00\"N",
     "longitude": "02°19'30\"E",
     "temp_moy": "11.4",
     "temp_min": "7",
@@ -4221,7 +4221,7 @@
     "pluie": "621.2",
     "vent": "50.8",
     "distance_cnpe": "88",
-    "prix_maisons": "3354"
+    "prix_maisons": 3357
   },
   {
     "indicatif": "95088001",
@@ -4237,7 +4237,7 @@
     "pluie": "640.7",
     "vent": "47.6",
     "distance_cnpe": "94",
-    "prix_maisons": "3682"
+    "prix_maisons": 3678
   },
   {
     "indicatif": "95527001",
@@ -4253,7 +4253,7 @@
     "pluie": "693.6",
     "vent": "65.9",
     "distance_cnpe": "91",
-    "prix_maisons": "3682"
+    "prix_maisons": 3678
   },
   {
     "indicatif": "97101015",
@@ -4269,7 +4269,7 @@
     "pluie": "1616.6",
     "vent": "21.2",
     "distance_cnpe": "6461",
-    "prix_maisons": "2438"
+    "prix_maisons": 2974
   },
   {
     "indicatif": "97209004",
@@ -4285,7 +4285,7 @@
     "pluie": "2020.5",
     "vent": "-",
     "distance_cnpe": "6553",
-    "prix_maisons": "2808"
+    "prix_maisons": 2996
   },
   {
     "indicatif": "97213004",
@@ -4301,13 +4301,13 @@
     "pluie": "2094.9",
     "vent": "24.8",
     "distance_cnpe": "6550",
-    "prix_maisons": "2808"
+    "prix_maisons": 2996
   },
   {
     "indicatif": "97304003",
     "ville": "Kourou Csg",
     "departement": "973",
-    "altitude": "12",
+    "altitude": "17",
     "latitude": "5°12'30\"N",
     "longitude": "52°44'48\"W",
     "temp_moy": "26.8",
@@ -4317,7 +4317,7 @@
     "pluie": "2838.4",
     "vent": "6.6",
     "distance_cnpe": "6704",
-    "prix_maisons": "3808"
+    "prix_maisons": 3852
   },
   {
     "indicatif": "97304005",
@@ -4333,7 +4333,7 @@
     "pluie": "2530.3",
     "vent": "31.3",
     "distance_cnpe": "6700",
-    "prix_maisons": "3808"
+    "prix_maisons": 3852
   },
   {
     "indicatif": "97307001",
@@ -4349,7 +4349,7 @@
     "pluie": "3516.3",
     "vent": "-",
     "distance_cnpe": "6710",
-    "prix_maisons": "3808"
+    "prix_maisons": 3852
   },
   {
     "indicatif": "97404540",
@@ -4365,7 +4365,7 @@
     "pluie": "684.6",
     "vent": "24.6",
     "distance_cnpe": "8924",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97405480",
@@ -4381,7 +4381,7 @@
     "pluie": "1433.8",
     "vent": "indisponible",
     "distance_cnpe": "8943",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97407520",
@@ -4397,7 +4397,7 @@
     "pluie": "579.3",
     "vent": "31.8",
     "distance_cnpe": "8888",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97410238",
@@ -4413,7 +4413,7 @@
     "pluie": "3531.5",
     "vent": "-",
     "distance_cnpe": "8924",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97411111",
@@ -4429,15 +4429,15 @@
     "pluie": "1347.4",
     "vent": "-",
     "distance_cnpe": "8893",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97412384",
     "ville": "St-joseph Cirad",
     "departement": "974",
-    "altitude": "17",
-    "latitude": "21°22'54\"S",
-    "longitude": "55°36'24\"E",
+    "altitude": "13",
+    "latitude": "21°23'06\"S",
+    "longitude": "55°36'30\"E",
     "temp_moy": "24.2",
     "temp_min": "20.8",
     "temp_max": "27.6",
@@ -4445,7 +4445,7 @@
     "pluie": "1670.7",
     "vent": "indisponible",
     "distance_cnpe": "8948",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97413520",
@@ -4461,7 +4461,7 @@
     "pluie": "1104.4",
     "vent": "indisponible",
     "distance_cnpe": "8907",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97413524",
@@ -4477,7 +4477,7 @@
     "pluie": "809.4",
     "vent": "6.7",
     "distance_cnpe": "8907",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97414431",
@@ -4493,7 +4493,7 @@
     "pluie": "1022.9",
     "vent": "indisponible",
     "distance_cnpe": "8924",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97415566",
@@ -4509,7 +4509,7 @@
     "pluie": "1286.2",
     "vent": "indisponible",
     "distance_cnpe": "8906",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97415590",
@@ -4525,7 +4525,7 @@
     "pluie": "435.8",
     "vent": "22.6",
     "distance_cnpe": "8901",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97416410",
@@ -4541,7 +4541,7 @@
     "pluie": "841.3",
     "vent": "indisponible",
     "distance_cnpe": "8930",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97416415",
@@ -4557,7 +4557,7 @@
     "pluie": "672.1",
     "vent": "indisponible",
     "distance_cnpe": "8931",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97416463",
@@ -4573,7 +4573,7 @@
     "pluie": "639.9",
     "vent": "107.2",
     "distance_cnpe": "8931",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97416465",
@@ -4589,7 +4589,7 @@
     "pluie": "940.1",
     "vent": "indisponible",
     "distance_cnpe": "8935",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97418110",
@@ -4605,7 +4605,7 @@
     "pluie": "1658.6",
     "vent": "81.8",
     "distance_cnpe": "8897",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97422440",
@@ -4621,7 +4621,7 @@
     "pluie": "2020.2",
     "vent": "-",
     "distance_cnpe": "8930",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97424410",
@@ -4637,7 +4637,7 @@
     "pluie": "1852.7",
     "vent": "12.3",
     "distance_cnpe": "8917",
-    "prix_maisons": "2648"
+    "prix_maisons": 3408
   },
   {
     "indicatif": "97502001",
