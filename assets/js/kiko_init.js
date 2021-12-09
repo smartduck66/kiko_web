@@ -8,11 +8,11 @@
 // **********************************************************************************************************************
 
 // On 'importe' des fonctions de distances.js
-let distances = require('../js/distances.js'); 
+const distances = require('../js/distances.js'); 
 
 // Chargement des prix au m2 et des coordonnées des CNPE
-let prix_m2 = require('../data/prix_maisons_m2.json');    
-let lat_long_CNPE = require('../data/centrales.json');    
+const prix_m2 = require('../data/prix_maisons_m2.json');    
+const lat_long_CNPE = require('../data/centrales.json');    
 
 // Constantes communes à l'ensemble des traitements
 const https =  require("https");
@@ -162,7 +162,7 @@ case 'clim':
         item.distance_cnpe = Math.trunc(d.distance).toString();
         
         try {
-            item.prix_maisons = prix_m2[prix_m2.findIndex(x => x.dpt==item.departement)]["prix"];
+            item.prix_maisons = prix_m2[prix_m2.findIndex(x => x.dpt==item.departement)]["prix"].toString();
         }
         catch (ex) {
             item.prix_maisons = "-";
@@ -293,8 +293,8 @@ case 'immo':
             
             }
             else {
-                item.prix = cumul_surface ? Math.trunc(cumul_prix / cumul_surface) : 0;	// Guard : pour le département 2B, pas de maison donc pas de surface...
-                item.nb_ventes = nb_vente;
+                item.prix = cumul_surface ? Math.trunc(cumul_prix / cumul_surface).toString() : "0";	// Guard : pour le département 2B, pas de maison donc pas de surface...
+                item.nb_ventes = nb_vente.toString();
                 item.dpt = current_district;
                 console.log( "Traitement du département " + item.dpt + " : prix moyen au m2 = " + item.prix + " euros ("+ item.nb_ventes + " ventes)");
                 fiches1.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
