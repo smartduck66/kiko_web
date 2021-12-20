@@ -1,7 +1,8 @@
 // Ensemble des fonctions JS utilisées en mode interactif par index.html
 // *********************************************************************
 //
-// On 'importe' des fonctions de distances.js =====> A supprimer
+//import {site_dangereux_le_plus_proche} from '../js/distances.js';
+// On 'importe' des fonctions de distances.js via require mais il faut alors supprimer la ligne var distances = require('../js/distances.js'); post-génération
 //var distances = require('../js/distances.js');
 // Formatage
 var euros = Intl.NumberFormat("fr", { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
@@ -56,7 +57,6 @@ fetch("assets/data/fc.json")
     localStorage.fc = JSON.stringify(data); // Stockage local du fichier json pour le réutiliser lors de cette session
     // Affichage valeur de référence
     var station = data[data.findIndex(function (x) { return x.indicatif == "78640001"; })];
-    console.log(station);
     document.getElementById('en-tete').innerHTML = '<b>' + station.indicatif + ' - ' + station.ville + ' (alt. : ' + station.altitude + ' m)</b>';
     document.getElementById('tmoy').innerHTML = station.temp_moy + '°';
     document.getElementById('tmin').innerHTML = station.temp_min + '°';
@@ -224,6 +224,7 @@ function ResetFiltres() {
     document.getElementById('occurences').value = "";
     document.getElementById('fiches_dep').value = "78";
     document.getElementById('risques_cp').value = "78140";
+    document.getElementById('occurences').innerHTML = "";
     for (var i = 1; i < 10; i++) {
         document.getElementById('results' + i.toString()).innerHTML = "";
     }

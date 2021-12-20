@@ -1,7 +1,8 @@
 // Code partagé entre le module kiko_init.js (node) et le module kiko.js (browser)
 // Inspiration : https://caolan.uk/articles/writing-for-node-and-the-browser/
 
-(function(exports){
+(function (exports) {
+
 
     // Initialisation de variables-clés
     const EARTH_RADIUS_KM = 6371;
@@ -9,7 +10,7 @@
 
     // This function converts decimal degrees to radians
     function deg2rad(deg: number) { return (deg * M_PI / 180); }
-    
+
     //  This function converts radians to decimal degrees
     function rad2deg(rad: number) { return (rad * 180 / M_PI); }
 
@@ -34,7 +35,7 @@
         
     }
 
-    exports.convert_DMS_DD= function(coord: string) {
+    exports.convert_DMS_DD = function (coord: string) {
         // Fonction qui convertit des coordonnées GPS d'une station météo en Degrés, Minutes, Secondes en Degrés Décimaux
         // Ex : latitude: 45°38'24"N longitude : 05°52'36"E donnera latitude : 45.64   longitude : 5.8766
         // Pas de guard supplémentaire dans cette fonction : le format de la coordonnées DMS a déjà été vérifié lors de la création des fiches climatiques
@@ -56,7 +57,7 @@
 
     }
 
-    exports.site_dangereux_le_plus_proche = function(coords_sites_dangereux: any[], latitude_to_test: number, longitude_to_test: number){
+    exports.site_dangereux_le_plus_proche= function (coords_sites_dangereux: any[], latitude_to_test: number, longitude_to_test: number){
         // Fonction qui retourne la distance à vol d'oiseau (en kms) de la plus proche centrale nucléaire répertoriée sur le territoire français (IRSN.fr)
         // 19 centrales en exploitation en 2020 et 1 en construction (EPR Flamanville)
         // Outil de vérification : https://www.lexilogos.com/calcul_distances.htm
@@ -68,7 +69,7 @@
             constructor() {
                 this.distance=0;
                 this.site="";
-              }
+                }
         }
         
         let fiches: distance_sites_dangereux[] = [];
@@ -76,8 +77,7 @@
         for (let i=0;i< coords_sites_dangereux.length; i++) {
             let item = new distance_sites_dangereux(); // note the "new" keyword here
 
-            item.distance = distanceEarth(Number(latitude_to_test), Number(longitude_to_test), 
-                Number(coords_sites_dangereux[i].latitude), Number(coords_sites_dangereux[i].longitude));
+            item.distance = distanceEarth(latitude_to_test, longitude_to_test, coords_sites_dangereux[i].latitude, coords_sites_dangereux[i].longitude);
             
             item.site = coords_sites_dangereux[i].site;
             
@@ -91,10 +91,6 @@
 
     }
 
-})(typeof exports === 'undefined'? this['distances']={}: exports);
-
-
-
-
+})(typeof exports === 'undefined' ? this['distances'] = {} : exports);
 
 

@@ -1,4 +1,4 @@
-// Bibliothéque JavaScript utilisée en mode "batch" - Dernière version : 6/12/2021
+// Bibliothéque JavaScript utilisée en mode "batch" - Dernière version : 18/12/2021 (Typescript)
 // Mode d'emploi : 
 // 1. Une fois/an, lancer dans cet ordre :
 //      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
@@ -7,7 +7,7 @@
 // 2. Mise à jour du site Web, hébergé sur netlify, via git
 // **********************************************************************************************************************
 // On 'importe' des fonctions de distances.js
-var distances = require('../js/distances.js');
+var distances1 = require('../js/distances.js');
 // Chargement des prix au m2 et des coordonnées des CNPE
 var prix_m2 = require('../data/prix_maisons_m2.json');
 var lat_long_CNPE = require('../data/centrales.json');
@@ -125,7 +125,7 @@ switch (myArgs[0]) {
             item.ensoleillement = extract_value_in_a_list(item.indicatif, /Durée d'insolation/, text, "Durée d'insolation (Moyenne en heures)");
             item.pluie = extract_value_in_a_list(item.indicatif, /Précipitations : Hauteur moyenne mensuelle/, text, "Précipitations : Hauteur moyenne mensuelle (mm)");
             item.vent = extract_value_in_a_list(item.indicatif, /Nombre moyen de jours avec rafales/, text, "Nombre moyen de jours avec rafales");
-            var d = distances.site_dangereux_le_plus_proche(lat_long_CNPE, distances.convert_DMS_DD(item.latitude), distances.convert_DMS_DD(item.longitude));
+            var d = distances1.site_dangereux_le_plus_proche(lat_long_CNPE, distances1.convert_DMS_DD(item.latitude), distances1.convert_DMS_DD(item.longitude));
             item.distance_cnpe = Math.trunc(d.distance);
             try {
                 item.prix_maisons = prix_m2[prix_m2.findIndex(function (x) { return x.dpt == item.departement; })]["prix"].toString();

@@ -8,7 +8,7 @@
 // **********************************************************************************************************************
 
 // On 'importe' des fonctions de distances.js
-const distances = require('../js/distances.js'); 
+const distances1 = require('../js/distances.js'); 
 
 // Chargement des prix au m2 et des coordonnées des CNPE
 const prix_m2 = require('../data/prix_maisons_m2.json');    
@@ -176,7 +176,7 @@ case 'clim':
 
         item.vent = extract_value_in_a_list(item.indicatif, /Nombre moyen de jours avec rafales/, text, "Nombre moyen de jours avec rafales");
 
-        let d = distances.site_dangereux_le_plus_proche(lat_long_CNPE, distances.convert_DMS_DD(item.latitude), distances.convert_DMS_DD(item.longitude));
+        let d = distances1.site_dangereux_le_plus_proche(lat_long_CNPE, distances1.convert_DMS_DD(item.latitude), distances1.convert_DMS_DD(item.longitude));
         item.distance_cnpe = Math.trunc(d.distance);
         
         try {

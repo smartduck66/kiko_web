@@ -1,97 +1,97 @@
 [
     {
         "site": "Gravelines",
-        "latitude": "50.9833",
-        "longitude": "2.1167"
+        "latitude": 50.9833,
+        "longitude": 2.1167
     },
     {
         "site": "Penly",
-        "latitude": "49.9761",
-        "longitude": "1.2119"
+        "latitude": 49.9761,
+        "longitude": 1.2119
     },
     {
         "site": "Chooz",
-        "latitude": "50.09",
-        "longitude": "4.7905"
+        "latitude": 50.09,
+        "longitude": 4.7905
     },
     {
         "site": "Flamanville",
-        "latitude": "49.5363",
-        "longitude": "-1.8816"
+        "latitude": 49.5363,
+        "longitude": -1.8816
     },
     {
         "site": "Paluel",
-        "latitude": "49.8577",
-        "longitude": "0.6352"
+        "latitude": 49.8577,
+        "longitude": 0.6352
     },
     {
         "site": "Cattenom",
-        "latitude": "49.4158",
-        "longitude": "6.2180"
+        "latitude": 49.4158,
+        "longitude": 6.2180
     },
     {
         "site": "Nogent-sur-Seine",
-        "latitude": "48.5152",
-        "longitude": "3.5177"
+        "latitude": 48.5152,
+        "longitude": 3.5177
     },
     {
         "site": "Fessenheim",
-        "latitude": "47.9030",
-        "longitude": "7.5627"
+        "latitude": 47.9030,
+        "longitude": 7.5627
     },
     {
         "site": "St-Laurent-des-Eaux",
-        "latitude": "47.7238",
-        "longitude": "1.5836"
+        "latitude": 47.7238,
+        "longitude": 1.5836
     },
     {
         "site": "Dampierre",
-        "latitude": "47.7330",
-        "longitude": "2.5166"
+        "latitude": 47.7330,
+        "longitude": 2.5166
     },
     {
         "site": "Chinon",
-        "latitude": "47.2305",
-        "longitude": "0.1702"
+        "latitude": 47.2305,
+        "longitude": 0.1702
     },
     {
         "site": "Belleville",
-        "latitude": "47.5097",
-        "longitude": "2.875"
+        "latitude": 47.5097,
+        "longitude": 2.875
     },
     {
         "site": "Civaux",
-        "latitude": "46.4566",
-        "longitude": "0.6527"
+        "latitude": 46.4566,
+        "longitude": 0.6527
     },
     {
         "site": "Bugey",
-        "latitude": "45.7983",
-        "longitude": "5.2708"
+        "latitude": 45.7983,
+        "longitude": 5.2708
     },
     {
         "site": "St-Alban",
-        "latitude": "45.4044",
-        "longitude": "4.7552"
+        "latitude": 45.4044,
+        "longitude": 4.7552
     },
     {
         "site": "Le Blayais",
-        "latitude": "45.2561",
-        "longitude": "-0.6908"
+        "latitude": 45.2561,
+        "longitude": -0.6908
     },
     {
         "site": "Cruas",
-        "latitude": "44.6330",
-        "longitude": "4.7566"
+        "latitude": 44.6330,
+        "longitude": 4.7566
     },
     {
         "site": "Tricastin",
-        "latitude": "44.3308",
-        "longitude": "4.7313"
+        "latitude": 44.3308,
+        "longitude": 4.7313
     },
     {
         "site": "Golfech",
-        "latitude": "44.1066",
-        "longitude": "0.8452"
+        "latitude": 44.1066,
+        "longitude": 0.8452
     } 
 ]

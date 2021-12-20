@@ -79,8 +79,8 @@ for (let i=0;i< allTextLines1.length; i++) {
     let fields = allTextLines1[i].split(";");
 
     let coords = fields[0].split(",");
-    item.latitude = coords[0];
-    item.longitude = coords[1];
+    item.latitude = Number(coords[0]);
+    item.longitude = Number(coords[1]);
     item.nom = fields[2];
     item.commune = fields[3];
     item.statut_seveso = fields[12];

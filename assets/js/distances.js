@@ -59,7 +59,7 @@
         var fiches = [];
         for (var i = 0; i < coords_sites_dangereux.length; i++) {
             var item = new distance_sites_dangereux(); // note the "new" keyword here
-            item.distance = distanceEarth(Number(latitude_to_test), Number(longitude_to_test), Number(coords_sites_dangereux[i].latitude), Number(coords_sites_dangereux[i].longitude));
+            item.distance = distanceEarth(latitude_to_test, longitude_to_test, coords_sites_dangereux[i].latitude, coords_sites_dangereux[i].longitude);
             item.site = coords_sites_dangereux[i].site;
             fiches.push(item);
         }

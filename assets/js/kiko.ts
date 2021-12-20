@@ -2,7 +2,8 @@
 // *********************************************************************
 //
 
-// On 'importe' des fonctions de distances.js =====> A supprimer
+//import {site_dangereux_le_plus_proche} from '../js/distances.js';
+// On 'importe' des fonctions de distances.js via require mais il faut alors supprimer la ligne var distances = require('../js/distances.js'); post-génération
 const distances = require('../js/distances.js'); 
 
 // Formatage
@@ -77,7 +78,6 @@ fetch("assets/data/fc.json")
    localStorage.fc = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
    // Affichage valeur de référence
    let station = data[data.findIndex((x: { indicatif: string; }) => x.indicatif == "78640001")];
-   console.log(station);
    document.getElementById('en-tete')!.innerHTML = '<b>'+station.indicatif + ' - ' + station.ville + ' (alt. : ' + station.altitude + ' m)</b>'; 
    document.getElementById('tmoy')!.innerHTML = station.temp_moy + '°';
    document.getElementById('tmin')!.innerHTML = station.temp_min + '°';
@@ -243,6 +243,8 @@ function ResetFiltres() {
     (<HTMLInputElement>document.getElementById('fiches_dep')).value="78";
     (<HTMLInputElement>document.getElementById('risques_cp')).value="78140";
 
+    document.getElementById('occurences')!.innerHTML = "";
+
     for (let i=1;i< 10; i++) {
         document.getElementById('results' + i.toString())!.innerHTML = "";
     } 
@@ -279,8 +281,8 @@ function showModal_risques(cp: string) {
     try {
         let index = data.findIndex((x: { cp: string; }) => x.cp===cp);      // Si pas de correspondance, le 'catch' prend le relai
         let ville: string = data[index]["ville"];
-        let lat: string = data[index]["latitude"];
-        let lon: string = data[index]["longitude"];
+        let lat: number = data[index]["latitude"];
+        let lon: number = data[index]["longitude"];
         let cnpe = distances.site_dangereux_le_plus_proche(data_cnpe, lat, lon);        // Fonction 'importée' de distances.js  
         let seveso = distances.site_dangereux_le_plus_proche(data_seveso, lat, lon);    // Fonction 'importée' de distances.js
         risques = "<p>" + cp + "</p><p>" + ville + "</p><p>" + "CNPE la plus proche : "+ Math.trunc(cnpe.distance) + " kms ("+ cnpe.site + ")</p>" 
