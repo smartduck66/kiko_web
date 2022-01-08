@@ -1,5 +1,9 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-redeclare */
+"use strict";
 // Utilitaire "mode batch" (node csv_to_json.js) permettant de créer des fichiers json à partir de fichiers csv 'open data'
 // ************************************************************************************************************************
+exports.__esModule = true;
 // Transformation d'un fichier CSV des communes françaises (https://www.data.gouv.fr/fr/datasets/base-officielle-des-codes-postaux/)
 // en un fichier json contenant le nom, la latitude et la longitude de chaque commune française référencée
 var communes = /** @class */ (function () {
@@ -24,11 +28,11 @@ for (var i = 0; i < allTextLines.length; i++) {
     item.cp = fields[2];
     item.ville = fields[1];
     var coords = fields[5].split(",");
-    item.latitude = coords[0];
-    item.longitude = coords[1];
+    item.latitude = Number(coords[0]);
+    item.longitude = Number(coords[1]);
     fiches.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
 }
-fs1.writeFileSync('../data/communes.json', JSON.stringify(fiches, null, 2)); // Création du json final sur disque
+fs1.writeFileSync("../data/communes.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
 // ***********************************************************************************************************************************
 // Transformation d'un fichier CSV des sites Seveso (https://public.opendatasoft.com/explore/dataset/sites-seveso/export/?flg=fr&location=9,44.52588,1.0643&basemap=jawg.streets)
 // en un fichier json contenant la latitude, la longitude, le nom de l'usine et la commune hébergeant chaque site classé seveso
@@ -56,7 +60,8 @@ for (var i = 0; i < allTextLines1.length; i++) {
     item.nom = fields[2];
     item.commune = fields[3];
     item.statut_seveso = fields[12];
-    item.site = "Sté " + item.nom + " à " + item.commune + " - " + item.statut_seveso;
+    item.site =
+        "Sté " + item.nom + " à " + item.commune + " - " + item.statut_seveso;
     fiches1.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
 }
-fs1.writeFileSync('../data/seveso.json', JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
+fs1.writeFileSync("../data/seveso.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque

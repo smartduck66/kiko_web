@@ -1,305 +1,411 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 // Ensemble des fonctions JS utilisées en mode interactif par index.html
 // *********************************************************************
 //
 
 //import {site_dangereux_le_plus_proche} from '../js/distances.js';
 // On 'importe' des fonctions de distances.js via require mais il faut alors supprimer la ligne var distances = require('../js/distances.js'); post-génération
-const distances = require('../js/distances.js'); 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const distances = require("../js/distances.js");
 
 // Formatage
-const euros = Intl.NumberFormat("fr", {style: "currency", currency: "EUR", maximumFractionDigits: 0});
-const milliers = Intl.NumberFormat("fr", {style: "decimal", maximumFractionDigits: 0});
+const euros = Intl.NumberFormat("fr", {
+  style: "currency",
+  currency: "EUR",
+  maximumFractionDigits: 0,
+});
+const milliers = Intl.NumberFormat("fr", {
+  style: "decimal",
+  maximumFractionDigits: 0,
+});
 
-localStorage.clear();   // Initialisation du stockage local avant chargement des différents fichiers json
+localStorage.clear(); // Initialisation du stockage local avant chargement des différents fichiers json
 
 // Load du fichier json contenant les coordonnées des CNPE (pour la fenêtre modale des risques)
 fetch("assets/data/centrales.json")
-             
-.then(function (response) {
+  .then(function (response) {
     return response.json();
-})
-.then(function (data) {
-   localStorage.cnpe = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
-   
-})
-.catch(function (err) {
-    console.log('error: ' + err);
-});
+  })
+  .then(function (data) {
+    localStorage.cnpe = JSON.stringify(data); // Stockage local du fichier json pour le réutiliser lors de cette session
+  })
+  .catch(function (err) {
+    console.log("error: " + err);
+  });
 
 // Load du fichier json contenant les coordonnées des sites seveso (pour la fenêtre modale des risques)
 fetch("assets/data/seveso.json")
-             
-.then(function (response) {
+  .then(function (response) {
     return response.json();
-})
-.then(function (data) {
-   localStorage.seveso = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
-   
-})
-.catch(function (err) {
-    console.log('error: ' + err);
-});
+  })
+  .then(function (data) {
+    localStorage.seveso = JSON.stringify(data); // Stockage local du fichier json pour le réutiliser lors de cette session
+  })
+  .catch(function (err) {
+    console.log("error: " + err);
+  });
 
 // Load du fichier json contenant les départements/régions (pour la fenêtre modale)
 fetch("assets/data/departements-region.json")
-             
-.then(function (response) {
+  .then(function (response) {
     return response.json();
-})
-.then(function (data) {
-   localStorage.dpt = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
-   
-})
-.catch(function (err) {
-    console.log('error: ' + err);
-});
+  })
+  .then(function (data) {
+    localStorage.dpt = JSON.stringify(data); // Stockage local du fichier json pour le réutiliser lors de cette session
+  })
+  .catch(function (err) {
+    console.log("error: " + err);
+  });
 
 // Load du fichier json contenant les coordonnées géographiques de chaque commune (pour la fenêtre modale)
 fetch("assets/data/communes.json")
-             
-.then(function (response) {
+  .then(function (response) {
     return response.json();
-})
-.then(function (data) {
-   localStorage.communes = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
-   
-})
-.catch(function (err) {
-    console.log('error: ' + err);
-});
+  })
+  .then(function (data) {
+    localStorage.communes = JSON.stringify(data); // Stockage local du fichier json pour le réutiliser lors de cette session
+  })
+  .catch(function (err) {
+    console.log("error: " + err);
+  });
 
 // Load du fichier json contenant l'ensemble des fiches climatiques
 fetch("assets/data/fc.json")
-             
-.then(function (response) {
+  .then(function (response) {
     return response.json();
-})
-.then(function (data) {
-   localStorage.fc = JSON.stringify(data);    // Stockage local du fichier json pour le réutiliser lors de cette session
-   // Affichage valeur de référence
-   let station = data[data.findIndex((x: { indicatif: string; }) => x.indicatif == "78640001")];
-   document.getElementById('en-tete')!.innerHTML = '<b>'+station.indicatif + ' - ' + station.ville + ' (alt. : ' + station.altitude + ' m)</b>'; 
-   document.getElementById('tmoy')!.innerHTML = station.temp_moy + '°';
-   document.getElementById('tmin')!.innerHTML = station.temp_min + '°';
-   document.getElementById('tmax')!.innerHTML = station.temp_max + '°';
-   document.getElementById('cnpe')!.innerHTML = station.distance_cnpe + ' kms';
-   document.getElementById('soleil')!.innerHTML = milliers.format(station.ensoleillement) + ' h/an';
-   document.getElementById('pluie')!.innerHTML = milliers.format(station.pluie) + ' mm/an';
-   document.getElementById('vent')!.innerHTML = milliers.format(station.vent) + ' j/an';
-   document.getElementById('prix')!.innerHTML = euros.format(station.prix_maisons) + '/m2';
-})
-.catch(function (err) {
-    console.log('error: ' + err);
-});
+  })
+  .then(function (data) {
+    localStorage.fc = JSON.stringify(data); // Stockage local du fichier json pour le réutiliser lors de cette session
+    // Affichage valeur de référence
+    const station =
+      data[
+        data.findIndex((x: { indicatif: string }) => x.indicatif == "78640001")
+      ];
 
-function affichage_fiches(results: string | any[]){
-    // Affichage des fiches par colonne
-    let c1: string[] = [];
-    let c2: string[] = [];
-    let c3: string[] = [];
-    let c4: string[] = [];
-    let c5: string[] = [];
-    let c6: string[] = [];
-    let c7: string[] = [];
-    let c8: string[] = [];
-    let c9: string[] = [];
+      document.getElementById("en-tete")!.innerHTML =
+      "<b>" +
+      station.indicatif +
+      " - " +
+      station.ville +
+      " (alt. : " +
+      station.altitude +
+      " m)</b>";
+    document.getElementById("tmoy")!.innerHTML = station.temp_moy + "°";
+    document.getElementById("tmin")!.innerHTML = station.temp_min + "°";
+    document.getElementById("tmax")!.innerHTML = station.temp_max + "°";
+    document.getElementById("cnpe")!.innerHTML = station.distance_cnpe + " kms";
+    document.getElementById("soleil")!.innerHTML =
+      milliers.format(station.ensoleillement) + " h/an";
+    document.getElementById("pluie")!.innerHTML =
+      milliers.format(station.pluie) + " mm/an";
+    document.getElementById("vent")!.innerHTML =
+      milliers.format(station.vent) + " j/an";
+    document.getElementById("prix")!.innerHTML =
+      euros.format(station.prix_maisons) + "/m2";
+  })
+  .catch(function (err) {
+    console.log("error: " + err);
+  });
 
-    for (let i=0;i< results.length; i++) {
-    let ref: string = results[i].indicatif;
-    if (window.screen.width>768) {
-        c1.push("<p>");
-        c1.push(ref);
-        c1.push(" ");
-        c1.push(results[i].ville);
-        c1.push(" (");
-        c1.push(results[i].altitude);
-        c1.push(" m)</p>");
-    } else {c1.push(`<p><a onclick="showModal_ref('`+ ref +`')">` + ref + "</a></p>");}  // En mobile, affichage seulement de l'indicatif (modale pour le détail)
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function affichage_fiches(results: string | any[]) {
+  // Affichage des fiches par colonne
+  const c1: string[] = [];
+  const c2: string[] = [];
+  const c3: string[] = [];
+  const c4: string[] = [];
+  const c5: string[] = [];
+  const c6: string[] = [];
+  const c7: string[] = [];
+  const c8: string[] = [];
+  const c9: string[] = [];
+
+  for (let i = 0; i < results.length; i++) {
+    const ref: string = results[i].indicatif;
+    if (window.screen.width > 768) {
+      c1.push("<p>");
+      c1.push(ref);
+      c1.push(" ");
+      c1.push(results[i].ville);
+      c1.push(" (");
+      c1.push(results[i].altitude);
+      c1.push(" m)</p>");
+    } else {
+      c1.push(
+        `<p><a onclick="showModal_ref('` + ref + `')">` + ref + "</a></p>"
+      );
+    } // En mobile, affichage seulement de l'indicatif (modale pour le détail)
     c2.push("<p>" + results[i].temp_moy + "</p>");
     c3.push("<p>" + results[i].temp_min + "</p>");
     c4.push("<p>" + results[i].temp_max + "</p>");
     c5.push("<p>");
-    if (isNaN(results[i].ensoleillement)) {c5.push('-');} else {c5.push(milliers.format(Number(results[i].ensoleillement)));}
+    if (isNaN(results[i].ensoleillement)) {
+      c5.push("-");
+    } else {
+      c5.push(milliers.format(Number(results[i].ensoleillement)));
+    }
     c5.push("</p>");
     c6.push("<p>");
-    if (isNaN(results[i].pluie)) {c6.push('-');} else {c6.push(milliers.format(Number(results[i].pluie)));}
+    if (isNaN(results[i].pluie)) {
+      c6.push("-");
+    } else {
+      c6.push(milliers.format(Number(results[i].pluie)));
+    }
     c6.push("</p>");
     c7.push("<p>");
-    if (isNaN(results[i].vent)) {c7.push('-');} else {c7.push(milliers.format(Number(results[i].vent)));}
+    if (isNaN(results[i].vent)) {
+      c7.push("-");
+    } else {
+      c7.push(milliers.format(Number(results[i].vent)));
+    }
     c7.push("</p>");
     c8.push("<p>" + results[i].distance_cnpe + "</p>");
-    if (isNaN(results[i].prix_maisons)) {c9.push("<p>-</p>");} else {c9.push("<p>" + euros.format(results[i].prix_maisons) + "</p>");}
+    if (isNaN(results[i].prix_maisons)) {
+      c9.push("<p>-</p>");
+    } else {
+      c9.push("<p>" + euros.format(results[i].prix_maisons) + "</p>");
     }
-    // On concatène chaque élément de l'array pour chaque colonne, afin d'obtenir une seule string HTML à afficher
-    document.getElementById('results1')!.innerHTML = "".concat(...c1);
-    document.getElementById('results2')!.innerHTML = "".concat(...c2);
-    document.getElementById('results3')!.innerHTML = "".concat(...c3);
-    document.getElementById('results4')!.innerHTML = "".concat(...c4);
-    document.getElementById('results5')!.innerHTML = "".concat(...c5);
-    document.getElementById('results6')!.innerHTML = "".concat(...c6);
-    document.getElementById('results7')!.innerHTML = "".concat(...c7);
-    document.getElementById('results8')!.innerHTML = "".concat(...c8);
-    document.getElementById('results9')!.innerHTML = "".concat(...c9);
+  }
+  // On concatène chaque élément de l'array pour chaque colonne, afin d'obtenir une seule string HTML à afficher
+  document.getElementById("results1")!.innerHTML = "".concat(...c1);
+  document.getElementById("results2")!.innerHTML = "".concat(...c2);
+  document.getElementById("results3")!.innerHTML = "".concat(...c3);
+  document.getElementById("results4")!.innerHTML = "".concat(...c4);
+  document.getElementById("results5")!.innerHTML = "".concat(...c5);
+  document.getElementById("results6")!.innerHTML = "".concat(...c6);
+  document.getElementById("results7")!.innerHTML = "".concat(...c7);
+  document.getElementById("results8")!.innerHTML = "".concat(...c8);
+  document.getElementById("results9")!.innerHTML = "".concat(...c9);
 
-    document.getElementById('occurences')!.innerHTML = results.length.toString();
+  document.getElementById("occurences")!.innerHTML = results.length.toString();
 }
 
 function filtres() {
-    // Saisie des filtres
+  // Saisie des filtres
 
-    let data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
-    
-    // Récupération et sécurisation des paramétres saisis
-    var p1 = Number((<HTMLInputElement>document.getElementById('min_temp')).value);
-    var p2 = Number((<HTMLInputElement>document.getElementById('max_temp')).value);
-    if (p1 > p2) {
-        p2 = [p1, p1 = p2][0];  // swap
-        (<HTMLInputElement>document.getElementById('min_temp')).value=p1.toString();
-        (<HTMLInputElement>document.getElementById('max_temp')).value=p2.toString();
-    }
+  const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
 
-    var p3 = Number((<HTMLInputElement>document.getElementById('min_soleil')).value);
-    var p4 = Number((<HTMLInputElement>document.getElementById('max_soleil')).value);
-    if (p3 > p4) {
-        p4 = [p3, p3 = p4][0];  // swap
-        (<HTMLInputElement>document.getElementById('min_soleil')).value=p3.toString();
-        (<HTMLInputElement>document.getElementById('max_soleil')).value=p4.toString();
-    }
+  // Récupération et sécurisation des paramétres saisis
+  let p1 = Number(
+    (<HTMLInputElement>document.getElementById("min_temp")).value
+  );
+  let p2 = Number(
+    (<HTMLInputElement>document.getElementById("max_temp")).value
+  );
+  if (p1 > p2) {
+    p2 = [p1, (p1 = p2)][0]; // swap
+    (<HTMLInputElement>document.getElementById("min_temp")).value =
+      p1.toString();
+    (<HTMLInputElement>document.getElementById("max_temp")).value =
+      p2.toString();
+  }
 
-    var p5 = Number((<HTMLInputElement>document.getElementById('min_pluie')).value);
-    var p6 = Number((<HTMLInputElement>document.getElementById('max_pluie')).value);
-    if (p5 > p6) {
-        p6 = [p5, p5 = p6][0];  // swap
-        (<HTMLInputElement>document.getElementById('min_pluie')).value=p5.toString();
-        (<HTMLInputElement>document.getElementById('max_pluie')).value=p6.toString();
-    }
+  let p3 = Number(
+    (<HTMLInputElement>document.getElementById("min_soleil")).value
+  );
+  let p4 = Number(
+    (<HTMLInputElement>document.getElementById("max_soleil")).value
+  );
+  if (p3 > p4) {
+    p4 = [p3, (p3 = p4)][0]; // swap
+    (<HTMLInputElement>document.getElementById("min_soleil")).value =
+      p3.toString();
+    (<HTMLInputElement>document.getElementById("max_soleil")).value =
+      p4.toString();
+  }
 
-    var p7 = Number((<HTMLInputElement>document.getElementById('min_vent')).value);
-    var p8 = Number((<HTMLInputElement>document.getElementById('max_vent')).value);
-    if (p7 > p8) {
-        p8 = [p7, p7 = p8][0];  // swap
-        (<HTMLInputElement>document.getElementById('min_vent')).value=p7.toString();
-        (<HTMLInputElement>document.getElementById('max_vent')).value=p8.toString();
-    }
-    
-    // Sélection des fiches climatiques et tri ascendant
-    let results = data;
-    if (p1 && p2) {
-        results = results.filter((x: { temp_moy: number; }) => x.temp_moy >= p1 && x.temp_moy <= p2);
-        results.sort(function(a: { temp_moy: number; },b: { temp_moy: number; }){return a.temp_moy - b.temp_moy});
-    }
-    if (p3 && p4) {
-        results = results.filter((x: { ensoleillement: number; }) => x.ensoleillement >= p3 && x.ensoleillement <= p4);
-        results.sort(function(a: { ensoleillement: number; },b: { ensoleillement: number; }){return a.ensoleillement - b.ensoleillement});
-    }
-    if (p5 && p6) {
-        results = results.filter((x: { pluie: number; }) => x.pluie >= p5 && x.pluie <= p6);
-        results.sort(function(a: { pluie: number; },b: { pluie: number; }){return a.pluie - b.pluie});
-    }
-    if (p7 && p8) {
-        results = results.filter((x: { vent: number; }) => x.vent >= p7 && x.vent <= p8);
-        results.sort(function(a: { vent: number; },b: { vent: number; }){return a.vent - b.vent});
-    }
+  let p5 = Number(
+    (<HTMLInputElement>document.getElementById("min_pluie")).value
+  );
+  let p6 = Number(
+    (<HTMLInputElement>document.getElementById("max_pluie")).value
+  );
+  if (p5 > p6) {
+    p6 = [p5, (p5 = p6)][0]; // swap
+    (<HTMLInputElement>document.getElementById("min_pluie")).value =
+      p5.toString();
+    (<HTMLInputElement>document.getElementById("max_pluie")).value =
+      p6.toString();
+  }
 
-    affichage_fiches(results);
+  let p7 = Number(
+    (<HTMLInputElement>document.getElementById("min_vent")).value
+  );
+  let p8 = Number(
+    (<HTMLInputElement>document.getElementById("max_vent")).value
+  );
+  if (p7 > p8) {
+    p8 = [p7, (p7 = p8)][0]; // swap
+    (<HTMLInputElement>document.getElementById("min_vent")).value =
+      p7.toString();
+    (<HTMLInputElement>document.getElementById("max_vent")).value =
+      p8.toString();
+  }
+
+  // Sélection des fiches climatiques et tri ascendant
+  let results = data;
+  if (p1 && p2) {
+    results = results.filter(
+      (x: { temp_moy: number }) => x.temp_moy >= p1 && x.temp_moy <= p2
+    );
+    results.sort(function (a: { temp_moy: number }, b: { temp_moy: number }) {
+      return a.temp_moy - b.temp_moy;
+    });
+  }
+  if (p3 && p4) {
+    results = results.filter(
+      (x: { ensoleillement: number }) =>
+        x.ensoleillement >= p3 && x.ensoleillement <= p4
+    );
+    results.sort(function (
+      a: { ensoleillement: number },
+      b: { ensoleillement: number }
+    ) {
+      return a.ensoleillement - b.ensoleillement;
+    });
+  }
+  if (p5 && p6) {
+    results = results.filter(
+      (x: { pluie: number }) => x.pluie >= p5 && x.pluie <= p6
+    );
+    results.sort(function (a: { pluie: number }, b: { pluie: number }) {
+      return a.pluie - b.pluie;
+    });
+  }
+  if (p7 && p8) {
+    results = results.filter(
+      (x: { vent: number }) => x.vent >= p7 && x.vent <= p8
+    );
+    results.sort(function (a: { vent: number }, b: { vent: number }) {
+      return a.vent - b.vent;
+    });
+  }
+
+  affichage_fiches(results);
 }
 
 function departement() {
-    // Fiches d'un département donné
+  // Fiches d'un département donné
 
-    let data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
+  const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
 
-    // Récupération du paramétre saisi
-    var p1 = (<HTMLInputElement>document.getElementById('fiches_dep')).value;
-     
-    // Sélection des fiches climatiques
-    let results = data;
-    if (p1 != "") {results = results.filter((x: { departement: string; }) => x.departement == p1);}
+  // Récupération du paramétre saisi
+  const p1 = (<HTMLInputElement>document.getElementById("fiches_dep")).value;
 
-    affichage_fiches(results);
+  // Sélection des fiches climatiques
+  let results = data;
+  if (p1 != "") {
+    results = results.filter(
+      (x: { departement: string }) => x.departement == p1
+    );
+  }
+
+  affichage_fiches(results);
 }
 
 function risques_commune() {
-    // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
+  // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
 
-    // Récupération du paramétre saisi
-    var p1 = (<HTMLInputElement>document.getElementById('risques_cp')).value;
+  // Récupération du paramétre saisi
+  const p1 = (<HTMLInputElement>document.getElementById("risques_cp")).value;
 
-    // Affichage de la modale
-    showModal_risques(p1);
-
+  // Affichage de la modale
+  showModal_risques(p1);
 }
 
 function ResetFiltres() {
-    (<HTMLInputElement>document.getElementById('min_temp')).value="";
-    (<HTMLInputElement>document.getElementById('max_temp')).value="";
-    (<HTMLInputElement>document.getElementById('min_soleil')).value="";
-    (<HTMLInputElement>document.getElementById('max_soleil')).value="";
-    (<HTMLInputElement>document.getElementById('min_pluie')).value="";
-    (<HTMLInputElement>document.getElementById('max_pluie')).value="";
-    (<HTMLInputElement>document.getElementById('min_vent')).value="";
-    (<HTMLInputElement>document.getElementById('max_vent')).value="";
-    (<HTMLInputElement>document.getElementById('occurences')).value="";
-    (<HTMLInputElement>document.getElementById('fiches_dep')).value="78";
-    (<HTMLInputElement>document.getElementById('risques_cp')).value="78140";
+  (<HTMLInputElement>document.getElementById("min_temp")).value = "";
+  (<HTMLInputElement>document.getElementById("max_temp")).value = "";
+  (<HTMLInputElement>document.getElementById("min_soleil")).value = "";
+  (<HTMLInputElement>document.getElementById("max_soleil")).value = "";
+  (<HTMLInputElement>document.getElementById("min_pluie")).value = "";
+  (<HTMLInputElement>document.getElementById("max_pluie")).value = "";
+  (<HTMLInputElement>document.getElementById("min_vent")).value = "";
+  (<HTMLInputElement>document.getElementById("max_vent")).value = "";
+  (<HTMLInputElement>document.getElementById("occurences")).value = "";
+  (<HTMLInputElement>document.getElementById("fiches_dep")).value = "78";
+  (<HTMLInputElement>document.getElementById("risques_cp")).value = "78140";
 
-    document.getElementById('occurences')!.innerHTML = "";
+  document.getElementById("occurences")!.innerHTML = "";
 
-    for (let i=1;i< 10; i++) {
-        document.getElementById('results' + i.toString())!.innerHTML = "";
-    } 
-
-}   
+  for (let i = 1; i < 10; i++) {
+    document.getElementById("results" + i.toString())!.innerHTML = "";
+  }
+}
 
 function showModal_ref(ref: string) {
-    var element = document.getElementById("modal");
-    element!.classList.add("is-active");
-    
-    let data = JSON.parse(localStorage.fc);     // Récupération locale des fiches climatiques
-    let station = data[data.findIndex((x: { indicatif: string; }) => x.indicatif == ref)]
-    let data1 = JSON.parse(localStorage.dpt);   // Récupération locale des départements
-    let dpt_searched: string = station.indicatif.substring(0,2);
-    let dpt_toDisplay: string = "";  
-    if (Number(dpt_searched) < 97) {            // Guard pour les DOM (inutile dans notre cas)
-        let departement = data1[data1.findIndex((x: { num_dep: string; }) => x.num_dep == dpt_searched)];
-        dpt_toDisplay = departement.dep_name;
-    } 
-    document.getElementById('results_modal')!.innerHTML = "<p>" + station.indicatif + "</p><p>" + 
-        station.ville + "</p><p>" + dpt_toDisplay + "</p><p>" + "Altitude : "+ station.altitude + " m</p>";
+  const element = document.getElementById("modal");
+  element!.classList.add("is-active");
 
-}    
+  const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
+  const station =
+    data[data.findIndex((x: { indicatif: string }) => x.indicatif == ref)];
+  const data1 = JSON.parse(localStorage.dpt); // Récupération locale des départements
+  const dpt_searched: string = station.indicatif.substring(0, 2);
+  let dpt_toDisplay = "";
+  if (Number(dpt_searched) < 97) {
+    // Guard pour les DOM (inutile dans notre cas)
+    const departement =
+      data1[
+        data1.findIndex((x: { num_dep: string }) => x.num_dep == dpt_searched)
+      ];
+    dpt_toDisplay = departement.dep_name;
+  }
+  document.getElementById("results_modal")!.innerHTML =
+    "<p>" +
+    station.indicatif +
+    "</p><p>" +
+    station.ville +
+    "</p><p>" +
+    dpt_toDisplay +
+    "</p><p>" +
+    "Altitude : " +
+    station.altitude +
+    " m</p>";
+}
 
 function showModal_risques(cp: string) {
-    let data = JSON.parse(localStorage.communes);       // Récupération locale des coordonnées géographiques des communes
-    let data_cnpe = JSON.parse(localStorage.cnpe);      // Récupération locale des coordonnées des Centrales Nucléaires
-    let data_seveso = JSON.parse(localStorage.seveso);  // Récupération locale des coordonnées des sites seveso
+  const data = JSON.parse(localStorage.communes); // Récupération locale des coordonnées géographiques des communes
+  const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
+  const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
 
-    var element = document.getElementById("modal");
-    element!.classList.add("is-active");
-    let risques: string ="";
-        
-    try {
-        let index = data.findIndex((x: { cp: string; }) => x.cp===cp);      // Si pas de correspondance, le 'catch' prend le relai
-        let ville: string = data[index]["ville"];
-        let lat: number = data[index]["latitude"];
-        let lon: number = data[index]["longitude"];
-        let cnpe = distances.site_dangereux_le_plus_proche(data_cnpe, lat, lon);        // Fonction 'importée' de distances.js  
-        let seveso = distances.site_dangereux_le_plus_proche(data_seveso, lat, lon);    // Fonction 'importée' de distances.js
-        risques = "<p>" + cp + "</p><p>" + ville + "</p><p>" + "CNPE la plus proche : "+ Math.trunc(cnpe.distance) + " kms ("+ cnpe.site + ")</p>" 
-            + "Site Seveso le plus proche : "+ Math.trunc(seveso.distance) + " kms - "+ seveso.site + "</p>";
-    
-    }
-    catch (ex) {
-        risques = "Pas de données";
-    }
-    
-    document.getElementById('results_modal')!.innerHTML = risques;
+  const element = document.getElementById("modal");
+  element!.classList.add("is-active");
+  let risques = "";
 
-}    
+  try {
+    const index = data.findIndex((x: { cp: string }) => x.cp === cp); // Si pas de correspondance, le 'catch' prend le relai
+    const ville: string = data[index]["ville"];
+    const lat: number = data[index]["latitude"];
+    const lon: number = data[index]["longitude"];
+    const cnpe = distances.site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
+    const seveso = distances.site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
+    risques =
+      "<p>" +
+      cp +
+      "</p><p>" +
+      ville +
+      "</p><p>" +
+      "CNPE la plus proche : " +
+      Math.trunc(cnpe.distance) +
+      " kms (" +
+      cnpe.site +
+      ")</p>" +
+      "Site Seveso le plus proche : " +
+      Math.trunc(seveso.distance) +
+      " kms - " +
+      seveso.site +
+      "</p>";
+  } catch (ex) {
+    risques = "Pas de données";
+  }
+
+  document.getElementById("results_modal")!.innerHTML = risques;
+}
 
 function hideModal() {
-    var element = document.getElementById("modal");
-    document.getElementById('results_modal')!.innerHTML = "";
-    element!.classList.remove("is-active");
-
-}  
+  const element = document.getElementById("modal");
+  document.getElementById("results_modal")!.innerHTML = "";
+  element!.classList.remove("is-active");
+}
