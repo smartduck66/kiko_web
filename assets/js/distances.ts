@@ -7,13 +7,13 @@
   const M_PI = Math.acos(-1.0);
 
   // This function converts decimal degrees to radians
-  function deg2rad(deg: number) {
+  function deg2rad(deg: number): number {
     return (deg * M_PI) / 180;
   }
 
   //  This function converts radians to decimal degrees
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  function rad2deg(rad: number) {
+  function rad2deg(rad: number): number {
     return (rad * 180) / M_PI;
   }
 
@@ -22,7 +22,7 @@
     lon1d: number,
     lat2d: number,
     lon2d: number
-  ) {
+  ): number {
     /**
      * Returns the distance between two points on the Earth.
      * Direct translation from http://en.wikipedia.org/wiki/Haversine_formula
@@ -46,7 +46,7 @@
     );
   }
 
-  exports.convert_DMS_DD = function (coord: string) {
+  exports.convert_DMS_DD = function (coord: string): number {
     // Fonction qui convertit des coordonnées GPS d'une station météo en Degrés, Minutes, Secondes en Degrés Décimaux
     // Ex : latitude: 45°38'24"N longitude : 05°52'36"E donnera latitude : 45.64   longitude : 5.8766
     // Pas de guard supplémentaire dans cette fonction : le format de la coordonnées DMS a déjà été vérifié lors de la création des fiches climatiques
@@ -74,7 +74,8 @@
     coords_sites_dangereux: any[],
     latitude_to_test: number,
     longitude_to_test: number
-  ) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ): any {
     // Fonction qui retourne la distance à vol d'oiseau (en kms) de la plus proche centrale nucléaire répertoriée sur le territoire français (IRSN.fr)
     // 19 centrales en exploitation en 2020 et 1 en construction (EPR Flamanville)
     // Outil de vérification : https://www.lexilogos.com/calcul_distances.htm
@@ -105,7 +106,7 @@
 
       fiches.push(item);
     }
-    fiches.sort(function (a, b) {
+    fiches.sort(function (a, b): number {
       return a.distance - b.distance;
     });
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-unexpected-multiline */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-var-requires */
@@ -110,7 +111,7 @@ fetch("assets/data/fc.json")
   });
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function affichage_fiches(results: string | any[]) {
+function affichage_fiches(results: string | any[]): void {
   // Affichage des fiches par colonne
   const c1: string[] = [];
   const c2: string[] = [];
@@ -182,7 +183,7 @@ function affichage_fiches(results: string | any[]) {
   document.getElementById("occurences")!.innerHTML = results.length.toString();
 }
 
-function filtres() {
+function filtres(): void {
   // Saisie des filtres
 
   const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
@@ -286,7 +287,7 @@ function filtres() {
   affichage_fiches(results);
 }
 
-function departement() {
+function departement(): void {
   // Fiches d'un département donné
 
   const data = JSON.parse(localStorage.fc); // Récupération locale des fiches climatiques
@@ -305,7 +306,7 @@ function departement() {
   affichage_fiches(results);
 }
 
-function risques_commune() {
+function risques_commune(): void {
   // Affichage d'une modale contenant les risques liés à la commune (code postal saisi)
 
   // Récupération du paramétre saisi
@@ -315,7 +316,7 @@ function risques_commune() {
   showModal_risques(p1);
 }
 
-function ResetFiltres() {
+function ResetFiltres(): void {
   (<HTMLInputElement>document.getElementById("min_temp")).value = "";
   (<HTMLInputElement>document.getElementById("max_temp")).value = "";
   (<HTMLInputElement>document.getElementById("min_soleil")).value = "";
@@ -335,7 +336,7 @@ function ResetFiltres() {
   }
 }
 
-function showModal_ref(ref: string) {
+function showModal_ref(ref: string): void {
   const element = document.getElementById("modal");
   element!.classList.add("is-active");
 
@@ -366,7 +367,7 @@ function showModal_ref(ref: string) {
     " m</p>";
 }
 
-function showModal_risques(cp: string) {
+function showModal_risques(cp: string): void {
   const data = JSON.parse(localStorage.communes); // Récupération locale des coordonnées géographiques des communes
   const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
   const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
@@ -409,7 +410,7 @@ function showModal_risques(cp: string) {
   document.getElementById("results_modal")!.innerHTML = risques;
 }
 
-function hideModal() {
+function hideModal(): void {
   const element = document.getElementById("modal");
   document.getElementById("results_modal")!.innerHTML = "";
   element!.classList.remove("is-active");

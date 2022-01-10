@@ -27,7 +27,7 @@ function extract_alone_value(
   pattern: RegExp,
   data: string,
   value_name: string
-) {
+): string {
   // Fonction qui extrait une valeur seule
   const match = data.match(pattern);
   if (match !== null) {
@@ -43,7 +43,7 @@ function extract_value_in_a_list(
   pattern: RegExp,
   data: string,
   value_name: string
-) {
+): string {
   // Fonction qui extrait une valeur dans une liste
   const match = data.match(pattern);
 
