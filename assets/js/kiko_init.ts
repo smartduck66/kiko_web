@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 //
-// Bibliothéque JavaScript utilisée en mode "batch" - Dernière version : 18/12/2021 (Typescript)
+// Bibliothéque JavaScript utilisée en mode "batch" - Dernière version majeure : 18/12/2021 (Typescript)
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans cet ordre :
 //      - node kiko_init.js mf : chargement des données climatiques de Météo France (MF)
