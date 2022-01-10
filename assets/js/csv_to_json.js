@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable no-redeclare */
 "use strict";
 // Utilitaire "mode batch" (node csv_to_json.js) permettant de créer des fichiers json à partir de fichiers csv 'open data'
 // ************************************************************************************************************************
@@ -16,6 +14,7 @@ var communes = /** @class */ (function () {
     return communes;
 }());
 var fiches = [];
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 var fs1 = require("fs");
 // Balayage du fichier csv, enrichissement de l'Array fiches, création du JSON sur disque
 // Format : Code_commune_INSEE;Nom_commune;Code_postal;Ligne_5;Libellé_d_acheminement;coordonnees_gps
@@ -51,17 +50,17 @@ var fiches1 = [];
 // Balayage du fichier csv, enrichissement de l'Array fiches, création du JSON sur disque
 var text1 = fs1.readFileSync("../data_source/sites-seveso.csv", "utf8");
 var allTextLines1 = text1.split(/\r\n|\n/);
-for (var i = 0; i < allTextLines1.length; i++) {
-    var item = new seveso(); // note the "new" keyword here
-    var fields = allTextLines1[i].split(";");
-    var coords = fields[0].split(",");
-    item.latitude = Number(coords[0]);
-    item.longitude = Number(coords[1]);
-    item.nom = fields[2];
-    item.commune = fields[3];
-    item.statut_seveso = fields[12];
-    item.site =
-        "Sté " + item.nom + " à " + item.commune + " - " + item.statut_seveso;
-    fiches1.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
+for (var i1 = 0; i1 < allTextLines1.length; i1++) {
+    var item1 = new seveso(); // note the "new" keyword here
+    var fields1 = allTextLines1[i1].split(";");
+    var coords1 = fields1[0].split(",");
+    item1.latitude = Number(coords1[0]);
+    item1.longitude = Number(coords1[1]);
+    item1.nom = fields1[2];
+    item1.commune = fields1[3];
+    item1.statut_seveso = fields1[12];
+    item1.site =
+        "Sté " + item1.nom + " à " + item1.commune + " - " + item1.statut_seveso;
+    fiches1.push(item1); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
 }
 fs1.writeFileSync("../data/seveso.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque

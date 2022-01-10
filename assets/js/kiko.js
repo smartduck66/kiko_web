@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-var-requires */
+//
 // Ensemble des fonctions JS utilisées en mode interactif par index.html
 // *********************************************************************
 //
 //import {site_dangereux_le_plus_proche} from '../js/distances.js';
 // On 'importe' des fonctions de distances.js via require mais il faut alors supprimer la ligne var distances = require('../js/distances.js'); post-génération
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-//var distances = require("../js/distances.js");
+// var distances = require("../js/distances.js");
 // Formatage
 var euros = Intl.NumberFormat("fr", {
     style: "currency",

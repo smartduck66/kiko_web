@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-var-requires */
+//
 // Ensemble des fonctions JS utilisées en mode interactif par index.html
 // *********************************************************************
 //
 
 //import {site_dangereux_le_plus_proche} from '../js/distances.js';
 // On 'importe' des fonctions de distances.js via require mais il faut alors supprimer la ligne var distances = require('../js/distances.js'); post-génération
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const distances = require("../js/distances.js");
 
 // Formatage
@@ -83,7 +84,7 @@ fetch("assets/data/fc.json")
         data.findIndex((x: { indicatif: string }) => x.indicatif == "78640001")
       ];
 
-      document.getElementById("en-tete")!.innerHTML =
+    document.getElementById("en-tete")!.innerHTML =
       "<b>" +
       station.indicatif +
       " - " +
@@ -380,7 +381,11 @@ function showModal_risques(cp: string) {
     const lat: number = data[index]["latitude"];
     const lon: number = data[index]["longitude"];
     const cnpe = distances.site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
-    const seveso = distances.site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
+    const seveso = distances.site_dangereux_le_plus_proche(
+      data_seveso,
+      lat,
+      lon
+    ); // Fonction 'importée' de distances.js
     risques =
       "<p>" +
       cp +

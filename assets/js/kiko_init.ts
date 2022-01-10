@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+//
 // Bibliothéque JavaScript utilisée en mode "batch" - Dernière version : 18/12/2021 (Typescript)
 // Mode d'emploi :
 // 1. Une fois/an, lancer dans cet ordre :
@@ -8,19 +10,15 @@
 // **********************************************************************************************************************
 
 // On 'importe' des fonctions de distances.js
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const distances1 = require("../js/distances.js");
 
 // Chargement des prix au m2 et des coordonnées des CNPE
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const prix_m2 = require("../data/prix_maisons_m2.json");
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const lat_long_CNPE = require("../data/centrales.json");
 
 // Constantes communes à l'ensemble des traitements
 import * as https from "https";
 import * as fs from "fs";
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const ref = require("../data/ListeFichesClimatiques.json");
 const nb_fiches: number = Object.keys(ref.refcli).length;
 
@@ -64,7 +62,7 @@ function extract_value_in_a_list(
         offset += 50; // On augmente l'offset à cause de la mention "Statistiques établies..."
 
       // eslint-disable-next-line no-fallthrough
-      default:{
+      default: {
         // On est positionné au début du jeu de données (janvier à décembre, + une valeur moyenne), séparées par des points-virgules
         const s1: string = data.substring(offset, offset + 156); // 156 correspond au nombre d'octets du jeu de données
         const s2: string[] = s1.split(";");
@@ -127,7 +125,7 @@ switch (myArgs[0]) {
     }
     break;
 
-  case "clim":{
+  case "clim": {
     console.log(
       "Création du fichier fc.json regroupant les fiches climatiques"
     );
@@ -169,15 +167,15 @@ switch (myArgs[0]) {
     const fiches: data_MF[] = [];
 
     // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
-    for (let i = 0; i < nb_fiches; i++) {
+    for (let i1 = 0; i1 < nb_fiches; i1++) {
       const text = fs.readFileSync(
-        "../ficheclim/" + ref.refcli[i].ref + ".data",
+        "../ficheclim/" + ref.refcli[i1].ref + ".data",
         "utf8"
       );
       const item = new data_MF(); // note the "new" keyword here
 
-      item.indicatif = ref.refcli[i].ref;
-      item.ville = ref.refcli[i].town;
+      item.indicatif = ref.refcli[i1].ref;
+      item.ville = ref.refcli[i1].town;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let s: any = extract_alone_value(
@@ -268,7 +266,7 @@ switch (myArgs[0]) {
     break;
   }
 
-  case "immo":{
+  case "immo": {
     // Chargement du fichier des valeurs foncières et création du fichier afférent sur le disque dur
     // Source : https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
     console.log(
@@ -377,10 +375,8 @@ switch (myArgs[0]) {
     let num_line = 0;
     let current_district = "01";
 
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const lineReader = require("readline").createInterface({
       // Nouveau package depuis Node 4.0.0 qui facilite la lecture d'un fichier ligne à ligne
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
       input: require("fs").createReadStream(filename),
     });
 
@@ -394,8 +390,8 @@ switch (myArgs[0]) {
         const prix: number = !fields[10]
           ? 0
           : Number(fields[10].substring(0, fields[10].indexOf(","))); // Guard si le prix est vide ; suppression des décimales sinon
-          const type_bien: string = fields[36];
-          const surface: number = !fields[38] ? 0 : Number(fields[38]); // Guard si la surface est vide
+        const type_bien: string = fields[36];
+        const surface: number = !fields[38] ? 0 : Number(fields[38]); // Guard si la surface est vide
 
         if (departement == current_district) {
           if (type_bien == "Maison" && prix / surface < 50000) {
@@ -436,7 +432,7 @@ switch (myArgs[0]) {
 
     break;
   }
-  
+
   default:
     console.log(
       "Désolé mais seule l'une des 3 commandes suivantes est autorisée : mf, clim, immo"
