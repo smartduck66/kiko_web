@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // Squelette de pipeline d'intégration (plus évolué : utiliser gulp.js)
 // Utilisation : 'node pipe' à la racine
 // 10/01/2022 : la 'parallélisation' n'apporte a priori pas grand chose
@@ -11,7 +13,6 @@ let tsc3 = child_process.execSync("tsc assets/js/distances.ts");
 let tsc4 = child_process.execSync("tsc assets/js/csv_to_json.ts");
 
 let tsc5 = child_process.execSync("npx prettier --write .");
-
 
 // Suppression de la ligne '...require("../js/distances.js' dans le fichier kiko.js généré par tsc
 const code_lines = [];

@@ -247,7 +247,7 @@ function filtres(): void {
 
   // Sélection des fiches climatiques et tri ascendant
   let results = data;
-  if (p1 && p2) {
+  if (p1 + p2 > 0) {
     results = results.filter(
       (x: { temp_moy: number }) => x.temp_moy >= p1 && x.temp_moy <= p2
     );
@@ -255,7 +255,7 @@ function filtres(): void {
       return a.temp_moy - b.temp_moy;
     });
   }
-  if (p3 && p4) {
+  if (p3 + p4 > 0) {
     results = results.filter(
       (x: { ensoleillement: number }) =>
         x.ensoleillement >= p3 && x.ensoleillement <= p4
@@ -267,7 +267,7 @@ function filtres(): void {
       return a.ensoleillement - b.ensoleillement;
     });
   }
-  if (p5 && p6) {
+  if (p5 + p6 > 0) {
     results = results.filter(
       (x: { pluie: number }) => x.pluie >= p5 && x.pluie <= p6
     );
@@ -275,7 +275,7 @@ function filtres(): void {
       return a.pluie - b.pluie;
     });
   }
-  if (p7 && p8) {
+  if (p7 + p8 > 0) {
     results = results.filter(
       (x: { vent: number }) => x.vent >= p7 && x.vent <= p8
     );

@@ -205,7 +205,7 @@ function filtres() {
   }
   // Sélection des fiches climatiques et tri ascendant
   var results = data;
-  if (p1 && p2) {
+  if (p1 + p2 > 0) {
     results = results.filter(function (x) {
       return x.temp_moy >= p1 && x.temp_moy <= p2;
     });
@@ -213,7 +213,7 @@ function filtres() {
       return a.temp_moy - b.temp_moy;
     });
   }
-  if (p3 && p4) {
+  if (p3 + p4 > 0) {
     results = results.filter(function (x) {
       return x.ensoleillement >= p3 && x.ensoleillement <= p4;
     });
@@ -221,7 +221,7 @@ function filtres() {
       return a.ensoleillement - b.ensoleillement;
     });
   }
-  if (p5 && p6) {
+  if (p5 + p6 > 0) {
     results = results.filter(function (x) {
       return x.pluie >= p5 && x.pluie <= p6;
     });
@@ -229,7 +229,7 @@ function filtres() {
       return a.pluie - b.pluie;
     });
   }
-  if (p7 && p8) {
+  if (p7 + p8 > 0) {
     results = results.filter(function (x) {
       return x.vent >= p7 && x.vent <= p8;
     });
