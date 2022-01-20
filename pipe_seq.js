@@ -2,15 +2,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // Squelette de pipeline d'intégration (plus évolué : utiliser gulp.js)
 // Utilisation : 'node pipe' à la racine
-// 10/01/2022 : la 'parallélisation' n'apporte a priori pas grand chose
+// 20/01/2022 : 12 secondes de traitement
+
+var startTime = performance.now();
 
 const fs = require("fs");
 
 const child_process = require("child_process");
-let tsc1 = child_process.execSync("tsc assets/js/kiko.ts");
+let tsc1 = child_process.execSync("tsc assets/js/csv_to_json.ts");
 let tsc2 = child_process.execSync("tsc assets/js/kiko_init.ts");
 let tsc3 = child_process.execSync("tsc assets/js/distances.ts");
-let tsc4 = child_process.execSync("tsc assets/js/csv_to_json.ts");
+let tsc4 = child_process.execSync("tsc assets/js/kiko.ts");
 
 let tsc5 = child_process.execSync("npx prettier --write .");
 
@@ -36,3 +38,11 @@ lineReader.on("close", function () {
   }
   output.end();
 });
+
+var endTime = performance.now();
+
+console.log(
+  `Le traitement du pipeline a pris ${
+    Math.round(endTime - startTime) / 1000
+  } secondes`
+);
