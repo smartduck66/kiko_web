@@ -313,17 +313,19 @@ function showModal_ref(ref) {
     " m</p>";
 }
 function showModal_risques(cp) {
-  //const data = JSON.parse(localStorage.communes); // Récupération locale des coordonnées géographiques des communes
+  var data = JSON.parse(localStorage.communes); // Récupération locale des coordonnées géographiques des communes
   var data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
   var data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
   var element = document.getElementById("modal");
   element.classList.add("is-active");
   var risques = "";
   try {
-    //const index = data.findIndex((x: { cp: string }) => x.cp === cp); // Si pas de correspondance, le 'catch' prend le relai
-    var ville = "VELIZY VILLACOUBLAY"; //: string = data[index]["ville"];
-    var lat = 48.783985823; //: number = data[index]["latitude"];
-    var lon = 2.19707485523; //: number = data[index]["longitude"];
+    var index = data.findIndex(function (x) {
+      return x.cp === cp;
+    }); // Si pas de correspondance, le 'catch' prend le relai
+    var ville = data[index]["ville"];
+    var lat = data[index]["latitude"];
+    var lon = data[index]["longitude"];
     var cnpe = distances.site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
     var seveso = distances.site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
     risques =

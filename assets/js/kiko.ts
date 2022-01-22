@@ -375,7 +375,6 @@ function showModal_risques(cp: string): void {
   const element = document.getElementById("modal");
   element!.classList.add("is-active");
   let risques = "";
-
   try {
     const index = data.findIndex((x: { cp: string }) => x.cp === cp); // Si pas de correspondance, le 'catch' prend le relai
     const ville: string = data[index]["ville"];
