@@ -368,7 +368,7 @@ function showModal_ref(ref: string): void {
 }
 
 function showModal_risques(cp: string): void {
-  const data = JSON.parse(localStorage.communes); // Récupération locale des coordonnées géographiques des communes
+  //const data = JSON.parse(localStorage.communes); // Récupération locale des coordonnées géographiques des communes
   const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
   const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
 
@@ -377,10 +377,10 @@ function showModal_risques(cp: string): void {
   let risques = "";
 
   try {
-    const index = data.findIndex((x: { cp: string }) => x.cp === cp); // Si pas de correspondance, le 'catch' prend le relai
-    const ville: string = data[index]["ville"];
-    const lat: number = data[index]["latitude"];
-    const lon: number = data[index]["longitude"];
+    //const index = data.findIndex((x: { cp: string }) => x.cp === cp); // Si pas de correspondance, le 'catch' prend le relai
+    const ville = "VELIZY VILLACOUBLAY"; //: string = data[index]["ville"];
+    const lat = 48.783985823; //: number = data[index]["latitude"];
+    const lon = 2.19707485523; //: number = data[index]["longitude"];
     const cnpe = distances.site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
     const seveso = distances.site_dangereux_le_plus_proche(
       data_seveso,
