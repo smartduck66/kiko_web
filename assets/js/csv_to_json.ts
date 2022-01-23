@@ -50,20 +50,14 @@ fs1.writeFileSync("../data/communes.json", JSON.stringify(fiches, null, 2)); // 
 // en un fichier json contenant la latitude, la longitude, le nom de l'usine et la commune hébergeant chaque site classé seveso
 
 class seveso {
+  site: string;
   latitude: number;
   longitude: number;
-  nom: string;
-  commune: string;
-  statut_seveso: string;
-  site: string;
 
   constructor() {
+    this.site = "";
     this.latitude = 0;
     this.longitude = 0;
-    this.nom = "";
-    this.commune = "";
-    this.statut_seveso = "";
-    this.site = "";
   }
 }
 
@@ -79,13 +73,9 @@ for (let i1 = 0; i1 < allTextLines1.length; i1++) {
   const fields1 = allTextLines1[i1].split(";");
 
   const coords1 = fields1[0].split(",");
+  item1.site = "Sté " + fields1[2] + " à " + fields1[3] + " - " + fields1[12];
   item1.latitude = Number(coords1[0]);
   item1.longitude = Number(coords1[1]);
-  item1.nom = fields1[2];
-  item1.commune = fields1[3];
-  item1.statut_seveso = fields1[12];
-  item1.site =
-    "Sté " + item1.nom + " à " + item1.commune + " - " + item1.statut_seveso;
 
   fiches1.push(item1); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
 }

@@ -55,15 +55,15 @@
     return c;
   };
   exports.site_dangereux_le_plus_proche = function (
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     coords_sites_dangereux,
     latitude_to_test,
     longitude_to_test
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ) {
-    // Fonction qui retourne la distance à vol d'oiseau (en kms) de la plus proche centrale nucléaire répertoriée sur le territoire français (IRSN.fr)
-    // 19 centrales en exploitation en 2020 et 1 en construction (EPR Flamanville)
-    // Outil de vérification : https://www.lexilogos.com/calcul_distances.htm
+    // Fonction qui retourne la distance à vol d'oiseau (en kms) soit :
+    // - de la plus proche centrale nucléaire répertoriée sur le territoire français (IRSN.fr)
+    //   19 centrales en exploitation en 2020 et 1 en construction (EPR Flamanville)
+    //   Outil de vérification : https://www.lexilogos.com/calcul_distances.htm
+    // - du site Seveso le plus proche de la commune saisie
     var distance_sites_dangereux = /** @class */ (function () {
       function distance_sites_dangereux() {
         this.distance = 0;

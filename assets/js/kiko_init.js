@@ -90,7 +90,6 @@ switch (myArgs[0]) {
             new Error("HTTP status ${response.statusCode}");
           }
         });
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         request.on("error", function (error) {
           console.log(error);
         });
@@ -133,7 +132,6 @@ switch (myArgs[0]) {
       var item = new data_MF(); // note the "new" keyword here
       item.indicatif = ref.refcli[i1].ref;
       item.ville = ref.refcli[i1].town;
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       var s = extract_alone_value(
         item.indicatif,
         /\(\d{1,3}\)/,
@@ -290,7 +288,6 @@ switch (myArgs[0]) {
           new Error("HTTP status ${response.statusCode}");
         }
       });
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       request_1.on("error", function (error) {
         console.log(error);
       });

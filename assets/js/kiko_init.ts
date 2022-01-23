@@ -117,8 +117,7 @@ switch (myArgs[0]) {
           }
         });
 
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        request.on("error", (error: any) => {
+        request.on("error", (error: string) => {
           console.log(error);
         });
       });
@@ -177,8 +176,7 @@ switch (myArgs[0]) {
       item.indicatif = ref.refcli[i1].ref;
       item.ville = ref.refcli[i1].town;
 
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      let s: any = extract_alone_value(
+      let s: string = extract_alone_value(
         item.indicatif,
         /\(\d{1,3}\)/,
         text,
@@ -348,8 +346,7 @@ switch (myArgs[0]) {
         }
       });
 
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      request.on("error", (error: any) => {
+      request.on("error", (error: string) => {
         console.log(error);
       });
     });

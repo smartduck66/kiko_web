@@ -69,18 +69,31 @@
     return c;
   };
 
-  exports.site_dangereux_le_plus_proche = function (
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    coords_sites_dangereux: any[],
+  interface sites_dangereux {
+    distance: number;
+    site: string;
+  }
+
+  interface coords_sites_dangereux {
+    site: string;
+    latitude: number;
+    longitude: number;
+  }
+
+  exports.site_dangereux_le_plus_proche = function <
+    Type extends coords_sites_dangereux[]
+  >(
+    coords_sites_dangereux: Type,
     latitude_to_test: number,
     longitude_to_test: number
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ): any {
-    // Fonction qui retourne la distance à vol d'oiseau (en kms) de la plus proche centrale nucléaire répertoriée sur le territoire français (IRSN.fr)
-    // 19 centrales en exploitation en 2020 et 1 en construction (EPR Flamanville)
-    // Outil de vérification : https://www.lexilogos.com/calcul_distances.htm
+  ): sites_dangereux {
+    // Fonction qui retourne la distance à vol d'oiseau (en kms) soit :
+    // - de la plus proche centrale nucléaire répertoriée sur le territoire français (IRSN.fr)
+    //   19 centrales en exploitation en 2020 et 1 en construction (EPR Flamanville)
+    //   Outil de vérification : https://www.lexilogos.com/calcul_distances.htm
+    // - du site Seveso le plus proche de la commune saisie
 
-    class distance_sites_dangereux {
+    class distance_sites_dangereux implements sites_dangereux {
       distance: number;
       site: string;
 
@@ -91,7 +104,6 @@
     }
 
     const fiches: distance_sites_dangereux[] = [];
-
     for (let i = 0; i < coords_sites_dangereux.length; i++) {
       const item = new distance_sites_dangereux(); // note the "new" keyword here
 

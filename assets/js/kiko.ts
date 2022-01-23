@@ -7,7 +7,6 @@
 // *********************************************************************
 //
 
-//import {site_dangereux_le_plus_proche} from '../js/distances.js';
 // On 'importe' des fonctions de distances.js via require mais il faut alors supprimer la ligne var distances = require('../js/distances.js'); post-génération
 const distances = require("../js/distances.js");
 
@@ -110,8 +109,26 @@ fetch("assets/data/fc.json")
     console.log("error: " + err);
   });
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function affichage_fiches(results: string | any[]): void {
+interface fiche_climatique {
+  indicatif: string;
+  ville: string;
+  departement: string;
+  altitude: number;
+  latitude: string;
+  longitude: string;
+  temp_moy: number;
+  temp_min: number;
+  temp_max: number;
+  ensoleillement: string;
+  pluie: string;
+  vent: string;
+  distance_cnpe: number;
+  prix_maisons: string;
+}
+
+function affichage_fiches<Type extends fiche_climatique[]>(
+  results: Type
+): void {
   // Affichage des fiches par colonne
   const c1: string[] = [];
   const c2: string[] = [];
@@ -131,7 +148,7 @@ function affichage_fiches(results: string | any[]): void {
       c1.push(" ");
       c1.push(results[i].ville);
       c1.push(" (");
-      c1.push(results[i].altitude);
+      c1.push(results[i].altitude.toString());
       c1.push(" m)</p>");
     } else {
       c1.push(
@@ -142,33 +159,34 @@ function affichage_fiches(results: string | any[]): void {
     c3.push("<p>" + results[i].temp_min + "</p>");
     c4.push("<p>" + results[i].temp_max + "</p>");
     c5.push("<p>");
-    if (isNaN(results[i].ensoleillement)) {
+    if (isNaN(Number(results[i].ensoleillement))) {
       c5.push("-");
     } else {
       c5.push(milliers.format(Number(results[i].ensoleillement)));
     }
     c5.push("</p>");
     c6.push("<p>");
-    if (isNaN(results[i].pluie)) {
+    if (isNaN(Number(results[i].pluie))) {
       c6.push("-");
     } else {
       c6.push(milliers.format(Number(results[i].pluie)));
     }
     c6.push("</p>");
     c7.push("<p>");
-    if (isNaN(results[i].vent)) {
+    if (isNaN(Number(results[i].vent))) {
       c7.push("-");
     } else {
       c7.push(milliers.format(Number(results[i].vent)));
     }
     c7.push("</p>");
     c8.push("<p>" + results[i].distance_cnpe + "</p>");
-    if (isNaN(results[i].prix_maisons)) {
+    if (isNaN(Number(results[i].prix_maisons))) {
       c9.push("<p>-</p>");
     } else {
-      c9.push("<p>" + euros.format(results[i].prix_maisons) + "</p>");
+      c9.push("<p>" + euros.format(Number(results[i].prix_maisons)) + "</p>");
     }
   }
+
   // On concatène chaque élément de l'array pour chaque colonne, afin d'obtenir une seule string HTML à afficher
   document.getElementById("results1")!.innerHTML = "".concat(...c1);
   document.getElementById("results2")!.innerHTML = "".concat(...c2);
