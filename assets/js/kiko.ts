@@ -7,8 +7,23 @@
 // *********************************************************************
 //
 
-// On 'importe' des fonctions de distances.js via require mais il faut alors supprimer la ligne var distances = require('../js/distances.js'); post-génération
+// On 'importe' des fonctions de distances.js via require mais il faut alors supprimer
+// la ligne var distances = require('../js/distances.js'); post-génération (require non compris côté browser)
 const distances = require("../js/distances.js");
+
+// Test d'intégration faunadb : comment traiter le json 'ret' retourné ???
+const faunadb = require("faunadb");
+const q = faunadb.query;
+const client = new faunadb.Client({
+  secret: "fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMo",
+  domain: "db.eu.fauna.com",
+  port: 443,
+  scheme: "https",
+});
+client
+  .query(q.Paginate(q.Match(q.Index("code_postal"), "78140")))
+  .then((ret: string) => console.log(ret))
+  .catch((err: string) => console.error("Error: %s", err));
 
 // Formatage
 const euros = Intl.NumberFormat("fr", {

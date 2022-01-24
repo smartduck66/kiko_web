@@ -6,7 +6,25 @@
 // Ensemble des fonctions JS utilisées en mode interactif par index.html
 // *********************************************************************
 //
-// On 'importe' des fonctions de distances.js via require mais il faut alors supprimer la ligne var distances = require('../js/distances.js'); post-génération
+// On 'importe' des fonctions de distances.js via require mais il faut alors supprimer
+// la ligne var distances = require('../js/distances.js'); post-génération (require non compris côté browser)
+// Test d'intégration faunadb : comment traiter le json 'ret' retourné ???
+//var faunadb = require("faunadb");
+var q = faunadb.query;
+var client = new faunadb.Client({
+  secret: "fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMo",
+  domain: "db.eu.fauna.com",
+  port: 443,
+  scheme: "https",
+});
+client
+  .query(q.Paginate(q.Match(q.Index("code_postal"), "78140")))
+  .then(function (ret) {
+    return console.log(ret);
+  })
+  ["catch"](function (err) {
+    return console.error("Error: %s", err);
+  });
 // Formatage
 var euros = Intl.NumberFormat("fr", {
   style: "currency",

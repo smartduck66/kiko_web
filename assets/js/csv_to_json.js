@@ -34,7 +34,7 @@ for (var i = 0; i < allTextLines.length; i++) {
 fs1.writeFileSync("../data/communes.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
 // ***********************************************************************************************************************************
 // Transformation d'un fichier CSV des sites Seveso (https://public.opendatasoft.com/explore/dataset/sites-seveso/export/?flg=fr&location=9,44.52588,1.0643&basemap=jawg.streets)
-// en un fichier json contenant la latitude, la longitude, le nom de l'usine et la commune hébergeant chaque site classé seveso
+// en un fichier json contenant le nom de l'usine et la commune hébergeant chaque site classé seveso, la latitude, la longitude
 var seveso = /** @class */ (function () {
   function seveso() {
     this.site = "";
