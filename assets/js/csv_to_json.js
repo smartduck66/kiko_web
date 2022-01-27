@@ -4,6 +4,7 @@
 exports.__esModule = true;
 // Transformation d'un fichier CSV des communes françaises (https://www.data.gouv.fr/fr/datasets/base-officielle-des-codes-postaux/)
 // en un fichier json contenant le nom, la latitude et la longitude de chaque commune française référencée
+// Import de communes.json dans fauna via shell : fauna import --path=./assets/data/communes.json --collection=communes --append
 var communes = /** @class */ (function () {
   function communes() {
     this.cp = "";
