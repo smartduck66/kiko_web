@@ -6,25 +6,7 @@
 // Ensemble des fonctions JS utilisées en mode interactif par index.html
 // *********************************************************************
 //
-// On 'importe' des fonctions de distances.js via require mais il faut alors supprimer
-// la ligne var distances = require('../js/distances.js'); post-génération (require non compris côté browser)
-// Test d'intégration faunadb : comment traiter le json 'ret' retourné ???
-//var faunadb = require("faunadb");
-var q = faunadb.query;
-var client = new faunadb.Client({
-  secret: "fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMo",
-  domain: "db.eu.fauna.com",
-  port: 443,
-  scheme: "https",
-});
-client
-  .query(q.Paginate(q.Match(q.Index("code_postal"), "78140")))
-  .then(function (ret) {
-    return console.log(ret);
-  })
-  ["catch"](function (err) {
-    return console.error("Error: %s", err);
-  });
+// Ligne supprimée post-génération JS car require n'est pas compris par le browser
 // Formatage
 var euros = Intl.NumberFormat("fr", {
   style: "currency",
@@ -65,17 +47,6 @@ fetch("assets/data/departements-region.json")
   })
   .then(function (data) {
     localStorage.dpt = JSON.stringify(data); // Stockage local du fichier json pour le réutiliser lors de cette session
-  })
-  ["catch"](function (err) {
-    console.log("error: " + err);
-  });
-// Load du fichier json contenant les coordonnées géographiques de chaque commune (pour la fenêtre modale)
-fetch("assets/data/communes.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    localStorage.communes = JSON.stringify(data); // Stockage local du fichier json pour le réutiliser lors de cette session
   })
   ["catch"](function (err) {
     console.log("error: " + err);
@@ -329,41 +300,55 @@ function showModal_ref(ref) {
     " m</p>";
 }
 function showModal_risques(cp) {
-  var data = JSON.parse(localStorage.communes); // Récupération locale des coordonnées géographiques des communes
   var data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
   var data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
   var element = document.getElementById("modal");
   element.classList.add("is-active");
   var risques = "";
-  try {
-    var index = data.findIndex(function (x) {
-      return x.cp === cp;
-    }); // Si pas de correspondance, le 'catch' prend le relai
-    var ville = data[index]["ville"];
-    var lat = data[index]["latitude"];
-    var lon = data[index]["longitude"];
-    var cnpe = distances.site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
-    var seveso = distances.site_dangereux_le_plus_proche(data_seveso, lat, lon); // Fonction 'importée' de distances.js
-    risques =
-      "<p>" +
-      cp +
-      "</p><p>" +
-      ville +
-      "</p><p>" +
-      "CNPE la plus proche : " +
-      Math.trunc(cnpe.distance) +
-      " kms (" +
-      cnpe.site +
-      ")</p>" +
-      "Site Seveso le plus proche : " +
-      Math.trunc(seveso.distance) +
-      " kms - " +
-      seveso.site +
-      "</p>";
-  } catch (ex) {
-    risques = "Pas de données";
-  }
-  document.getElementById("results_modal").innerHTML = risques;
+  // Connexion à la base distante pour le fichier des communes, trop volumineux pour être traité en local (> 4 Mo)
+  // Ligne supprimée post-génération JS car require n'est pas compris par le browser
+  var q = faunadb.query;
+  var client = new faunadb.Client({
+    secret: "fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMo",
+    domain: "db.eu.fauna.com",
+    port: 443,
+    scheme: "https",
+  });
+  client
+    .query(q.Get(q.Match(q.Index("code_postal"), cp)))
+    .then(function (ret) {
+      var result = Object.values(ret); // fauna renvoie ref, ts, data
+      var ville = result[2].ville;
+      var lat = result[2].latitude;
+      var lon = result[2].longitude;
+      var cnpe = distances.site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
+      var seveso = distances.site_dangereux_le_plus_proche(
+        data_seveso,
+        lat,
+        lon
+      ); // Fonction 'importée' de distances.js
+      risques =
+        "<p>" +
+        cp +
+        "</p><p>" +
+        ville +
+        "</p><p>" +
+        "CNPE la plus proche : " +
+        Math.trunc(cnpe.distance) +
+        " kms (" +
+        cnpe.site +
+        ")</p>" +
+        "Site Seveso le plus proche : " +
+        Math.trunc(seveso.distance) +
+        " kms - " +
+        seveso.site +
+        "</p>";
+      document.getElementById("results_modal").innerHTML = risques;
+    })
+    ["catch"](function (err) {
+      return (document.getElementById("results_modal").innerHTML =
+        "Erreur : " + err);
+    });
 }
 function hideModal() {
   var element = document.getElementById("modal");

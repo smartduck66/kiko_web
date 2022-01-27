@@ -7,23 +7,8 @@
 // *********************************************************************
 //
 
-// On 'importe' des fonctions de distances.js via require mais il faut alors supprimer
-// la ligne var distances = require('../js/distances.js'); post-génération (require non compris côté browser)
+// Ligne supprimée post-génération JS car require n'est pas compris par le browser
 const distances = require("../js/distances.js");
-
-// Test d'intégration faunadb : comment traiter le json 'ret' retourné ???
-const faunadb = require("faunadb");
-const q = faunadb.query;
-const client = new faunadb.Client({
-  secret: "fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMo",
-  domain: "db.eu.fauna.com",
-  port: 443,
-  scheme: "https",
-});
-client
-  .query(q.Paginate(q.Match(q.Index("code_postal"), "78140")))
-  .then((ret: string) => console.log(ret))
-  .catch((err: string) => console.error("Error: %s", err));
 
 // Formatage
 const euros = Intl.NumberFormat("fr", {
@@ -69,18 +54,6 @@ fetch("assets/data/departements-region.json")
   })
   .then(function (data) {
     localStorage.dpt = JSON.stringify(data); // Stockage local du fichier json pour le réutiliser lors de cette session
-  })
-  .catch(function (err) {
-    console.log("error: " + err);
-  });
-
-// Load du fichier json contenant les coordonnées géographiques de chaque commune (pour la fenêtre modale)
-fetch("assets/data/communes.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    localStorage.communes = JSON.stringify(data); // Stockage local du fichier json pour le réutiliser lors de cette session
   })
   .catch(function (err) {
     console.log("error: " + err);
@@ -401,45 +374,61 @@ function showModal_ref(ref: string): void {
 }
 
 function showModal_risques(cp: string): void {
-  const data = JSON.parse(localStorage.communes); // Récupération locale des coordonnées géographiques des communes
   const data_cnpe = JSON.parse(localStorage.cnpe); // Récupération locale des coordonnées des Centrales Nucléaires
   const data_seveso = JSON.parse(localStorage.seveso); // Récupération locale des coordonnées des sites seveso
 
   const element = document.getElementById("modal");
   element!.classList.add("is-active");
   let risques = "";
-  try {
-    const index = data.findIndex((x: { cp: string }) => x.cp === cp); // Si pas de correspondance, le 'catch' prend le relai
-    const ville: string = data[index]["ville"];
-    const lat: number = data[index]["latitude"];
-    const lon: number = data[index]["longitude"];
-    const cnpe = distances.site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
-    const seveso = distances.site_dangereux_le_plus_proche(
-      data_seveso,
-      lat,
-      lon
-    ); // Fonction 'importée' de distances.js
-    risques =
-      "<p>" +
-      cp +
-      "</p><p>" +
-      ville +
-      "</p><p>" +
-      "CNPE la plus proche : " +
-      Math.trunc(cnpe.distance) +
-      " kms (" +
-      cnpe.site +
-      ")</p>" +
-      "Site Seveso le plus proche : " +
-      Math.trunc(seveso.distance) +
-      " kms - " +
-      seveso.site +
-      "</p>";
-  } catch (ex) {
-    risques = "Pas de données";
-  }
 
-  document.getElementById("results_modal")!.innerHTML = risques;
+  // Connexion à la base distante pour le fichier des communes, trop volumineux pour être traité en local (> 4 Mo)
+  // Ligne supprimée post-génération JS car require n'est pas compris par le browser
+  const faunadb = require("faunadb");
+  const q = faunadb.query;
+  const client = new faunadb.Client({
+    secret: "fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMo",
+    domain: "db.eu.fauna.com",
+    port: 443,
+    scheme: "https",
+  });
+
+  client
+    .query(q.Get(q.Match(q.Index("code_postal"), cp)))
+    .then((ret: JSON) => {
+      const result = Object.values(ret); // fauna renvoie ref, ts, data
+      const ville: string = result[2].ville;
+      const lat: number = result[2].latitude;
+      const lon: number = result[2].longitude;
+
+      const cnpe = distances.site_dangereux_le_plus_proche(data_cnpe, lat, lon); // Fonction 'importée' de distances.js
+      const seveso = distances.site_dangereux_le_plus_proche(
+        data_seveso,
+        lat,
+        lon
+      ); // Fonction 'importée' de distances.js
+      risques =
+        "<p>" +
+        cp +
+        "</p><p>" +
+        ville +
+        "</p><p>" +
+        "CNPE la plus proche : " +
+        Math.trunc(cnpe.distance) +
+        " kms (" +
+        cnpe.site +
+        ")</p>" +
+        "Site Seveso le plus proche : " +
+        Math.trunc(seveso.distance) +
+        " kms - " +
+        seveso.site +
+        "</p>";
+      document.getElementById("results_modal")!.innerHTML = risques;
+    })
+    .catch(
+      (err: string) =>
+        (document.getElementById("results_modal")!.innerHTML =
+          "Erreur : " + err)
+    );
 }
 
 function hideModal(): void {

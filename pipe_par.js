@@ -8,8 +8,8 @@ var startTime = performance.now();
 
 const fs = require("fs");
 
-function line_delete() {
-  // Suppression de la ligne '...require("../js/distances.js' dans le fichier kiko.js généré par tsc
+function lines_delete() {
+  // Suppression de lignes dans le fichier kiko.js généré par tsc
   const code_lines = [];
   const filename = "./assets/js/kiko.js";
   const lineReader = require("readline").createInterface({
@@ -18,7 +18,10 @@ function line_delete() {
   });
 
   lineReader.on("line", function (line_read) {
-    if (line_read != 'var distances = require("../js/distances.js");') {
+    if (
+      line_read.trim() != 'var faunadb = require("faunadb");' &&
+      line_read.trim() != 'var distances = require("../js/distances.js");'
+    ) {
       code_lines.push(line_read);
     }
   });
@@ -42,7 +45,7 @@ let promises = files.map((file) => execP("tsc assets/js/" + file));
 
 Promise.all(promises)
   .then((bodies) => {
-    line_delete();
+    lines_delete();
   })
   .catch((e) => console.error(e));
 
