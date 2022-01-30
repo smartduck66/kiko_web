@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // Squelette de pipeline d'intégration (plus évolué : utiliser gulp.js)
-// Utilisation : 'node pipe' à la racine
+// Utilisation : 'node pipe_par' à la racine
 // 20/01/2022 : moins de 5 secondes de traitement
 
 var startTime = performance.now();
@@ -49,7 +49,7 @@ Promise.all(promises)
   })
   .catch((e) => console.error(e));
 
-let tsc1 = child_process.execSync("npx prettier --write .");
+let tsc2 = child_process.execSync("npx prettier --write .");
 
 var endTime = performance.now();
 
