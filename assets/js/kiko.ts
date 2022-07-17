@@ -393,7 +393,7 @@ function showModal_risques(cp: string): void {
     scheme: "https",
   });
 
-  client
+   client
     .query(q.Get(q.Match(q.Index("code_postal"), cp)))
     .then((ret: JSON) => {
       const result = Object.values(ret); // fauna renvoie ref, ts, data
