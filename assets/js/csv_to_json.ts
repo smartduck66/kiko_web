@@ -82,3 +82,40 @@ for (let i1 = 0; i1 < allTextLines1.length; i1++) {
 }
 
 fs1.writeFileSync("../data/seveso.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
+
+// ***********************************************************************************************************************************
+
+// Transformation d'un fichier CSV contenant la liste des fiches climatiques (https://donneespubliques.meteofrance.fr/?fond=produit&id_produit=117&id_rubrique=39)
+// en un fichier json contenant la référence de la station météo et le nom de la ville
+
+class fiche_clim_MF {
+  ref: string;
+  town: string;
+
+  constructor() {
+    this.ref = "";
+    this.town = "";
+  }
+}
+
+const fiches2: fiche_clim_MF[] = [];
+
+// Balayage du fichier txt, enrichissement de l'Array fiches, création du JSON sur disque
+const text2 = fs1.readFileSync("../data_source/listeFC_MF.csv", "utf8");
+const allTextLines2 = text2.split(/\r\n|\n/);
+
+for (let i2 = 0; i2 < allTextLines2.length; i2++) {
+  const item2 = new fiche_clim_MF(); // note the "new" keyword here
+
+  const fields2 = allTextLines2[i2].split(";");
+
+  item2.ref = fields2[0];
+  item2.town = fields2[1];
+
+  fiches2.push(item2); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
+}
+
+fs1.writeFileSync(
+  "../data/ListeFichesClimatiques.json",
+  JSON.stringify(fiches2, null, 2)
+); // Création du json final sur disque

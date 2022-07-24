@@ -1,5 +1,7 @@
 "# kiko_web"
-Derniers travaux v1.07 : 27/01/2022 - fauna.db
+Derniers travaux :
+v1.07 : 27/01/2022 - fauna.db
+v1.08 : 24/07/2022 - MAJ fiches climatiques, nouvelle référence "Trappes", new vsc_to_json.ts
 
 Tests en local : lancer 'netlify dev' dans le répertoire racine du site
 Typescript : suffixer les modules avec l'extension 'ts' ; exécuter par exemple 'tsc kiko.ts', qui génère kiko.js

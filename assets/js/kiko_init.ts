@@ -20,7 +20,7 @@ const lat_long_CNPE = require("../data/centrales.json");
 import * as https from "https";
 import * as fs from "fs";
 const ref = require("../data/ListeFichesClimatiques.json");
-const nb_fiches: number = Object.keys(ref.refcli).length;
+const nb_fiches: number = Object.keys(ref).length;
 
 function extract_alone_value(
   ref: string,
@@ -90,9 +90,9 @@ switch (myArgs[0]) {
 
     // Balayage de l'ensemble des fiches MF et création des fichiers .data sur disque (assets/ficheclim)
     for (let i = 0; i < nb_fiches; i++) {
-      const filename = ref.refcli[i].ref + ".data";
+      const filename = ref[i].ref + ".data";
       console.log(
-        "Chargement de la fiche climatique de la ville : " + ref.refcli[i].town
+        "Chargement de la fiche climatique de la ville : " + ref[i].town
       );
       const url =
         "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_" +
@@ -168,13 +168,13 @@ switch (myArgs[0]) {
     // Balayage de l'ensemble des fiches MF, enrichissement de l'Array fiches, création du JSON sur disque
     for (let i1 = 0; i1 < nb_fiches; i1++) {
       const text = fs.readFileSync(
-        "../ficheclim/" + ref.refcli[i1].ref + ".data",
+        "../ficheclim/" + ref[i1].ref + ".data",
         "utf8"
       );
       const item = new data_MF(); // note the "new" keyword here
 
-      item.indicatif = ref.refcli[i1].ref;
-      item.ville = ref.refcli[i1].town;
+      item.indicatif = ref[i1].ref;
+      item.ville = ref[i1].town;
 
       let s: string = extract_alone_value(
         item.indicatif,
@@ -271,10 +271,10 @@ switch (myArgs[0]) {
       "Création du fichier prix_maisons_m2.json correspondant aux prix immobiliers des maisons"
     );
 
-    // Dernières valeurs disponibles complètes : 2020 - Chargées le 6 décembre 2021
+    // Dernières valeurs disponibles complètes : 2020 - Chargées le 24 juillet 2022
     const url =
-      "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20211020-111113/valeursfoncieres-2020.txt";
-    const filename = "../data_source/valeursfoncieres-2020.txt";
+      "https://static.data.gouv.fr/resources/demandes-de-valeurs-foncieres/20220408-143516/valeursfoncieres-2021.txt";
+    const filename = "../data_source/valeursfoncieres-2021.txt";
 
     const request = https.get(url);
 
@@ -289,7 +289,7 @@ switch (myArgs[0]) {
 
       response.on("end", () => {
         if (httpStatus === 200) {
-          // On crée le fichier sur disque si tout est OK (400 Mo pour 2020, 3 millions de lignes) *************************************************
+          // On crée le fichier sur disque si tout est OK (442 Mo pour 2021, >3 millions de lignes) *************************************************
           // Champs ci-dessous pour chaque ligne du fichier --------------------------------------
           // Code service CH
           // Reference document

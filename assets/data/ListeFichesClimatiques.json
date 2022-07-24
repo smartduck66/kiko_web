@@ -1,309 +1,6330 @@
-{
-  "refcli": [
-    { "ref": "01089001", "town": "Amberieu" },
-    { "ref": "02320001", "town": "St Quentin" },
-    { "ref": "02321002", "town": "Fontaine-les-vv" },
-    { "ref": "02594001", "town": "Passy En Valois" },
-    { "ref": "03060001", "town": "Vichy-charmeil" },
-    { "ref": "03155003", "town": "Lurcy-levis Sa" },
-    { "ref": "03180001", "town": "Montbeugny" },
-    { "ref": "03200001", "town": "Neuvy" },
-    { "ref": "03248001", "town": "St-nicolas" },
-    { "ref": "04049001", "town": "St Auban" },
-    { "ref": "05023001", "town": "Briancon" },
-    { "ref": "05046001", "town": "Embrun" },
-    { "ref": "05070003", "town": "Laragne Monteglin" },
-    { "ref": "06029001", "town": "Cannes" },
-    { "ref": "06088001", "town": "Nice" },
-    { "ref": "07068001", "town": "Colombier Rad" },
-    { "ref": "07131001", "town": "Lanas Syn" },
-    { "ref": "08105005", "town": "Charleville-mez" },
-    { "ref": "09289001", "town": "St Girons" },
-    { "ref": "10030001", "town": "Troyes-barberey" },
-    { "ref": "10130001", "town": "Dosnon" },
-    { "ref": "10228002", "town": "Mathaux-etape" },
-    { "ref": "11069001", "town": "Carcassonne" },
-    { "ref": "11170001", "town": "Gruissan-inra" },
-    { "ref": "12145001", "town": "Millau" },
-    { "ref": "12254001", "town": "Rodez-aveyron" },
-    { "ref": "13001006", "town": "Aix-les-Milles" },
-    { "ref": "13001009", "town": "Aix En Provence" },
-    { "ref": "13004003", "town": "Arles" },
-    { "ref": "13047001", "town": "Istres" },
-    { "ref": "13054001", "town": "Marignane" },
-    { "ref": "13103001", "town": "Salon De Provence" },
-    { "ref": "14137001", "town": "Caen-carpiquet" },
-    { "ref": "14624001", "town": "L Oudon Lieury_sapc" },
-    { "ref": "15014004", "town": "Aurillac" },
-    { "ref": "15053001", "town": "Coltines" },
-    { "ref": "15114002", "town": "Marcenat" },
-    { "ref": "15120005", "town": "Mauriac" },
-    { "ref": "15122002", "town": "Maurs" },
-    { "ref": "16089001", "town": "Cognac" },
-    { "ref": "16113001", "town": "La Couronne" },
-    { "ref": "16225001", "town": "Montemboeuf" },
-    { "ref": "16360001", "town": "Salles De Barb" },
-    { "ref": "16390001", "town": "Tusson" },
-    { "ref": "16397001", "town": "Verdille" },
-    { "ref": "17300001", "town": "La Rochelle" },
-    { "ref": "17415003", "town": "Saintes" },
-    { "ref": "18033001", "town": "Bourges" },
-    { "ref": "18092001", "town": "Avord" },
-    { "ref": "18241002", "town": "Sancerre" },
-    { "ref": "19010001", "town": "Argentat" },
-    { "ref": "19031008", "town": "Brive" },
-    { "ref": "19146001", "town": "Naves" },
-    { "ref": "19276006", "town": "Uzerche" },
-    { "ref": "20004002", "town": "Ajaccio" },
-    { "ref": "20041001", "town": "Cap Pertusato" },
-    { "ref": "20050001", "town": "Calvi" },
-    { "ref": "20092001", "town": "Conca" },
-    { "ref": "20096005", "town": "Corte_fdf" },
-    { "ref": "20114002", "town": "Figari" },
-    { "ref": "20148001", "town": "Bastia" },
-    { "ref": "20223001", "town": "Pietralba" },
-    { "ref": "20232002", "town": "Pila-canale" },
-    { "ref": "20258001", "town": "Renno" },
-    { "ref": "20268001", "town": "Sampolo" },
-    { "ref": "20272004", "town": "Sartene" },
-    { "ref": "20342001", "town": "Solenzara" },
-    { "ref": "21154001", "town": "Chatillon/seine" },
-    { "ref": "21473001", "town": "Dijon-longvic" },
-    { "ref": "21567001", "town": "Arnay_sapc" },
-    { "ref": "22092001", "town": "Kerpert" },
-    { "ref": "22113006", "town": "Lannion_aero" },
-    { "ref": "22135001", "town": "Louargat" },
-    { "ref": "22219003", "town": "Plouguenast" },
-    { "ref": "22247002", "town": "Pommerit-jaudy" },
-    { "ref": "22261002", "town": "Quintenic" },
-    { "ref": "22266001", "town": "Rostrenen" },
-    { "ref": "22372001", "town": "St Brieuc" },
-    { "ref": "23030004", "town": "Bourganeuf" },
-    { "ref": "23176001", "town": "La Souterraine" },
-    { "ref": "24037005", "town": "Bergerac" },
-    { "ref": "25056001", "town": "Besancon" },
-    { "ref": "25462001", "town": "Pontarlier" },
-    { "ref": "26050001", "town": "Besignan" },
-    { "ref": "26113003", "town": "Die" },
-    { "ref": "26115001", "town": "Divajeu" },
-    { "ref": "26116002", "town": "Donzere" },
-    { "ref": "26124001", "town": "Etoile" },
-    { "ref": "26179001", "town": "Mercurol" },
-    { "ref": "26198001", "town": "Montelimar" },
-    { "ref": "26313001", "town": "St-marcel-les-v-inra" },
-    { "ref": "27347001", "town": "Evreux-huest" },
-    { "ref": "28070001", "town": "Chartres" },
-    { "ref": "28198001", "town": "Chateaudun" },
-    { "ref": "28215001", "town": "Louville" },
-    { "ref": "28239002", "town": "Marville_sapc" },
-    { "ref": "28252002", "town": "Miermaigne" },
-    { "ref": "28305001", "town": "Pre-st-evroult" },
-    { "ref": "28322003", "town": "Rueil" },
-    { "ref": "28406001", "town": "Viabon" },
-    { "ref": "29021001", "town": "Brignogan" },
-    { "ref": "29075001", "town": "Brest-guipavas" },
-    { "ref": "29120001", "town": "Lanveoc" },
-    { "ref": "29155005", "town": "Ouessant-stiff" },
-    { "ref": "29163003", "town": "Pleyber-christ Sa" },
-    { "ref": "29216001", "town": "Quimper" },
-    { "ref": "29264001", "town": "Landivisiau" },
-    { "ref": "29276001", "town": "Sibiril S A" },
-    { "ref": "30081002", "town": "Chusclan" },
-    { "ref": "30189001", "town": "Nimes-courbessac" },
-    { "ref": "30258001", "town": "Nimes-garons" },
-    { "ref": "30339001", "town": "Mont Aigoual" },
-    { "ref": "31069001", "town": "Toulouse-blagnac" },
-    { "ref": "31157001", "town": "Toulouse-francazal" },
-    { "ref": "32013005", "town": "Auch" },
-    { "ref": "33281001", "town": "Bordeaux-merignac" },
-    { "ref": "33529001", "town": "Cazaux" },
-    { "ref": "34154001", "town": "Montpellier-aeroport" },
-    { "ref": "34301002", "town": "Sete" },
-    { "ref": "35228001", "town": "Dinard" },
-    { "ref": "35281001", "town": "Rennes-st", "undefined": "Jacques" },
-    { "ref": "36063001", "town": "Chateauroux Deols" },
-    { "ref": "37179001", "town": "Tours" },
-    { "ref": "38384001", "town": "Grenoble-st-Geoirs" },
-    { "ref": "39013004", "town": "Arbois_sapc" },
-    { "ref": "39097003", "town": "Champagnole" },
-    { "ref": "39362001", "town": "Lons Le Saunier" },
-    { "ref": "39413001", "town": "La Pesse" },
-    { "ref": "39526003", "town": "Tavaux Sa" },
-    { "ref": "40088001", "town": "Dax" },
-    { "ref": "40192001", "town": "Mont-de-marsan" },
-    { "ref": "41097001", "town": "Romorantin" },
-    { "ref": "41281001", "town": "Blois" },
-    { "ref": "42005001", "town": "St-Etienne-boutheon" },
-    { "ref": "42095001", "town": "Firminy" },
-    { "ref": "42170001", "town": "Perreux" },
-    { "ref": "42184002", "town": "Riorges" },
-    { "ref": "43062001", "town": "Le Puy-loudes" },
-    { "ref": "43096001", "town": "Fontannes" },
-    { "ref": "43111002", "town": "Landos-charbon" },
-    { "ref": "43234005", "town": "Saugues-sa" },
-    { "ref": "44020001", "town": "Nantes-bouguenais" },
-    { "ref": "44103001", "town": "St Nazaire-montoir" },
-    { "ref": "45055001", "town": "Orleans" },
-    { "ref": "46127001", "town": "Gourdon" },
-    { "ref": "47091001", "town": "Agen-la-Garenne" },
-    { "ref": "47252002", "town": "Sainte-livrade-sur-lot" },
-    { "ref": "48004001", "town": "Altier" },
-    { "ref": "49020001", "town": "Beaucouze" },
-    { "ref": "49188001", "town": "Marce" },
-    { "ref": "51029003", "town": "Avize" },
-    { "ref": "51183001", "town": "Reims-courcy" },
-    { "ref": "52269001", "town": "Langres" },
-    { "ref": "52448001", "town": "St-dizier" },
-    { "ref": "53094001", "town": "Laval-entrammes" },
-    { "ref": "53096004", "town": "Ernee" },
-    { "ref": "54405001", "town": "Nancy-ochey" },
-    { "ref": "54463001", "town": "Toul Rosieres" },
-    { "ref": "54526001", "town": "Nancy-essey" },
-    { "ref": "56004001", "town": "Arzal" },
-    { "ref": "56009001", "town": "Belle Talut" },
-    { "ref": "56017003", "town": "Bignan" },
-    { "ref": "56165003", "town": "Ploermel" },
-    { "ref": "56185001", "town": "Lorient-lann-Bihoue" },
-    { "ref": "56240003", "town": "Sarzeau Sa" },
-    { "ref": "56243001", "town": "Vannes-sene" },
-    { "ref": "57039001", "town": "Metz-frescaty" },
-    { "ref": "58160001", "town": "Nevers-marzy" },
-    { "ref": "59343001", "town": "Lille-lesquin" },
-    { "ref": "60639001", "town": "Beauvais-tille" },
-    { "ref": "61001001", "town": "Alencon" },
-    { "ref": "62160001", "town": "Boulogne-sem" },
-    { "ref": "62298001", "town": "Cambrai-epinoy" },
-    { "ref": "62548002", "town": "Calais-marck" },
-    { "ref": "62826001", "town": "Le-touquet" },
-    { "ref": "63003004", "town": "Ambert" },
-    { "ref": "63098001", "town": "Chastreix" },
-    { "ref": "63113001", "town": "Clermont-fd" },
-    { "ref": "63178001", "town": "Issoire" },
-    { "ref": "63345002", "town": "St-genes-chplle-inra" },
-    { "ref": "63353003", "town": "St-germain-l-He" },
-    { "ref": "64010002", "town": "Aicirits" },
-    { "ref": "64024001", "town": "Biarritz-pays-basque" },
-    { "ref": "64189001", "town": "Socoa" },
-    { "ref": "64549001", "town": "Pau-uzein" },
-    { "ref": "65125001", "town": "Campistrous" },
-    { "ref": "65344001", "town": "Tarbes-lourdes-pyrenees" },
-    { "ref": "66002001", "town": "Alenya-inra" },
-    { "ref": "66136001", "town": "Perpignan" },
-    { "ref": "66181001", "town": "Ste Leocadie" },
-    { "ref": "66212001", "town": "Torreilles" },
-    { "ref": "66233001", "town": "Vives" },
-    { "ref": "67122001", "town": "Wangenbourg_sapc" },
-    { "ref": "67124001", "town": "Strasbourg-entzheim" },
-    { "ref": "68066001", "town": "Colmar-inra" },
-    { "ref": "68102001", "town": "Geishouse_sapc" },
-    { "ref": "68205001", "town": "Colmar-meyenheim" },
-    { "ref": "68224006", "town": "Mulhouse" },
-    { "ref": "68287003", "town": "Rouffach Sa" },
-    { "ref": "68297001", "town": "Bale-mulhouse" },
-    { "ref": "68338001", "town": "Trois-epis_sapc" },
-    { "ref": "69029001", "town": "Lyon-bron" },
-    { "ref": "69174002", "town": "Les Sauvages" },
-    { "ref": "69299001", "town": "Lyon-st-Exupery" },
-    { "ref": "70132001", "town": "Chargey-les-gra" },
-    { "ref": "70261001", "town": "Frotey_sapc" },
-    { "ref": "70473001", "town": "Luxeuil" },
-    { "ref": "70561002", "town": "Villersexel Sa" },
-    { "ref": "71014004", "town": "Autun" },
-    { "ref": "71081001", "town": "Chalon-champfo" },
-    { "ref": "71105001", "town": "Macon" },
-    { "ref": "71289001", "town": "Matour_sapc" },
-    { "ref": "71320001", "town": "Mt-st-vincent" },
-    { "ref": "71491001", "town": "St", "undefined": "Yan" },
-    { "ref": "72181001", "town": "Le Mans" },
-    { "ref": "73054001", "town": "Bourg Maurice" },
-    { "ref": "73329001", "town": "Chambery-aix" },
-    { "ref": "74182001", "town": "Meythet" },
-    { "ref": "75114001", "town": "Paris-montsouris" },
-    { "ref": "76116001", "town": "Rouen-boos" },
-    { "ref": "77054001", "town": "La Brosse-mx" },
-    { "ref": "77113002", "town": "Chevru" },
-    { "ref": "77211001", "town": "Nangis" },
-    { "ref": "77306001", "town": "Melun" },
-    { "ref": "77333003", "town": "Nemours" },
-    { "ref": "77468001", "town": "Torcy" },
-    { "ref": "78354001", "town": "Magnanville" },
-    { "ref": "78465001", "town": "Orgerus" },
-    { "ref": "78620001", "town": "Toussus Le Noble" },
-    { "ref": "78621001", "town": "Trappes" },
-    { "ref": "78640001", "town": "Villacoublay" },
-    { "ref": "79191005", "town": "Niort" },
-    { "ref": "80001001", "town": "Abbeville" },
-    { "ref": "80379002", "town": "Amiens-glisy" },
-    { "ref": "80682001", "town": "Rouvroy-en-santerre" },
-    { "ref": "80815002", "town": "Vron" },
-    { "ref": "81081002", "town": "Dourgne" },
-    { "ref": "81140002", "town": "Lavaur" },
-    { "ref": "81284001", "town": "Albi" },
-    { "ref": "82121002", "town": "Montauban" },
-    { "ref": "83019002", "town": "Bormes Les Mimosas" },
-    { "ref": "83031001", "town": "Le Luc" },
-    { "ref": "83061001", "town": "Frejus" },
-    { "ref": "83069001", "town": "Hyeres" },
-    { "ref": "83069016", "town": "Hyeres-plage" },
-    { "ref": "83137001", "town": "Toulon" },
-    { "ref": "84025001", "town": "Cabrieres D'avignon" },
-    { "ref": "84031001", "town": "Carpentras" },
-    { "ref": "84087001", "town": "Orange" },
-    { "ref": "85113001", "town": "L Ile D Yeu" },
-    { "ref": "85191003", "town": "La Yon" },
-    { "ref": "86027001", "town": "Poitiers-biard" },
-    { "ref": "87064005", "town": "Eymoutiers" },
-    { "ref": "87085006", "town": "Limoges-bellegarde" },
-    { "ref": "87089003", "town": "Magnac-laval" },
-    { "ref": "87154003", "town": "St Junien" },
-    { "ref": "87187003", "town": "St Pe" },
-    { "ref": "88136001", "town": "Epinal" },
-    { "ref": "89131001", "town": "Cruzy_sapc" },
-    { "ref": "89206001", "town": "Joigny" },
-    { "ref": "89346001", "town": "Auxerre" },
-    { "ref": "90010001", "town": "Belfort" },
-    { "ref": "91027002", "town": "Orly" },
-    { "ref": "91103001", "town": "Bretigny_sapc" },
-    { "ref": "95088001", "town": "Le Bourget" },
-    { "ref": "95527001", "town": "Roissy" },
-    { "ref": "97101015", "town": "Le Raizet Aero" },
-    { "ref": "97209004", "town": "Fort-de-france Desaix" },
-    { "ref": "97213004", "town": "Lamentin-aero" },
-    { "ref": "97304003", "town": "Kourou Csg" },
-    { "ref": "97304005", "town": "Kourou Plage" },
-    { "ref": "97307001", "town": "Cayenne-matoury" },
-    { "ref": "97404540", "town": "Pont-mathurin" },
-    { "ref": "97405480", "town": "Petite-ile Cirad" },
-    { "ref": "97407520", "town": "Le Port" },
-    { "ref": "97410238", "town": "Saint-benoit" },
-    { "ref": "97411111", "town": "Saint-denis College" },
-    { "ref": "97412384", "town": "St-joseph Cirad" },
-    { "ref": "97413520", "town": "Colimacons" },
-    { "ref": "97413524", "town": "Mascarin" },
-    { "ref": "97414431", "town": "Le Cirad" },
-    { "ref": "97415566", "town": "Piton-maido" },
-    { "ref": "97415590", "town": "Pointe Des Trois-bassins" },
-    { "ref": "97416410", "town": "Ravine Cirad" },
-    { "ref": "97416415", "town": "Pierrefonds Cirad" },
-    { "ref": "97416463", "town": "Pierrefonds-aeroport" },
-    { "ref": "97416465", "town": "Ligne-paradis Cirad" },
-    { "ref": "97418110", "town": "Gillot-aeroport" },
-    { "ref": "97422440", "town": "Plaine Cafres" },
-    { "ref": "97424410", "town": "Cilaos" },
-    { "ref": "97502001", "town": "St-pierre" },
-    { "ref": "98404001", "town": "Kerguelen" },
-    { "ref": "98508001", "town": "Pamandzi" },
-    { "ref": "98611001", "town": "Maopoopo" },
-    { "ref": "98613001", "town": "Hihifo" },
-    { "ref": "98715002", "town": "Faaa" },
-    { "ref": "98723001", "town": "Hiva-oa" },
-    { "ref": "98741001", "town": "Rapa" },
-    { "ref": "98753001", "town": "Mataura 1" },
-    { "ref": "98812001", "town": "Koumac" },
-    { "ref": "98814001", "town": "Ouanaham" },
-    { "ref": "98818001", "town": "Noumea" },
-    { "ref": "98818002", "town": "Magenta" },
-    { "ref": "98821001", "town": "La Tontouta" },
-    { "ref": "98822001", "town": "Poindimie" }
-  ]
-}
+[
+  {
+    "ref": "01014002",
+    "town": "Arbent"
+  },
+  {
+    "ref": "01028001",
+    "town": "Baneins"
+  },
+  {
+    "ref": "01033002",
+    "town": "Bellegarde"
+  },
+  {
+    "ref": "01034004",
+    "town": "Belley"
+  },
+  {
+    "ref": "01037001",
+    "town": "Benonces"
+  },
+  {
+    "ref": "01071001",
+    "town": "Cessy"
+  },
+  {
+    "ref": "01072001",
+    "town": "Ceyzeriat_sapc"
+  },
+  {
+    "ref": "01089001",
+    "town": "Amberieu"
+  },
+  {
+    "ref": "01143002",
+    "town": "Divonne Za"
+  },
+  {
+    "ref": "01174001",
+    "town": "Giron"
+  },
+  {
+    "ref": "01235001",
+    "town": "Marlieux"
+  },
+  {
+    "ref": "01255002",
+    "town": "Montagnieu"
+  },
+  {
+    "ref": "01384001",
+    "town": "Saint Rambert En Bugey"
+  },
+  {
+    "ref": "01414001",
+    "town": "Sutrieu"
+  },
+  {
+    "ref": "01441001",
+    "town": "Vieu"
+  },
+  {
+    "ref": "02037002",
+    "town": "Aulnois-ss-laon"
+  },
+  {
+    "ref": "02094001",
+    "town": "Blesmes"
+  },
+  {
+    "ref": "02110002",
+    "town": "Braine"
+  },
+  {
+    "ref": "02173002",
+    "town": "Chauny"
+  },
+  {
+    "ref": "02320001",
+    "town": "St Quentin"
+  },
+  {
+    "ref": "02321002",
+    "town": "Fontaine-les-vv"
+  },
+  {
+    "ref": "02346001",
+    "town": "Gizy"
+  },
+  {
+    "ref": "02471001",
+    "town": "Martigny-courpi"
+  },
+  {
+    "ref": "02705001",
+    "town": "La Selve"
+  },
+  {
+    "ref": "03006003",
+    "town": "Arfeuilles"
+  },
+  {
+    "ref": "03036002",
+    "town": "Bourbon_sapc"
+  },
+  {
+    "ref": "03059001",
+    "town": "Chareil-cintrat_sapc"
+  },
+  {
+    "ref": "03060001",
+    "town": "Vichy-charmeil"
+  },
+  {
+    "ref": "03061001",
+    "town": "Charmes_sapc"
+  },
+  {
+    "ref": "03100001",
+    "town": "Diou"
+  },
+  {
+    "ref": "03106002",
+    "town": "Durdat-larequille"
+  },
+  {
+    "ref": "03108001",
+    "town": "Echassieres_sapc"
+  },
+  {
+    "ref": "03130002",
+    "town": "Isle-et-bardais"
+  },
+  {
+    "ref": "03149002",
+    "town": "Louchy-montfand"
+  },
+  {
+    "ref": "03155001",
+    "town": "Lurcy-levis"
+  },
+  {
+    "ref": "03155003",
+    "town": "Lurcy-levis Sa"
+  },
+  {
+    "ref": "03165001",
+    "town": "Mayet-de-montag"
+  },
+  {
+    "ref": "03180001",
+    "town": "Montbeugny"
+  },
+  {
+    "ref": "03185007",
+    "town": "Montlucon Aero"
+  },
+  {
+    "ref": "03186001",
+    "town": "Montmarault"
+  },
+  {
+    "ref": "03204001",
+    "town": "Paray-sous-briailles"
+  },
+  {
+    "ref": "03226001",
+    "town": "Saint Didier_sapc"
+  },
+  {
+    "ref": "03240001",
+    "town": "St-leon"
+  },
+  {
+    "ref": "03248001",
+    "town": "St-nicolas"
+  },
+  {
+    "ref": "03285001",
+    "town": "Tortezais_sapc"
+  },
+  {
+    "ref": "03310001",
+    "town": "Vichy-ville"
+  },
+  {
+    "ref": "03321001",
+    "town": "Yzeure"
+  },
+  {
+    "ref": "04006005",
+    "town": "Allos_sapc"
+  },
+  {
+    "ref": "04019001",
+    "town": "Barcelonnette"
+  },
+  {
+    "ref": "04039001",
+    "town": "Castellane"
+  },
+  {
+    "ref": "04049001",
+    "town": "St Auban"
+  },
+  {
+    "ref": "04068001",
+    "town": "Dauphin"
+  },
+  {
+    "ref": "04070009",
+    "town": "Digne Les Bains"
+  },
+  {
+    "ref": "04096002",
+    "town": "Jausiers-st Anne"
+  },
+  {
+    "ref": "04115001",
+    "town": "Meailles_sapc"
+  },
+  {
+    "ref": "04126001",
+    "town": "Montclar_sapc"
+  },
+  {
+    "ref": "04136001",
+    "town": "La Mure-argens"
+  },
+  {
+    "ref": "04184001",
+    "town": "St Jurs"
+  },
+  {
+    "ref": "04209005",
+    "town": "Sisteron"
+  },
+  {
+    "ref": "04222001",
+    "town": "Turriers"
+  },
+  {
+    "ref": "04230001",
+    "town": "Valensole"
+  },
+  {
+    "ref": "05007001",
+    "town": "Arvieux La Chalp"
+  },
+  {
+    "ref": "05007003",
+    "town": "Arvieux"
+  },
+  {
+    "ref": "05026001",
+    "town": "Ceillac"
+  },
+  {
+    "ref": "05046001",
+    "town": "Embrun"
+  },
+  {
+    "ref": "05055001",
+    "town": "La Faurie"
+  },
+  {
+    "ref": "05061009",
+    "town": "Gap"
+  },
+  {
+    "ref": "05064001",
+    "town": "Chapelle-en-valgaudemar"
+  },
+  {
+    "ref": "05070001",
+    "town": "Laragne-monteglin"
+  },
+  {
+    "ref": "05070003",
+    "town": "Laragne Monteglin"
+  },
+  {
+    "ref": "05079001",
+    "town": "Le Monetier Les Bains"
+  },
+  {
+    "ref": "05093001",
+    "town": "Nevache"
+  },
+  {
+    "ref": "05098001",
+    "town": "Les Orres"
+  },
+  {
+    "ref": "05101001",
+    "town": "Pelvoux"
+  },
+  {
+    "ref": "05120002",
+    "town": "Ristolas"
+  },
+  {
+    "ref": "05126001",
+    "town": "Rosans"
+  },
+  {
+    "ref": "05132001",
+    "town": "St-bonnet Champsaur"
+  },
+  {
+    "ref": "05136002",
+    "town": "St Crepin"
+  },
+  {
+    "ref": "05139002",
+    "town": "St Etienne-en-devoluy"
+  },
+  {
+    "ref": "05142001",
+    "town": "St Firmin"
+  },
+  {
+    "ref": "05145002",
+    "town": "St Jean-st-nicolas"
+  },
+  {
+    "ref": "05157001",
+    "town": "St Veran"
+  },
+  {
+    "ref": "05158001",
+    "town": "Le Saix"
+  },
+  {
+    "ref": "05170001",
+    "town": "Tallard"
+  },
+  {
+    "ref": "05181002",
+    "town": "Villar D'arene"
+  },
+  {
+    "ref": "05182001",
+    "town": "Villar Loubiere"
+  },
+  {
+    "ref": "05183001",
+    "town": "Villar St Pancrace"
+  },
+  {
+    "ref": "06004009",
+    "town": "Antibes"
+  },
+  {
+    "ref": "06005001",
+    "town": "Ascros"
+  },
+  {
+    "ref": "06029001",
+    "town": "Cannes"
+  },
+  {
+    "ref": "06037002",
+    "town": "Caussols"
+  },
+  {
+    "ref": "06073005",
+    "town": "Isola 2000"
+  },
+  {
+    "ref": "06074005",
+    "town": "Lantosque_sapc"
+  },
+  {
+    "ref": "06075007",
+    "town": "Levens"
+  },
+  {
+    "ref": "06077006",
+    "town": "Peira Cava"
+  },
+  {
+    "ref": "06079002",
+    "town": "Mandelieu La Napoule"
+  },
+  {
+    "ref": "06081001",
+    "town": "Le Mas"
+  },
+  {
+    "ref": "06088001",
+    "town": "Nice"
+  },
+  {
+    "ref": "06088007",
+    "town": "Nice-rimiez"
+  },
+  {
+    "ref": "06090002",
+    "town": "Pegomas"
+  },
+  {
+    "ref": "06091003",
+    "town": "Peille"
+  },
+  {
+    "ref": "06094002",
+    "town": "Peone"
+  },
+  {
+    "ref": "06102001",
+    "town": "Rimplas_sapc"
+  },
+  {
+    "ref": "06118002",
+    "town": "St Cezaire Sur Siagne"
+  },
+  {
+    "ref": "06120004",
+    "town": "St Etienne De Tinee_sapc"
+  },
+  {
+    "ref": "06125001",
+    "town": "St Martin D'entraunes_sapc"
+  },
+  {
+    "ref": "06127001",
+    "town": "St-martin-de-vesubie-obs"
+  },
+  {
+    "ref": "06136005",
+    "town": "Sospel"
+  },
+  {
+    "ref": "06152002",
+    "town": "Valbonne-sophia"
+  },
+  {
+    "ref": "06163007",
+    "town": "Tende_sapc"
+  },
+  {
+    "ref": "07005001",
+    "town": "Alba La Romaine"
+  },
+  {
+    "ref": "07010001",
+    "town": "Annonay"
+  },
+  {
+    "ref": "07011004",
+    "town": "Antraigues Sa"
+  },
+  {
+    "ref": "07019005",
+    "town": "Aubenas Sa"
+  },
+  {
+    "ref": "07025001",
+    "town": "Barnas Rad"
+  },
+  {
+    "ref": "07032002",
+    "town": "Berzeme Rad"
+  },
+  {
+    "ref": "07064001",
+    "town": "Cheylard Sa"
+  },
+  {
+    "ref": "07066001",
+    "town": "Chomerac Sa_rce"
+  },
+  {
+    "ref": "07068001",
+    "town": "Colombier Jeune Rad"
+  },
+  {
+    "ref": "07069001",
+    "town": "Colombier Vieux Sa"
+  },
+  {
+    "ref": "07075001",
+    "town": "Cros Georand"
+  },
+  {
+    "ref": "07096001",
+    "town": "Gluiras Rad"
+  },
+  {
+    "ref": "07101001",
+    "town": "Grospierres"
+  },
+  {
+    "ref": "07101002",
+    "town": "Grospierres Sa"
+  },
+  {
+    "ref": "07105003",
+    "town": "Issanlas_sapc"
+  },
+  {
+    "ref": "07117001",
+    "town": "Lablachere Drome"
+  },
+  {
+    "ref": "07117002",
+    "town": "Lablachere"
+  },
+  {
+    "ref": "07128001",
+    "town": "Lalouvesc"
+  },
+  {
+    "ref": "07131001",
+    "town": "Lanas Syn"
+  },
+  {
+    "ref": "07144001",
+    "town": "Loubaresse"
+  },
+  {
+    "ref": "07154005",
+    "town": "Mazan Abbaye Rad"
+  },
+  {
+    "ref": "07159001",
+    "town": "Mirabel Sa"
+  },
+  {
+    "ref": "07161001",
+    "town": "Montpezat Sa"
+  },
+  {
+    "ref": "07168001",
+    "town": "Orgnac Aven"
+  },
+  {
+    "ref": "07172002",
+    "town": "Peaugres Rad"
+  },
+  {
+    "ref": "07185001",
+    "town": "Preaux Sa"
+  },
+  {
+    "ref": "07187001",
+    "town": "Croix Millet"
+  },
+  {
+    "ref": "07202002",
+    "town": "Sablieres Oara"
+  },
+  {
+    "ref": "07204008",
+    "town": "St-agreve Rad"
+  },
+  {
+    "ref": "07228001",
+    "town": "St-desirat Sa"
+  },
+  {
+    "ref": "07232001",
+    "town": "St-etienne Lugdares"
+  },
+  {
+    "ref": "07261001",
+    "town": "St-laurent Pape"
+  },
+  {
+    "ref": "07265001",
+    "town": "St-marcel Annonay"
+  },
+  {
+    "ref": "07286002",
+    "town": "St-pierreville"
+  },
+  {
+    "ref": "07294001",
+    "town": "St-sauveur Sa"
+  },
+  {
+    "ref": "07330004",
+    "town": "Vallon Sa"
+  },
+  {
+    "ref": "07331001",
+    "town": "Vals-les-bains"
+  },
+  {
+    "ref": "07334004",
+    "town": "Les Vans-sa"
+  },
+  {
+    "ref": "07338001",
+    "town": "Vernoux"
+  },
+  {
+    "ref": "08046001",
+    "town": "Banogne-recouvrance"
+  },
+  {
+    "ref": "08089003",
+    "town": "Buzancy_sapc"
+  },
+  {
+    "ref": "08092001",
+    "town": "Cauroy"
+  },
+  {
+    "ref": "08105005",
+    "town": "Charleville-mez"
+  },
+  {
+    "ref": "08145001",
+    "town": "Douzy"
+  },
+  {
+    "ref": "08239001",
+    "town": "Juniville"
+  },
+  {
+    "ref": "08248002",
+    "town": "Launois-sur-vence_sapc"
+  },
+  {
+    "ref": "08255001",
+    "town": "Linay"
+  },
+  {
+    "ref": "08296002",
+    "town": "Montcheutin_sapc"
+  },
+  {
+    "ref": "08367002",
+    "town": "Rocroi"
+  },
+  {
+    "ref": "08401001",
+    "town": "Saulces-champenoises"
+  },
+  {
+    "ref": "08419001",
+    "town": "Signy-l'abbaye"
+  },
+  {
+    "ref": "09023002",
+    "town": "Ascou Lavail"
+  },
+  {
+    "ref": "09024004",
+    "town": "Aston"
+  },
+  {
+    "ref": "09027001",
+    "town": "Augirein"
+  },
+  {
+    "ref": "09042003",
+    "town": "La Bastide De S"
+  },
+  {
+    "ref": "09094001",
+    "town": "Cerizols"
+  },
+  {
+    "ref": "09099001",
+    "town": "Cos"
+  },
+  {
+    "ref": "09161003",
+    "town": "Leran"
+  },
+  {
+    "ref": "09199002",
+    "town": "Montaut"
+  },
+  {
+    "ref": "09206001",
+    "town": "Montferrier"
+  },
+  {
+    "ref": "09250001",
+    "town": "Les Cascades"
+  },
+  {
+    "ref": "09277001",
+    "town": "St-ybars"
+  },
+  {
+    "ref": "09289001",
+    "town": "St Girons"
+  },
+  {
+    "ref": "09334004",
+    "town": "Vicdessos"
+  },
+  {
+    "ref": "10002001",
+    "town": "Ailleville_sapc"
+  },
+  {
+    "ref": "10030001",
+    "town": "Troyes-barberey"
+  },
+  {
+    "ref": "10057001",
+    "town": "Bouy-sur-orvin"
+  },
+  {
+    "ref": "10070001",
+    "town": "Celles-sur-ource"
+  },
+  {
+    "ref": "10099002",
+    "town": "Chessy-les-pres_sapc"
+  },
+  {
+    "ref": "10119001",
+    "town": "Cunfin_sapc"
+  },
+  {
+    "ref": "10130001",
+    "town": "Dosnon"
+  },
+  {
+    "ref": "10228002",
+    "town": "Mathaux-etape"
+  },
+  {
+    "ref": "10238001",
+    "town": "Mesnil-st-pere"
+  },
+  {
+    "ref": "10323001",
+    "town": "Romilly"
+  },
+  {
+    "ref": "10350001",
+    "town": "St-mards"
+  },
+  {
+    "ref": "10360001",
+    "town": "St-pouange"
+  },
+  {
+    "ref": "10372001",
+    "town": "Soulaines"
+  },
+  {
+    "ref": "11004001",
+    "town": "Alaigne"
+  },
+  {
+    "ref": "11012001",
+    "town": "Argeliers"
+  },
+  {
+    "ref": "11016003",
+    "town": "Arquettes-en-val"
+  },
+  {
+    "ref": "11028001",
+    "town": "Belcaire"
+  },
+  {
+    "ref": "11069001",
+    "town": "Carcassonne"
+  },
+  {
+    "ref": "11076001",
+    "town": "Castelnaudary"
+  },
+  {
+    "ref": "11081003",
+    "town": "Caunes-minervois"
+  },
+  {
+    "ref": "11124003",
+    "town": "Durban-corbieres"
+  },
+  {
+    "ref": "11136001",
+    "town": "Fanjeaux_sapc"
+  },
+  {
+    "ref": "11144001",
+    "town": "Fitou"
+  },
+  {
+    "ref": "11168001",
+    "town": "Granes"
+  },
+  {
+    "ref": "11181002",
+    "town": "Labecede Lauragais_sapc"
+  },
+  {
+    "ref": "11185001",
+    "town": "Lagrasse"
+  },
+  {
+    "ref": "11203004",
+    "town": "Lezignan-corbieres"
+  },
+  {
+    "ref": "11206003",
+    "town": "Limoux"
+  },
+  {
+    "ref": "11221004",
+    "town": "Les Martys"
+  },
+  {
+    "ref": "11243001",
+    "town": "Montferrand"
+  },
+  {
+    "ref": "11260002",
+    "town": "Mouthoumet"
+  },
+  {
+    "ref": "11262005",
+    "town": "Narbonne"
+  },
+  {
+    "ref": "11295001",
+    "town": "Portel-des-corbieres"
+  },
+  {
+    "ref": "11333001",
+    "town": "St Benoit"
+  },
+  {
+    "ref": "11404001",
+    "town": "Ventenac-cabardes"
+  },
+  {
+    "ref": "12014001",
+    "town": "Aurelle-verlac_sapc"
+  },
+  {
+    "ref": "12021001",
+    "town": "Bastide Eveque"
+  },
+  {
+    "ref": "12023001",
+    "town": "Bastide Solages"
+  },
+  {
+    "ref": "12039001",
+    "town": "Brusque_sapc"
+  },
+  {
+    "ref": "12050001",
+    "town": "Canet-de-salars_sapc"
+  },
+  {
+    "ref": "12063003",
+    "town": "Millau-larzac_sapc"
+  },
+  {
+    "ref": "12068001",
+    "town": "Colombies"
+  },
+  {
+    "ref": "12077002",
+    "town": "Cornus"
+  },
+  {
+    "ref": "12092001",
+    "town": "Durenque_sapc"
+  },
+  {
+    "ref": "12094002",
+    "town": "Entraygues Sur"
+  },
+  {
+    "ref": "12102001",
+    "town": "Flavin"
+  },
+  {
+    "ref": "12119001",
+    "town": "Laguiole"
+  },
+  {
+    "ref": "12145001",
+    "town": "Millau"
+  },
+  {
+    "ref": "12150001",
+    "town": "Monteils"
+  },
+  {
+    "ref": "12154003",
+    "town": "Montlaur"
+  },
+  {
+    "ref": "12179001",
+    "town": "Peux-et-couffouleux_sapc"
+  },
+  {
+    "ref": "12216001",
+    "town": "St-come-d'olt"
+  },
+  {
+    "ref": "12253001",
+    "town": "Salles Curan"
+  },
+  {
+    "ref": "12254001",
+    "town": "Rodez-aveyron"
+  },
+  {
+    "ref": "12300004",
+    "town": "Villefranche-de-rouergue"
+  },
+  {
+    "ref": "13001009",
+    "town": "Aix En Provence"
+  },
+  {
+    "ref": "13004003",
+    "town": "Arles"
+  },
+  {
+    "ref": "13005003",
+    "town": "Aubagne"
+  },
+  {
+    "ref": "13022003",
+    "town": "Cassis"
+  },
+  {
+    "ref": "13031002",
+    "town": "La Destrousse_sapc"
+  },
+  {
+    "ref": "13036003",
+    "town": "Eyragues"
+  },
+  {
+    "ref": "13047001",
+    "town": "Istres"
+  },
+  {
+    "ref": "13054001",
+    "town": "Marignane"
+  },
+  {
+    "ref": "13056002",
+    "town": "Cap Couronne"
+  },
+  {
+    "ref": "13062002",
+    "town": "Mimet"
+  },
+  {
+    "ref": "13074003",
+    "town": "Peyrolles En Provence"
+  },
+  {
+    "ref": "13103001",
+    "town": "Salon De Provence"
+  },
+  {
+    "ref": "13108004",
+    "town": "Tarascon"
+  },
+  {
+    "ref": "13110003",
+    "town": "Trets"
+  },
+  {
+    "ref": "13111002",
+    "town": "Vauvenargues"
+  },
+  {
+    "ref": "14020002",
+    "town": "Argences"
+  },
+  {
+    "ref": "14066001",
+    "town": "Bernieres"
+  },
+  {
+    "ref": "14137001",
+    "town": "Caen-carpiquet"
+  },
+  {
+    "ref": "14216001",
+    "town": "Damblainville"
+  },
+  {
+    "ref": "14291002",
+    "town": "Fresney Le Vieu"
+  },
+  {
+    "ref": "14296001",
+    "town": "Legast_sapc"
+  },
+  {
+    "ref": "14357002",
+    "town": "Lassy_sapc"
+  },
+  {
+    "ref": "14366002",
+    "town": "Lisieux_sapc"
+  },
+  {
+    "ref": "14372001",
+    "town": "Livry"
+  },
+  {
+    "ref": "14431002",
+    "town": "Mezidon-canon"
+  },
+  {
+    "ref": "14501002",
+    "town": "Pierrefitte Cin_sapc"
+  },
+  {
+    "ref": "14578001",
+    "town": "St Gatien Des B"
+  },
+  {
+    "ref": "14579002",
+    "town": "Saint Georges D"
+  },
+  {
+    "ref": "14624001",
+    "town": "L Oudon Lieury_sapc"
+  },
+  {
+    "ref": "14659001",
+    "town": "St Sylvain_sapc"
+  },
+  {
+    "ref": "14665001",
+    "town": "Sallenelles"
+  },
+  {
+    "ref": "14727001",
+    "town": "Vaubadon"
+  },
+  {
+    "ref": "14762004",
+    "town": "Vire Hippodrome"
+  },
+  {
+    "ref": "15014001",
+    "town": "Aurillac - Vill"
+  },
+  {
+    "ref": "15014004",
+    "town": "Aurillac"
+  },
+  {
+    "ref": "15050001",
+    "town": "Le Claux"
+  },
+  {
+    "ref": "15053001",
+    "town": "Coltines"
+  },
+  {
+    "ref": "15060001",
+    "town": "Deux-verg"
+  },
+  {
+    "ref": "15060002",
+    "town": "Deux-verges"
+  },
+  {
+    "ref": "15101004",
+    "town": "Le Lioran_sapc"
+  },
+  {
+    "ref": "15114002",
+    "town": "Marcenat"
+  },
+  {
+    "ref": "15118002",
+    "town": "Marmanhac"
+  },
+  {
+    "ref": "15119001",
+    "town": "Massiac"
+  },
+  {
+    "ref": "15120005",
+    "town": "Mauriac"
+  },
+  {
+    "ref": "15122002",
+    "town": "Maurs"
+  },
+  {
+    "ref": "15162003",
+    "town": "Riom-montagnes"
+  },
+  {
+    "ref": "15169001",
+    "town": "Saignes"
+  },
+  {
+    "ref": "15181001",
+    "town": "St Constant"
+  },
+  {
+    "ref": "15187006",
+    "town": "St Flour"
+  },
+  {
+    "ref": "15207002",
+    "town": "St- Poncy_sapc"
+  },
+  {
+    "ref": "15226001",
+    "town": "Senezergues"
+  },
+  {
+    "ref": "15231001",
+    "town": "Talizat"
+  },
+  {
+    "ref": "15248001",
+    "town": "Valuejols"
+  },
+  {
+    "ref": "16078001",
+    "town": "Angouleme - Brie - Champniers"
+  },
+  {
+    "ref": "16089001",
+    "town": "Cognac"
+  },
+  {
+    "ref": "16113001",
+    "town": "La Couronne"
+  },
+  {
+    "ref": "16225001",
+    "town": "Montemboeuf"
+  },
+  {
+    "ref": "16256001",
+    "town": "Passirac"
+  },
+  {
+    "ref": "16279001",
+    "town": "Rioux Martin"
+  },
+  {
+    "ref": "16363001",
+    "town": "Saulgond_sapc"
+  },
+  {
+    "ref": "16366001",
+    "town": "Segonzac_sapc"
+  },
+  {
+    "ref": "16390001",
+    "town": "Tusson"
+  },
+  {
+    "ref": "16403001",
+    "town": "Le Vieux Cerier_sapc"
+  },
+  {
+    "ref": "17004001",
+    "town": "Ile-d Aix"
+  },
+  {
+    "ref": "17053001",
+    "town": "Bords"
+  },
+  {
+    "ref": "17093002",
+    "town": "Chateau D'oleron"
+  },
+  {
+    "ref": "17218001",
+    "town": "Marans"
+  },
+  {
+    "ref": "17224001",
+    "town": "Matha"
+  },
+  {
+    "ref": "17236001",
+    "town": "Mirambeau"
+  },
+  {
+    "ref": "17243002",
+    "town": "Montlieu_sapc"
+  },
+  {
+    "ref": "17268002",
+    "town": "Nuaille Sur Boutonne"
+  },
+  {
+    "ref": "17300009",
+    "town": "La Rochelle-ile De Re"
+  },
+  {
+    "ref": "17306004",
+    "town": "Royan-medis"
+  },
+  {
+    "ref": "17308001",
+    "town": "St Agnant"
+  },
+  {
+    "ref": "17323001",
+    "town": "Chassiron"
+  },
+  {
+    "ref": "17339002",
+    "town": "St Germain De Lusignan"
+  },
+  {
+    "ref": "17353001",
+    "town": "St-laurent Pree-inra"
+  },
+  {
+    "ref": "17415003",
+    "town": "Saintes"
+  },
+  {
+    "ref": "17477001",
+    "town": "Villiers_sapc"
+  },
+  {
+    "ref": "18015003",
+    "town": "Aubigny-sur-nere"
+  },
+  {
+    "ref": "18033001",
+    "town": "Bourges"
+  },
+  {
+    "ref": "18047001",
+    "town": "Chapelle-d'ang_sapc"
+  },
+  {
+    "ref": "18057003",
+    "town": "Chateaumeillant"
+  },
+  {
+    "ref": "18087001",
+    "town": "Dun"
+  },
+  {
+    "ref": "18090001",
+    "town": "Etrechy"
+  },
+  {
+    "ref": "18092001",
+    "town": "Avord"
+  },
+  {
+    "ref": "18103001",
+    "town": "Gracay"
+  },
+  {
+    "ref": "18125004",
+    "town": "Lere"
+  },
+  {
+    "ref": "18127001",
+    "town": "Lignieres"
+  },
+  {
+    "ref": "18159001",
+    "town": "Nancay"
+  },
+  {
+    "ref": "18165001",
+    "town": "Neuvy-sur-bar."
+  },
+  {
+    "ref": "18172001",
+    "town": "Orval"
+  },
+  {
+    "ref": "18172003",
+    "town": "Orval Rad"
+  },
+  {
+    "ref": "18175001",
+    "town": "Ourouer-les-b."
+  },
+  {
+    "ref": "18175003",
+    "town": "Ourouer"
+  },
+  {
+    "ref": "18187004",
+    "town": "Preveranges"
+  },
+  {
+    "ref": "18190001",
+    "town": "Quincy"
+  },
+  {
+    "ref": "18242001",
+    "town": "Sancoins"
+  },
+  {
+    "ref": "18269001",
+    "town": "Vailly"
+  },
+  {
+    "ref": "18279001",
+    "town": "Vierzon - Veves"
+  },
+  {
+    "ref": "19010001",
+    "town": "Argentat"
+  },
+  {
+    "ref": "19031008",
+    "town": "Brive"
+  },
+  {
+    "ref": "19034001",
+    "town": "Camps"
+  },
+  {
+    "ref": "19073006",
+    "town": "Egletons"
+  },
+  {
+    "ref": "19121002",
+    "town": "Lubersac"
+  },
+  {
+    "ref": "19125001",
+    "town": "Marcillac"
+  },
+  {
+    "ref": "19147001",
+    "town": "Brive-souillac"
+  },
+  {
+    "ref": "19148001",
+    "town": "Neuvic"
+  },
+  {
+    "ref": "19164001",
+    "town": "Peyrelevade"
+  },
+  {
+    "ref": "19237001",
+    "town": "St-privat"
+  },
+  {
+    "ref": "19272001",
+    "town": "Tulle"
+  },
+  {
+    "ref": "19275001",
+    "town": "Ussel-lamartine"
+  },
+  {
+    "ref": "19276006",
+    "town": "Uzerche"
+  },
+  {
+    "ref": "19288004",
+    "town": "Voutezac"
+  },
+  {
+    "ref": "20004002",
+    "town": "Ajaccio"
+  },
+  {
+    "ref": "20004003",
+    "town": "Ajaccio-parata"
+  },
+  {
+    "ref": "20004014",
+    "town": "Ajaccio-milelli_sapc"
+  },
+  {
+    "ref": "20040004",
+    "town": "Bocognano"
+  },
+  {
+    "ref": "20041001",
+    "town": "Cap Pertusato"
+  },
+  {
+    "ref": "20050001",
+    "town": "Calvi"
+  },
+  {
+    "ref": "20092001",
+    "town": "Conca"
+  },
+  {
+    "ref": "20093002",
+    "town": "Ile Rousse"
+  },
+  {
+    "ref": "20096008",
+    "town": "Corte"
+  },
+  {
+    "ref": "20108002",
+    "town": "Evisa-onf"
+  },
+  {
+    "ref": "20114002",
+    "town": "Figari"
+  },
+  {
+    "ref": "20148001",
+    "town": "Bastia"
+  },
+  {
+    "ref": "20154001",
+    "town": "Marignana"
+  },
+  {
+    "ref": "20185003",
+    "town": "Oletta"
+  },
+  {
+    "ref": "20232002",
+    "town": "Pila-canale"
+  },
+  {
+    "ref": "20247001",
+    "town": "La Chiappa"
+  },
+  {
+    "ref": "20254006",
+    "town": "Quenza"
+  },
+  {
+    "ref": "20258001",
+    "town": "Renno"
+  },
+  {
+    "ref": "20264001",
+    "town": "Rusio"
+  },
+  {
+    "ref": "20268001",
+    "town": "Sampolo"
+  },
+  {
+    "ref": "20272004",
+    "town": "Sartene"
+  },
+  {
+    "ref": "20281001",
+    "town": "Cap Sagro"
+  },
+  {
+    "ref": "20342001",
+    "town": "Solenzara"
+  },
+  {
+    "ref": "21065001",
+    "town": "Bessey"
+  },
+  {
+    "ref": "21116002",
+    "town": "Bure Les Templiers_sapc"
+  },
+  {
+    "ref": "21131001",
+    "town": "Chamblanc Seurr"
+  },
+  {
+    "ref": "21154001",
+    "town": "Chatillon/seine"
+  },
+  {
+    "ref": "21231007",
+    "town": "Dijon Toison"
+  },
+  {
+    "ref": "21390001",
+    "town": "Marsannay La Cote"
+  },
+  {
+    "ref": "21425001",
+    "town": "Montbard_sapc"
+  },
+  {
+    "ref": "21473001",
+    "town": "Dijon-longvic"
+  },
+  {
+    "ref": "21501003",
+    "town": "Pouilly En Aux_sapc"
+  },
+  {
+    "ref": "21527001",
+    "town": "La Rochepot"
+  },
+  {
+    "ref": "21561003",
+    "town": "St-martin-du-m"
+  },
+  {
+    "ref": "21564001",
+    "town": "St Nic. Citeaux"
+  },
+  {
+    "ref": "21567001",
+    "town": "Arnay_sapc"
+  },
+  {
+    "ref": "21590001",
+    "town": "Savigny Les Bea"
+  },
+  {
+    "ref": "21603001",
+    "town": "Semur En Auxois_sapc"
+  },
+  {
+    "ref": "22016001",
+    "town": "Ile-de-brehat"
+  },
+  {
+    "ref": "22052002",
+    "town": "Duault"
+  },
+  {
+    "ref": "22092001",
+    "town": "Kerpert"
+  },
+  {
+    "ref": "22108001",
+    "town": "Lanleff"
+  },
+  {
+    "ref": "22113006",
+    "town": "Lannion_aero"
+  },
+  {
+    "ref": "22136001",
+    "town": "Loudeac"
+  },
+  {
+    "ref": "22147006",
+    "town": "Merdrignac"
+  },
+  {
+    "ref": "22168001",
+    "town": "Ploumanac'h"
+  },
+  {
+    "ref": "22203002",
+    "town": "Ploeuc-sur-lie"
+  },
+  {
+    "ref": "22247002",
+    "town": "Pommerit-jaudy"
+  },
+  {
+    "ref": "22261002",
+    "town": "Quintenic"
+  },
+  {
+    "ref": "22263001",
+    "town": "Le Quiou"
+  },
+  {
+    "ref": "22266001",
+    "town": "Rostrenen"
+  },
+  {
+    "ref": "22372001",
+    "town": "St Brieuc"
+  },
+  {
+    "ref": "23008004",
+    "town": "Aubusson_sapc"
+  },
+  {
+    "ref": "23013001",
+    "town": "Auzances_sapc"
+  },
+  {
+    "ref": "23021001",
+    "town": "Benevent_sapc"
+  },
+  {
+    "ref": "23025001",
+    "town": "Bonnat"
+  },
+  {
+    "ref": "23030004",
+    "town": "Bourganeuf"
+  },
+  {
+    "ref": "23031002",
+    "town": "Boussac_sapc"
+  },
+  {
+    "ref": "23067001",
+    "town": "La Courtine"
+  },
+  {
+    "ref": "23075001",
+    "town": "Dun Le Palestel"
+  },
+  {
+    "ref": "23079002",
+    "town": "Felletin"
+  },
+  {
+    "ref": "23089001",
+    "town": "Genouillac"
+  },
+  {
+    "ref": "23113001",
+    "town": "Lupersat_sapc"
+  },
+  {
+    "ref": "23142001",
+    "town": "Neoux"
+  },
+  {
+    "ref": "23155001",
+    "town": "Pontarion_sapc"
+  },
+  {
+    "ref": "23176001",
+    "town": "La Souterraine"
+  },
+  {
+    "ref": "24035003",
+    "town": "Belves"
+  },
+  {
+    "ref": "24037005",
+    "town": "Bergerac"
+  },
+  {
+    "ref": "24133002",
+    "town": "La Coquille"
+  },
+  {
+    "ref": "24138004",
+    "town": "Coulounieix"
+  },
+  {
+    "ref": "24335001",
+    "town": "Port Ste Foy"
+  },
+  {
+    "ref": "24376001",
+    "town": "St Aulaye"
+  },
+  {
+    "ref": "24452001",
+    "town": "St Martial Viveyrols"
+  },
+  {
+    "ref": "24453001",
+    "town": "St Martin De Fressengeas"
+  },
+  {
+    "ref": "24455001",
+    "town": "St Martin Rib."
+  },
+  {
+    "ref": "24516002",
+    "town": "Salignac-eyvigues"
+  },
+  {
+    "ref": "24550003",
+    "town": "Thenon"
+  },
+  {
+    "ref": "25007001",
+    "town": "Adam-les-vercel"
+  },
+  {
+    "ref": "25021001",
+    "town": "Arc-et-senans"
+  },
+  {
+    "ref": "25056001",
+    "town": "Besancon"
+  },
+  {
+    "ref": "25087002",
+    "town": "Branne_sapc"
+  },
+  {
+    "ref": "25127001",
+    "town": "Charquemont"
+  },
+  {
+    "ref": "25195001",
+    "town": "Dannemarie-sur-"
+  },
+  {
+    "ref": "25219002",
+    "town": "Epenoy"
+  },
+  {
+    "ref": "25223002",
+    "town": "Coulans"
+  },
+  {
+    "ref": "25320001",
+    "town": "Labergement"
+  },
+  {
+    "ref": "25356003",
+    "town": "Maiche"
+  },
+  {
+    "ref": "25372001",
+    "town": "Mediere"
+  },
+  {
+    "ref": "25413001",
+    "town": "Mouthe"
+  },
+  {
+    "ref": "25453001",
+    "town": "Pierrefontaine"
+  },
+  {
+    "ref": "25462001",
+    "town": "Pontarlier"
+  },
+  {
+    "ref": "25468001",
+    "town": "Pouligney"
+  },
+  {
+    "ref": "25494001",
+    "town": "La Boissaude Rochejean"
+  },
+  {
+    "ref": "25512001",
+    "town": "Le Russey"
+  },
+  {
+    "ref": "25529002",
+    "town": "Sancey-le-grand"
+  },
+  {
+    "ref": "26002003",
+    "town": "Albon"
+  },
+  {
+    "ref": "26035001",
+    "town": "Beaufort-s-gerv"
+  },
+  {
+    "ref": "26047001",
+    "town": "Bellegarde-en-d"
+  },
+  {
+    "ref": "26050001",
+    "town": "Besignan"
+  },
+  {
+    "ref": "26056001",
+    "town": "Bourdeaux"
+  },
+  {
+    "ref": "26063002",
+    "town": "Buis -Baronnies"
+  },
+  {
+    "ref": "26064001",
+    "town": "Valence-chabeui"
+  },
+  {
+    "ref": "26074001",
+    "town": "Chapelle-en-ver"
+  },
+  {
+    "ref": "26113003",
+    "town": "Die"
+  },
+  {
+    "ref": "26116002",
+    "town": "Donzere"
+  },
+  {
+    "ref": "26124001",
+    "town": "Etoile"
+  },
+  {
+    "ref": "26142001",
+    "town": "Glandage_sapc"
+  },
+  {
+    "ref": "26165001",
+    "town": "Livron"
+  },
+  {
+    "ref": "26168001",
+    "town": "Lus L Croix Hte"
+  },
+  {
+    "ref": "26176001",
+    "town": "Marsanne"
+  },
+  {
+    "ref": "26177001",
+    "town": "Marsaz"
+  },
+  {
+    "ref": "26179001",
+    "town": "Mercurol"
+  },
+  {
+    "ref": "26191001",
+    "town": "Montboucher-s-j"
+  },
+  {
+    "ref": "26198001",
+    "town": "Montelimar"
+  },
+  {
+    "ref": "26220010",
+    "town": "Nyons P182"
+  },
+  {
+    "ref": "26235001",
+    "town": "Pierrelatte"
+  },
+  {
+    "ref": "26258001",
+    "town": "Puy-st-martin"
+  },
+  {
+    "ref": "26264002",
+    "town": "Remuzat"
+  },
+  {
+    "ref": "26273002",
+    "town": "Rochefort-samson_sapc"
+  },
+  {
+    "ref": "26281001",
+    "town": "Romans_sapc"
+  },
+  {
+    "ref": "26292002",
+    "town": "St-auban"
+  },
+  {
+    "ref": "26295001",
+    "town": "St-barthelemy-v_sapc"
+  },
+  {
+    "ref": "26298001",
+    "town": "St-christophe-l_sapc"
+  },
+  {
+    "ref": "26307001",
+    "town": "St-jean-en-roya"
+  },
+  {
+    "ref": "26321003",
+    "town": "St-nazaire-le-d"
+  },
+  {
+    "ref": "26327001",
+    "town": "St Roman-diois"
+  },
+  {
+    "ref": "26330001",
+    "town": "St-sorlin-en-va"
+  },
+  {
+    "ref": "26340001",
+    "town": "Sederon"
+  },
+  {
+    "ref": "26348001",
+    "town": "Taulignan"
+  },
+  {
+    "ref": "26361001",
+    "town": "Valdrome"
+  },
+  {
+    "ref": "26377003",
+    "town": "Vinsobres"
+  },
+  {
+    "ref": "26380002",
+    "town": "Gervans"
+  },
+  {
+    "ref": "27056003",
+    "town": "Bernay"
+  },
+  {
+    "ref": "27096001",
+    "town": "Les Bottereaux"
+  },
+  {
+    "ref": "27100001",
+    "town": "Boulleville"
+  },
+  {
+    "ref": "27112001",
+    "town": "Breteuil"
+  },
+  {
+    "ref": "27116001",
+    "town": "Brionne"
+  },
+  {
+    "ref": "27226001",
+    "town": "Etrepagny"
+  },
+  {
+    "ref": "27306001",
+    "town": "Guichainville"
+  },
+  {
+    "ref": "27347001",
+    "town": "Evreux-huest"
+  },
+  {
+    "ref": "27367001",
+    "town": "Lieurey"
+  },
+  {
+    "ref": "27375001",
+    "town": "Louviers"
+  },
+  {
+    "ref": "27422001",
+    "town": "Muids"
+  },
+  {
+    "ref": "27457001",
+    "town": "Piseux"
+  },
+  {
+    "ref": "28041001",
+    "town": "Blandainville"
+  },
+  {
+    "ref": "28064002",
+    "town": "Bu_sapc"
+  },
+  {
+    "ref": "28070001",
+    "town": "Chartres"
+  },
+  {
+    "ref": "28078001",
+    "town": "Chapelle-guillaume_sapc"
+  },
+  {
+    "ref": "28190001",
+    "town": "Guillonville_ca28"
+  },
+  {
+    "ref": "28195001",
+    "town": "Houx"
+  },
+  {
+    "ref": "28198001",
+    "town": "Chateaudun"
+  },
+  {
+    "ref": "28206001",
+    "town": "Laons"
+  },
+  {
+    "ref": "28214003",
+    "town": "La Loupe_sapc"
+  },
+  {
+    "ref": "28215001",
+    "town": "Louville"
+  },
+  {
+    "ref": "28239002",
+    "town": "Marville_sapc"
+  },
+  {
+    "ref": "28252002",
+    "town": "Miermaigne"
+  },
+  {
+    "ref": "28305001",
+    "town": "Pre-st-evroult"
+  },
+  {
+    "ref": "28322001",
+    "town": "Rueil"
+  },
+  {
+    "ref": "28363001",
+    "town": "Sainville"
+  },
+  {
+    "ref": "28373002",
+    "town": "Senonches"
+  },
+  {
+    "ref": "28380003",
+    "town": "Sours_sapc"
+  },
+  {
+    "ref": "28386001",
+    "town": "Thimert"
+  },
+  {
+    "ref": "28406001",
+    "town": "Viabon"
+  },
+  {
+    "ref": "28407001",
+    "town": "Vicheres"
+  },
+  {
+    "ref": "29018001",
+    "town": "Brennilis"
+  },
+  {
+    "ref": "29024003",
+    "town": "Carhaix"
+  },
+  {
+    "ref": "29041002",
+    "town": "Coray Chat Eau"
+  },
+  {
+    "ref": "29075001",
+    "town": "Brest-guipavas"
+  },
+  {
+    "ref": "29120001",
+    "town": "Lanveoc"
+  },
+  {
+    "ref": "29155005",
+    "town": "Ouessant-stiff"
+  },
+  {
+    "ref": "29163003",
+    "town": "Pleyber-christ Sa"
+  },
+  {
+    "ref": "29170001",
+    "town": "Plomelin-inra"
+  },
+  {
+    "ref": "29178001",
+    "town": "Ploudalmezeau"
+  },
+  {
+    "ref": "29179001",
+    "town": "Ploudaniel-inra"
+  },
+  {
+    "ref": "29216001",
+    "town": "Quimper"
+  },
+  {
+    "ref": "29220002",
+    "town": "Pont-l'abbe"
+  },
+  {
+    "ref": "29263002",
+    "town": "St-segal S A"
+  },
+  {
+    "ref": "29264001",
+    "town": "Landivisiau"
+  },
+  {
+    "ref": "29277001",
+    "town": "Sizun"
+  },
+  {
+    "ref": "29293001",
+    "town": "Tregunc"
+  },
+  {
+    "ref": "30003001",
+    "town": "Aigues-mortes"
+  },
+  {
+    "ref": "30009001",
+    "town": "Alzon"
+  },
+  {
+    "ref": "30055001",
+    "town": "Brouzet Les Ales"
+  },
+  {
+    "ref": "30068001",
+    "town": "Cardet"
+  },
+  {
+    "ref": "30076001",
+    "town": "Cavillargues"
+  },
+  {
+    "ref": "30081002",
+    "town": "Chusclan"
+  },
+  {
+    "ref": "30087002",
+    "town": "Colognac"
+  },
+  {
+    "ref": "30101001",
+    "town": "Deaux"
+  },
+  {
+    "ref": "30123001",
+    "town": "Gallargues Le Montueux"
+  },
+  {
+    "ref": "30129001",
+    "town": "Generargues"
+  },
+  {
+    "ref": "30130001",
+    "town": "Genolhac"
+  },
+  {
+    "ref": "30132004",
+    "town": "La Grand Combe"
+  },
+  {
+    "ref": "30164001",
+    "town": "Mejannes-le-clap"
+  },
+  {
+    "ref": "30175001",
+    "town": "Montclus"
+  },
+  {
+    "ref": "30176002",
+    "town": "Montdardier"
+  },
+  {
+    "ref": "30189001",
+    "town": "Nimes-courbessac"
+  },
+  {
+    "ref": "30202002",
+    "town": "Pont St Esprit"
+  },
+  {
+    "ref": "30209002",
+    "town": "Pujaut"
+  },
+  {
+    "ref": "30224001",
+    "town": "La Rouviere"
+  },
+  {
+    "ref": "30243001",
+    "town": "St Christol-les-ales"
+  },
+  {
+    "ref": "30258001",
+    "town": "Nimes-garons"
+  },
+  {
+    "ref": "30269006",
+    "town": "St Jean Du Gard"
+  },
+  {
+    "ref": "30283001",
+    "town": "St Martial"
+  },
+  {
+    "ref": "30297001",
+    "town": "St Sauveur Camprieu"
+  },
+  {
+    "ref": "30305001",
+    "town": "Salindres"
+  },
+  {
+    "ref": "30334003",
+    "town": "Uzes"
+  },
+  {
+    "ref": "30339001",
+    "town": "Mont Aigoual"
+  },
+  {
+    "ref": "30349001",
+    "town": "Vic Le Fesq"
+  },
+  {
+    "ref": "30350001",
+    "town": "Le Vigan"
+  },
+  {
+    "ref": "30352002",
+    "town": "Villevieille"
+  },
+  {
+    "ref": "31042012",
+    "town": "Luchon"
+  },
+  {
+    "ref": "31069001",
+    "town": "Toulouse-blagnac"
+  },
+  {
+    "ref": "31147001",
+    "town": "Clarac"
+  },
+  {
+    "ref": "31157001",
+    "town": "Toulouse-francazal"
+  },
+  {
+    "ref": "31299001",
+    "town": "Muret-lherm"
+  },
+  {
+    "ref": "31406002",
+    "town": "Palaminy"
+  },
+  {
+    "ref": "31451001",
+    "town": "Revel"
+  },
+  {
+    "ref": "31478001",
+    "town": "St-felix-lauragais"
+  },
+  {
+    "ref": "31540001",
+    "town": "Segreville"
+  },
+  {
+    "ref": "32013005",
+    "town": "Auch"
+  },
+  {
+    "ref": "32035001",
+    "town": "Beaucaire"
+  },
+  {
+    "ref": "32107006",
+    "town": "Condom"
+  },
+  {
+    "ref": "32155001",
+    "town": "Le Houga"
+  },
+  {
+    "ref": "32160001",
+    "town": "Isle-jourdain"
+  },
+  {
+    "ref": "32182001",
+    "town": "Lahas"
+  },
+  {
+    "ref": "32219001",
+    "town": "Lupiac"
+  },
+  {
+    "ref": "32245001",
+    "town": "Maumusson"
+  },
+  {
+    "ref": "32248001",
+    "town": "Mauroux"
+  },
+  {
+    "ref": "32256001",
+    "town": "Mirande"
+  },
+  {
+    "ref": "32315001",
+    "town": "Peyrusse-grande"
+  },
+  {
+    "ref": "32355001",
+    "town": "Sadeillan"
+  },
+  {
+    "ref": "32357001",
+    "town": "Ste-anne"
+  },
+  {
+    "ref": "33042001",
+    "town": "Belin-beliet"
+  },
+  {
+    "ref": "33042005",
+    "town": "Belin Beliet"
+  },
+  {
+    "ref": "33080001",
+    "town": "Cadaujac-inra"
+  },
+  {
+    "ref": "33116001",
+    "town": "Cazats"
+  },
+  {
+    "ref": "33240001",
+    "town": "Lesparre Medoc"
+  },
+  {
+    "ref": "33281001",
+    "town": "Bordeaux-merignac"
+  },
+  {
+    "ref": "33314005",
+    "town": "Pauillac"
+  },
+  {
+    "ref": "33394002",
+    "town": "St Emilion"
+  },
+  {
+    "ref": "33415001",
+    "town": "St Gervais"
+  },
+  {
+    "ref": "33473001",
+    "town": "St-savin"
+  },
+  {
+    "ref": "33482001",
+    "town": "St Sulpice De Pommiers"
+  },
+  {
+    "ref": "33494001",
+    "town": "Salaunes"
+  },
+  {
+    "ref": "33504001",
+    "town": "Sauternes"
+  },
+  {
+    "ref": "33522001",
+    "town": "Talence"
+  },
+  {
+    "ref": "33529001",
+    "town": "Cazaux"
+  },
+  {
+    "ref": "33540001",
+    "town": "Vendays-montalive"
+  },
+  {
+    "ref": "33541001",
+    "town": "Vensac David"
+  },
+  {
+    "ref": "33550001",
+    "town": "Villenave D'ornon-inra"
+  },
+  {
+    "ref": "34008001",
+    "town": "Les Aires"
+  },
+  {
+    "ref": "34028003",
+    "town": "Bedarieux"
+  },
+  {
+    "ref": "34030002",
+    "town": "Berlou"
+  },
+  {
+    "ref": "34032002",
+    "town": "Beziers-courtade"
+  },
+  {
+    "ref": "34046005",
+    "town": "Cambon-et-salvergues"
+  },
+  {
+    "ref": "34055003",
+    "town": "Castanet Le Haut_sapc"
+  },
+  {
+    "ref": "34064003",
+    "town": "Le Caylar_sapc"
+  },
+  {
+    "ref": "34135001",
+    "town": "Lespignan"
+  },
+  {
+    "ref": "34142001",
+    "town": "Lodeve"
+  },
+  {
+    "ref": "34150001",
+    "town": "Marseillan-inra"
+  },
+  {
+    "ref": "34151005",
+    "town": "Marsillargues"
+  },
+  {
+    "ref": "34154001",
+    "town": "Montpellier-aeroport"
+  },
+  {
+    "ref": "34178001",
+    "town": "Murviel Les Beziers"
+  },
+  {
+    "ref": "34205001",
+    "town": "Les Plans"
+  },
+  {
+    "ref": "34209002",
+    "town": "Beziers-vias"
+  },
+  {
+    "ref": "34217001",
+    "town": "Prades Le Lez"
+  },
+  {
+    "ref": "34237001",
+    "town": "Roujan-inra"
+  },
+  {
+    "ref": "34239002",
+    "town": "St Andre De Sangonis"
+  },
+  {
+    "ref": "34269001",
+    "town": "St Jean De Minervois"
+  },
+  {
+    "ref": "34274001",
+    "town": "St Martin De Londres"
+  },
+  {
+    "ref": "34301002",
+    "town": "Sete"
+  },
+  {
+    "ref": "34306001",
+    "town": "Soumont"
+  },
+  {
+    "ref": "34311001",
+    "town": "Pezenas-tourbes"
+  },
+  {
+    "ref": "34317001",
+    "town": "La Vacquerie_sapc"
+  },
+  {
+    "ref": "34330001",
+    "town": "Verargues"
+  },
+  {
+    "ref": "34337001",
+    "town": "Villeneuve-les-mag-inra"
+  },
+  {
+    "ref": "35005001",
+    "town": "Arbrissel"
+  },
+  {
+    "ref": "35110003",
+    "town": "Feins Sa"
+  },
+  {
+    "ref": "35115001",
+    "town": "Fougeres"
+  },
+  {
+    "ref": "35162003",
+    "town": "Louvigne-du-desert"
+  },
+  {
+    "ref": "35202001",
+    "town": "La-noe-blanche"
+  },
+  {
+    "ref": "35228001",
+    "town": "Dinard"
+  },
+  {
+    "ref": "35240001",
+    "town": "Le Rheu-inra"
+  },
+  {
+    "ref": "35281001",
+    "town": "Rennes-st Jacques"
+  },
+  {
+    "ref": "36018001",
+    "town": "Le Blanc"
+  },
+  {
+    "ref": "36018004",
+    "town": "Blanc-arci"
+  },
+  {
+    "ref": "36035001",
+    "town": "Chaillac"
+  },
+  {
+    "ref": "36044001",
+    "town": "Chateauroux"
+  },
+  {
+    "ref": "36063001",
+    "town": "Chateauroux Deols"
+  },
+  {
+    "ref": "36070001",
+    "town": "Eguzon"
+  },
+  {
+    "ref": "36089003",
+    "town": "Jeu-les-bois-auto"
+  },
+  {
+    "ref": "36093002",
+    "town": "Levroux - Treg."
+  },
+  {
+    "ref": "36107001",
+    "town": "Lye"
+  },
+  {
+    "ref": "36113001",
+    "town": "Martizay"
+  },
+  {
+    "ref": "36136001",
+    "town": "Murs"
+  },
+  {
+    "ref": "36155001",
+    "town": "Pellevoisin"
+  },
+  {
+    "ref": "36162001",
+    "town": "Poulaines"
+  },
+  {
+    "ref": "36173002",
+    "town": "Rosnay"
+  },
+  {
+    "ref": "36186001",
+    "town": "St-christophe"
+  },
+  {
+    "ref": "36208001",
+    "town": "Ste-severe"
+  },
+  {
+    "ref": "37003004",
+    "town": "Amboise - Lycee"
+  },
+  {
+    "ref": "37055002",
+    "town": "Channay/lathan"
+  },
+  {
+    "ref": "37067003",
+    "town": "Cheille"
+  },
+  {
+    "ref": "37072002",
+    "town": "Chinon - Viti"
+  },
+  {
+    "ref": "37087001",
+    "town": "Courcoue"
+  },
+  {
+    "ref": "37107001",
+    "town": "Ferriere-larcon"
+  },
+  {
+    "ref": "37109001",
+    "town": "Fondettes"
+  },
+  {
+    "ref": "37128002",
+    "town": "Lignieres-de-t."
+  },
+  {
+    "ref": "37129002",
+    "town": "Ligre"
+  },
+  {
+    "ref": "37131002",
+    "town": "Limeray"
+  },
+  {
+    "ref": "37179001",
+    "town": "Tours"
+  },
+  {
+    "ref": "37183001",
+    "town": "Perrusson"
+  },
+  {
+    "ref": "37192001",
+    "town": "Reignac"
+  },
+  {
+    "ref": "37213003",
+    "town": "St-christophe-sur-nais"
+  },
+  {
+    "ref": "37216002",
+    "town": "St-epain"
+  },
+  {
+    "ref": "37224001",
+    "town": "St-laurent-en-g"
+  },
+  {
+    "ref": "37228001",
+    "town": "St-nicolas-de-bourgueil"
+  },
+  {
+    "ref": "37240001",
+    "town": "Saunay"
+  },
+  {
+    "ref": "37242002",
+    "town": "Savigny - Veron"
+  },
+  {
+    "ref": "37253001",
+    "town": "Sublaines"
+  },
+  {
+    "ref": "38040001",
+    "town": "Besse"
+  },
+  {
+    "ref": "38053003",
+    "town": "Bourgoin"
+  },
+  {
+    "ref": "38095001",
+    "town": "Chatte_sapc"
+  },
+  {
+    "ref": "38103001",
+    "town": "Chichilianne"
+  },
+  {
+    "ref": "38133001",
+    "town": "Coublevie"
+  },
+  {
+    "ref": "38191002",
+    "town": "Alpe-d'huez"
+  },
+  {
+    "ref": "38207001",
+    "town": "Lavaldens"
+  },
+  {
+    "ref": "38215002",
+    "town": "Luzinay"
+  },
+  {
+    "ref": "38242001",
+    "town": "Monestier"
+  },
+  {
+    "ref": "38269004",
+    "town": "La Mure- Radome"
+  },
+  {
+    "ref": "38299001",
+    "town": "Pellafol-chaneaux"
+  },
+  {
+    "ref": "38315002",
+    "town": "Pont-de-beauvoisin"
+  },
+  {
+    "ref": "38336001",
+    "town": "Reventin"
+  },
+  {
+    "ref": "38349001",
+    "town": "Sablons"
+  },
+  {
+    "ref": "38362001",
+    "town": "St Aupre_sapc"
+  },
+  {
+    "ref": "38366001",
+    "town": "St-baudille"
+  },
+  {
+    "ref": "38375001",
+    "town": "St-christophe"
+  },
+  {
+    "ref": "38384001",
+    "town": "Grenoble-st Geoirs"
+  },
+  {
+    "ref": "38442008",
+    "town": "St-pierre-les Egaux"
+  },
+  {
+    "ref": "38504002",
+    "town": "Pipay_sapc"
+  },
+  {
+    "ref": "38538002",
+    "town": "Grenoble - Lvd"
+  },
+  {
+    "ref": "38548001",
+    "town": "Villard-de-lans"
+  },
+  {
+    "ref": "38567002",
+    "town": "Chamrousse"
+  },
+  {
+    "ref": "39013004",
+    "town": "Arbois_sapc"
+  },
+  {
+    "ref": "39050001",
+    "town": "Besain"
+  },
+  {
+    "ref": "39085002",
+    "town": "Cerniebaud"
+  },
+  {
+    "ref": "39086001",
+    "town": "Cernon"
+  },
+  {
+    "ref": "39097003",
+    "town": "Champagnole"
+  },
+  {
+    "ref": "39156001",
+    "town": "Cogna"
+  },
+  {
+    "ref": "39159002",
+    "town": "Colonne"
+  },
+  {
+    "ref": "39198001",
+    "town": "Dole"
+  },
+  {
+    "ref": "39225002",
+    "town": "Le Fied_sapc"
+  },
+  {
+    "ref": "39296001",
+    "town": "Lombard"
+  },
+  {
+    "ref": "39362001",
+    "town": "Lons Le Saunier"
+  },
+  {
+    "ref": "39397002",
+    "town": "Orgelet"
+  },
+  {
+    "ref": "39413001",
+    "town": "La Pesse"
+  },
+  {
+    "ref": "39420001",
+    "town": "Pimorin"
+  },
+  {
+    "ref": "39478004",
+    "town": "St Claude"
+  },
+  {
+    "ref": "39485002",
+    "town": "St Julien - Sa"
+  },
+  {
+    "ref": "39526003",
+    "town": "Tavaux Sa"
+  },
+  {
+    "ref": "40022002",
+    "town": "Bahus Fleton"
+  },
+  {
+    "ref": "40031001",
+    "town": "Begaar"
+  },
+  {
+    "ref": "40046001",
+    "town": "Biscarrosse"
+  },
+  {
+    "ref": "40087001",
+    "town": "Creon D'armagnac"
+  },
+  {
+    "ref": "40088001",
+    "town": "Dax"
+  },
+  {
+    "ref": "40117001",
+    "town": "Grenade-sur-ad"
+  },
+  {
+    "ref": "40167001",
+    "town": "Luxey"
+  },
+  {
+    "ref": "40192001",
+    "town": "Mont-de-marsan"
+  },
+  {
+    "ref": "40218002",
+    "town": "Parleboscq"
+  },
+  {
+    "ref": "40227001",
+    "town": "Pissos"
+  },
+  {
+    "ref": "40243001",
+    "town": "Rion-des-landes"
+  },
+  {
+    "ref": "40246003",
+    "town": "Sabres"
+  },
+  {
+    "ref": "40272002",
+    "town": "St M Hinx Stna-inra"
+  },
+  {
+    "ref": "40304001",
+    "town": "Soorts-hossegor"
+  },
+  {
+    "ref": "40321002",
+    "town": "Urgons"
+  },
+  {
+    "ref": "41050002",
+    "town": "Cheverny"
+  },
+  {
+    "ref": "41053001",
+    "town": "Choue"
+  },
+  {
+    "ref": "41075003",
+    "town": "Droue - Morache"
+  },
+  {
+    "ref": "41097001",
+    "town": "Romorantin"
+  },
+  {
+    "ref": "41106001",
+    "town": "Lamotte-beuvron"
+  },
+  {
+    "ref": "41152001",
+    "town": "Montrieux"
+  },
+  {
+    "ref": "41221001",
+    "town": "St-leonard-en-b"
+  },
+  {
+    "ref": "41256002",
+    "town": "Theillay"
+  },
+  {
+    "ref": "41281001",
+    "town": "Blois"
+  },
+  {
+    "ref": "42005001",
+    "town": "St Etienne-boutheon"
+  },
+  {
+    "ref": "42019004",
+    "town": "Boen Sur Lignon"
+  },
+  {
+    "ref": "42039003",
+    "town": "Chalmazel_ra"
+  },
+  {
+    "ref": "42040001",
+    "town": "Col De La Loge_sapc"
+  },
+  {
+    "ref": "42052002",
+    "town": "Charlieu"
+  },
+  {
+    "ref": "42059001",
+    "town": "Chazelles-lyon"
+  },
+  {
+    "ref": "42094003",
+    "town": "Feurs"
+  },
+  {
+    "ref": "42098001",
+    "town": "Fourneaux"
+  },
+  {
+    "ref": "42101001",
+    "town": "Pilat Graix"
+  },
+  {
+    "ref": "42102002",
+    "town": "Grammond_sapc"
+  },
+  {
+    "ref": "42128001",
+    "town": "Machezal"
+  },
+  {
+    "ref": "42152001",
+    "town": "Nandax"
+  },
+  {
+    "ref": "42184001",
+    "town": "Riorges - Man"
+  },
+  {
+    "ref": "42204002",
+    "town": "St-bonnet-le-chateau_sapc"
+  },
+  {
+    "ref": "42207005",
+    "town": "St-chamond-p"
+  },
+  {
+    "ref": "42218011",
+    "town": "Saint-etienne"
+  },
+  {
+    "ref": "42248002",
+    "town": "St-just-en-chev"
+  },
+  {
+    "ref": "42253001",
+    "town": "Roanne-riorges_aero"
+  },
+  {
+    "ref": "42299001",
+    "town": "Savigneux"
+  },
+  {
+    "ref": "42306001",
+    "town": "Tarentaise"
+  },
+  {
+    "ref": "43003001",
+    "town": "Allegre"
+  },
+  {
+    "ref": "43014001",
+    "town": "Autrac"
+  },
+  {
+    "ref": "43015001",
+    "town": "Auvers"
+  },
+  {
+    "ref": "43020002",
+    "town": "Bas-en-basset"
+  },
+  {
+    "ref": "43046001",
+    "town": "Le Puy-chadrac"
+  },
+  {
+    "ref": "43062001",
+    "town": "Le Puy-loudes"
+  },
+  {
+    "ref": "43067001",
+    "town": "Chavaniac-lafayette"
+  },
+  {
+    "ref": "43091005",
+    "town": "Les Estables_sapc"
+  },
+  {
+    "ref": "43093001",
+    "town": "Felines_sapc"
+  },
+  {
+    "ref": "43095001",
+    "town": "Fix-st-geneys"
+  },
+  {
+    "ref": "43096001",
+    "town": "Fontannes"
+  },
+  {
+    "ref": "43111002",
+    "town": "Landos-charbon"
+  },
+  {
+    "ref": "43130002",
+    "town": "Mazet-volamont"
+  },
+  {
+    "ref": "43137003",
+    "town": "Monistrol-sur-loire"
+  },
+  {
+    "ref": "43150001",
+    "town": "Le Pertuis_sapc"
+  },
+  {
+    "ref": "43178003",
+    "town": "Saint Didier Sur Doulon"
+  },
+  {
+    "ref": "43215001",
+    "town": "St-paul-de-tart"
+  },
+  {
+    "ref": "43223001",
+    "town": "St-romain-lachalm"
+  },
+  {
+    "ref": "43234001",
+    "town": "Saugues"
+  },
+  {
+    "ref": "43234005",
+    "town": "Saugues-sa"
+  },
+  {
+    "ref": "43241002",
+    "town": "Solignac-sur-lo"
+  },
+  {
+    "ref": "43246001",
+    "town": "Tiranges"
+  },
+  {
+    "ref": "43268004",
+    "town": "Yssingeaux"
+  },
+  {
+    "ref": "44015001",
+    "town": "Blain"
+  },
+  {
+    "ref": "44020001",
+    "town": "Nantes-bouguenais"
+  },
+  {
+    "ref": "44070001",
+    "town": "Haie-fouassiere"
+  },
+  {
+    "ref": "44072002",
+    "town": "Herbignac"
+  },
+  {
+    "ref": "44103001",
+    "town": "St Nazaire-montoir"
+  },
+  {
+    "ref": "44110002",
+    "town": "Nort-sur-erdre"
+  },
+  {
+    "ref": "44117002",
+    "town": "Le Pallet_sapc"
+  },
+  {
+    "ref": "44181001",
+    "town": "St-meme-le-tenu"
+  },
+  {
+    "ref": "44184001",
+    "town": "Pte De Chemoulin"
+  },
+  {
+    "ref": "44199002",
+    "town": "Soudan"
+  },
+  {
+    "ref": "45004001",
+    "town": "Amilly"
+  },
+  {
+    "ref": "45055001",
+    "town": "Orleans"
+  },
+  {
+    "ref": "45147001",
+    "town": "Fleury-les-aub."
+  },
+  {
+    "ref": "45178001",
+    "town": "Ladon"
+  },
+  {
+    "ref": "45182001",
+    "town": "Ligny-le-r."
+  },
+  {
+    "ref": "45188001",
+    "town": "Loury"
+  },
+  {
+    "ref": "45229001",
+    "town": "Nogent-sur-v."
+  },
+  {
+    "ref": "45270002",
+    "town": "St-benoit/loire"
+  },
+  {
+    "ref": "45330001",
+    "town": "Trinay"
+  },
+  {
+    "ref": "45340002",
+    "town": "Villemurlin"
+  },
+  {
+    "ref": "46005001",
+    "town": "Anglars"
+  },
+  {
+    "ref": "46071001",
+    "town": "Comiac"
+  },
+  {
+    "ref": "46100001",
+    "town": "Faycelles"
+  },
+  {
+    "ref": "46127001",
+    "town": "Gourdon"
+  },
+  {
+    "ref": "46160001",
+    "town": "Latronquiere"
+  },
+  {
+    "ref": "46181001",
+    "town": "Lunegarde"
+  },
+  {
+    "ref": "46197002",
+    "town": "Le Montat"
+  },
+  {
+    "ref": "46201001",
+    "town": "Montcuq - Rouil"
+  },
+  {
+    "ref": "46311001",
+    "town": "Sousceyrac"
+  },
+  {
+    "ref": "47048001",
+    "town": "Cancon"
+  },
+  {
+    "ref": "47091001",
+    "town": "Agen-la Garenne"
+  },
+  {
+    "ref": "47123002",
+    "town": "Lacapelle-biron"
+  },
+  {
+    "ref": "47137003",
+    "town": "Laplume"
+  },
+  {
+    "ref": "47138001",
+    "town": "Laroque-timbaut"
+  },
+  {
+    "ref": "47195001",
+    "town": "Nerac - Man"
+  },
+  {
+    "ref": "47213001",
+    "town": "Prayssas"
+  },
+  {
+    "ref": "47221001",
+    "town": "Reaup"
+  },
+  {
+    "ref": "47254001",
+    "town": "Saint-martin-curto"
+  },
+  {
+    "ref": "47317002",
+    "town": "Verteuil"
+  },
+  {
+    "ref": "48004001",
+    "town": "Altier"
+  },
+  {
+    "ref": "48020003",
+    "town": "Bassurels"
+  },
+  {
+    "ref": "48027003",
+    "town": "Le Bleymard_sapc"
+  },
+  {
+    "ref": "48032003",
+    "town": "Le Buisson"
+  },
+  {
+    "ref": "48043001",
+    "town": "Chateauneuf-de-randon"
+  },
+  {
+    "ref": "48051002",
+    "town": "Le Collet-sauveplane"
+  },
+  {
+    "ref": "48057002",
+    "town": "Estables"
+  },
+  {
+    "ref": "48060001",
+    "town": "Fau De Peyre"
+  },
+  {
+    "ref": "48061002",
+    "town": "Florac"
+  },
+  {
+    "ref": "48069001",
+    "town": "Gatuzieres_sapc"
+  },
+  {
+    "ref": "48070004",
+    "town": "Grandrieu"
+  },
+  {
+    "ref": "48095004",
+    "town": "Mende-ville"
+  },
+  {
+    "ref": "48095005",
+    "town": "Mende"
+  },
+  {
+    "ref": "48103001",
+    "town": "Montrodat"
+  },
+  {
+    "ref": "48108001",
+    "town": "La Panouse_sapc"
+  },
+  {
+    "ref": "48110001",
+    "town": "Paulhac En Margeride_sapc"
+  },
+  {
+    "ref": "48116001",
+    "town": "Le Pont-de-montvert"
+  },
+  {
+    "ref": "48130002",
+    "town": "Rousses_sapc"
+  },
+  {
+    "ref": "48176002",
+    "town": "St Pierre-des-tripiers"
+  },
+  {
+    "ref": "48186001",
+    "town": "La Salle Prunet"
+  },
+  {
+    "ref": "48198001",
+    "town": "Villefort"
+  },
+  {
+    "ref": "49008001",
+    "town": "Angrie"
+  },
+  {
+    "ref": "49020001",
+    "town": "Beaucouze"
+  },
+  {
+    "ref": "49029001",
+    "town": "Blaison-gohier"
+  },
+  {
+    "ref": "49099003",
+    "town": "Cholet"
+  },
+  {
+    "ref": "49138001",
+    "town": "Fontaine-guerin"
+  },
+  {
+    "ref": "49188001",
+    "town": "Marce"
+  },
+  {
+    "ref": "49191001",
+    "town": "Martigne-briand"
+  },
+  {
+    "ref": "49201001",
+    "town": "La Menitre"
+  },
+  {
+    "ref": "49215002",
+    "town": "Mont-bellay-inra"
+  },
+  {
+    "ref": "49216001",
+    "town": "Montreuil Sur Loir"
+  },
+  {
+    "ref": "49248003",
+    "town": "Pouance_sapc"
+  },
+  {
+    "ref": "49331003",
+    "town": "Segre_sapc"
+  },
+  {
+    "ref": "50111001",
+    "town": "Cerisy La Salle"
+  },
+  {
+    "ref": "50129001",
+    "town": "Cherbourg-homet"
+  },
+  {
+    "ref": "50139001",
+    "town": "Conde Sur Vire_sapc"
+  },
+  {
+    "ref": "50147001",
+    "town": "Coutances"
+  },
+  {
+    "ref": "50196004",
+    "town": "Barfleur"
+  },
+  {
+    "ref": "50209001",
+    "town": "Gonneville"
+  },
+  {
+    "ref": "50215002",
+    "town": "Gouville"
+  },
+  {
+    "ref": "50277001",
+    "town": "Longueville"
+  },
+  {
+    "ref": "50410003",
+    "town": "Pontorson"
+  },
+  {
+    "ref": "50484002",
+    "town": "St-hilaire-du-h"
+  },
+  {
+    "ref": "50509002",
+    "town": "Ste Marie Du Mo"
+  },
+  {
+    "ref": "51015001",
+    "town": "Argers"
+  },
+  {
+    "ref": "51079001",
+    "town": "Bouzy-civc"
+  },
+  {
+    "ref": "51111001",
+    "town": "Chambrecy-civc"
+  },
+  {
+    "ref": "51153001",
+    "town": "Chouilly"
+  },
+  {
+    "ref": "51237001",
+    "town": "Esternay-man"
+  },
+  {
+    "ref": "51237002",
+    "town": "Esternay"
+  },
+  {
+    "ref": "51242001",
+    "town": "Fagnieres-inra"
+  },
+  {
+    "ref": "51262001",
+    "town": "Frignicourt"
+  },
+  {
+    "ref": "51338001",
+    "town": "Mailly-civc"
+  },
+  {
+    "ref": "51388003",
+    "town": "Mourmelon-grand"
+  },
+  {
+    "ref": "51544002",
+    "town": "Sommepy"
+  },
+  {
+    "ref": "51545001",
+    "town": "Sommesous"
+  },
+  {
+    "ref": "51548001",
+    "town": "Somme-vesle"
+  },
+  {
+    "ref": "51595002",
+    "town": "Vatry-aero"
+  },
+  {
+    "ref": "52023002",
+    "town": "Auberive_sapc"
+  },
+  {
+    "ref": "52055001",
+    "town": "Blecourt"
+  },
+  {
+    "ref": "52061002",
+    "town": "Bourdons_sapc"
+  },
+  {
+    "ref": "52084002",
+    "town": "Busson_sapc"
+  },
+  {
+    "ref": "52123003",
+    "town": "Chevillon_sapc"
+  },
+  {
+    "ref": "52131002",
+    "town": "Cirfontaines_sapc"
+  },
+  {
+    "ref": "52145001",
+    "town": "Coublanc"
+  },
+  {
+    "ref": "52197003",
+    "town": "Fayl-billot_sapc"
+  },
+  {
+    "ref": "52248002",
+    "town": "Is-en-bassigny"
+  },
+  {
+    "ref": "52269001",
+    "town": "Langres"
+  },
+  {
+    "ref": "52332001",
+    "town": "Val-de-meuse"
+  },
+  {
+    "ref": "52348003",
+    "town": "Neuilly-l'eveque_sapc"
+  },
+  {
+    "ref": "52448001",
+    "town": "St-dizier"
+  },
+  {
+    "ref": "52450002",
+    "town": "Saint-loup-sur-aujon_sapc"
+  },
+  {
+    "ref": "53007001",
+    "town": "Argentre"
+  },
+  {
+    "ref": "53018002",
+    "town": "Ballots"
+  },
+  {
+    "ref": "53048001",
+    "town": "Chailland"
+  },
+  {
+    "ref": "53077001",
+    "town": "Cosse-le-vivien"
+  },
+  {
+    "ref": "53078001",
+    "town": "Coudray"
+  },
+  {
+    "ref": "53097001",
+    "town": "Evron"
+  },
+  {
+    "ref": "53110002",
+    "town": "Grez-en-bouere"
+  },
+  {
+    "ref": "53116003",
+    "town": "Le Horps"
+  },
+  {
+    "ref": "53129001",
+    "town": "Launay-villiers"
+  },
+  {
+    "ref": "53130008",
+    "town": "Laval-etronnier"
+  },
+  {
+    "ref": "53147001",
+    "town": "Mayenne"
+  },
+  {
+    "ref": "53159002",
+    "town": "Montourtier_sapc"
+  },
+  {
+    "ref": "53220001",
+    "town": "St-georges-le-flechard"
+  },
+  {
+    "ref": "53233001",
+    "town": "St-loup-du-dorat"
+  },
+  {
+    "ref": "53238002",
+    "town": "St-mars/la-futa"
+  },
+  {
+    "ref": "53273001",
+    "town": "Villiers-charle"
+  },
+  {
+    "ref": "54040001",
+    "town": "Badonviller"
+  },
+  {
+    "ref": "54171001",
+    "town": "Doncourt-les-conflans"
+  },
+  {
+    "ref": "54405001",
+    "town": "Nancy-ochey"
+  },
+  {
+    "ref": "54481001",
+    "town": "St Maurice"
+  },
+  {
+    "ref": "54526001",
+    "town": "Nancy-essey"
+  },
+  {
+    "ref": "54582001",
+    "town": "Villette"
+  },
+  {
+    "ref": "55014001",
+    "town": "Aubreville_sapc"
+  },
+  {
+    "ref": "55041001",
+    "town": "Behonne_sapc"
+  },
+  {
+    "ref": "55060002",
+    "town": "Bonzee_sapc"
+  },
+  {
+    "ref": "55108004",
+    "town": "Chaumont_sapc"
+  },
+  {
+    "ref": "55123002",
+    "town": "Conde_sapc"
+  },
+  {
+    "ref": "55179001",
+    "town": "Erneville Aux Bois_sapc"
+  },
+  {
+    "ref": "55364001",
+    "town": "Mouzay"
+  },
+  {
+    "ref": "55386002",
+    "town": "Nonsard"
+  },
+  {
+    "ref": "55443001",
+    "town": "Rouvres-en-woevre"
+  },
+  {
+    "ref": "55484001",
+    "town": "Septsarges"
+  },
+  {
+    "ref": "55517002",
+    "town": "Triaucourt_sapc"
+  },
+  {
+    "ref": "55531001",
+    "town": "Vassincourt"
+  },
+  {
+    "ref": "56004001",
+    "town": "Arzal"
+  },
+  {
+    "ref": "56007001",
+    "town": "Auray"
+  },
+  {
+    "ref": "56009001",
+    "town": "Belle Ile-le Talut"
+  },
+  {
+    "ref": "56017003",
+    "town": "Bignan"
+  },
+  {
+    "ref": "56018001",
+    "town": "Billiers"
+  },
+  {
+    "ref": "56075001",
+    "town": "Guer"
+  },
+  {
+    "ref": "56081001",
+    "town": "Guiscriff"
+  },
+  {
+    "ref": "56105001",
+    "town": "Lanvenegen"
+  },
+  {
+    "ref": "56106001",
+    "town": "Larmor-baden"
+  },
+  {
+    "ref": "56140001",
+    "town": "Moreac"
+  },
+  {
+    "ref": "56159001",
+    "town": "Pleucadeuc"
+  },
+  {
+    "ref": "56165003",
+    "town": "Ploermel"
+  },
+  {
+    "ref": "56166005",
+    "town": "Plouay-sa"
+  },
+  {
+    "ref": "56184001",
+    "town": "Questembert"
+  },
+  {
+    "ref": "56185001",
+    "town": "Lorient-lann Bihoue"
+  },
+  {
+    "ref": "56186002",
+    "town": "Quiberon"
+  },
+  {
+    "ref": "56206001",
+    "town": "St-ave"
+  },
+  {
+    "ref": "56221001",
+    "town": "St-jacut-les-pins"
+  },
+  {
+    "ref": "56240003",
+    "town": "Sarzeau Sa"
+  },
+  {
+    "ref": "56243001",
+    "town": "Vannes-sene"
+  },
+  {
+    "ref": "57019001",
+    "town": "Malancourt"
+  },
+  {
+    "ref": "57039001",
+    "town": "Metz-frescaty"
+  },
+  {
+    "ref": "57168001",
+    "town": "Phalsbourg_sapc"
+  },
+  {
+    "ref": "57251001",
+    "town": "Aeroport Metz-nancy-lorraine"
+  },
+  {
+    "ref": "57357002",
+    "town": "Kappelkinger_sapc"
+  },
+  {
+    "ref": "57395001",
+    "town": "Lesse_sapc"
+  },
+  {
+    "ref": "57489001",
+    "town": "Mouterhouse"
+  },
+  {
+    "ref": "57509002",
+    "town": "Nitting_sapc"
+  },
+  {
+    "ref": "57587003",
+    "town": "Rodalbe"
+  },
+  {
+    "ref": "57623003",
+    "town": "Turquestein-blancrupt_sapc"
+  },
+  {
+    "ref": "57644001",
+    "town": "Seingbouse"
+  },
+  {
+    "ref": "57732001",
+    "town": "Volmunster"
+  },
+  {
+    "ref": "58019001",
+    "town": "Avree"
+  },
+  {
+    "ref": "58062001",
+    "town": "Chateau Chinon"
+  },
+  {
+    "ref": "58079004",
+    "town": "Clamecy"
+  },
+  {
+    "ref": "58106005",
+    "town": "Dun_sapc"
+  },
+  {
+    "ref": "58118001",
+    "town": "Fours"
+  },
+  {
+    "ref": "58131001",
+    "town": "Guerigny"
+  },
+  {
+    "ref": "58145002",
+    "town": "Lormes_sapc"
+  },
+  {
+    "ref": "58160001",
+    "town": "Nevers-marzy"
+  },
+  {
+    "ref": "58204001",
+    "town": "Ourouer"
+  },
+  {
+    "ref": "58218006",
+    "town": "Premery"
+  },
+  {
+    "ref": "58303002",
+    "town": "Varennes-boulor"
+  },
+  {
+    "ref": "59129001",
+    "town": "Cappelle-en-pev"
+  },
+  {
+    "ref": "59178001",
+    "town": "Douai"
+  },
+  {
+    "ref": "59183001",
+    "town": "Dunkerque"
+  },
+  {
+    "ref": "59343001",
+    "town": "Lille-lesquin"
+  },
+  {
+    "ref": "59534001",
+    "town": "St-hilaire-sur-helpe"
+  },
+  {
+    "ref": "59580003",
+    "town": "Steenvoorde"
+  },
+  {
+    "ref": "59606004",
+    "town": "Valenciennes"
+  },
+  {
+    "ref": "59647001",
+    "town": "Watten"
+  },
+  {
+    "ref": "60175001",
+    "town": "Creil"
+  },
+  {
+    "ref": "60276001",
+    "town": "Godenvillers"
+  },
+  {
+    "ref": "60322001",
+    "town": "Jamericourt"
+  },
+  {
+    "ref": "60382001",
+    "town": "Margny-les-compiegne"
+  },
+  {
+    "ref": "60500004",
+    "town": "Plessis-belleville"
+  },
+  {
+    "ref": "60555002",
+    "town": "Rouvroy-les-merles"
+  },
+  {
+    "ref": "60566001",
+    "town": "Saint-arnoult"
+  },
+  {
+    "ref": "60639001",
+    "town": "Beauvais-tille"
+  },
+  {
+    "ref": "61001001",
+    "town": "Alencon"
+  },
+  {
+    "ref": "61006005",
+    "town": "Argentan"
+  },
+  {
+    "ref": "61007001",
+    "town": "Athis-de-l'orne"
+  },
+  {
+    "ref": "61034001",
+    "town": "Beaulieu"
+  },
+  {
+    "ref": "61063001",
+    "town": "Briouze"
+  },
+  {
+    "ref": "61136001",
+    "town": "Couvains"
+  },
+  {
+    "ref": "61214002",
+    "town": "L Aigle"
+  },
+  {
+    "ref": "61275001",
+    "town": "Le Merlerault_sapc"
+  },
+  {
+    "ref": "61293003",
+    "town": "Mortagne - Parc"
+  },
+  {
+    "ref": "61328001",
+    "town": "Pin Au Haras-inra"
+  },
+  {
+    "ref": "61337004",
+    "town": "Preaux-du-perche"
+  },
+  {
+    "ref": "61387001",
+    "town": "St-fraimbault"
+  },
+  {
+    "ref": "61404001",
+    "town": "St-hilaire"
+  },
+  {
+    "ref": "61426001",
+    "town": "Belleme_sapc"
+  },
+  {
+    "ref": "61485002",
+    "town": "Ticheville_sapc"
+  },
+  {
+    "ref": "61491002",
+    "town": "Tourouvre_sapc"
+  },
+  {
+    "ref": "62160001",
+    "town": "Boulogne-sem"
+  },
+  {
+    "ref": "62298001",
+    "town": "Cambrai-epinoy"
+  },
+  {
+    "ref": "62333001",
+    "town": "Fiefs"
+  },
+  {
+    "ref": "62468001",
+    "town": "Humieres_sapc"
+  },
+  {
+    "ref": "62506001",
+    "town": "Licques"
+  },
+  {
+    "ref": "62516002",
+    "town": "Lillers"
+  },
+  {
+    "ref": "62548002",
+    "town": "Calais-marck"
+  },
+  {
+    "ref": "62613001",
+    "town": "Nielles-les-blequin_sapc"
+  },
+  {
+    "ref": "62685001",
+    "town": "Radinghem"
+  },
+  {
+    "ref": "62784001",
+    "town": "Saulty"
+  },
+  {
+    "ref": "62826001",
+    "town": "Le-touquet"
+  },
+  {
+    "ref": "62873001",
+    "town": "Arras"
+  },
+  {
+    "ref": "63003004",
+    "town": "Ambert"
+  },
+  {
+    "ref": "63006002",
+    "town": "Anzat-le-luguet_sapc"
+  },
+  {
+    "ref": "63098001",
+    "town": "Chastreix"
+  },
+  {
+    "ref": "63113001",
+    "town": "Clermont-fd"
+  },
+  {
+    "ref": "63125002",
+    "town": "Courpiere"
+  },
+  {
+    "ref": "63132002",
+    "town": "Cunlhat"
+  },
+  {
+    "ref": "63157001",
+    "town": "Fayet-le-chatea"
+  },
+  {
+    "ref": "63163001",
+    "town": "Gelles"
+  },
+  {
+    "ref": "63178001",
+    "town": "Issoire"
+  },
+  {
+    "ref": "63236002",
+    "town": "Le Mont-dore Bg"
+  },
+  {
+    "ref": "63236003",
+    "town": "Le Mont-dore_sapc"
+  },
+  {
+    "ref": "63263005",
+    "town": "Fontaine-du-ber_sapc"
+  },
+  {
+    "ref": "63281001",
+    "town": "Pionsat"
+  },
+  {
+    "ref": "63282001",
+    "town": "Plauzat_sapc"
+  },
+  {
+    "ref": "63319002",
+    "town": "St-antheme"
+  },
+  {
+    "ref": "63353003",
+    "town": "St-germain-l He"
+  },
+  {
+    "ref": "63354004",
+    "town": "St-gervais-d Au"
+  },
+  {
+    "ref": "63399002",
+    "town": "St-sulpice"
+  },
+  {
+    "ref": "63417001",
+    "town": "Sayat_sapc"
+  },
+  {
+    "ref": "63426001",
+    "town": "Tauves"
+  },
+  {
+    "ref": "63451001",
+    "town": "Vernines"
+  },
+  {
+    "ref": "64010002",
+    "town": "Aicirits"
+  },
+  {
+    "ref": "64024001",
+    "town": "Biarritz-pays-basque"
+  },
+  {
+    "ref": "64068001",
+    "town": "Asson"
+  },
+  {
+    "ref": "64092002",
+    "town": "Banca"
+  },
+  {
+    "ref": "64109001",
+    "town": "Benejacq"
+  },
+  {
+    "ref": "64123001",
+    "town": "Bidache"
+  },
+  {
+    "ref": "64155001",
+    "town": "Bustince - St Jean"
+  },
+  {
+    "ref": "64189001",
+    "town": "Socoa"
+  },
+  {
+    "ref": "64213001",
+    "town": "Espelette"
+  },
+  {
+    "ref": "64238001",
+    "town": "Ger"
+  },
+  {
+    "ref": "64342001",
+    "town": "Licq-atherey"
+  },
+  {
+    "ref": "64379001",
+    "town": "Mendive_sapc"
+  },
+  {
+    "ref": "64393001",
+    "town": "Monein"
+  },
+  {
+    "ref": "64401001",
+    "town": "Mont-disse"
+  },
+  {
+    "ref": "64422007",
+    "town": "Oloron"
+  },
+  {
+    "ref": "64430003",
+    "town": "Orthez"
+  },
+  {
+    "ref": "64450001",
+    "town": "Pomps"
+  },
+  {
+    "ref": "64480001",
+    "town": "St-gladie"
+  },
+  {
+    "ref": "64543001",
+    "town": "Urepel_sapc"
+  },
+  {
+    "ref": "64549001",
+    "town": "Pau-uzein"
+  },
+  {
+    "ref": "65017002",
+    "town": "Eget"
+  },
+  {
+    "ref": "65018001",
+    "town": "Arbeost_sapc"
+  },
+  {
+    "ref": "65055001",
+    "town": "Ayros Arbouix"
+  },
+  {
+    "ref": "65075001",
+    "town": "Bazus-aure"
+  },
+  {
+    "ref": "65125001",
+    "town": "Campistrous"
+  },
+  {
+    "ref": "65129003",
+    "town": "Castelnau Magnoac"
+  },
+  {
+    "ref": "65131001",
+    "town": "Castelvieilh"
+  },
+  {
+    "ref": "65188005",
+    "town": "Gavarnie_sapc"
+  },
+  {
+    "ref": "65195001",
+    "town": "Genos"
+  },
+  {
+    "ref": "65258001",
+    "town": "Lannemezan"
+  },
+  {
+    "ref": "65278001",
+    "town": "Lomne_sapc"
+  },
+  {
+    "ref": "65283001",
+    "town": "Loudervielle"
+  },
+  {
+    "ref": "65304001",
+    "town": "Maubourguet"
+  },
+  {
+    "ref": "65344001",
+    "town": "Tarbes-lourdes-pyrenees"
+  },
+  {
+    "ref": "65460002",
+    "town": "Vic En Bigorre"
+  },
+  {
+    "ref": "66003001",
+    "town": "Amelie-les-bains"
+  },
+  {
+    "ref": "66029003",
+    "town": "Caixas"
+  },
+  {
+    "ref": "66037001",
+    "town": "Canet-en-roussillon"
+  },
+  {
+    "ref": "66074002",
+    "town": "Eus"
+  },
+  {
+    "ref": "66082004",
+    "town": "Formigueres"
+  },
+  {
+    "ref": "66136001",
+    "town": "Perpignan"
+  },
+  {
+    "ref": "66137003",
+    "town": "Le Perthus"
+  },
+  {
+    "ref": "66187006",
+    "town": "St Paul De Fenouillet"
+  },
+  {
+    "ref": "66194002",
+    "town": "Serralongue"
+  },
+  {
+    "ref": "66206004",
+    "town": "Le Tech La Llau_sapc"
+  },
+  {
+    "ref": "66212001",
+    "town": "Torreilles"
+  },
+  {
+    "ref": "66233001",
+    "town": "Vives"
+  },
+  {
+    "ref": "67027001",
+    "town": "Belmont"
+  },
+  {
+    "ref": "67029001",
+    "town": "Berg"
+  },
+  {
+    "ref": "67122001",
+    "town": "Wangenbourg_sapc"
+  },
+  {
+    "ref": "67124001",
+    "town": "Strasbourg-entzheim"
+  },
+  {
+    "ref": "67210002",
+    "town": "Le Hohwald_sapc"
+  },
+  {
+    "ref": "67379001",
+    "town": "Preuschdorf"
+  },
+  {
+    "ref": "67443001",
+    "town": "Scheibenhard"
+  },
+  {
+    "ref": "67462004",
+    "town": "Selestat Sa"
+  },
+  {
+    "ref": "67498001",
+    "town": "Uhrwiller_sapc"
+  },
+  {
+    "ref": "67507003",
+    "town": "Ville"
+  },
+  {
+    "ref": "67516001",
+    "town": "Waltenheim-sur-zorn"
+  },
+  {
+    "ref": "68028001",
+    "town": "Bergheim-inra"
+  },
+  {
+    "ref": "68040001",
+    "town": "Bits.-les-thann"
+  },
+  {
+    "ref": "68062001",
+    "town": "Carspach"
+  },
+  {
+    "ref": "68066001",
+    "town": "Colmar-inra"
+  },
+  {
+    "ref": "68112005",
+    "town": "Guebwiller"
+  },
+  {
+    "ref": "68188002",
+    "town": "Linthal_sapc"
+  },
+  {
+    "ref": "68190001",
+    "town": "Lucelle_sapc"
+  },
+  {
+    "ref": "68205001",
+    "town": "Colmar-meyenheim"
+  },
+  {
+    "ref": "68224006",
+    "town": "Mulhouse"
+  },
+  {
+    "ref": "68226005",
+    "town": "Munster_sapc"
+  },
+  {
+    "ref": "68247003",
+    "town": "Markstein Crete"
+  },
+  {
+    "ref": "68269004",
+    "town": "Ribeau. - Verre"
+  },
+  {
+    "ref": "68269005",
+    "town": "Ribeau. - Acaci"
+  },
+  {
+    "ref": "68287003",
+    "town": "Rouffach - Sa"
+  },
+  {
+    "ref": "68294002",
+    "town": "Ste Croix Aux Mines"
+  },
+  {
+    "ref": "68297001",
+    "town": "Bale-mulhouse"
+  },
+  {
+    "ref": "68307001",
+    "town": "Sewen - Lac Alfeld_sapc"
+  },
+  {
+    "ref": "68338001",
+    "town": "Trois-epis_sapc"
+  },
+  {
+    "ref": "69026001",
+    "town": "Le Breuil"
+  },
+  {
+    "ref": "69028001",
+    "town": "Brindas"
+  },
+  {
+    "ref": "69029001",
+    "town": "Lyon-bron"
+  },
+  {
+    "ref": "69114001",
+    "town": "Liergues_sapc"
+  },
+  {
+    "ref": "69135001",
+    "town": "Monsols"
+  },
+  {
+    "ref": "69141001",
+    "town": "Mornant"
+  },
+  {
+    "ref": "69156001",
+    "town": "Pommiers"
+  },
+  {
+    "ref": "69174002",
+    "town": "Les Sauvages"
+  },
+  {
+    "ref": "69192001",
+    "town": "St-cyr-chatoux"
+  },
+  {
+    "ref": "69195002",
+    "town": "St-didier-river"
+  },
+  {
+    "ref": "69196001",
+    "town": "St-didier-beauj"
+  },
+  {
+    "ref": "69204002",
+    "town": "St-genis-laval"
+  },
+  {
+    "ref": "69206001",
+    "town": "St-georges-ren"
+  },
+  {
+    "ref": "69238001",
+    "town": "St-symphorien-c"
+  },
+  {
+    "ref": "69258001",
+    "town": "Vauxrenard"
+  },
+  {
+    "ref": "69264001",
+    "town": "Villefranche"
+  },
+  {
+    "ref": "69299001",
+    "town": "Lyon-st Exupery"
+  },
+  {
+    "ref": "70006001",
+    "town": "Aillevillers"
+  },
+  {
+    "ref": "70061002",
+    "town": "Belfahy_sapc"
+  },
+  {
+    "ref": "70104001",
+    "town": "Bucey-les-gy"
+  },
+  {
+    "ref": "70132001",
+    "town": "Chargey-les-gray"
+  },
+  {
+    "ref": "70165001",
+    "town": "Combeaufontaine"
+  },
+  {
+    "ref": "70192001",
+    "town": "Cugney"
+  },
+  {
+    "ref": "70221002",
+    "town": "Etobon"
+  },
+  {
+    "ref": "70245001",
+    "town": "Fougerolles"
+  },
+  {
+    "ref": "70245003",
+    "town": "Fougerolles_sapc"
+  },
+  {
+    "ref": "70261001",
+    "town": "Frotey_sapc"
+  },
+  {
+    "ref": "70283006",
+    "town": "Ballon De Servance"
+  },
+  {
+    "ref": "70372001",
+    "town": "Montureux-les-b"
+  },
+  {
+    "ref": "70414001",
+    "town": "Plancher-les-mi"
+  },
+  {
+    "ref": "70422001",
+    "town": "Poyans"
+  },
+  {
+    "ref": "70430001",
+    "town": "Quarte"
+  },
+  {
+    "ref": "70447002",
+    "town": "Rioz"
+  },
+  {
+    "ref": "70473001",
+    "town": "Luxeuil"
+  },
+  {
+    "ref": "70478001",
+    "town": "Saulx-de-vesoul"
+  },
+  {
+    "ref": "70545001",
+    "town": "Venisey"
+  },
+  {
+    "ref": "70550001",
+    "town": "Vesoul Ville"
+  },
+  {
+    "ref": "70561002",
+    "town": "Villersexel Sa"
+  },
+  {
+    "ref": "71014004",
+    "town": "Autun"
+  },
+  {
+    "ref": "71025001",
+    "town": "Beaubery"
+  },
+  {
+    "ref": "71054001",
+    "town": "Bragny Sur Saone"
+  },
+  {
+    "ref": "71060001",
+    "town": "Briant"
+  },
+  {
+    "ref": "71081001",
+    "town": "Chalon-champfo"
+  },
+  {
+    "ref": "71105001",
+    "town": "Macon"
+  },
+  {
+    "ref": "71152001",
+    "town": "Cressy"
+  },
+  {
+    "ref": "71231003",
+    "town": "Guiche(la)"
+  },
+  {
+    "ref": "71240001",
+    "town": "Jalogny_sapc"
+  },
+  {
+    "ref": "71289001",
+    "town": "Matour_sapc"
+  },
+  {
+    "ref": "71318001",
+    "town": "Montpont"
+  },
+  {
+    "ref": "71320001",
+    "town": "Mt-st-vincent"
+  },
+  {
+    "ref": "71373001",
+    "town": "Romenay"
+  },
+  {
+    "ref": "71445001",
+    "town": "St-marcel"
+  },
+  {
+    "ref": "71464001",
+    "town": "St-maurice-les-couches_sapc"
+  },
+  {
+    "ref": "71482001",
+    "town": "St-symphorien De Marmagne"
+  },
+  {
+    "ref": "71491001",
+    "town": "St Yan"
+  },
+  {
+    "ref": "71558001",
+    "town": "Varennes-st-sa"
+  },
+  {
+    "ref": "71589001",
+    "town": "Vitry/loire"
+  },
+  {
+    "ref": "72086001",
+    "town": "Commerveil_sapc"
+  },
+  {
+    "ref": "72093001",
+    "town": "Cormes"
+  },
+  {
+    "ref": "72137006",
+    "town": "La Fresnaye"
+  },
+  {
+    "ref": "72172003",
+    "town": "Le Luart"
+  },
+  {
+    "ref": "72175002",
+    "town": "Luche-pringe"
+  },
+  {
+    "ref": "72181001",
+    "town": "Le Mans"
+  },
+  {
+    "ref": "72189001",
+    "town": "Marolles Les Br"
+  },
+  {
+    "ref": "72255001",
+    "town": "Rouesse-vasse"
+  },
+  {
+    "ref": "72275003",
+    "town": "Saint Corneille"
+  },
+  {
+    "ref": "72284001",
+    "town": "Saint Germain_sapc"
+  },
+  {
+    "ref": "72357001",
+    "town": "Thoree Les Pins"
+  },
+  {
+    "ref": "73013001",
+    "town": "Albiez"
+  },
+  {
+    "ref": "73023001",
+    "town": "Aussois-clim"
+  },
+  {
+    "ref": "73026001",
+    "town": "Avrieux"
+  },
+  {
+    "ref": "73034002",
+    "town": "Beaufort-sur-doron"
+  },
+  {
+    "ref": "73040005",
+    "town": "Bessans-clim"
+  },
+  {
+    "ref": "73054001",
+    "town": "Bourg St Maurice"
+  },
+  {
+    "ref": "73064001",
+    "town": "Challes Les Eaux"
+  },
+  {
+    "ref": "73098003",
+    "town": "Feclaz_sapc"
+  },
+  {
+    "ref": "73124001",
+    "town": "Gilly Sur Isere"
+  },
+  {
+    "ref": "73132001",
+    "town": "Hauteluce"
+  },
+  {
+    "ref": "73132003",
+    "town": "Col-des-saisies"
+  },
+  {
+    "ref": "73146001",
+    "town": "Lescheraines"
+  },
+  {
+    "ref": "73158001",
+    "town": "Mognard"
+  },
+  {
+    "ref": "73171002",
+    "town": "Montmelian"
+  },
+  {
+    "ref": "73181001",
+    "town": "Moutiers"
+  },
+  {
+    "ref": "73191001",
+    "town": "Novalaise"
+  },
+  {
+    "ref": "73191005",
+    "town": "Lac Aiguebelette"
+  },
+  {
+    "ref": "73197001",
+    "town": "Peisey Nancroix"
+  },
+  {
+    "ref": "73206001",
+    "town": "Pralognan La Vanoise"
+  },
+  {
+    "ref": "73220001",
+    "town": "St-alban Des Hurtieres"
+  },
+  {
+    "ref": "73230002",
+    "town": "St Colomban Des Villards"
+  },
+  {
+    "ref": "73248002",
+    "town": "St-jean De Maurienne"
+  },
+  {
+    "ref": "73255003",
+    "town": "Ste Marie Cuines"
+  },
+  {
+    "ref": "73257001",
+    "town": "St-martin De Belleville"
+  },
+  {
+    "ref": "73261001",
+    "town": "St-michel De Maurienne"
+  },
+  {
+    "ref": "73261003",
+    "town": "St Michel Maur_sapc"
+  },
+  {
+    "ref": "73276001",
+    "town": "St-pierre De Soucy"
+  },
+  {
+    "ref": "73290002",
+    "town": "Termignon-clim"
+  },
+  {
+    "ref": "73296005",
+    "town": "Tignes_sapc"
+  },
+  {
+    "ref": "73301001",
+    "town": "Trevignin"
+  },
+  {
+    "ref": "73303005",
+    "town": "Ugine"
+  },
+  {
+    "ref": "73304005",
+    "town": "Val D'isere Jos"
+  },
+  {
+    "ref": "73306005",
+    "town": "Valloire Forest"
+  },
+  {
+    "ref": "73329001",
+    "town": "Chambery-aix"
+  },
+  {
+    "ref": "74014002",
+    "town": "Les Carroz"
+  },
+  {
+    "ref": "74016001",
+    "town": "Archamps"
+  },
+  {
+    "ref": "74024001",
+    "town": "Ayze"
+  },
+  {
+    "ref": "74035001",
+    "town": "Bloye"
+  },
+  {
+    "ref": "74042003",
+    "town": "Bonneville"
+  },
+  {
+    "ref": "74060001",
+    "town": "Chapelle Saint-maurice_sapc"
+  },
+  {
+    "ref": "74080002",
+    "town": "Clusaz (La)"
+  },
+  {
+    "ref": "74083002",
+    "town": "Combloux"
+  },
+  {
+    "ref": "74085001",
+    "town": "Contamines Mj"
+  },
+  {
+    "ref": "74105002",
+    "town": "Douvaine Sa"
+  },
+  {
+    "ref": "74119002",
+    "town": "Evian"
+  },
+  {
+    "ref": "74119003",
+    "town": "Evian Sa"
+  },
+  {
+    "ref": "74133001",
+    "town": "Gaillard"
+  },
+  {
+    "ref": "74134002",
+    "town": "Gets (Les)"
+  },
+  {
+    "ref": "74135001",
+    "town": "Giez"
+  },
+  {
+    "ref": "74136003",
+    "town": "Grand Bornand"
+  },
+  {
+    "ref": "74136005",
+    "town": "Le Grand-bornand"
+  },
+  {
+    "ref": "74137001",
+    "town": "Groisy_sapc"
+  },
+  {
+    "ref": "74143003",
+    "town": "Houches (Les)"
+  },
+  {
+    "ref": "74173001",
+    "town": "Megeve"
+  },
+  {
+    "ref": "74182001",
+    "town": "Meythet"
+  },
+  {
+    "ref": "74191003",
+    "town": "Le Plenay"
+  },
+  {
+    "ref": "74252001",
+    "town": "St Sigismond"
+  },
+  {
+    "ref": "74256001",
+    "town": "Sallanches"
+  },
+  {
+    "ref": "74266001",
+    "town": "Servoz"
+  },
+  {
+    "ref": "74280001",
+    "town": "Thones"
+  },
+  {
+    "ref": "74285002",
+    "town": "Usinens Sa"
+  },
+  {
+    "ref": "74286001",
+    "town": "Vacheresse"
+  },
+  {
+    "ref": "74290002",
+    "town": "Vallorcine"
+  },
+  {
+    "ref": "74500001",
+    "town": "Geneve"
+  },
+  {
+    "ref": "75106001",
+    "town": "Luxembourg"
+  },
+  {
+    "ref": "75114001",
+    "town": "Paris-montsouris"
+  },
+  {
+    "ref": "75116002",
+    "town": "Bagatelle"
+  },
+  {
+    "ref": "75116008",
+    "town": "Longchamp"
+  },
+  {
+    "ref": "76116001",
+    "town": "Rouen-boos"
+  },
+  {
+    "ref": "76130001",
+    "town": "Bouelles"
+  },
+  {
+    "ref": "76217001",
+    "town": "Dieppe"
+  },
+  {
+    "ref": "76228001",
+    "town": "Ectot Les Baons"
+  },
+  {
+    "ref": "76276001",
+    "town": "Forges"
+  },
+  {
+    "ref": "76378001",
+    "town": "Jumieges"
+  },
+  {
+    "ref": "76481001",
+    "town": "Octeville"
+  },
+  {
+    "ref": "76499001",
+    "town": "Petiville"
+  },
+  {
+    "ref": "76540009",
+    "town": "Rouen - Jardin"
+  },
+  {
+    "ref": "76552001",
+    "town": "Cap-de-la-heve"
+  },
+  {
+    "ref": "77033001",
+    "town": "Bezalles"
+  },
+  {
+    "ref": "77054001",
+    "town": "La Brosse-mx"
+  },
+  {
+    "ref": "77084001",
+    "town": "Changis"
+  },
+  {
+    "ref": "77113002",
+    "town": "Chevru"
+  },
+  {
+    "ref": "77186002",
+    "town": "Fontainebleau_sapc"
+  },
+  {
+    "ref": "77211001",
+    "town": "Nangis"
+  },
+  {
+    "ref": "77306001",
+    "town": "Melun"
+  },
+  {
+    "ref": "77320002",
+    "town": "Mouroux_sapc"
+  },
+  {
+    "ref": "77333003",
+    "town": "Nemours"
+  },
+  {
+    "ref": "77405001",
+    "town": "St-cyr/morin-bg"
+  },
+  {
+    "ref": "77431001",
+    "town": "St-pierre-les-n"
+  },
+  {
+    "ref": "77447002",
+    "town": "Seine-port"
+  },
+  {
+    "ref": "77468001",
+    "town": "Torcy"
+  },
+  {
+    "ref": "77478001",
+    "town": "Ussy-sur-marne"
+  },
+  {
+    "ref": "77530001",
+    "town": "Voulton_sapc"
+  },
+  {
+    "ref": "78162001",
+    "town": "Choisel"
+  },
+  {
+    "ref": "78354001",
+    "town": "Magnanville"
+  },
+  {
+    "ref": "78380001",
+    "town": "Maule"
+  },
+  {
+    "ref": "78562001",
+    "town": "St-leger_sapc"
+  },
+  {
+    "ref": "78620001",
+    "town": "Toussus Le Noble"
+  },
+  {
+    "ref": "78621001",
+    "town": "Trappes"
+  },
+  {
+    "ref": "79017001",
+    "town": "Nueil-les-aubiers"
+  },
+  {
+    "ref": "79043001",
+    "town": "Bouille-loretz"
+  },
+  {
+    "ref": "79049004",
+    "town": "Bressuire"
+  },
+  {
+    "ref": "79061001",
+    "town": "Celles-sur-bell"
+  },
+  {
+    "ref": "79094001",
+    "town": "Clesse"
+  },
+  {
+    "ref": "79134001",
+    "town": "Glenay_sapc"
+  },
+  {
+    "ref": "79140002",
+    "town": "Hanc"
+  },
+  {
+    "ref": "79148001",
+    "town": "Lezay"
+  },
+  {
+    "ref": "79174002",
+    "town": "Melle"
+  },
+  {
+    "ref": "79176001",
+    "town": "Menigoute_sapc"
+  },
+  {
+    "ref": "79191005",
+    "town": "Niort"
+  },
+  {
+    "ref": "79202003",
+    "town": "Parthenay_sapc"
+  },
+  {
+    "ref": "79215001",
+    "town": "Pougne-herisson_sapc"
+  },
+  {
+    "ref": "79220001",
+    "town": "Prin-deyrancon"
+  },
+  {
+    "ref": "79270003",
+    "town": "Saint-maixent-l-ecole_sapc"
+  },
+  {
+    "ref": "79309001",
+    "town": "Scille"
+  },
+  {
+    "ref": "79311002",
+    "town": "Secondigny"
+  },
+  {
+    "ref": "79320002",
+    "town": "Surin_sapc"
+  },
+  {
+    "ref": "79326002",
+    "town": "Thenezay"
+  },
+  {
+    "ref": "79326004",
+    "town": "Thenezay Stna"
+  },
+  {
+    "ref": "79329001",
+    "town": "Thouars-stna"
+  },
+  {
+    "ref": "80001001",
+    "town": "Abbeville"
+  },
+  {
+    "ref": "80086002",
+    "town": "Bernaville"
+  },
+  {
+    "ref": "80182003",
+    "town": "Cayeux-sur-mer"
+  },
+  {
+    "ref": "80271002",
+    "town": "Epehy_sapc"
+  },
+  {
+    "ref": "80379002",
+    "town": "Amiens-glisy"
+  },
+  {
+    "ref": "80523001",
+    "town": "Meaulte"
+  },
+  {
+    "ref": "80557001",
+    "town": "Estrees-mons-inra"
+  },
+  {
+    "ref": "80606002",
+    "town": "Oisemont_sapc"
+  },
+  {
+    "ref": "80682001",
+    "town": "Rouvroy-en-santerre"
+  },
+  {
+    "ref": "81081002",
+    "town": "Dourgne"
+  },
+  {
+    "ref": "81115002",
+    "town": "Labastide-rouairoux"
+  },
+  {
+    "ref": "81124001",
+    "town": "Lacaune"
+  },
+  {
+    "ref": "81140002",
+    "town": "Lavaur"
+  },
+  {
+    "ref": "81163001",
+    "town": "Mazamet"
+  },
+  {
+    "ref": "81182004",
+    "town": "Montredon-labessonnie"
+  },
+  {
+    "ref": "81192005",
+    "town": "Murat Sur Vebre"
+  },
+  {
+    "ref": "81217002",
+    "town": "Puycelsi"
+  },
+  {
+    "ref": "81219001",
+    "town": "Puylaurens"
+  },
+  {
+    "ref": "81231001",
+    "town": "Rouairoux"
+  },
+  {
+    "ref": "81284001",
+    "town": "Albi"
+  },
+  {
+    "ref": "81292001",
+    "town": "Tanus"
+  },
+  {
+    "ref": "82018003",
+    "town": "Bioule"
+  },
+  {
+    "ref": "82033005",
+    "town": "Castelsarrasin"
+  },
+  {
+    "ref": "82038006",
+    "town": "Caylus"
+  },
+  {
+    "ref": "82051001",
+    "town": "Durfort"
+  },
+  {
+    "ref": "82094004",
+    "town": "Lauzerte"
+  },
+  {
+    "ref": "82121002",
+    "town": "Montauban"
+  },
+  {
+    "ref": "82155003",
+    "town": "St-antonin-teus"
+  },
+  {
+    "ref": "82174001",
+    "town": "St-vincent"
+  },
+  {
+    "ref": "82178001",
+    "town": "Savenes_man"
+  },
+  {
+    "ref": "82178002",
+    "town": "Savenes"
+  },
+  {
+    "ref": "82180001",
+    "town": "Serignac"
+  },
+  {
+    "ref": "82186003",
+    "town": "Valence"
+  },
+  {
+    "ref": "83002004",
+    "town": "Aiguines_sapc"
+  },
+  {
+    "ref": "83004004",
+    "town": "Les Arcs_sapc"
+  },
+  {
+    "ref": "83007004",
+    "town": "Aups"
+  },
+  {
+    "ref": "83031001",
+    "town": "Le Luc"
+  },
+  {
+    "ref": "83035001",
+    "town": "Le Castellet"
+  },
+  {
+    "ref": "83035002",
+    "town": "Le Castellet_sapc"
+  },
+  {
+    "ref": "83042001",
+    "town": "Cogolin_sapc"
+  },
+  {
+    "ref": "83043005",
+    "town": "Collobrieres_sapc"
+  },
+  {
+    "ref": "83044003",
+    "town": "Comps-sur-artuby"
+  },
+  {
+    "ref": "83049005",
+    "town": "Cuers"
+  },
+  {
+    "ref": "83050007",
+    "town": "Draguignan_sapc"
+  },
+  {
+    "ref": "83051001",
+    "town": "Entrecasteaux"
+  },
+  {
+    "ref": "83061001",
+    "town": "Frejus"
+  },
+  {
+    "ref": "83069001",
+    "town": "Hyeres"
+  },
+  {
+    "ref": "83069002",
+    "town": "Porquerolles"
+  },
+  {
+    "ref": "83069003",
+    "town": "Ile Du Levant"
+  },
+  {
+    "ref": "83083001",
+    "town": "Montfort-sur-argens_sapc"
+  },
+  {
+    "ref": "83093005",
+    "town": "Plan D'aups - Ste Baume_sapc"
+  },
+  {
+    "ref": "83102005",
+    "town": "Regusse"
+  },
+  {
+    "ref": "83116022",
+    "town": "St Maximin La Ste Baume"
+  },
+  {
+    "ref": "83118002",
+    "town": "Le Dramont"
+  },
+  {
+    "ref": "83124002",
+    "town": "Seillans"
+  },
+  {
+    "ref": "83137001",
+    "town": "Toulon"
+  },
+  {
+    "ref": "83145001",
+    "town": "Varages"
+  },
+  {
+    "ref": "83148002",
+    "town": "Vidauban"
+  },
+  {
+    "ref": "83150002",
+    "town": "Vinon Sur Verdon"
+  },
+  {
+    "ref": "83153001",
+    "town": "Cap Cepet"
+  },
+  {
+    "ref": "84003002",
+    "town": "Apt-viton"
+  },
+  {
+    "ref": "84003003",
+    "town": "Apt"
+  },
+  {
+    "ref": "84007005",
+    "town": "Avignon"
+  },
+  {
+    "ref": "84009002",
+    "town": "La Bastide Des Jourdans"
+  },
+  {
+    "ref": "84015002",
+    "town": "Beaumont-mt Serein"
+  },
+  {
+    "ref": "84025001",
+    "town": "Cabrieres D'avignon"
+  },
+  {
+    "ref": "84026003",
+    "town": "Cadenet"
+  },
+  {
+    "ref": "84031001",
+    "town": "Carpentras"
+  },
+  {
+    "ref": "84085004",
+    "town": "Murs"
+  },
+  {
+    "ref": "84087001",
+    "town": "Orange"
+  },
+  {
+    "ref": "84094001",
+    "town": "Puymeras"
+  },
+  {
+    "ref": "84107002",
+    "town": "St Christol"
+  },
+  {
+    "ref": "84118001",
+    "town": "St Saturnin Les Apt"
+  },
+  {
+    "ref": "84121001",
+    "town": "Sannes"
+  },
+  {
+    "ref": "84140001",
+    "town": "Vaugines"
+  },
+  {
+    "ref": "84150001",
+    "town": "Visan"
+  },
+  {
+    "ref": "85004001",
+    "town": "Angles"
+  },
+  {
+    "ref": "85060002",
+    "town": "Chateau-d'olonne"
+  },
+  {
+    "ref": "85152001",
+    "town": "La Mothe Achard"
+  },
+  {
+    "ref": "85163001",
+    "town": "Noirmoutier En"
+  },
+  {
+    "ref": "85169002",
+    "town": "Palluau"
+  },
+  {
+    "ref": "85172001",
+    "town": "Le Perrier"
+  },
+  {
+    "ref": "85190001",
+    "town": "Rocheserviere"
+  },
+  {
+    "ref": "85191003",
+    "town": "La Roche Sur Yon"
+  },
+  {
+    "ref": "85215002",
+    "town": "St-fulgent_sapc"
+  },
+  {
+    "ref": "85216001",
+    "town": "Sainte Gemme La Plaine_sapc"
+  },
+  {
+    "ref": "85234001",
+    "town": "St Jean De Mont"
+  },
+  {
+    "ref": "86027001",
+    "town": "Poitiers-biard"
+  },
+  {
+    "ref": "86039001",
+    "town": "Brux_sapc"
+  },
+  {
+    "ref": "86078002",
+    "town": "Civray"
+  },
+  {
+    "ref": "86097001",
+    "town": "La Ferriere Airoux_sapc"
+  },
+  {
+    "ref": "86129001",
+    "town": "Lesigny"
+  },
+  {
+    "ref": "86137003",
+    "town": "Loudun"
+  },
+  {
+    "ref": "86139001",
+    "town": "Lusignan-inra"
+  },
+  {
+    "ref": "86149001",
+    "town": "Martaize"
+  },
+  {
+    "ref": "86165005",
+    "town": "Montmorillon"
+  },
+  {
+    "ref": "86177001",
+    "town": "Neuville De Poi"
+  },
+  {
+    "ref": "86289001",
+    "town": "Le-vigeant"
+  },
+  {
+    "ref": "86294003",
+    "town": "Vouille"
+  },
+  {
+    "ref": "87026001",
+    "town": "Bussiere Boffy"
+  },
+  {
+    "ref": "87032004",
+    "town": "Chalus_sapc"
+  },
+  {
+    "ref": "87034001",
+    "town": "Champagnac La R"
+  },
+  {
+    "ref": "87059001",
+    "town": "Le Dorat"
+  },
+  {
+    "ref": "87064005",
+    "town": "Eymoutiers"
+  },
+  {
+    "ref": "87085006",
+    "town": "Limoges-bellegarde"
+  },
+  {
+    "ref": "87089003",
+    "town": "Magnac-laval"
+  },
+  {
+    "ref": "87103002",
+    "town": "Nantiat"
+  },
+  {
+    "ref": "87106001",
+    "town": "Nexon"
+  },
+  {
+    "ref": "87126002",
+    "town": "Rochechouart"
+  },
+  {
+    "ref": "87146002",
+    "town": "St Germain Bell"
+  },
+  {
+    "ref": "87154003",
+    "town": "St Junien"
+  },
+  {
+    "ref": "87159002",
+    "town": "St Leger La Montagne_sapc"
+  },
+  {
+    "ref": "87187003",
+    "town": "St Yrieix La Pe"
+  },
+  {
+    "ref": "88029001",
+    "town": "Bains"
+  },
+  {
+    "ref": "88033002",
+    "town": "Ban-de-sapt"
+  },
+  {
+    "ref": "88037003",
+    "town": "Basse-s-l-rupt"
+  },
+  {
+    "ref": "88136001",
+    "town": "Epinal"
+  },
+  {
+    "ref": "88147001",
+    "town": "Dommartin-aux-bois_sapc"
+  },
+  {
+    "ref": "88196009",
+    "town": "Gerardmer"
+  },
+  {
+    "ref": "88271001",
+    "town": "Ligneville"
+  },
+  {
+    "ref": "88304006",
+    "town": "Mirecourt-inra"
+  },
+  {
+    "ref": "88393003",
+    "town": "Rollainville"
+  },
+  {
+    "ref": "88399001",
+    "town": "Le Roulier_sapc"
+  },
+  {
+    "ref": "88402002",
+    "town": "Roville"
+  },
+  {
+    "ref": "88430001",
+    "town": "St Ouen-les-parey_sapc"
+  },
+  {
+    "ref": "88486003",
+    "town": "Vagney"
+  },
+  {
+    "ref": "88487002",
+    "town": "Val-d Ajol"
+  },
+  {
+    "ref": "89003001",
+    "town": "Aillant"
+  },
+  {
+    "ref": "89068001",
+    "town": "Chablis_sapc"
+  },
+  {
+    "ref": "89120001",
+    "town": "Coulours"
+  },
+  {
+    "ref": "89131001",
+    "town": "Cruzy_sapc"
+  },
+  {
+    "ref": "89133001",
+    "town": "Cudot_sapc"
+  },
+  {
+    "ref": "89165001",
+    "town": "Flacy"
+  },
+  {
+    "ref": "89192001",
+    "town": "Grandchamp_sapc"
+  },
+  {
+    "ref": "89227001",
+    "town": "Ligny-le-chatel"
+  },
+  {
+    "ref": "89253001",
+    "town": "Merry-sur-yonne"
+  },
+  {
+    "ref": "89260001",
+    "town": "Molesmes_sapc"
+  },
+  {
+    "ref": "89273001",
+    "town": "Moutiers_sapc"
+  },
+  {
+    "ref": "89279002",
+    "town": "Noyers_sapc"
+  },
+  {
+    "ref": "89333001",
+    "town": "St Andre"
+  },
+  {
+    "ref": "89349001",
+    "town": "St Leger Vauban"
+  },
+  {
+    "ref": "89365001",
+    "town": "Saint Prive"
+  },
+  {
+    "ref": "89380001",
+    "town": "Savigny/clairis"
+  },
+  {
+    "ref": "89387002",
+    "town": "Sens"
+  },
+  {
+    "ref": "89418007",
+    "town": "Tonnerre Joudre"
+  },
+  {
+    "ref": "90035001",
+    "town": "Dorans"
+  },
+  {
+    "ref": "90044001",
+    "town": "Felon_sapc"
+  },
+  {
+    "ref": "90052002",
+    "town": "Giromagny_sapc"
+  },
+  {
+    "ref": "90056002",
+    "town": "Joncherey"
+  },
+  {
+    "ref": "90065003",
+    "town": "Ballon_sapc"
+  },
+  {
+    "ref": "90074001",
+    "town": "Novillard_sapc"
+  },
+  {
+    "ref": "90090001",
+    "town": "St Dizier-l'eveque_sapc"
+  },
+  {
+    "ref": "91027002",
+    "town": "Orly"
+  },
+  {
+    "ref": "91069001",
+    "town": "Boigneville"
+  },
+  {
+    "ref": "91103001",
+    "town": "Bretigny_sapc"
+  },
+  {
+    "ref": "91184001",
+    "town": "Courdimanche"
+  },
+  {
+    "ref": "91200002",
+    "town": "Dourdan"
+  },
+  {
+    "ref": "91216001",
+    "town": "Epinay-sur-orge"
+  },
+  {
+    "ref": "91243001",
+    "town": "Fontenay-les-b."
+  },
+  {
+    "ref": "91275001",
+    "town": "Gometz-le-chat."
+  },
+  {
+    "ref": "91441001",
+    "town": "Nainville"
+  },
+  {
+    "ref": "93050001",
+    "town": "Neuilly-sur-m."
+  },
+  {
+    "ref": "94022001",
+    "town": "Choisy-le-roi"
+  },
+  {
+    "ref": "94042001",
+    "town": "Joinville"
+  },
+  {
+    "ref": "94044001",
+    "town": "Limeil"
+  },
+  {
+    "ref": "94047001",
+    "town": "Mandres"
+  },
+  {
+    "ref": "95078001",
+    "town": "Pontoise - Aero"
+  },
+  {
+    "ref": "95088001",
+    "town": "Le Bourget"
+  },
+  {
+    "ref": "95500003",
+    "town": "Pontoise -Ville"
+  },
+  {
+    "ref": "95527001",
+    "town": "Roissy"
+  },
+  {
+    "ref": "95580001",
+    "town": "St Witz"
+  },
+  {
+    "ref": "97101015",
+    "town": "Le Raizet Aero"
+  },
+  {
+    "ref": "97117013",
+    "town": "Le Moule Laureal"
+  },
+  {
+    "ref": "97123001",
+    "town": "St-barthelemy Meteo"
+  },
+  {
+    "ref": "97201001",
+    "town": "Ajoupa-bouillon Eden"
+  },
+  {
+    "ref": "97203003",
+    "town": "Bassepointe-chal"
+  },
+  {
+    "ref": "97208001",
+    "town": "Fond-denis-cadet"
+  },
+  {
+    "ref": "97209004",
+    "town": "Fort-de-france Desaix"
+  },
+  {
+    "ref": "97210001",
+    "town": "Francois-chopot"
+  },
+  {
+    "ref": "97210004",
+    "town": "Francois-simon"
+  },
+  {
+    "ref": "97213004",
+    "town": "Lamentin-aero"
+  },
+  {
+    "ref": "97215001",
+    "town": "Macouba-bell."
+  },
+  {
+    "ref": "97218002",
+    "town": "Morne-rouge-champ"
+  },
+  {
+    "ref": "97224004",
+    "town": "St-joseph Lezard"
+  },
+  {
+    "ref": "97225007",
+    "town": "St-pierre"
+  },
+  {
+    "ref": "97228002",
+    "town": "Ste-marie Belvu"
+  },
+  {
+    "ref": "97228004",
+    "town": "Ste-marie Conco"
+  },
+  {
+    "ref": "97230007",
+    "town": "Trinite-reservoir"
+  },
+  {
+    "ref": "97232003",
+    "town": "Vauclin"
+  },
+  {
+    "ref": "97304001",
+    "town": "Ile Royale"
+  },
+  {
+    "ref": "97304003",
+    "town": "Kourou Csg"
+  },
+  {
+    "ref": "97304005",
+    "town": "Kourou Plage"
+  },
+  {
+    "ref": "97307001",
+    "town": "Cayenne-matoury"
+  },
+  {
+    "ref": "97308001",
+    "town": "Saint Georges"
+  },
+  {
+    "ref": "97311005",
+    "town": "Charvein"
+  },
+  {
+    "ref": "97312006",
+    "town": "Savane Combi"
+  },
+  {
+    "ref": "97352001",
+    "town": "Saul_sapc"
+  },
+  {
+    "ref": "97353001",
+    "town": "Maripasoula"
+  },
+  {
+    "ref": "97356001",
+    "town": "Camopi_sapc"
+  },
+  {
+    "ref": "97401540",
+    "town": "Les Avirons - Cirad"
+  },
+  {
+    "ref": "97402240",
+    "town": "Bellevue Bras-panon"
+  },
+  {
+    "ref": "97404540",
+    "town": "Pont-mathurin"
+  },
+  {
+    "ref": "97405420",
+    "town": "Piton-bloc_sapc"
+  },
+  {
+    "ref": "97405480",
+    "town": "Petite-ile - Cirad"
+  },
+  {
+    "ref": "97406220",
+    "town": "Plaine Des Palmistes"
+  },
+  {
+    "ref": "97407520",
+    "town": "Le Port"
+  },
+  {
+    "ref": "97408540",
+    "town": "Dos D'ane - 1"
+  },
+  {
+    "ref": "97409230",
+    "town": "Le Colosse"
+  },
+  {
+    "ref": "97409240",
+    "town": "Menciol"
+  },
+  {
+    "ref": "97410202",
+    "town": "Beauvallon"
+  },
+  {
+    "ref": "97410238",
+    "town": "Saint-benoit"
+  },
+  {
+    "ref": "97411164",
+    "town": "Le Brule - Val Fleuri_sapc"
+  },
+  {
+    "ref": "97412336",
+    "town": "Grand-coude_sapc"
+  },
+  {
+    "ref": "97412384",
+    "town": "St-joseph_sapc"
+  },
+  {
+    "ref": "97413520",
+    "town": "Colimacons"
+  },
+  {
+    "ref": "97413550",
+    "town": "Etang Saint-leu - Cirad"
+  },
+  {
+    "ref": "97413580",
+    "town": "Piton Saint-leu_sapc"
+  },
+  {
+    "ref": "97414409",
+    "town": "Plaine Des Makes_sapc"
+  },
+  {
+    "ref": "97414431",
+    "town": "Le Gol Les Hauts - Cirad"
+  },
+  {
+    "ref": "97415516",
+    "town": "Bois De Nefles St-paul_sapc"
+  },
+  {
+    "ref": "97415536",
+    "town": "Petite-france"
+  },
+  {
+    "ref": "97415550",
+    "town": "L'ermitage - Cirad"
+  },
+  {
+    "ref": "97415566",
+    "town": "Piton-maido"
+  },
+  {
+    "ref": "97415590",
+    "town": "Pointe Des Trois-bassins"
+  },
+  {
+    "ref": "97416410",
+    "town": "Ravine Des Cabris - Cirad"
+  },
+  {
+    "ref": "97416415",
+    "town": "Pierrefonds - Cirad"
+  },
+  {
+    "ref": "97416463",
+    "town": "Pierrefonds-aeroport"
+  },
+  {
+    "ref": "97416465",
+    "town": "Ligne-paradis - Cirad"
+  },
+  {
+    "ref": "97418110",
+    "town": "Gillot-aeroport"
+  },
+  {
+    "ref": "97418123",
+    "town": "La Mare - Cirad"
+  },
+  {
+    "ref": "97419350",
+    "town": "Gros Piton Sainte-rose"
+  },
+  {
+    "ref": "97419380",
+    "town": "Bellecombe-jacob"
+  },
+  {
+    "ref": "97420150",
+    "town": "Bagatelle_sapc"
+  },
+  {
+    "ref": "97420180",
+    "town": "Bras-pistolet_sapc"
+  },
+  {
+    "ref": "97421210",
+    "town": "Mare A Vieille Place"
+  },
+  {
+    "ref": "97421270",
+    "town": "Hell-bourg"
+  },
+  {
+    "ref": "97422440",
+    "town": "Plaine Des Cafres"
+  },
+  {
+    "ref": "97422465",
+    "town": "Le Tampon - Cirad"
+  },
+  {
+    "ref": "97424410",
+    "town": "Cilaos"
+  },
+  {
+    "ref": "97502001",
+    "town": "St-pierre"
+  },
+  {
+    "ref": "98403004",
+    "town": "Tromelin"
+  },
+  {
+    "ref": "98404001",
+    "town": "Kerguelen"
+  },
+  {
+    "ref": "98404002",
+    "town": "Nouvelle Amsterdam"
+  },
+  {
+    "ref": "98503001",
+    "town": "Bandrele"
+  },
+  {
+    "ref": "98507002",
+    "town": "Dembeni"
+  },
+  {
+    "ref": "98508001",
+    "town": "Pamandzi"
+  },
+  {
+    "ref": "98511001",
+    "town": "Mamoudzou_sapc"
+  },
+  {
+    "ref": "98511003",
+    "town": "Vahibe_sapc"
+  },
+  {
+    "ref": "98512001",
+    "town": "Mtzamboro Gen"
+  },
+  {
+    "ref": "98611001",
+    "town": "Maopoopo"
+  },
+  {
+    "ref": "98613001",
+    "town": "Hihifo"
+  },
+  {
+    "ref": "98714002",
+    "town": "Bora-bora-motu-aero"
+  },
+  {
+    "ref": "98715002",
+    "town": "Faaa"
+  },
+  {
+    "ref": "98715003",
+    "town": "Faaa 3"
+  },
+  {
+    "ref": "98719005",
+    "town": "Mangareva"
+  },
+  {
+    "ref": "98723001",
+    "town": "Hiva-oa"
+  },
+  {
+    "ref": "98728001",
+    "town": "Petei"
+  },
+  {
+    "ref": "98729003",
+    "town": "Paopao 1"
+  },
+  {
+    "ref": "98729008",
+    "town": "Papetoai 3"
+  },
+  {
+    "ref": "98729010",
+    "town": "Papetoai 4"
+  },
+  {
+    "ref": "98731007",
+    "town": "Nukuataha Aero"
+  },
+  {
+    "ref": "98734005",
+    "town": "Papara 5"
+  },
+  {
+    "ref": "98735002",
+    "town": "Papeete 2"
+  },
+  {
+    "ref": "98738006",
+    "town": "Punaauia 6"
+  },
+  {
+    "ref": "98741001",
+    "town": "Rapa"
+  },
+  {
+    "ref": "98747004",
+    "town": "Afaahiti 2"
+  },
+  {
+    "ref": "98749001",
+    "town": "Takaroa"
+  },
+  {
+    "ref": "98750003",
+    "town": "Opoa"
+  },
+  {
+    "ref": "98757004",
+    "town": "Hakahau - Koko"
+  },
+  {
+    "ref": "98802003",
+    "town": "Bourake"
+  },
+  {
+    "ref": "98803001",
+    "town": "Bourail"
+  },
+  {
+    "ref": "98803003",
+    "town": "Nessadiou"
+  },
+  {
+    "ref": "98808001",
+    "town": "Houailou P."
+  },
+  {
+    "ref": "98810002",
+    "town": "Ouaco"
+  },
+  {
+    "ref": "98811001",
+    "town": "Kone"
+  },
+  {
+    "ref": "98813001",
+    "town": "La Foa"
+  },
+  {
+    "ref": "98814001",
+    "town": "Ouanaham"
+  },
+  {
+    "ref": "98814003",
+    "town": "Chepenehe"
+  },
+  {
+    "ref": "98814006",
+    "town": "Wiwatul"
+  },
+  {
+    "ref": "98815001",
+    "town": "La Roche"
+  },
+  {
+    "ref": "98817005",
+    "town": "La Coulee"
+  },
+  {
+    "ref": "98817104",
+    "town": "Goro_usine"
+  },
+  {
+    "ref": "98818001",
+    "town": "Noumea"
+  },
+  {
+    "ref": "98818002",
+    "town": "Magenta"
+  },
+  {
+    "ref": "98818003",
+    "town": "Phare Amedee"
+  },
+  {
+    "ref": "98820001",
+    "town": "Ouloup"
+  },
+  {
+    "ref": "98821001",
+    "town": "La Tontouta"
+  },
+  {
+    "ref": "98821005",
+    "town": "Port Laguerre"
+  },
+  {
+    "ref": "98822001",
+    "town": "Poindimie"
+  },
+  {
+    "ref": "98827001",
+    "town": "Poya"
+  },
+  {
+    "ref": "98827002",
+    "town": "Nepoui"
+  },
+  {
+    "ref": "98830002",
+    "town": "Touho Aerod."
+  },
+  {
+    "ref": "98832002",
+    "town": "Yate Mrie"
+  },
+  {
+    "ref": "98832006",
+    "town": "Riviere Blanche"
+  },
+  {
+    "ref": "98832101",
+    "town": "Goro_ancienne_pepiniere"
+  }
+]

@@ -6,14 +6,14 @@ exports.__esModule = true;
 // en un fichier json contenant le nom, la latitude et la longitude de chaque commune française référencée
 // Import de communes.json dans fauna via shell : fauna import --path=./assets/data/communes.json --collection=communes --append
 var communes = /** @class */ (function () {
-    function communes() {
-        this.cp = "";
-        this.ville = "";
-        this.latitude = 0;
-        this.longitude = 0;
-    }
-    return communes;
-}());
+  function communes() {
+    this.cp = "";
+    this.ville = "";
+    this.latitude = 0;
+    this.longitude = 0;
+  }
+  return communes;
+})();
 var fiches = [];
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 var fs1 = require("fs");
@@ -23,38 +23,63 @@ var fs1 = require("fs");
 var text = fs1.readFileSync("../data_source/communes.csv", "utf8");
 var allTextLines = text.split(/\r\n|\n/);
 for (var i = 0; i < allTextLines.length; i++) {
-    var item = new communes(); // note the "new" keyword here
-    var fields = allTextLines[i].split(";");
-    item.cp = fields[2];
-    item.ville = fields[1];
-    var coords = fields[5].split(",");
-    item.latitude = Number(coords[0]);
-    item.longitude = Number(coords[1]);
-    fiches.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
+  var item = new communes(); // note the "new" keyword here
+  var fields = allTextLines[i].split(";");
+  item.cp = fields[2];
+  item.ville = fields[1];
+  var coords = fields[5].split(",");
+  item.latitude = Number(coords[0]);
+  item.longitude = Number(coords[1]);
+  fiches.push(item); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
 }
 fs1.writeFileSync("../data/communes.json", JSON.stringify(fiches, null, 2)); // Création du json final sur disque
 // ***********************************************************************************************************************************
 // Transformation d'un fichier CSV des sites Seveso (https://public.opendatasoft.com/explore/dataset/sites-seveso/export/?flg=fr&location=9,44.52588,1.0643&basemap=jawg.streets)
 // en un fichier json contenant le nom de l'usine et la commune hébergeant chaque site classé seveso, la latitude, la longitude
 var seveso = /** @class */ (function () {
-    function seveso() {
-        this.site = "";
-        this.latitude = 0;
-        this.longitude = 0;
-    }
-    return seveso;
-}());
+  function seveso() {
+    this.site = "";
+    this.latitude = 0;
+    this.longitude = 0;
+  }
+  return seveso;
+})();
 var fiches1 = [];
 // Balayage du fichier csv, enrichissement de l'Array fiches, création du JSON sur disque
 var text1 = fs1.readFileSync("../data_source/sites-seveso.csv", "utf8");
 var allTextLines1 = text1.split(/\r\n|\n/);
 for (var i1 = 0; i1 < allTextLines1.length; i1++) {
-    var item1 = new seveso(); // note the "new" keyword here
-    var fields1 = allTextLines1[i1].split(";");
-    var coords1 = fields1[0].split(",");
-    item1.site = "Sté " + fields1[2] + " à " + fields1[3] + " - " + fields1[12];
-    item1.latitude = Number(coords1[0]);
-    item1.longitude = Number(coords1[1]);
-    fiches1.push(item1); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
+  var item1 = new seveso(); // note the "new" keyword here
+  var fields1 = allTextLines1[i1].split(";");
+  var coords1 = fields1[0].split(",");
+  item1.site = "Sté " + fields1[2] + " à " + fields1[3] + " - " + fields1[12];
+  item1.latitude = Number(coords1[0]);
+  item1.longitude = Number(coords1[1]);
+  fiches1.push(item1); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
 }
 fs1.writeFileSync("../data/seveso.json", JSON.stringify(fiches1, null, 2)); // Création du json final sur disque
+// ***********************************************************************************************************************************
+// Transformation d'un fichier CSV contenant la liste des fiches climatiques (https://donneespubliques.meteofrance.fr/?fond=produit&id_produit=117&id_rubrique=39)
+// en un fichier json contenant la référence de la station météo et le nom de la ville
+var fiche_clim_MF = /** @class */ (function () {
+  function fiche_clim_MF() {
+    this.ref = "";
+    this.town = "";
+  }
+  return fiche_clim_MF;
+})();
+var fiches2 = [];
+// Balayage du fichier txt, enrichissement de l'Array fiches, création du JSON sur disque
+var text2 = fs1.readFileSync("../data_source/listeFC_MF.csv", "utf8");
+var allTextLines2 = text2.split(/\r\n|\n/);
+for (var i2 = 0; i2 < allTextLines2.length; i2++) {
+  var item2 = new fiche_clim_MF(); // note the "new" keyword here
+  var fields2 = allTextLines2[i2].split(";");
+  item2.ref = fields2[0];
+  item2.town = fields2[1];
+  fiches2.push(item2); // Enrichissement du 'vecteur' contenant l'ensemble des fiches
+}
+fs1.writeFileSync(
+  "../data/ListeFichesClimatiques.json",
+  JSON.stringify(fiches2, null, 2)
+); // Création du json final sur disque

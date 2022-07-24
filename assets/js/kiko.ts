@@ -66,10 +66,10 @@ fetch("assets/data/fc.json")
   })
   .then(function (data) {
     localStorage.fc = JSON.stringify(data); // Stockage local du fichier json pour le réutiliser lors de cette session
-    // Affichage valeur de référence
+    // Affichage valeur de référence (Trappes)
     const station =
       data[
-        data.findIndex((x: { indicatif: string }) => x.indicatif == "78640001")
+        data.findIndex((x: { indicatif: string }) => x.indicatif == "78621001")
       ];
 
     document.getElementById("en-tete")!.innerHTML =
@@ -88,8 +88,13 @@ fetch("assets/data/fc.json")
       milliers.format(station.ensoleillement) + " h/an";
     document.getElementById("pluie")!.innerHTML =
       milliers.format(station.pluie) + " mm/an";
-    document.getElementById("vent")!.innerHTML =
-      milliers.format(station.vent) + " j/an";
+    if (isNaN(Number(station.vent))) {
+      // Ce test devrait être réalisé pour toute valeur numérique : affichage de NaN sinon (Trappes ne possède pas cette valeur en 2022)
+      document.getElementById("vent")!.innerHTML = "-";
+    } else {
+      document.getElementById("vent")!.innerHTML =
+        milliers.format(station.vent) + " j/an";
+    }
     document.getElementById("prix")!.innerHTML =
       euros.format(station.prix_maisons) + "/m2";
   })
@@ -333,7 +338,7 @@ function ResetFiltres(): void {
   (<HTMLInputElement>document.getElementById("max_vent")).value = "";
   (<HTMLInputElement>document.getElementById("occurences")).value = "";
   (<HTMLInputElement>document.getElementById("fiches_dep")).value = "78";
-  (<HTMLInputElement>document.getElementById("risques_cp")).value = "78140";
+  (<HTMLInputElement>document.getElementById("risques_cp")).value = "78190";
 
   document.getElementById("occurences")!.innerHTML = "";
 
@@ -393,7 +398,7 @@ function showModal_risques(cp: string): void {
     scheme: "https",
   });
 
-   client
+  client
     .query(q.Get(q.Match(q.Index("code_postal"), cp)))
     .then((ret: JSON) => {
       const result = Object.values(ret); // fauna renvoie ref, ts, data
