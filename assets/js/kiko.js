@@ -314,7 +314,7 @@ function showModal_risques(cp) {
   // Ligne supprimée post-génération JS car require n'est pas compris par le browser
   var q = faunadb.query;
   var client = new faunadb.Client({
-    secret: "fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMo",
+    secret: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX", // A remplacer par la chaîne stockée dans fauna_secret
     domain: "db.eu.fauna.com",
     port: 443,
     scheme: "https",

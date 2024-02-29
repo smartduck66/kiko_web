@@ -392,7 +392,7 @@ function showModal_risques(cp: string): void {
 
   const q = faunadb.query;
   const client = new faunadb.Client({
-    secret: "fnAEdsVp-CAAwLklyuBILPAZb1qpPnzx5ZKT4aMo",
+    secret: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX", // A remplacer par la chaîne stockée dans fauna_secret
     domain: "db.eu.fauna.com",
     port: 443,
     scheme: "https",
